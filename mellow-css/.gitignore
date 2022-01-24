@@ -1,3 +1,4 @@
 /node_modules
 /dist
 /build
+/hugo/resources/_gen
