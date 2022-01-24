@@ -5,9 +5,154 @@
  * See https://github.com/sippy-platform/ui/pull/8 for details on this implementation.
  */
 
-// Borders and padding are part of the element, and let nobody ever tell you otherwise.
+// Borders and padding are not part of the element, and let nobody ever tell you otherwise.
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Set smooth scrolling for the root element.
+:root {
+  scroll-behavior: smooth;
+}
+
+// Reset body margin
+body {
+  margin: 0;
+  font-family: $font-family-sans;
+}
+
+// Typography reset
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-family: $font-family-sans-heading;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: .875rem;
+}
+
+a {
+  color: $anchor-color;
+
+  &:hover {
+    color: $anchor-hover-color;
+  }
+}
+
+code,
+kbd,
+pre {
+  font-family: $font-family-mono;
+}
+
+// Lists, description lists and items, normalizing padding and margins
+ol,
+ul {
+  padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ol ul,
+ul ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+// Images
+img,
+svg {
+  vertical-align: middle;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+// Forms and inputs
+label {
+  display: inline-block;
+}
+
+button {
+  border-radius: 0;
+}
+
+// Not a border, but claims to be one? Use a pointer.
+[role="button"] {
+  cursor: pointer;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+select {
+  word-wrap: normal;
+
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+// Blockquotes
+blockquote{
+  margin: 0 0 1rem;
+}
+
+// Other elements
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
 }
