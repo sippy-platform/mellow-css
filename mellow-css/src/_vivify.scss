@@ -1,0 +1,190 @@
+/*
+ * Vivify
+ *
+ * Vivify is a CSS reset to make sure all browsers start from the same baseline.
+ * See https://github.com/sippy-platform/ui/pull/8 for details on this implementation.
+ */
+
+// Set smooth scrolling for the root element.
+:root {
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce), (update: slow) {
+    --animation-duration: 0.001ms !important; 
+    --transition-duration: 0.001ms !important;
+  }
+}
+
+// Borders and padding are not part of the element, and let nobody ever tell you otherwise.
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  @media screen and (prefers-reduced-motion: reduce), (update: slow) {
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: 1 !important;
+    transition-duration: var(--animation-duration);
+  }
+}
+
+// Reset body margin
+body {
+  margin: 0;
+  font-family: $font-family-sans;
+}
+
+// Typography reset
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-family: $font-family-sans-heading;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: .875rem;
+}
+
+a {
+  color: $anchor-color;
+
+  &:hover {
+    color: $anchor-hover-color;
+  }
+}
+
+code,
+kbd,
+pre {
+  font-family: $font-family-mono;
+}
+
+// Lists, description lists and items, normalizing padding and margins
+ol,
+ul {
+  padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ol ul,
+ul ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+// Images
+img,
+svg {
+  vertical-align: middle;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+// Forms and inputs
+label {
+  display: inline-block;
+}
+
+button {
+  border-radius: 0;
+}
+
+// Not a border, but claims to be one? Use a pointer.
+[role="button"] {
+  cursor: pointer;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+select {
+  word-wrap: normal;
+
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+// This resets search fields to appear just like normal text inputs in Safari
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Allow styling for the file select button in Safari
+::file-selector-button {
+  -webkit-appearance: button;
+}
+
+// Blockquotes
+blockquote{
+  margin: 0 0 1rem;
+}
+
+// Other elements
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}

@@ -1,8 +1,13 @@
 /*
  * Mellow CSS v0.1.0
  * Copyright 2022 - Sippy (https://sippy.cloud)
- * Licensed under AGPLv3 (https://github.com/sippy-platform /mellow/blob/main/LICENSE)
+ * Licensed under AGPLv3 (https://github.com/sippy-platform/mellow/blob/main/LICENSE)
  */
+
+@import 'variable';
+
+@import 'root';
+@import 'vivify';
 
 .container {
   max-width: 900px;
