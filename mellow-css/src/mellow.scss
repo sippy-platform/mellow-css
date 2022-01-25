@@ -5,11 +5,9 @@
  */
 
 @import 'variable';
+@import 'mixins';
 
 @import 'root';
 @import 'vivify';
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
+@import 'container';

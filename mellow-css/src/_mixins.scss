@@ -1,0 +1,26 @@
+// Function to check if the given breakpoint is the 0 breakpoint. The 0-breakpoint
+// is equivalent of setting no breakpoint so it doesn't need its own classes.
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+
+  @return if($min != 0, $min, null);
+}
+
+// Create the breakpoint suffix, when it matches the 0-breakpoint, return an empty
+// string instead.
+@function breakpoint-suffix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
+}
+
+// Add a media query around anything that isn't the 0-breakpoint breakpoint.
+@mixin breakpoint-min-width($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
