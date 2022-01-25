@@ -145,6 +145,25 @@ textarea {
   resize: vertical;
 }
 
+// This resets search fields to appear just like normal text inputs in Safari
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Allow styling for the file select button in Safari
+::file-selector-button {
+  -webkit-appearance: button;
+}
+
 // Blockquotes
 blockquote{
   margin: 0 0 1rem;
