@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partialCached "head" . }}
+  </head>
+  <body>
+    {{ partialCached "navbar" . }}
+
+    <main class="container">
+      {{ .Content }}
+    </main>
+    
+    {{ partialCached "footer" . }}
+  </body>
+</html>
