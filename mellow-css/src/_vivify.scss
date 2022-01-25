@@ -14,7 +14,9 @@
 
 // Set smooth scrolling for the root element.
 :root {
-  scroll-behavior: smooth;
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 // Reset body margin
