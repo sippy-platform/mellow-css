@@ -5,17 +5,28 @@
  * See https://github.com/sippy-platform/ui/pull/8 for details on this implementation.
  */
 
+// Set smooth scrolling for the root element.
+:root {
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce), (update: slow) {
+    --animation-duration: 0.001ms !important; 
+    --transition-duration: 0.001ms !important;
+  }
+}
+
 // Borders and padding are not part of the element, and let nobody ever tell you otherwise.
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
 
-// Set smooth scrolling for the root element.
-:root {
-  @media (prefers-reduced-motion: no-preference) {
-    scroll-behavior: smooth;
+  @media screen and (prefers-reduced-motion: reduce), (update: slow) {
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: 1 !important;
+    transition-duration: var(--animation-duration);
   }
 }
 
