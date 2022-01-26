@@ -104,3 +104,25 @@ If the amount of used columns exceed the grid width, the grid will automatically
   <div class="col-4">1/3</div>
 </div>
 {{</ example >}}
+
+## Gap
+By default, the grid will create a gap of `1rem`. The `gap-*`-classes can be used to change the size of the gap. The `gap-*`-utility classes range between 0 and 5 and generate values of `0rem`, `.25rem`, `.5rem`, `1rem`, `1.5rem`, and `3rem` respectivly.
+
+{{< example >}}
+<div class="grid grid-12 gap-0">
+  <div class="col-4">1/3</div>
+  <div class="col-4">1/3</div>
+  <div class="col-4">1/3</div>
+</div>
+{{</ example >}}
+
+### Responsive classes
+Like every other grid class, the `gap-*`-classes are also responsive.
+
+{{< example >}}
+<div class="grid grid-12 gap-2 gap-md-4">
+  <div class="col-4">gap 2 md:4</div>
+  <div class="col-4">gap 2 md:4</div>
+  <div class="col-4">gap 2 md:4</div>
+</div>
+{{</ example >}}

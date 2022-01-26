@@ -28,3 +28,14 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1320px
 ) !default;
+
+// Gap
+$gap: 1rem !default;
+$gaps: (
+  0: 0,
+  1: $gap * .25,
+  2: $gap * .5,
+  3: $gap,
+  4: $gap * 1.5,
+  5: $gap * 3,
+) !default;
