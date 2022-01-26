@@ -72,7 +72,7 @@
     "files": [
       {
         "path": "dist/*.css",
-        "maxSize": "100kB"
+        "maxSize": "20kB"
       }
     ]
   }
