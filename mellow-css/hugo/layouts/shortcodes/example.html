@@ -1,0 +1,10 @@
+{{- $class := .Get "class" -}}
+{{- $lang := .Get "lang" | default "html" -}}
+
+<div class="docs-example">
+  <div class="docs-preview{{ with $class }} {{ . }}{{ end }}">
+    {{- .Inner -}}
+  </div>
+  
+  {{- highlight (trim .Inner "\n") $lang "" -}}
+</div>

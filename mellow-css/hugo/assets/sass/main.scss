@@ -1,1 +1,23 @@
 @import '../../../src/mellow.scss';
+
+.docs-example {
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+
+  .docs-preview {
+    padding: 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .highlight {
+    & > pre {
+      margin: 0;
+      padding: 1rem 1.5rem;
+      border-radius: 0 0 .5rem .5rem;
+      font-size: 14px;
+      line-height: 1.5;
+      font-family: $font-family-mono;
+    }
+  }
+}
