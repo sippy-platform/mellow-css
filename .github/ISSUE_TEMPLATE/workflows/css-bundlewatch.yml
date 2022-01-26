@@ -5,6 +5,9 @@ on:
 jobs:
   bundlewatch:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./mellow-css
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
