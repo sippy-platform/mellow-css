@@ -19,7 +19,8 @@
     "scss:lint:vars": "fusv scss/ hugo/assets/sass/",
     "scss:compile": "node-sass scss -o dist --output-style compressed",
     "scss:copy": "bundle-scss --mask \"scss/mellow.scss\" --dest \"dist/mellow.scss\"",
-    "scss:prefix": "postcss -u autoprefixer -r dist/*.css --map"
+    "scss:prefix": "postcss -u autoprefixer -r dist/*.css --map",
+    "watch": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss:lint scss:compile scss:prefix\""
   },
   "repository": {
     "type": "git",
