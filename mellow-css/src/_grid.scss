@@ -4,22 +4,28 @@
   grid-template-columns: repeat(1, 1fr);
   gap: .5rem;
 
-  // End at 11 because 12 would just result in the default column count
-  @for $i from 2 through 12 {
-    &.grid-#{$i} {
-      grid-template-columns: repeat($i, minmax(0, 1fr));
-    }
-  }
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
-  @for $i from 1 through 12 {
-    .col-#{$i} {
-      grid-column: auto/ span $i;
-    }
-  }
+    @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+      // End at 11 because 12 would just result in the default column count
+      @for $i from 2 through 12 {
+        &.grid#{$breakpoint-suffix}-#{$i} {
+          grid-template-columns: repeat($i, minmax(0, 1fr));
+        }
+      }
 
-  @for $i from 1 through 12 {
-    .col-start-#{$i} {
-      grid-column-start: $i;
+      @for $i from 1 through 12 {
+        .col#{$breakpoint-suffix}-#{$i} {
+          grid-column: auto/ span $i;
+        }
+      }
+
+      @for $i from 1 through 12 {
+        .col-start#{$breakpoint-suffix}-#{$i} {
+          grid-column-start: $i;
+        }
+      }
     }
   }
 }
