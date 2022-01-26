@@ -13,7 +13,7 @@
     "hugo:clean": "rm -rf build resources public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run prod",
-    "prod": "npm run clean && npm run scss",
+    "prod": "npm-run-all clean scss",
     "scss": "npm-run-all scss:lint scss:compile scss:prefix scss:copy",
     "scss:lint": "npm-run-all scss:lint:*",
     "scss:lint:style": "stylelint \"**/*.scss\"",
