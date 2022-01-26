@@ -12,7 +12,7 @@
     "hugo:clean": "rm -rf build resources public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run prod",
-    "prod": "npm run clean && npm run scss",
+    "prod": "npm run scss",
     "scss": "npm run scss:compile && npm run scss:prefix && npm run scss:copy",
     "scss:compile": "node-sass src -o dist --output-style compressed",
     "scss:copy": "bundle-scss --mask \"src/mellow.scss\" --dest \"dist/mellow.scss\"",
