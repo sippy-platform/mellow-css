@@ -44,12 +44,14 @@ $gaps: (
 $font-size-base: 1rem !default;
 $font-size-small: .875em !default; // Relative to its parent
 
-$font-size-h1: $font-size-base * 2.5 !default;
-$font-size-h2: $font-size-base * 2 !default;
-$font-size-h3: $font-size-base * 1.75 !default;
-$font-size-h4: $font-size-base * 1.5 !default;
-$font-size-h5: $font-size-base * 1.25 !default;
-$font-size-h6: $font-size-base !default;
+$font-sizes-heading: (
+  h1: $font-size-base * 2.5,
+  h2: $font-size-base * 2,
+  h3: $font-size-base * 1.75,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base
+) !default;
 
 $font-sizes-marketing: (
   1: 5rem,
