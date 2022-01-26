@@ -1,7 +1,8 @@
 ---
+title: Breakpoints
+description: All you need to know about the breakpoints in Mellow.
 ---
 
-# Breakpoints
 Breakpoints determine at which points Mellow changes the behavior of any breakpoint-related class.
 
 | Breakpoint | Suffix | Pixels |

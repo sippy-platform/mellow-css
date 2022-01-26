@@ -39,3 +39,23 @@ $gaps: (
   4: $gap * 1.5,
   5: $gap * 3,
 ) !default;
+
+// Fonts and typogrpahy
+$font-size-base: 1rem !default;
+$font-size-small: .875em !default; // Relative to its parent
+
+$font-size-h1: $font-size-base * 2.5 !default;
+$font-size-h2: $font-size-base * 2 !default;
+$font-size-h3: $font-size-base * 1.75 !default;
+$font-size-h4: $font-size-base * 1.5 !default;
+$font-size-h5: $font-size-base * 1.25 !default;
+$font-size-h6: $font-size-base !default;
+
+$font-sizes-marketing: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+) !default;
