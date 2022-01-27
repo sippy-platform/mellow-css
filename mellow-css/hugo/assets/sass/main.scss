@@ -11,7 +11,7 @@
     font-size: .875rem;
 
     &:hover {
-      background-color: rgba($blue, .1);
+      background-color: map-get($blues, 50);
       color: inherit;
     }
   }

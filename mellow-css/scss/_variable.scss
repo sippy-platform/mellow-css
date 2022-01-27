@@ -7,6 +7,7 @@ $font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 
 // Colors
 $blues: (
+  50: #e6f0fb,
   100: #cce1f7,
   200: #99c3ef,
   300: #66a4e8,
@@ -19,6 +20,7 @@ $blues: (
 ) !default;
 
 $reds: (
+  50: #fde6ea,
   100: #fbccd5,
   200: #f799ab,
   300: #f04d6c,
@@ -31,6 +33,7 @@ $reds: (
 ) !default;
 
 $greens: (
+  50: #f3ffe0,
   100: #e6f9c9,
   200: #cff497,
   300: #b8ee64,
@@ -43,6 +46,7 @@ $greens: (
 ) !default;
 
 $yellows: (
+  50: #fff8db,
   100: #fff4c2,
   200: #ffea8f,
   300: #ffe15c,
@@ -55,6 +59,7 @@ $yellows: (
 ) !default;
 
 $oranges: (
+  50: #ffd5ae,
   100: #ffca99,
   200: #ffb570,
   300: #ffa048,
@@ -67,10 +72,11 @@ $oranges: (
 ) !default;
 
 $pinks: (
-  100: #fdeef6,
-  200: #f9c5df,
-  300: #f59bc7,
-  400: #f072b0,
+  50: #fdeef6,
+  100: #fbdceb,
+  200: #f8b7d7,
+  300: #f492c2,
+  400: #f06dae,
   500: #ec4899,
   600: #e82384,
   700: #cd1570,
@@ -79,6 +85,7 @@ $pinks: (
 ) !default;
 
 $purples: (
+  50: #f7eefe,
   100: #eeddfd,
   200: #dcbbfc,
   300: #cb99fa,
@@ -91,6 +98,7 @@ $purples: (
 ) !default;
 
 $greys: (
+  50: #f9f9f9,
   100: #f4f4f4,
   200: #e4e4e4,
   300: #d4d4d4,
