@@ -2,7 +2,19 @@
   "extends": "stylelint-config-standard-scss",
   "rules": {
     "at-rule-empty-line-before": null,
+    "at-rule-name-space-after": "always",
+    "at-rule-semicolon-space-before": "never",
+    "color-named": "never",
+    "font-family-name-quotes": "always-where-required",
+    "length-zero-no-unit": true,
     "max-line-length": null,
-    "number-leading-zero": "never"
+    "number-leading-zero": "never",
+    "selector-max-id": 0,
+    "selector-max-universal": 1,
+    "shorthand-property-no-redundant-values": true,
+    "value-list-comma-newline-after": "never-multi-line",
+    "value-list-comma-newline-before": "never-multi-line",
+    "value-list-comma-space-after": "always",
+    "value-no-vendor-prefix": true
   }
 }
