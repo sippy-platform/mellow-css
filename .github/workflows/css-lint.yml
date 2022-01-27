@@ -4,7 +4,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./mellow-css
+    working-directory: mellow-css
 
 jobs:
   lint:
