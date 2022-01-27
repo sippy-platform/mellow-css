@@ -72,7 +72,7 @@ $blues: (
 {{</example>}}
 
 {{<example show_code="false">}}
-<div class="grid grid-2 grid-sm-3">
+<div class="grid grid-2 grid-sm-3 grid-lg-4 grid-xl-5">
   <div>
     <div class="bg-blue-500 p-3 mb-3 text-white">
       <p class="m-0 h6">Blue</p>
