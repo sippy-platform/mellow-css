@@ -1,10 +1,16 @@
 {{- $class := .Get "class" -}}
 {{- $lang := .Get "lang" | default "html" -}}
+{{- $show_preview := .Get "show_preview" | default true -}}
+{{- $show_code := .Get "show_code" | default true -}}
 
 <div class="docs-example">
-  <div class="docs-preview{{ with $class }} {{ . }}{{ end }}">
-    {{- .Inner -}}
-  </div>
-  
-  {{- highlight (trim .Inner "\n") $lang "" -}}
+  {{- if eq $show_preview true -}}
+    <div class="docs-preview{{ with $class }} {{ . }}{{ end }}">
+      {{- .Inner -}}
+    </div>
+  {{- end -}}
+
+  {{- if eq $show_code true -}}
+    {{- highlight (trim .Inner "\n") $lang "" -}}
+  {{- end -}}
 </div>
