@@ -6,7 +6,7 @@
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "scripts": {
-    "bundlewatch": "npm-run-all --serial scss:compile scss:prefix bundlewatch",
+    "bundlewatch": "bundlewatch",
     "clean": "rimraf dist",
     "hugo": "hugo server -s hugo",
     "hugo:build": "hugo -d build -s hugo -d \"../build\"",
