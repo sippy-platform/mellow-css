@@ -6,10 +6,56 @@ $font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 // stylelint-enable value-keyword-case
 
 // Colors
-$primary: #0068d8 !default;
+$blues: (
+  100: #cce1f7,
+  200: #99c3ef,
+  300: #66a4e8,
+  400: #3386e0,
+  500: #0068d8,
+  600: #005ec2,
+  700: #0053ad,
+  800: #004997,
+  900: #003e82
+) !default;
+
+$reds: (
+  100: #fbccd5,
+  200: #f799ab,
+  300: #f04d6c,
+  400: #ee3357,
+  500: #ea002d,
+  600: #d30029,
+  700: #bb0024,
+  800: #a4001f,
+  900: #8c001b
+) !default;
+
+$greys: (
+  100: #f4f4f4,
+  200: #e4e4e4,
+  300: #d4d4d4,
+  400: #a3a3a3,
+  500: #747474,
+  600: #535353,
+  700: #424242,
+  800: #282828,
+  900: #191919
+) !default;
+
+$blue: map-get($blues, 500) !default;
+$red: map-get($reds, 500) !default;
+$grey: map-get($greys, 500) !default;
+
+$colors: (
+  blue: $blue,
+  red: $red,
+  grey: $grey,
+  light: map-get($greys, 100),
+  dark: map-get($greys, 900)
+) !default;
 
 // Anchors
-$anchor-color: $primary !default;
+$anchor-color: $blue !default;
 $anchor-hover-color: #0055b6 !default;
 
 // Grid breakpoints

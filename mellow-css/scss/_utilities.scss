@@ -110,3 +110,13 @@
     }
   }
 }
+
+@each $color-name, $bg-color in $colors {
+  .bg-#{$color-name} {
+    background-color: #{$bg-color};
+  }
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
