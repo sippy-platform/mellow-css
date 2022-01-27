@@ -1,9 +1,7 @@
 ---
-layout: single
+title: Grid
+description: The grid allows you to create layouts anyway you want.
 ---
-
-# Grid system
-The grid allows you to create layouts anyway you want.
 
 ## Grid columns
 By default, the grid will create a CSS grid with 1 column. Every element inserted as a child will take on 1 column if no other classes are given.

@@ -1,7 +1,7 @@
 ---
+title: Mellow CSS
+description: Get started with Mellow CSS.
 ---
-
-# Mellow CSS
 
 To get started with Mellow CSS, install it through npm.
 

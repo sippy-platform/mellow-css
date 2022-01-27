@@ -1,7 +1,7 @@
 ---
+title: Vivify
+description: The CSS reset used by Mellow is a simple and clean fresh start for all browsers to build amazing designs.
 ---
-
-# Vivify
 
 `vivify` is Mellow's CSS reset. It takes care of a number of important inconsistencies with the goal to provide a usable default environment for unstyled HTML.
 
