@@ -2,7 +2,7 @@
   $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
   @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    @each $key, $value in $gaps {
+    @each $key, $value in $spacers {
       // Margin
       &.m#{$breakpoint-suffix}-#{$key} {
         margin: #{$value};
