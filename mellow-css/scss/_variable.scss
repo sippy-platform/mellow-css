@@ -30,6 +30,66 @@ $reds: (
   900: #8c001b
 ) !default;
 
+$greens: (
+  100: #e6f9c9,
+  200: #cff497,
+  300: #b8ee64,
+  400: #a0e931,
+  500: #7acc00,
+  600: #6fac13,
+  700: #5a8c0f,
+  800: #456b0c,
+  900: #314b08
+) !default;
+
+$yellows: (
+  100: #fff4c2,
+  200: #ffea8f,
+  300: #ffe15c,
+  400: #ffd829,
+  500: #f5c800,
+  600: #d1ab00,
+  700: #ae8e00,
+  800: #8a7100,
+  900: #665300
+) !default;
+
+$oranges: (
+  100: #ffca99,
+  200: #ffb570,
+  300: #ffa048,
+  400: #ff8b1f,
+  500: #f57600,
+  600: #bd5b00,
+  700: #854000,
+  800: #4d2500,
+  900: #150a00
+) !default;
+
+$pinks: (
+  100: #fdeef6,
+  200: #f9c5df,
+  300: #f59bc7,
+  400: #f072b0,
+  500: #ec4899,
+  600: #e82384,
+  700: #cd1570,
+  800: #a8115c,
+  900: #830e48
+) !default;
+
+$purples: (
+  100: #eeddfd,
+  200: #dcbbfc,
+  300: #cb99fa,
+  400: #b977f9,
+  500: #a855f7,
+  600: #942ef5,
+  700: #800bef,
+  800: #6b09c8,
+  900: #5608a1
+) !default;
+
 $greys: (
   100: #f4f4f4,
   200: #e4e4e4,
@@ -44,11 +104,21 @@ $greys: (
 
 $blue: map-get($blues, 500) !default;
 $red: map-get($reds, 500) !default;
+$green: map-get($greens, 500) !default;
+$yellow: map-get($yellows, 500) !default;
+$orange: map-get($oranges, 500) !default;
+$pink: map-get($pinks, 500) !default;
+$purple: map-get($purples, 500) !default;
 $grey: map-get($greys, 500) !default;
 
 $colors: (
   blue: $blue,
   red: $red,
+  green: $green,
+  yellow: $yellow,
+  orange: $orange,
+  pink: $pink,
+  purple: $purple,
   grey: $grey,
   light: map-get($greys, 100),
   dark: map-get($greys, 900),
