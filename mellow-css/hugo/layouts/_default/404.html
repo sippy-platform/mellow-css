@@ -6,17 +6,19 @@
   <body>
     {{ partialCached "navbar" . }}
 
-    <main class="container">
+    <main class="container pt-3">
       <div class="grid grid-12">
         <div class="col-12 col-md-4 col-lg-2">
           {{ partialCached "navigation" . }}
         </div>
-        <div class="col-12 col-md-8 col-lg-10">
+        <div class="col-12 col-md-8 col-lg-10 docs-content">
+          <h1>{{ .Title }}</h1>
+          <p class="lead">{{ .Description }}</p>
           {{ .Content }}
         </div>
       </div>
     </main>
-    
+
     {{ partialCached "footer" . }}
   </body>
 </html>

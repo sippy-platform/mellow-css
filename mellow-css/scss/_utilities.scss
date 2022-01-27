@@ -4,19 +4,108 @@
   @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
     @each $key, $value in $spacers {
       // Margin
-      &.m#{$breakpoint-suffix}-#{$key} {
+      .m#{$breakpoint-suffix}-#{$key} {
         margin: #{$value};
       }
 
       @if ($key >= 1) {
-        &.m#{$breakpoint-suffix}-n#{$key} {
+        .m#{$breakpoint-suffix}-n#{$key} {
           margin: -#{$value};
         }
       }
 
+      .mx#{$breakpoint-suffix}-#{$key} {
+        margin-left: #{$value};
+        margin-right: #{$value};
+      }
+
+      @if ($key >= 1) {
+        .mx#{$breakpoint-suffix}-n#{$key} {
+          margin-left: -#{$value};
+          margin-right: -#{$value};
+        }
+      }
+
+      .my#{$breakpoint-suffix}-#{$key} {
+        margin-top: #{$value};
+        margin-bottom: #{$value};
+      }
+
+      @if ($key >= 1) {
+        .my#{$breakpoint-suffix}-n#{$key} {
+          margin-top: -#{$value};
+          margin-bottom: -#{$value};
+        }
+      }
+
+      .mt#{$breakpoint-suffix}-#{$key} {
+        margin-top: #{$value};
+      }
+
+      @if ($key >= 1) {
+        .mt#{$breakpoint-suffix}-n#{$key} {
+          margin-top: -#{$value};
+        }
+      }
+
+      .me#{$breakpoint-suffix}-#{$key} {
+        margin-right: #{$value};
+      }
+
+      @if ($key >= 1) {
+        .me#{$breakpoint-suffix}-n#{$key} {
+          margin-right: -#{$value};
+        }
+      }
+      .mb#{$breakpoint-suffix}-#{$key} {
+        margin-bottom: #{$value};
+      }
+
+      @if ($key >= 1) {
+        .mb#{$breakpoint-suffix}-n#{$key} {
+          margin-bottom: -#{$value};
+        }
+      }
+
+      .ms#{$breakpoint-suffix}-#{$key} {
+        margin-left: #{$value};
+      }
+
+      @if ($key >= 1) {
+        .ms#{$breakpoint-suffix}-n#{$key} {
+          margin-left: -#{$value};
+        }
+      }
+
       // Padding
-      &.p#{$breakpoint-suffix}-#{$key} {
+      .p#{$breakpoint-suffix}-#{$key} {
         padding: #{$value};
+      }
+
+      .px#{$breakpoint-suffix}-#{$key} {
+        padding-left: #{$value};
+        padding-right: #{$value};
+      }
+
+      .py#{$breakpoint-suffix}-#{$key} {
+        padding-top: #{$value};
+        padding-bottom: #{$value};
+      }
+
+      .pt#{$breakpoint-suffix}-#{$key} {
+        padding-top: #{$value};
+      }
+
+      .pe#{$breakpoint-suffix}-#{$key} {
+        padding-right: #{$value};
+      }
+
+      .pb#{$breakpoint-suffix}-#{$key} {
+        padding-bottom: #{$value};
+      }
+
+      .ps#{$breakpoint-suffix}-#{$key} {
+        padding-left: #{$value};
       }
     }
   }
