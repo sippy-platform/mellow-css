@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sippy-platform/mellow-ui.git"
+    "url": "git+https://github.com/sippy-platform/mellow.git"
   },
   "files": [
     "/dist"
@@ -36,9 +36,9 @@
   "author": "",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/sippy-platform/mellow-ui/issues"
+    "url": "https://github.com/sippy-platform/mellow/issues"
   },
-  "homepage": "https://sippy-platform.github.io/mellow-ui",
+  "homepage": "https://sippy-platform.github.io/mellow",
   "devDependencies": {
     "autoprefixer": "10.4.2",
     "bundle-scss": "1.5.1",
