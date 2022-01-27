@@ -32,5 +32,5 @@ body:
       options:
         - label: This is a single feature.
           required: true
-        - label: I have [searched the issues](https://github.com/sippy-playform/mellow-ui/issues) for any possible duplications of this feature request.
+        - label: I have [searched the issues](https://github.com/sippy-playform/mellow/issues) for any possible duplications of this feature request.
           required: true
