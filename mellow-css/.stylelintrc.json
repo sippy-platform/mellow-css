@@ -15,6 +15,9 @@
     "value-list-comma-newline-after": "never-multi-line",
     "value-list-comma-newline-before": "never-multi-line",
     "value-list-comma-space-after": "always",
-    "value-no-vendor-prefix": true
+    "value-no-vendor-prefix": true,
+    "scss/at-extend-no-missing-placeholder": null,
+    "scss/at-rule-conditional-no-parentheses": null,
+    "scss/no-global-function-names": null
   }
 }

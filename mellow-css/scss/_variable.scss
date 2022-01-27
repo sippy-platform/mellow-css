@@ -9,7 +9,7 @@ $font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 $primary: #0068d8 !default;
 
 // Anchors
-$anchor-color: #07f !default;
+$anchor-color: $primary !default;
 $anchor-hover-color: #0055b6 !default;
 
 // Grid breakpoints
