@@ -6,17 +6,22 @@
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "scripts": {
+    "bundlewatch": "bundlewatch",
     "clean": "rimraf dist",
     "hugo": "hugo server -s hugo",
     "hugo:build": "hugo -d build -s hugo -d \"../build\"",
     "hugo:clean": "rm -rf build resources public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run prod",
-    "prod": "npm run scss",
-    "scss": "npm run scss:compile && npm run scss:prefix && npm run scss:copy",
-    "scss:compile": "node-sass src -o dist --output-style compressed",
-    "scss:copy": "bundle-scss --mask \"src/mellow.scss\" --dest \"dist/mellow.scss\"",
-    "scss:prefix": "postcss -u autoprefixer -r dist/*.css --map"
+    "prod": "npm-run-all clean scss",
+    "scss": "npm-run-all scss:lint scss:compile scss:prefix scss:copy",
+    "scss:lint": "npm-run-all scss:lint:*",
+    "scss:lint:style": "stylelint \"**/*.scss\"",
+    "scss:lint:vars": "fusv scss/ hugo/assets/sass/",
+    "scss:compile": "node-sass scss -o dist --output-style compressed",
+    "scss:copy": "bundle-scss --mask \"scss/mellow.scss\" --dest \"dist/mellow.scss\"",
+    "scss:prefix": "postcss -u autoprefixer -r dist/*.css --map",
+    "watch": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss:lint scss:compile scss:prefix\""
   },
   "repository": {
     "type": "git",
@@ -35,18 +40,22 @@
   },
   "homepage": "https://sippy-platform.github.io/mellow-ui",
   "devDependencies": {
-    "autoprefixer": "^10.3.7",
-    "bundle-scss": "^1.5.0",
-    "clsx": "^1.1.1",
-    "copyfiles": "^2.4.1",
+    "autoprefixer": "10.4.2",
+    "bundle-scss": "1.5.1",
+    "bundlewatch": "^0.3.3",
+    "clsx": "1.1.1",
+    "copyfiles": "2.4.1",
+    "find-unused-sass-variables": "^3.1.0",
     "hugo-bin-extended": "0.92.0",
-    "node-sass": "^6.0.1",
-    "nodemon": "^2.0.14",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.3.11",
-    "postcss-cli": "^9.0.1",
-    "rimraf": "^3.0.2",
-    "sass": "^1.43.3"
+    "node-sass": "7.0.1",
+    "nodemon": "2.0.15",
+    "npm-run-all": "4.1.5",
+    "postcss": "8.4.5",
+    "postcss-cli": "9.1.0",
+    "rimraf": "3.0.2",
+    "sass": "1.49.0",
+    "stylelint": "14.3.0",
+    "stylelint-config-standard-scss": "3.0.0"
   },
   "browserslist": {
     "production": [
@@ -58,5 +67,13 @@
   "sideEffects": false,
   "hugo-bin": {
     "buildTags": "extended"
+  },
+  "bundlewatch": {
+    "files": [
+      {
+        "path": "dist/*.css",
+        "maxSize": "20kB"
+      }
+    ]
   }
 }
