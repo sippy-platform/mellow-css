@@ -9,11 +9,12 @@
   // Create the various container breakpoint classes with their max-width
   .container-#{$breakpoint} {
     @extend .container-fluid;
+
     max-width: $container-max-width;
   }
 
   @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    %undoc__container-#{$breakpoint} {
+    %container-#{$breakpoint} {
       max-width: $container-max-width;
     }
 
@@ -22,7 +23,7 @@
     @each $breakpoint-name, $width in $grid-breakpoints {
       @if ($include-next) {
         .container#{breakpoint-suffix($breakpoint-name, $grid-breakpoints)} {
-          @extend %undoc__container-#{$breakpoint};
+          @extend %container-#{$breakpoint};
         }
 
         @if ($breakpoint == $breakpoint-name) {
