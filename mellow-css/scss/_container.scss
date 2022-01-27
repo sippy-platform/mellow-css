@@ -1,0 +1,35 @@
+.container,
+.container-fluid {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@each $breakpoint, $container-max-width in $container-max-widths {
+  // Create the various container breakpoint classes with their max-width
+  .container-#{$breakpoint} {
+    @extend .container-fluid;
+
+    max-width: $container-max-width;
+  }
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    %container-#{$breakpoint} {
+      max-width: $container-max-width;
+    }
+
+    $include-next: true;
+
+    @each $breakpoint-name, $width in $grid-breakpoints {
+      @if ($include-next) {
+        .container#{breakpoint-suffix($breakpoint-name, $grid-breakpoints)} {
+          @extend %container-#{$breakpoint};
+        }
+
+        @if ($breakpoint == $breakpoint-name) {
+          $include-next: false;
+        }
+      }
+    }
+  }
+}
