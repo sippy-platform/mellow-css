@@ -20,7 +20,5 @@ jobs:
           cache-dependency-path: ./mellow-css/package-lock.json
       - name: Install dependencies
         run: npm ci
-      - name: Run scss
-        run: npm run scss
       - name: Run bundlewatch
         run: npm run bundlewatch
