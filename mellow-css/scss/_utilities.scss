@@ -1,0 +1,23 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    @each $key, $value in $gaps {
+      // Margin
+      &.m#{$breakpoint-suffix}-#{$key} {
+        margin: #{$value};
+      }
+
+      @if ($key >= 1) {
+        &.m#{$breakpoint-suffix}-n#{$key} {
+          margin: -#{$value};
+        }
+      }
+
+      // Padding
+      &.p#{$breakpoint-suffix}-#{$key} {
+        padding: #{$value};
+      }
+    }
+  }
+}
