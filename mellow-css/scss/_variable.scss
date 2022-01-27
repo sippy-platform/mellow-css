@@ -110,14 +110,25 @@ $greys: (
   900: #191919
 ) !default;
 
-$blue: map-get($blues, 500) !default;
-$red: map-get($reds, 500) !default;
-$green: map-get($greens, 500) !default;
-$yellow: map-get($yellows, 500) !default;
-$orange: map-get($oranges, 500) !default;
-$pink: map-get($pinks, 500) !default;
-$purple: map-get($purples, 500) !default;
-$grey: map-get($greys, 500) !default;
+$palettes: (
+  "blue": $blues,
+  "red": $reds,
+  "green": $greens,
+  "yellow": $yellows,
+  "orange": $oranges,
+  "pink": $pinks,
+  "purple": $purples,
+  "grey": $greys
+);
+
+$blue: map-get(map-get($palettes, "blue"), 500) !default;
+$red: map-get(map-get($palettes, "red"), 500) !default;
+$green: map-get(map-get($palettes, "green"), 500) !default;
+$yellow: map-get(map-get($palettes, "yellow"), 500) !default;
+$orange: map-get(map-get($palettes, "orange"), 500) !default;
+$pink: map-get(map-get($palettes, "pink"), 500) !default;
+$purple: map-get(map-get($palettes, "purple"), 500) !default;
+$grey: map-get(map-get($palettes, "grey"), 500) !default;
 
 $colors: (
   blue: $blue,
