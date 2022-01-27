@@ -51,7 +51,8 @@ $colors: (
   red: $red,
   grey: $grey,
   light: map-get($greys, 100),
-  dark: map-get($greys, 900)
+  dark: map-get($greys, 900),
+  white: #fff
 ) !default;
 
 // Anchors
