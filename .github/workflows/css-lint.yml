@@ -2,12 +2,13 @@ name: CSS SCSS Stylelint
 on:
   pull_request:
 
+defaults:
+  run:
+    working-directory: ./mellow-css
+
 jobs:
   lint:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./mellow-css
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
