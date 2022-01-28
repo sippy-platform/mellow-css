@@ -9,7 +9,7 @@ The main color set has `text-*` and `bg-*` classes available in our [text color]
 {{<example show_code="false">}}
 <div class="grid grid-2 grid-sm-3">
   <div class="bg-blue text-white p-3">Blue</div>
-  <div class="bg-purple text-white p-3">Purpole</div>
+  <div class="bg-purple text-white p-3">Purple</div>
   <div class="bg-pink p-3">Pink</div>
   <div class="bg-red text-white p-3">Red</div>
   <div class="bg-orange p-3">Orange</div>
