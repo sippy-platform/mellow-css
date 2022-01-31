@@ -126,3 +126,16 @@
     color: #{$text-color};
   }
 }
+
+@each $level, $box-shadow in $box-shadows {
+  .shadow-#{$level} {
+    box-shadow: #{$box-shadow};
+  }
+}
+
+@each $level, $box-shadow in $box-shadows {
+  .elevation-#{$level} {
+    box-shadow: #{$box-shadow};
+    background-color: map-get($elevations-dark, $level);
+  }
+}
