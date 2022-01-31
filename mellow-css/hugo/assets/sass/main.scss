@@ -61,6 +61,30 @@
         }
       }
     }
+
+    &.docs-preview-border {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: .5rem;
+
+      [class^="border"] {
+        width: 100px;
+        height: 100px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        background-color: map-get($greys, 50);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &.bordered {
+        [class^="border"] {
+          border: 1px solid map-get($greys, 200);
+        }
+      }
+    }
   }
 
   .highlight {

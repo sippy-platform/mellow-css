@@ -5,115 +5,116 @@
     @each $key, $value in $spacers {
       // Margin
       .m#{$breakpoint-suffix}-#{$key} {
-        margin: #{$value};
+        margin: #{$value} !important;
       }
 
       @if ($key >= 1) {
         .m#{$breakpoint-suffix}-n#{$key} {
-          margin: -#{$value};
+          margin: -#{$value} !important;
         }
       }
 
       .mx#{$breakpoint-suffix}-#{$key} {
-        margin-left: #{$value};
-        margin-right: #{$value};
+        margin-left: #{$value} !important;
+        margin-right: #{$value} !important;
       }
 
       @if ($key >= 1) {
         .mx#{$breakpoint-suffix}-n#{$key} {
-          margin-left: -#{$value};
-          margin-right: -#{$value};
+          margin-left: -#{$value} !important;
+          margin-right: -#{$value} !important;
         }
       }
 
       .my#{$breakpoint-suffix}-#{$key} {
-        margin-top: #{$value};
-        margin-bottom: #{$value};
+        margin-top: #{$value} !important;
+        margin-bottom: #{$value} !important;
       }
 
       @if ($key >= 1) {
         .my#{$breakpoint-suffix}-n#{$key} {
-          margin-top: -#{$value};
-          margin-bottom: -#{$value};
+          margin-top: -#{$value} !important;
+          margin-bottom: -#{$value} !important;
         }
       }
 
       .mt#{$breakpoint-suffix}-#{$key} {
-        margin-top: #{$value};
+        margin-top: #{$value} !important;
       }
 
       @if ($key >= 1) {
         .mt#{$breakpoint-suffix}-n#{$key} {
-          margin-top: -#{$value};
+          margin-top: -#{$value} !important;
         }
       }
 
       .me#{$breakpoint-suffix}-#{$key} {
-        margin-right: #{$value};
+        margin-right: #{$value} !important;
       }
 
       @if ($key >= 1) {
         .me#{$breakpoint-suffix}-n#{$key} {
-          margin-right: -#{$value};
+          margin-right: -#{$value} !important;
         }
       }
       .mb#{$breakpoint-suffix}-#{$key} {
-        margin-bottom: #{$value};
+        margin-bottom: #{$value} !important;
       }
 
       @if ($key >= 1) {
         .mb#{$breakpoint-suffix}-n#{$key} {
-          margin-bottom: -#{$value};
+          margin-bottom: -#{$value} !important;
         }
       }
 
       .ms#{$breakpoint-suffix}-#{$key} {
-        margin-left: #{$value};
+        margin-left: #{$value} !important;
       }
 
       @if ($key >= 1) {
         .ms#{$breakpoint-suffix}-n#{$key} {
-          margin-left: -#{$value};
+          margin-left: -#{$value} !important;
         }
       }
 
       // Padding
       .p#{$breakpoint-suffix}-#{$key} {
-        padding: #{$value};
+        padding: #{$value} !important;
       }
 
       .px#{$breakpoint-suffix}-#{$key} {
-        padding-left: #{$value};
-        padding-right: #{$value};
+        padding-left: #{$value} !important;
+        padding-right: #{$value} !important;
       }
 
       .py#{$breakpoint-suffix}-#{$key} {
-        padding-top: #{$value};
-        padding-bottom: #{$value};
+        padding-top: #{$value} !important;
+        padding-bottom: #{$value} !important;
       }
 
       .pt#{$breakpoint-suffix}-#{$key} {
-        padding-top: #{$value};
+        padding-top: #{$value} !important;
       }
 
       .pe#{$breakpoint-suffix}-#{$key} {
-        padding-right: #{$value};
+        padding-right: #{$value} !important;
       }
 
       .pb#{$breakpoint-suffix}-#{$key} {
-        padding-bottom: #{$value};
+        padding-bottom: #{$value} !important;
       }
 
       .ps#{$breakpoint-suffix}-#{$key} {
-        padding-left: #{$value};
+        padding-left: #{$value} !important;
       }
     }
   }
 }
 
+// Background colors
 @each $color-name, $bg-color in $colors {
   .bg-#{$color-name} {
-    background-color: #{$bg-color};
+    background-color: #{$bg-color} !important;
   }
 }
 
@@ -121,21 +122,114 @@
   background-color: transparent;
 }
 
+// Text colors
 @each $color-name, $text-color in $colors {
   .text-#{$color-name} {
-    color: #{$text-color};
+    color: #{$text-color} !important;
   }
 }
 
+// Elevation
 @each $level, $box-shadow in $box-shadows {
   .shadow-#{$level} {
-    box-shadow: #{$box-shadow};
+    box-shadow: #{$box-shadow} !important;
   }
 }
 
 @each $level, $box-shadow in $box-shadows {
   .elevation-#{$level} {
-    box-shadow: #{$box-shadow};
-    background-color: map-get($elevations-dark, $level);
+    box-shadow: #{$box-shadow} !important;
+    background-color: map-get($elevations-dark, $level) !important;
   }
+}
+
+// Borders
+%border-style {
+  border-color: $border-color;
+  border-style: solid;
+  border-width: 0;
+}
+
+.border {
+  @extend %border-style;
+
+  border-width: $border-width !important;
+}
+
+.border-top {
+  @extend %border-style;
+
+  border-top-width: $border-width !important;
+}
+
+.border-end {
+  @extend %border-style;
+
+  border-right-width: $border-width !important;
+}
+
+.border-bottom {
+  @extend %border-style;
+
+  border-bottom-width: $border-width !important;
+}
+
+.border-start {
+  @extend %border-style;
+
+  border-left-width: $border-width !important;
+}
+
+@each $level, $border-width in $border-widths {
+  .border-#{$level} {
+    border-width: #{$border-width} !important;
+  }
+}
+
+.border-0 {
+  border-width: 0 !important;
+}
+
+.border-top-0 {
+  border-top-width: 0 !important;
+}
+
+.border-end-0 {
+  border-right-width: 0 !important;
+}
+
+.border-bottom-0 {
+  border-bottom-width: 0 !important;
+}
+
+.border-start-0 {
+  border-left-width: 0 !important;
+}
+
+@each $color-name, $border-color in $colors {
+  .border-#{$color-name} {
+    border-color: #{$border-color} !important;
+  }
+}
+
+@each $width-key, $border-width in $border-widths {
+  .border-#{$width-key} {
+    border-width: #{$border-width} !important;
+  }
+}
+
+.border-radius-sm {
+  border-radius: $border-radius-sm !important;
+}
+
+.border-radius {
+  border-radius: $border-radius !important;
+}
+
+.border-radius-lg {
+  border-radius: $border-radius-lg !important;
+}
+
+.border-radius-pill {
+  border-radius: $border-radius-pill !important;
 }
