@@ -55,4 +55,3 @@ Every `border-*`-class has also an inverse version that removes the border.
 <div class="border border-radius-lg"></div>
 <div class="border border-radius-pill"></div>
 {{</example>}}
-

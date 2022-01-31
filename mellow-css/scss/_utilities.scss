@@ -237,3 +237,81 @@
 .border-radius-pill {
   border-radius: $border-radius-pill !important;
 }
+
+// Display
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    @each $display-type in $display-types {
+      .d#{$breakpoint-suffix}-#{$display-type} {
+        display: $display-type !important;
+      }
+    }
+  }
+}
+
+// Flex
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    .flex#{$breakpoint-suffix}-1 {
+      flex: 1 !important;
+    }
+
+    .flex#{$breakpoint-suffix}-auto {
+      flex: auto !important;
+    }
+
+    .flex#{$breakpoint-suffix}-grow-0 {
+      flex-grow: 0 !important;
+    }
+
+    .flex#{$breakpoint-suffix}-shrink-0 {
+      flex-shrink: 0 !important;
+    }
+
+    @each $flex-direction in $flex-directions {
+      .flex#{$breakpoint-suffix}-#{$flex-direction} {
+        flex-direction: $flex-direction !important;
+      }
+    }
+
+    @each $flex-wrap in $flex-wraps {
+      .flex#{$breakpoint-suffix}-#{$flex-wrap} {
+        flex-wrap: $flex-wrap !important;
+      }
+    }
+
+    @each $justify-name, $justify-value in $flex-justifies-content {
+      .flex-justify#{$breakpoint-suffix}-#{$justify-name} {
+        justify-items: $justify-value !important;
+      }
+    }
+
+    @each $align-name, $align-value in $flex-aligns-items {
+      .flex-items#{$breakpoint-suffix}-#{$align-name} {
+        align-items: $align-value !important;
+      }
+    }
+
+    @each $align-name, $align-value in $flex-aligns-content {
+      .flex-content#{$breakpoint-suffix}-#{$align-name} {
+        align-content: $align-value !important;
+      }
+    }
+
+    @each $align-name, $align-value in $flex-aligns-self {
+      .flex-self#{$breakpoint-suffix}-#{$align-name} {
+        align-self: $align-value !important;
+      }
+    }
+
+    @each $order-name, $order-value in $flex-orders {
+      .order#{$breakpoint-suffix}-#{$order-name} {
+        order: $order-value !important;
+      }
+    }
+  }
+}
