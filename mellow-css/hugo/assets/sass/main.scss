@@ -66,6 +66,53 @@
         }
       }
     }
+
+    &.docs-preview-flex {
+      .d-flex,
+      .d-inline-flex {
+        border-radius: .5rem;
+        background-image: linear-gradient(45deg, rgba($orange, .4) 10%, transparent 0, transparent 50%, rgba($orange, .4) 0, rgba($orange, .4) 60%, transparent 0, transparent);
+        background-size: 6px 6px;
+
+        & > * {
+          padding: .75rem 0;
+          background: rgba($orange, .1);
+          border: 1px solid $orange;
+          text-align: center;
+          border-radius: .5rem;
+          backdrop-filter: blur(2px);
+
+          &.md-item {
+            padding: 1rem;
+            align-content: center;
+          }
+        }
+      }
+    }
+
+    &.docs-preview-border {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: .5rem;
+
+      [class^="border"] {
+        width: 100px;
+        height: 100px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        background-color: map-get($greys, 50);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &.bordered {
+        [class^="border"] {
+          border: 1px solid map-get($greys, 200);
+        }
+      }
+    }
   }
 
   .highlight {
