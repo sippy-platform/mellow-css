@@ -315,3 +315,10 @@
     }
   }
 }
+
+// Opacity
+@each $level, $opacity in $opacities {
+  .opacity-#{$level} {
+    opacity: #{$opacity} !important;
+  }
+}

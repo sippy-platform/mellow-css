@@ -10,7 +10,7 @@ The general notation for these utility classes goes like this:
 
 As per usual, the `xs`-breakpoint is omitted because it has the same effect as not including a responsive modifier at all.
 
-Mellow supports the following properties=
+Mellow supports the following properties:
 
 * `block`
 * `flex`
