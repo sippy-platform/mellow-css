@@ -286,7 +286,7 @@
 
     @each $justify-name, $justify-value in $flex-justifies-content {
       .flex-justify#{$breakpoint-suffix}-#{$justify-name} {
-        justify-items: $justify-value !important;
+        justify-content: $justify-value !important;
       }
     }
 
