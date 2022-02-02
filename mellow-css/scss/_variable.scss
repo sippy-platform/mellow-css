@@ -255,6 +255,13 @@ $display-types: (
   none
 );
 
+// Float
+$floats: (
+  start: left,
+  end: right,
+  none: none
+);
+
 // Flex
 $flex-directions: (
   row,

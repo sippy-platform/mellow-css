@@ -22,3 +22,20 @@ The `d-*`-classes allow you to control what display type an element should be. L
 </div>
 <div class="d-grid border">.d-grid</div>
 {{</example>}}
+
+## Float
+Use the `.float-start` and `.float-end` classes to set floats, and `.clearfix` to clear. The float classes also have support for responsive variants in the form of `float-<breakpoint>-*`.
+
+{{<example>}}
+<div class="clearfix border">
+  <div class="float-start border">
+    .float-start
+  </div>
+  <div class="float-end border">
+    .float-end
+  </div>
+  <div class="float-none border">
+    .float-none
+  </div>
+</div>
+{{</example>}}

@@ -322,3 +322,24 @@
     opacity: #{$opacity} !important;
   }
 }
+
+// Float
+.clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    @each $float-name, $float-value in $floats {
+      .float#{$breakpoint-suffix}-#{$float-name} {
+        float: $float-value !important;
+      }
+    }
+  }
+}
