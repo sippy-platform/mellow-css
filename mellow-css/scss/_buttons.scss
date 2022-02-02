@@ -1,0 +1,67 @@
+// Base button
+.btn {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  padding: .365rem .75rem;
+  font-size: .875rem;
+  border-radius: $border-radius-sm;
+  box-shadow: $btn-box-shadow, $btn-box-shadow-inset;
+  line-height: 1.5;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+  &.btn-primary,
+  &.btn-secondary,
+  &.btn-danger,
+  &.btn-success {
+    font-weight: 600;
+  }
+
+  &.btn-danger {
+    color: #{map-get($reds, 500)};
+  }
+
+  &.btn-secondary,
+  &.btn-danger {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  &.btn-primary {
+    background-color: #{map-get($accent, 500)};
+    border: 1px solid #{map-get($accent, 600)};
+
+    &:hover {
+      background-color: #{map-get($accent, 600)};
+      border-color: #{map-get($accent, 700)};
+    }
+  }
+
+  &.btn-success {
+    background-color: #{map-get($greens, 500)};
+    border: 1px solid #{map-get($greens, 600)};
+
+    &:hover {
+      background-color: #{map-get($greens, 600)};
+      border-color: #{map-get($greens, 700)};
+    }
+  }
+
+  @each $color-name, $color in $palettes {
+    &.btn-#{$color-name} {
+      background-color: #{map-get($color, 500)};
+      color: #fff;
+      font-weight: 600;
+
+      &:hover {
+        background-color: #{map-get($color, 600)};
+      }
+    }
+  }
+}
