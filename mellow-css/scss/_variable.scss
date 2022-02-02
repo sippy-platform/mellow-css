@@ -378,3 +378,11 @@ $font-weights: (
   bold: 700,
   bolder: bolder
 );
+
+// Overflow
+$overflows: (
+  auto,
+  hidden,
+  visible,
+  scroll
+);

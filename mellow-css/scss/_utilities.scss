@@ -452,3 +452,10 @@
 .fs-normal {
   font-style: normal !important;
 }
+
+// Overflows
+@each $overflow in $overflows {
+  .overflow-#{$overflow} {
+    overflow: #{$overflow} !important;
+  }
+}
