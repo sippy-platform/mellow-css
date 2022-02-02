@@ -1,0 +1,468 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    @each $key, $value in $spacers {
+      // Margin
+      .m#{$breakpoint-suffix}-#{$key} {
+        margin: #{$value} !important;
+      }
+
+      @if ($key >= 1) {
+        .m#{$breakpoint-suffix}-n#{$key} {
+          margin: -#{$value} !important;
+        }
+      }
+
+      .mx#{$breakpoint-suffix}-#{$key} {
+        margin-left: #{$value} !important;
+        margin-right: #{$value} !important;
+      }
+
+      @if ($key >= 1) {
+        .mx#{$breakpoint-suffix}-n#{$key} {
+          margin-left: -#{$value} !important;
+          margin-right: -#{$value} !important;
+        }
+      }
+
+      .my#{$breakpoint-suffix}-#{$key} {
+        margin-top: #{$value} !important;
+        margin-bottom: #{$value} !important;
+      }
+
+      @if ($key >= 1) {
+        .my#{$breakpoint-suffix}-n#{$key} {
+          margin-top: -#{$value} !important;
+          margin-bottom: -#{$value} !important;
+        }
+      }
+
+      .mt#{$breakpoint-suffix}-#{$key} {
+        margin-top: #{$value} !important;
+      }
+
+      @if ($key >= 1) {
+        .mt#{$breakpoint-suffix}-n#{$key} {
+          margin-top: -#{$value} !important;
+        }
+      }
+
+      .me#{$breakpoint-suffix}-#{$key} {
+        margin-right: #{$value} !important;
+      }
+
+      @if ($key >= 1) {
+        .me#{$breakpoint-suffix}-n#{$key} {
+          margin-right: -#{$value} !important;
+        }
+      }
+      .mb#{$breakpoint-suffix}-#{$key} {
+        margin-bottom: #{$value} !important;
+      }
+
+      @if ($key >= 1) {
+        .mb#{$breakpoint-suffix}-n#{$key} {
+          margin-bottom: -#{$value} !important;
+        }
+      }
+
+      .ms#{$breakpoint-suffix}-#{$key} {
+        margin-left: #{$value} !important;
+      }
+
+      @if ($key >= 1) {
+        .ms#{$breakpoint-suffix}-n#{$key} {
+          margin-left: -#{$value} !important;
+        }
+      }
+
+      // Padding
+      .p#{$breakpoint-suffix}-#{$key} {
+        padding: #{$value} !important;
+      }
+
+      .px#{$breakpoint-suffix}-#{$key} {
+        padding-left: #{$value} !important;
+        padding-right: #{$value} !important;
+      }
+
+      .py#{$breakpoint-suffix}-#{$key} {
+        padding-top: #{$value} !important;
+        padding-bottom: #{$value} !important;
+      }
+
+      .pt#{$breakpoint-suffix}-#{$key} {
+        padding-top: #{$value} !important;
+      }
+
+      .pe#{$breakpoint-suffix}-#{$key} {
+        padding-right: #{$value} !important;
+      }
+
+      .pb#{$breakpoint-suffix}-#{$key} {
+        padding-bottom: #{$value} !important;
+      }
+
+      .ps#{$breakpoint-suffix}-#{$key} {
+        padding-left: #{$value} !important;
+      }
+    }
+  }
+}
+
+// Background colors
+@each $color-name, $bg-color in $colors {
+  .bg-#{$color-name} {
+    background-color: #{$bg-color} !important;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+// Text colors
+@each $color-name, $text-color in $colors {
+  .text-#{$color-name} {
+    color: #{$text-color} !important;
+  }
+}
+
+// Elevation
+@each $level, $box-shadow in $box-shadows {
+  .shadow-#{$level} {
+    box-shadow: #{$box-shadow} !important;
+  }
+}
+
+@each $level, $box-shadow in $box-shadows {
+  .elevation-#{$level} {
+    box-shadow: #{$box-shadow} !important;
+    background-color: map-get($elevations-dark, $level) !important;
+  }
+}
+
+// Borders
+%border-style {
+  border-color: $border-color;
+  border-style: solid;
+  border-width: 0;
+}
+
+.border {
+  @extend %border-style;
+
+  border-width: $border-width !important;
+}
+
+.border-top {
+  @extend %border-style;
+
+  border-top-width: $border-width !important;
+}
+
+.border-end {
+  @extend %border-style;
+
+  border-right-width: $border-width !important;
+}
+
+.border-bottom {
+  @extend %border-style;
+
+  border-bottom-width: $border-width !important;
+}
+
+.border-start {
+  @extend %border-style;
+
+  border-left-width: $border-width !important;
+}
+
+@each $level, $border-width in $border-widths {
+  .border-#{$level} {
+    border-width: #{$border-width} !important;
+  }
+}
+
+.border-0 {
+  border-width: 0 !important;
+}
+
+.border-top-0 {
+  border-top-width: 0 !important;
+}
+
+.border-end-0 {
+  border-right-width: 0 !important;
+}
+
+.border-bottom-0 {
+  border-bottom-width: 0 !important;
+}
+
+.border-start-0 {
+  border-left-width: 0 !important;
+}
+
+@each $color-name, $border-color in $colors {
+  .border-#{$color-name} {
+    border-color: #{$border-color} !important;
+  }
+}
+
+@each $width-key, $border-width in $border-widths {
+  .border-#{$width-key} {
+    border-width: #{$border-width} !important;
+  }
+}
+
+.border-radius-0 {
+  border-radius: 0 !important;
+}
+
+.border-radius-sm {
+  border-radius: $border-radius-sm !important;
+}
+
+.border-radius {
+  border-radius: $border-radius !important;
+}
+
+.border-radius-lg {
+  border-radius: $border-radius-lg !important;
+}
+
+.border-radius-pill {
+  border-radius: $border-radius-pill !important;
+}
+
+// Display
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    @each $display-type in $display-types {
+      .d#{$breakpoint-suffix}-#{$display-type} {
+        display: $display-type !important;
+      }
+    }
+  }
+}
+
+// Flex
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    .flex#{$breakpoint-suffix}-1 {
+      flex: 1 !important;
+    }
+
+    .flex#{$breakpoint-suffix}-auto {
+      flex: auto !important;
+    }
+
+    .flex#{$breakpoint-suffix}-grow-0 {
+      flex-grow: 0 !important;
+    }
+
+    .flex#{$breakpoint-suffix}-shrink-0 {
+      flex-shrink: 0 !important;
+    }
+
+    @each $flex-direction in $flex-directions {
+      .flex#{$breakpoint-suffix}-#{$flex-direction} {
+        flex-direction: $flex-direction !important;
+      }
+    }
+
+    @each $flex-wrap in $flex-wraps {
+      .flex#{$breakpoint-suffix}-#{$flex-wrap} {
+        flex-wrap: $flex-wrap !important;
+      }
+    }
+
+    @each $justify-name, $justify-value in $flex-justifies-content {
+      .flex-justify#{$breakpoint-suffix}-#{$justify-name} {
+        justify-content: $justify-value !important;
+      }
+    }
+
+    @each $align-name, $align-value in $flex-aligns-items {
+      .flex-items#{$breakpoint-suffix}-#{$align-name} {
+        align-items: $align-value !important;
+      }
+    }
+
+    @each $align-name, $align-value in $flex-aligns-content {
+      .flex-content#{$breakpoint-suffix}-#{$align-name} {
+        align-content: $align-value !important;
+      }
+    }
+
+    @each $align-name, $align-value in $flex-aligns-self {
+      .flex-self#{$breakpoint-suffix}-#{$align-name} {
+        align-self: $align-value !important;
+      }
+    }
+
+    @each $order-name, $order-value in $flex-orders {
+      .order#{$breakpoint-suffix}-#{$order-name} {
+        order: $order-value !important;
+      }
+    }
+  }
+}
+
+// Opacity
+@each $level, $opacity in $opacities {
+  .opacity-#{$level} {
+    opacity: #{$opacity} !important;
+  }
+}
+
+// Float
+.clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    @each $float-name, $float-value in $floats {
+      .float#{$breakpoint-suffix}-#{$float-name} {
+        float: $float-value !important;
+      }
+    }
+  }
+}
+
+// Sizing
+@each $level, $size in $sizes {
+  .w-#{$level} {
+    width: #{$size} !important;
+  }
+}
+
+@each $level, $size in $sizes {
+  .h-#{$level} {
+    height: #{$size} !important;
+  }
+}
+
+@each $level, $size in $max-sizes {
+  .max-w-#{$level} {
+    max-width: #{$size} !important;
+  }
+}
+
+@each $level, $size in $max-sizes {
+  .max-h-#{$level} {
+    max-height: #{$size} !important;
+  }
+}
+
+@each $level, $size in $min-sizes {
+  .min-w-#{$level} {
+    min-width: #{$size} !important;
+  }
+}
+
+@each $level, $size in $min-sizes {
+  .min-h-#{$level} {
+    min-height: #{$size} !important;
+  }
+}
+
+.vw-100 {
+  width: 100vw;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.min-vw-100 {
+  min-width: 100vw;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+// Text
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    @each $text-name, $text-value in $text-directions {
+      .text#{$breakpoint-suffix}-#{$text-name} {
+        text-align: $text-value !important;
+      }
+    }
+  }
+}
+
+@each $text-name, $text-value in $text-wraps {
+  .text-#{$text-name} {
+    white-space: $text-value !important;
+  }
+}
+
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+@each $transform in $text-transforms {
+  .text-#{$transform} {
+    text-transform: #{$transform} !important;
+  }
+}
+
+@each $decoration in $text-decorations {
+  .text-#{$decoration} {
+    text-decoration: #{$decoration} !important;
+  }
+}
+
+@each $line-name, $line-value in $line-heights {
+  .lh-#{$line-name} {
+    line-height: $line-value !important;
+  }
+}
+
+@each $font-name, $font-value in $font-weights {
+  .fw-#{$font-name} {
+    font-weight: $font-value !important;
+  }
+}
+
+.fs-italic {
+  font-style: italic !important;
+}
+
+.fs-normal {
+  font-style: normal !important;
+}
+
+// Overflows
+@each $overflow in $overflows {
+  .overflow-#{$overflow} {
+    overflow: #{$overflow} !important;
+  }
+}
+
+// Truncate
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

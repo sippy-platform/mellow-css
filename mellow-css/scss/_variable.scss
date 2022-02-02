@@ -6,10 +6,146 @@ $font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 // stylelint-enable value-keyword-case
 
 // Colors
-$primary: #0068d8 !default;
+$blues: (
+  50: #e6f0fb,
+  100: #cce1f7,
+  200: #99c3ef,
+  300: #66a4e8,
+  400: #3386e0,
+  500: #0068d8,
+  600: #005ec2,
+  700: #0053ad,
+  800: #004997,
+  900: #003e82
+) !default;
+
+$reds: (
+  50: #fde6ea,
+  100: #fbccd5,
+  200: #f799ab,
+  300: #f04d6c,
+  400: #ee3357,
+  500: #ea002d,
+  600: #d30029,
+  700: #bb0024,
+  800: #a4001f,
+  900: #8c001b
+) !default;
+
+$greens: (
+  50: #f3ffe0,
+  100: #e6f9c9,
+  200: #cff497,
+  300: #b8ee64,
+  400: #a0e931,
+  500: #7acc00,
+  600: #6fac13,
+  700: #5a8c0f,
+  800: #456b0c,
+  900: #314b08
+) !default;
+
+$yellows: (
+  50: #fff8db,
+  100: #fff4c2,
+  200: #ffea8f,
+  300: #ffe15c,
+  400: #ffd829,
+  500: #f5c800,
+  600: #d1ab00,
+  700: #ae8e00,
+  800: #8a7100,
+  900: #665300
+) !default;
+
+$oranges: (
+  50: #ffd5ae,
+  100: #ffca99,
+  200: #ffb570,
+  300: #ffa048,
+  400: #ff8b1f,
+  500: #f57600,
+  600: #d16500,
+  700: #ae5400,
+  800: #8a4200,
+  900: #663100
+) !default;
+
+$pinks: (
+  50: #fdeef6,
+  100: #fbdceb,
+  200: #f8b7d7,
+  300: #f492c2,
+  400: #f06dae,
+  500: #ec4899,
+  600: #e82384,
+  700: #cd1570,
+  800: #a8115c,
+  900: #830e48
+) !default;
+
+$purples: (
+  50: #f7eefe,
+  100: #eeddfd,
+  200: #dcbbfc,
+  300: #cb99fa,
+  400: #b977f9,
+  500: #a855f7,
+  600: #942ef5,
+  700: #800bef,
+  800: #6b09c8,
+  900: #5608a1
+) !default;
+
+$greys: (
+  50: #f9f9f9,
+  100: #f4f4f4,
+  200: #e4e4e4,
+  300: #d4d4d4,
+  400: #a3a3a3,
+  500: #747474,
+  600: #535353,
+  700: #424242,
+  800: #282828,
+  900: #191919
+) !default;
+
+$palettes: (
+  "blue": $blues,
+  "red": $reds,
+  "green": $greens,
+  "yellow": $yellows,
+  "orange": $oranges,
+  "pink": $pinks,
+  "purple": $purples,
+  "grey": $greys
+);
+
+$blue: map-get(map-get($palettes, "blue"), 500) !default;
+$red: map-get(map-get($palettes, "red"), 500) !default;
+$green: map-get(map-get($palettes, "green"), 500) !default;
+$yellow: map-get(map-get($palettes, "yellow"), 500) !default;
+$orange: map-get(map-get($palettes, "orange"), 500) !default;
+$pink: map-get(map-get($palettes, "pink"), 500) !default;
+$purple: map-get(map-get($palettes, "purple"), 500) !default;
+$grey: map-get(map-get($palettes, "grey"), 500) !default;
+
+$colors: (
+  blue: $blue,
+  red: $red,
+  green: $green,
+  yellow: $yellow,
+  orange: $orange,
+  pink: $pink,
+  purple: $purple,
+  grey: $grey,
+  light: map-get($greys, 100),
+  dark: map-get($greys, 900),
+  white: #fff
+) !default;
 
 // Anchors
-$anchor-color: $primary !default;
+$anchor-color: $blue !default;
 $anchor-hover-color: #0055b6 !default;
 
 // Grid breakpoints
@@ -32,14 +168,14 @@ $container-max-widths: (
 ) !default;
 
 // Gap
-$gap: 1rem !default;
-$gaps: (
+$spacer: 1rem !default;
+$spacers: (
   0: 0,
-  1: $gap * .25,
-  2: $gap * .5,
-  3: $gap,
-  4: $gap * 1.5,
-  5: $gap * 3,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
 ) !default;
 
 // Fonts and typogrpahy
@@ -63,3 +199,190 @@ $font-sizes-marketing: (
   5: 3rem,
   6: 2.5rem
 ) !default;
+
+// Shadows
+$box-shadows: (
+  0: "none",
+  1: (.1px .1px .5px rgba(0, 0, 0, .032), .4px .4px 1.8px rgba(0, 0, 0, .048), 2px 2px 8px rgba(0, 0, 0, .08)),
+  2: (.1px .1px .7px rgba(0, 0, 0, .04), .4px .4px 2.2px rgba(0, 0, 0, .06), 2px 2px 10px rgba(0, 0, 0, .1)),
+  3: (.1px .1px .9px rgba(0, 0, 0, .048), .4px .4px 3.1px rgba(0, 0, 0, .072), 2px 2px 14px rgba(0, 0, 0, .12)),
+  4: (.2px .2px 1.2px rgba(0, 0, 0, .057), .7px .7px 4px rgba(0, 0, 0, .083), 3px 3px 18px rgba(0, 0, 0, .14)),
+  5: (.2px .2px 1.5px rgba(0, 0, 0, .069), .7px .7px 4.9px rgba(0, 0, 0, .101), 3px 3px 22px rgba(0, 0, 0, .17))
+) !default;
+
+$elevations-dark: (
+  0: #333,
+  1: #383838,
+  2: #454545,
+  3: #4f4f4f,
+  4: #595959,
+  5: #666
+) !default;
+
+// Borders
+$border-color: map-get($greys, 200);
+$border-width: 1px !default;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+) !default;
+
+$border-radius-sm: .5rem;
+$border-radius: 1rem;
+$border-radius-lg: 1.5rem;
+$border-radius-pill: 50rem;
+
+// Opacity
+$opacities: (
+  0: 0,
+  25: .25,
+  50: .5,
+  75: .75,
+  100: 1
+) !default;
+
+// Display
+$display-types: (
+  block,
+  flex,
+  grid,
+  inline-block,
+  inline-flex,
+  inline,
+  none
+);
+
+// Float
+$floats: (
+  start: left,
+  end: right,
+  none: none
+);
+
+// Flex
+$flex-directions: (
+  row,
+  row-reverse,
+  column,
+  column-reverse
+);
+
+$flex-wraps: (
+  wrap,
+  nowrap,
+  wrap-reverse
+);
+
+$flex-justifies-content: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around
+);
+
+$flex-aligns-items: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch
+);
+
+$flex-aligns-content: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  stretch: stretch
+);
+
+$flex-aligns-self: (
+  auto: auto,
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch
+);
+
+$flex-orders: (
+  first: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  last: 6,
+);
+
+// Sizing
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto
+);
+
+$min-sizes: (
+  0: 0,
+  100: 100%
+);
+
+$max-sizes: (
+  0: 0,
+  100: 100%
+);
+
+// Text
+$text-directions: (
+  start: left,
+  end: right,
+  center: center
+);
+
+$text-wraps: (
+  wrap: normal,
+  nowrap: nowrap
+);
+
+$text-transforms: (
+  uppercase,
+  lowercase,
+  capitalize
+);
+
+$text-decorations: (
+  none,
+  underline,
+  line-through
+);
+
+$line-heights: (
+  1: 1,
+  sm: 1.25,
+  md: 1.5,
+  lg: 2,
+);
+
+$font-weights: (
+  light: 300,
+  lighter: lighter,
+  normal: 400,
+  bold: 700,
+  bolder: bolder
+);
+
+// Overflow
+$overflows: (
+  auto,
+  hidden,
+  visible,
+  scroll
+);

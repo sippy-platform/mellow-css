@@ -79,6 +79,14 @@ pre {
   font-family: $font-family-mono;
 }
 
+code {
+  color: map-get($blues, 500);
+}
+
+pre code {
+  color: inherit;
+}
+
 // Lists, description lists and items, normalizing padding and margins
 ol,
 ul {

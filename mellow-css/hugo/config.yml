@@ -5,3 +5,8 @@ title:              'Mellow'
 markup:
   highlight:
     style:          'monokailight'
+  goldmark:
+    renderer:
+      unsafe:       true
+
+disableKinds:       ['taxonomy', 'term', 'RSS']
