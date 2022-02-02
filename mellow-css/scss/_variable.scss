@@ -147,7 +147,7 @@ $colors: (
 ) !default;
 
 // Anchors
-$anchor-color: $primary !default;
+$anchor-color: $blue !default;
 $anchor-hover-color: #0055b6 !default;
 
 // Grid breakpoints
@@ -170,14 +170,14 @@ $container-max-widths: (
 ) !default;
 
 // Gap
-$gap: 1rem !default;
-$gaps: (
+$spacer: 1rem !default;
+$spacers: (
   0: 0,
-  1: $gap * .25,
-  2: $gap * .5,
-  3: $gap,
-  4: $gap * 1.5,
-  5: $gap * 3,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
 ) !default;
 
 // Fonts and typogrpahy
