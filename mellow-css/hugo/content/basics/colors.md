@@ -14,6 +14,7 @@ The main color set has `text-*` and `bg-*` classes available in our [text color]
   <div class="bg-red text-white p-3">Red</div>
   <div class="bg-orange p-3">Orange</div>
   <div class="bg-yellow p-3">Yellow</div>
+  <div class="bg-lime p-3">Lime</div>
   <div class="bg-green p-3">Green</div>
   <div class="bg-light p-3">Light</div>
   <div class="bg-dark text-white p-3">Dark</div>
@@ -174,6 +175,23 @@ $blues: (
     <div class="bg-yellow-700 py-2 px-3 text-white">Yellow 700</div>
     <div class="bg-yellow-800 py-2 px-3 text-white">Yellow 800</div>
     <div class="bg-yellow-900 py-2 px-3 text-white">Yellow 900</div>
+  </div>
+  <div>
+    <div class="bg-lime-500 p-3 mb-3">
+      <p class="m-0 h6">Lime</p>
+      <p class="m-0">#0068d8</p>
+    </div>
+
+    <div class="bg-lime-50 py-2 px-3">Lime 50</div>
+    <div class="bg-lime-100 py-2 px-3">Lime 100</div>
+    <div class="bg-lime-200 py-2 px-3">Lime 200</div>
+    <div class="bg-lime-300 py-2 px-3">Lime 300</div>
+    <div class="bg-lime-400 py-2 px-3">Lime 400</div>
+    <div class="bg-lime-500 py-2 px-3">Lime 500</div>
+    <div class="bg-lime-600 py-2 px-3">Lime 600</div>
+    <div class="bg-lime-700 py-2 px-3 text-white">Lime 700</div>
+    <div class="bg-lime-800 py-2 px-3 text-white">Lime 800</div>
+    <div class="bg-lime-900 py-2 px-3 text-white">Lime 900</div>
   </div>
   <div>
     <div class="bg-green-500 p-3 mb-3">
