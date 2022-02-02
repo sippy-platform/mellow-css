@@ -363,3 +363,18 @@ $text-decorations: (
   underline,
   line-through
 );
+
+$line-heights: (
+  1: 1,
+  sm: 1.25,
+  md: 1.5,
+  lg: 2,
+);
+
+$font-weights: (
+  light: 300,
+  lighter: lighter,
+  normal: 400,
+  bold: 700,
+  bolder: bolder
+);

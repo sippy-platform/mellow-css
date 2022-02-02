@@ -432,3 +432,23 @@
     text-decoration: #{$decoration} !important;
   }
 }
+
+@each $line-name, $line-value in $line-heights {
+  .lh-#{$line-name} {
+    line-height: $line-value !important;
+  }
+}
+
+@each $font-name, $font-value in $font-weights {
+  .fw-#{$font-name} {
+    font-weight: $font-value !important;
+  }
+}
+
+.fs-italic {
+  font-style: italic !important;
+}
+
+.fs-normal {
+  font-style: normal !important;
+}
