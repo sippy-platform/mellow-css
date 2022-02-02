@@ -388,3 +388,47 @@
 .vh-100 {
   height: 100vh;
 }
+
+.min-vw-100 {
+  min-width: 100vw;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+// Text
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    @each $text-name, $text-value in $text-directions {
+      .text#{$breakpoint-suffix}-#{$text-name} {
+        text-align: $text-value !important;
+      }
+    }
+  }
+}
+
+@each $text-name, $text-value in $text-wraps {
+  .text-#{$text-name} {
+    white-space: $text-value !important;
+  }
+}
+
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+@each $transform in $text-transforms {
+  .text-#{$transform} {
+    text-transform: #{$transform} !important;
+  }
+}
+
+@each $decoration in $text-decorations {
+  .text-#{$decoration} {
+    text-decoration: #{$decoration} !important;
+  }
+}

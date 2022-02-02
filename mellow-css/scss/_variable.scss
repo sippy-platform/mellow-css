@@ -339,3 +339,27 @@ $max-sizes: (
   0: 0,
   100: 100%
 );
+
+// Text
+$text-directions: (
+  start: left,
+  end: right,
+  center: center
+);
+
+$text-wraps: (
+  wrap: normal,
+  nowrap: nowrap
+);
+
+$text-transforms: (
+  uppercase,
+  lowercase,
+  capitalize
+);
+
+$text-decorations: (
+  none,
+  underline,
+  line-through
+);
