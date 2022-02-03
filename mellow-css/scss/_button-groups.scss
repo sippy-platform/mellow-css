@@ -1,0 +1,40 @@
+.btn-group {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+
+  > .btn {
+    position: relative;
+    flex: 1 1 auto;
+  }
+
+  > .btn:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  > .btn:not(:first-child) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &.btn-group-sm > .btn {
+    @extend .btn-sm;
+  }
+
+  &.btn-group-lg > .btn {
+    @extend .btn-lg;
+  }
+}
+
+.btn-toolbar {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) {
+    margin-left: .5rem;
+  }
+}

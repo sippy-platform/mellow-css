@@ -32,7 +32,7 @@ $reds: (
   900: #8c001b
 ) !default;
 
-$greens: (
+$limes: (
   50: #f3ffe0,
   100: #e6f9c9,
   200: #cff497,
@@ -43,6 +43,19 @@ $greens: (
   700: #5a8c0f,
   800: #456b0c,
   900: #314b08
+) !default;
+
+$greens: (
+  50: #cdf4d4,
+  100: #b8efc1,
+  200: #8fe69d,
+  300: #65dc79,
+  400: #3cd355,
+  500: #29b340,
+  600: #249e38,
+  700: #1f8931,
+  800: #1a7429,
+  900: #166022
 ) !default;
 
 $yellows: (
@@ -113,6 +126,7 @@ $greys: (
 $palettes: (
   "blue": $blues,
   "red": $reds,
+  "lime": $limes,
   "green": $greens,
   "yellow": $yellows,
   "orange": $oranges,
@@ -121,8 +135,11 @@ $palettes: (
   "grey": $greys
 );
 
+$accent: $blues;
+
 $blue: map-get(map-get($palettes, "blue"), 500) !default;
 $red: map-get(map-get($palettes, "red"), 500) !default;
+$lime: map-get(map-get($palettes, "lime"), 500) !default;
 $green: map-get(map-get($palettes, "green"), 500) !default;
 $yellow: map-get(map-get($palettes, "yellow"), 500) !default;
 $orange: map-get(map-get($palettes, "orange"), 500) !default;
@@ -133,6 +150,7 @@ $grey: map-get(map-get($palettes, "grey"), 500) !default;
 $colors: (
   blue: $blue,
   red: $red,
+  lime: $lime,
   green: $green,
   yellow: $yellow,
   orange: $orange,
@@ -385,4 +403,36 @@ $overflows: (
   hidden,
   visible,
   scroll
-);
+) !default;
+
+// Buttons
+// $btn-box-shadow: 0 1px 0 rgba(0, 0, 0, .07) !default;
+$btn-box-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .15) !default;
+
+$btn-context-colored-text: (
+  default: (
+    500: #000
+  )
+) !default;
+
+$btn-context-colored-hover: (
+  secondary: $accent,
+  danger: $reds
+) !default;
+
+$btn-context-colored: (
+  primary: $accent,
+  success: $greens
+) !default;
+
+$btn-colored: (
+  blue: $blues,
+  red: $reds,
+  lime: $limes,
+  green: $greens,
+  yellow: $yellows,
+  orange: $oranges,
+  pink: $pinks,
+  purple: $purples,
+  grey: $greys
+) !default;

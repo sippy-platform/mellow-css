@@ -1,4 +1,5 @@
 // stylelint-disable property-no-vendor-prefix
+// stylelint-disable no-descending-specificity
 
 /*
  * Vivify
@@ -140,11 +141,19 @@ label {
 
 button {
   border-radius: 0;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 // Not a border, but claims to be one? Use a pointer.
 [role="button"] {
   cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 input,
