@@ -17,6 +17,7 @@
     color: #666;
     font-size: .875rem;
 
+    &.active,
     &:hover {
       background-color: map-get($blues, 50);
       color: inherit;

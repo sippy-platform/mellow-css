@@ -1,0 +1,36 @@
+- title: Get started
+  pages:
+    - title: Installation
+    - title: Vivify
+
+- title: Basics
+  pages:
+    - title: Typography
+    - title: Colors
+
+- title: Layout
+  pages:
+    - title: Breakpoints
+    - title: Container
+    - title: Grid
+
+- title: Components
+  pages:
+    - title: Buttons
+    - title: Button groups
+
+- title: Utilities
+  pages:
+    - title: Background
+    - title: Borders
+    - title: Color
+    - title: Display
+    - title: Elevation
+    - title: Flex
+    - title: Layout
+    - title: Opacity
+    - title: Overflow
+    - title: Sizing
+    - title: Spacing
+    - title: Text
+    - title: Text truncation
