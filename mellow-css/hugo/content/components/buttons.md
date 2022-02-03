@@ -9,13 +9,12 @@ When applying to a button, make sure to set the `type` attribute. When applying 
 
 {{<example>}}
 <button type="button" class="btn btn-default">Button</button>
-<a role="button" class="btn btn-default">Anchor</a>
+<a role="button" href="#" class="btn btn-default">Anchor</a>
 {{</example>}}
 
 ## Variants
 
 ### Contextual buttons
-
 Contextual buttons are ment to be used in situations where the action performed by the button is important.
 
 {{<example>}}
@@ -27,7 +26,6 @@ Contextual buttons are ment to be used in situations where the action performed 
 {{</example>}}
 
 ### Colored buttons
-
 Colored buttons are variations of the button component that use one of the colors in the color pallette.
 
 {{<example>}}
@@ -40,4 +38,51 @@ Colored buttons are variations of the button component that use one of the color
 <button type="button" class="btn btn-lime">Lime</button>
 <button type="button" class="btn btn-green">Green</button>
 <button type="button" class="btn btn-grey">Grey</button>
+{{</example>}}
+
+## Disabled
+Buttons can be disabled with the `aria-disabled` property. This will reduce the opacity of the buttons and disable `pointer-events`.
+
+{{<example>}}
+<button type="button" class="btn btn-default" aria-disabled="true">Default</button>
+<button type="button" class="btn btn-primary" aria-disabled="true">Primary</button>
+<button type="button" class="btn btn-secondary" aria-disabled="true">Secondary</button>
+<button type="button" class="btn btn-danger" aria-disabled="true">Danger</button>
+<button type="button" class="btn btn-success" aria-disabled="true">Success</button>
+{{</example>}}
+
+Note the use of the `aria-disabled` property instead of `disabled`. Unlike `disabled`, `aria-disabled` leaves the button discoverable for assistive technologies and will remain in the tab-flow when navigating with a keyboard (so that any tooltips that may be connected to it can still appear for users without a pointer).
+
+When disabling an anchor, note that you should not inlcude the `href` property:
+
+{{<example>}}
+<a class="btn btn-default" role="button" aria-disabled="true">Default</a>
+<a class="btn btn-primary" role="button" aria-disabled="true">Primary</a>
+<a class="btn btn-secondary" role="button" aria-disabled="true">Secondary</a>
+<a class="btn btn-danger" role="button" aria-disabled="true">Danger</a>
+<a class="btn btn-success" role="button" aria-disabled="true">Success</a>
+{{</example>}}
+
+### `.disabled` class
+Additionally, you can also disable buttons by adding the `.disabled` class to it. Note that while the button won't respond to clicks, it is still in the tab flow and will respond to interactions. This button acts disabled, but isn't. We strongly recommend against using this class.
+
+{{<example>}}
+<button type="button" class="btn btn-default disabled">Disabled button</button>
+{{</example>}}
+
+## Sizes
+Aside from the normal button size, Mellow also provides the `.btn-sm` and `.btn-lg` classes for all your button needs.
+
+{{<example>}}
+<button type="button" class="btn btn-default btn-sm">Small</button>
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-default btn-lg">Large</button>
+{{</example>}}
+
+If you want to make a button take on the full width of its container, you can do so with the `.btn-block` class.
+
+{{<example>}}
+<button type="button" class="btn btn-default btn-block btn-sm mb-3">Small</button>
+<button type="button" class="btn btn-default btn-block mb-3">Default</button>
+<button type="button" class="btn btn-default btn-block btn-lg">Large</button>
 {{</example>}}

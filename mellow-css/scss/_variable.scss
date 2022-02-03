@@ -407,4 +407,32 @@ $overflows: (
 
 // Buttons
 // $btn-box-shadow: 0 1px 0 rgba(0, 0, 0, .07);
-$btn-box-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .25);
+$btn-box-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .15);
+
+$btn-context-colored-text: (
+  default: (
+    500: #000
+  ),
+  secondary: $accent
+);
+
+$btn-context-colored-hover: (
+  danger: $reds
+);
+
+$btn-context-colored: (
+  primary: $accent,
+  success: $greens
+);
+
+$btn-colored: (
+  blue: $blues,
+  red: $reds,
+  lime: $limes,
+  green: $greens,
+  yellow: $yellows,
+  orange: $oranges,
+  pink: $pinks,
+  purple: $purples,
+  grey: $greys
+);

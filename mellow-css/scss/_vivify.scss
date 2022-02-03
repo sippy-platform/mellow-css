@@ -150,6 +150,10 @@ button {
 // Not a border, but claims to be one? Use a pointer.
 [role="button"] {
   cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 input,
