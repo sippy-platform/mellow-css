@@ -271,14 +271,14 @@ $display-types: (
   inline-flex,
   inline,
   none
-);
+) !default;
 
 // Float
 $floats: (
   start: left,
   end: right,
   none: none
-);
+) !default;
 
 // Flex
 $flex-directions: (
@@ -286,13 +286,13 @@ $flex-directions: (
   row-reverse,
   column,
   column-reverse
-);
+) !default;
 
 $flex-wraps: (
   wrap,
   nowrap,
   wrap-reverse
-);
+) !default;
 
 $flex-justifies-content: (
   start: flex-start,
@@ -300,7 +300,7 @@ $flex-justifies-content: (
   center: center,
   between: space-between,
   around: space-around
-);
+) !default;
 
 $flex-aligns-items: (
   start: flex-start,
@@ -308,7 +308,7 @@ $flex-aligns-items: (
   center: center,
   baseline: baseline,
   stretch: stretch
-);
+) !default;
 
 $flex-aligns-content: (
   start: flex-start,
@@ -317,7 +317,7 @@ $flex-aligns-content: (
   between: space-between,
   around: space-around,
   stretch: stretch
-);
+) !default;
 
 $flex-aligns-self: (
   auto: auto,
@@ -326,7 +326,7 @@ $flex-aligns-self: (
   center: center,
   baseline: baseline,
   stretch: stretch
-);
+) !default;
 
 $flex-orders: (
   first: -1,
@@ -337,7 +337,7 @@ $flex-orders: (
   4: 4,
   5: 5,
   last: 6,
-);
+) !default;
 
 // Sizing
 $sizes: (
@@ -346,48 +346,48 @@ $sizes: (
   75: 75%,
   100: 100%,
   auto: auto
-);
+) !default;
 
 $min-sizes: (
   0: 0,
   100: 100%
-);
+) !default;
 
 $max-sizes: (
   0: 0,
   100: 100%
-);
+) !default;
 
 // Text
 $text-directions: (
   start: left,
   end: right,
   center: center
-);
+) !default;
 
 $text-wraps: (
   wrap: normal,
   nowrap: nowrap
-);
+) !default;
 
 $text-transforms: (
   uppercase,
   lowercase,
   capitalize
-);
+) !default;
 
 $text-decorations: (
   none,
   underline,
   line-through
-);
+) !default;
 
 $line-heights: (
   1: 1,
   sm: 1.25,
   md: 1.5,
   lg: 2,
-);
+) !default;
 
 $font-weights: (
   light: 300,
@@ -395,7 +395,7 @@ $font-weights: (
   normal: 400,
   bold: 700,
   bolder: bolder
-);
+) !default;
 
 // Overflow
 $overflows: (
