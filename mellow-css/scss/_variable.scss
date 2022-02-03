@@ -412,11 +412,11 @@ $btn-box-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .15) !default;
 $btn-context-colored-text: (
   default: (
     500: #000
-  ),
-  secondary: $accent
+  )
 ) !default;
 
 $btn-context-colored-hover: (
+  secondary: $accent,
   danger: $reds
 ) !default;
 
