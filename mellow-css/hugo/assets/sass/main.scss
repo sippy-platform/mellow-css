@@ -53,6 +53,11 @@
         background-color: map-get($blues, 50);
         color: inherit;
       }
+
+      code {
+        margin-right: 3px;
+        font: inherit;
+      }
     }
   }
 }
@@ -95,6 +100,11 @@
       &:hover {
         background-color: map-get($blues, 50);
         color: inherit;
+      }
+
+      code {
+        margin-right: 3px;
+        font: inherit;
       }
     }
   }
