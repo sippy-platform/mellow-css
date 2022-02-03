@@ -8,5 +8,9 @@ markup:
   goldmark:
     renderer:
       unsafe:       true
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
 
 disableKinds:       ['taxonomy', 'term', 'RSS']

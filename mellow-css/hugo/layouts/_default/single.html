@@ -8,13 +8,21 @@
 
     <main class="container-lg pt-3">
       <div class="grid grid-12">
-        <div class="col-12 col-md-4 col-lg-2">
+        <div class="col-12 col-sm-3 col-lg-2">
           {{ partialCached "navigation" . }}
         </div>
-        <div class="col-12 col-md-8 col-lg-10 docs-content">
+        <div class="col-12 col-sm-9 col-lg-8 docs-content">
           <h1>{{ .Title }}</h1>
           <p class="lead">{{ .Description }}</p>
+          <div class="d-block d-lg-none">
+            <p class="h6 mb-1 mt-2 ms-2">On this page</p>
+            {{ .TableOfContents }}
+          </div>
           {{ .Content }}
+        </div>
+        <div class="d-none d-lg-block col-lg-2">
+          <p class="h6 mb-1 mt-2 ms-2">On this page</p>
+          {{ .TableOfContents }}
         </div>
       </div>
     </main>
