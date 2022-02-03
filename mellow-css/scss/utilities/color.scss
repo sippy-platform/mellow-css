@@ -1,0 +1,58 @@
+// Based on https://css-tricks.com/snippets/sass/luminance-color-function/
+
+@function color-contrast($background, $color-contrast-dark: #000, $color-contrast-light: #fff, $min-contrast-ratio: 2.5) {
+  $foregrounds: $color-contrast-light, $color-contrast-dark;
+  $max-ratio: 0;
+  $max-ratio-color: null;
+
+  @each $color in $foregrounds {
+    $contrast-ratio: contrast-ratio($background, $color);
+
+    @if $contrast-ratio > $min-contrast-ratio {
+      @return $color;
+    } @else if $contrast-ratio > $max-ratio {
+      $max-ratio: $contrast-ratio;
+      $max-ratio-color: $color;
+    }
+  }
+
+  @return $max-ratio-color;
+}
+
+@function contrast-ratio($background, $foreground: $color-contrast-light) {
+  $luminance1: luminance($foreground) + .05;
+  $luminance2: luminance($background) + .05;
+  $ratio: $luminance1 / $luminance2;
+
+  @if $luminance2 > $luminance1 {
+    $ratio: 1 / $ratio;
+  }
+
+  $ratio: round($ratio * 100) / 100;
+  @return $ratio;
+}
+
+// Return WCAG2.0 relative luminance
+@function luminance($color) {
+  $rgba: red($color), green($color), blue($color);
+  $rgba2: ();
+
+  @for $i from 1 through 3 {
+    $rgb: nth($rgba, $i);
+    $rgb: $rgb / 255;
+    $rgb: if($rgb < .0393, $rgb / 12.92, pow(($rgb + .055) / 1.055, 2));
+    $rgba2: append($rgba2, $rgb);
+  }
+
+  @return (.2126 * nth($rgba2, 1) + .7152 * nth($rgba2, 2) + .0722 * nth($rgba2, 3)) * 100;
+}
+
+@function pow($base, $exponents) {
+  $raised: 1;
+
+  @for $i from 1 through $exponents {
+    $raised: $raised * $base;
+  }
+
+  @return $raised;
+}
