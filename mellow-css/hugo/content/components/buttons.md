@@ -40,6 +40,17 @@ Colored buttons are variations of the button component that use one of the color
 <button type="button" class="btn btn-grey">Grey</button>
 {{</example>}}
 
+## Active
+You can use the `.active` class to make the button appear as if it is `:active`.
+
+{{<example>}}
+<button type="button" class="btn btn-default active">Default</button>
+<button type="button" class="btn btn-primary active">Primary</button>
+<button type="button" class="btn btn-secondary active">Secondary</button>
+<button type="button" class="btn btn-danger active">Danger</button>
+<button type="button" class="btn btn-success active">Success</button>
+{{</example>}}
+
 ## Disabled
 Buttons can be disabled with the `aria-disabled` property. This will reduce the opacity of the buttons and disable `pointer-events`.
 
