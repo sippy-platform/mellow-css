@@ -403,27 +403,27 @@ $overflows: (
   hidden,
   visible,
   scroll
-);
+) !default;
 
 // Buttons
-// $btn-box-shadow: 0 1px 0 rgba(0, 0, 0, .07);
-$btn-box-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .15);
+// $btn-box-shadow: 0 1px 0 rgba(0, 0, 0, .07) !default;
+$btn-box-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .15) !default;
 
 $btn-context-colored-text: (
   default: (
     500: #000
   ),
   secondary: $accent
-);
+) !default;
 
 $btn-context-colored-hover: (
   danger: $reds
-);
+) !default;
 
 $btn-context-colored: (
   primary: $accent,
   success: $greens
-);
+) !default;
 
 $btn-colored: (
   blue: $blues,
@@ -435,4 +435,4 @@ $btn-colored: (
   pink: $pinks,
   purple: $purples,
   grey: $greys
-);
+) !default;
