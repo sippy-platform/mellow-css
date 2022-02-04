@@ -25,7 +25,7 @@ By default, the grid will create a CSS grid with 1 column. Every element inserte
 </div>
 {{</example>}}
 
-By using the `grid-*`-classes, you can tell the grid layout to change the number of columns in the grid. If no column count is defined, the grid will have only 1 column.
+By using the `grid-*` classes, you can tell the grid layout to change the number of columns in the grid. If no column count is defined, the grid will have only 1 column.
 
 {{<example class="docs-preview-grid">}}
 <div class="grid grid-5">
@@ -45,7 +45,7 @@ Mellow also provides support for changing the number of columns based on the vie
 {{</example>}}
 
 ## Column spans
-By using the `col-*`-classes, you can tell a grid item to span multiple columns.
+By using the `col-*` classes, you can tell a grid item to span multiple columns.
 
 {{<example class="docs-preview-grid">}}
 <div class="grid grid-12">
@@ -67,7 +67,7 @@ The grid also provides a set of responsive classes to change the column span dep
 {{</example>}}
 
 ## Column start position
-By using the `col-start-*`-classes, you can tell a grid item to to start at a certain position in the grid. When a grid item starts at a point an earlier grid item already occupies space, it will wrap into the next column.
+By using the `col-start-*` classes, you can tell a grid item to to start at a certain position in the grid. When a grid item starts at a point an earlier grid item already occupies space, it will wrap into the next column.
 
 Note that a CSS grid counts the grid lines starting at 1. The grid from the example below has 13 grid lines.
 
@@ -104,7 +104,7 @@ If the amount of used columns exceed the grid width, the grid will automatically
 {{</example>}}
 
 ## Gap
-By default, the grid will create a gap of `1rem`. The `gap-*`-classes can be used to change the size of the gap. The `gap-*`-utility classes range between 0 and 5 and generate values of `0rem`, `.25rem`, `.5rem`, `1rem`, `1.5rem`, and `3rem` respectivly.
+By default, the grid will create a gap of `1rem`. The `gap-*` classes can be used to change the size of the gap. The `gap-*`-utility classes range between 0 and 5 and generate values of `0rem`, `25rem`, `5rem`, `1rem`, `1.5rem`, and `3rem` respectivly.
 
 {{<example class="docs-preview-grid">}}
 <div class="grid grid-12 gap-0">
@@ -115,7 +115,7 @@ By default, the grid will create a gap of `1rem`. The `gap-*`-classes can be use
 {{</example>}}
 
 ### Responsive classes
-Like every other grid class, the `gap-*`-classes are also responsive.
+Like every other grid class, the `gap-*` classes are also responsive.
 
 {{<example class="docs-preview-grid">}}
 <div class="grid grid-12 gap-2 gap-md-4">

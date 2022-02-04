@@ -41,7 +41,7 @@ Colored buttons are variations of the button component that use one of the color
 {{</example>}}
 
 ## Active
-You can use the `.active` class to make the button appear as if it is `:active`.
+You can use the `active` class to make the button appear as if it is `:active`.
 
 {{<example>}}
 <button type="button" class="btn btn-default active">Default</button>
@@ -74,15 +74,15 @@ When disabling an anchor, note that you should not inlcude the `href` property:
 <a class="btn btn-success" role="button" aria-disabled="true">Success</a>
 {{</example>}}
 
-### `.disabled` class
-Additionally, you can also disable buttons by adding the `.disabled` class to it. Note that while the button won't respond to clicks, it is still in the tab flow and will respond to interactions. This button acts disabled, but isn't. We strongly recommend against using this class.
+### `disabled` class
+Additionally, you can also disable buttons by adding the `disabled` class to it. Note that while the button won't respond to clicks, it is still in the tab flow and will respond to interactions. This button acts disabled, but isn't. We strongly recommend against using this class.
 
 {{<example>}}
 <button type="button" class="btn btn-default disabled">Disabled button</button>
 {{</example>}}
 
 ## Sizes
-Aside from the normal button size, Mellow also provides the `.btn-sm` and `.btn-lg` classes for all your button needs.
+Aside from the normal button size, Mellow also provides the `btn-sm` and `btn-lg` classes for all your button needs.
 
 {{<example>}}
 <button type="button" class="btn btn-default btn-sm">Small</button>
@@ -90,7 +90,7 @@ Aside from the normal button size, Mellow also provides the `.btn-sm` and `.btn-
 <button type="button" class="btn btn-default btn-lg">Large</button>
 {{</example>}}
 
-If you want to make a button take on the full width of its container, you can do so with the `.btn-block` class.
+If you want to make a button take on the full width of its container, you can do so with the `btn-block` class.
 
 {{<example>}}
 <button type="button" class="btn btn-default btn-block btn-sm mb-3">Small</button>

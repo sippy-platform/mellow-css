@@ -4,7 +4,7 @@ description: Group buttons together in a row to indicate their relation.
 ---
 
 ## Simple group
-Wrap your buttons with a `.btn-group` to make them appear as a single unit.
+Wrap your buttons with a `btn-group` to make them appear as a single unit.
 
 {{<example>}}
 <div class="btn-group" role="group">
@@ -25,7 +25,7 @@ You can chain multiple different styles together.
 {{</example>}}
 
 ## Sizes
-While setting the individual button sizes is supported, you can also set the button size for the entire group with the `.btn-group-sm` and `.btn-group-lg` classes.
+While setting the individual button sizes is supported, you can also set the button size for the entire group with the `btn-group-sm` and `btn-group-lg` classes.
 
 {{<example>}}
 <div class="btn-group btn-group-sm" role="group">
@@ -44,7 +44,7 @@ While setting the individual button sizes is supported, you can also set the but
 {{</example>}}
 
 ## Toolbar
-You can combine multiple groups into a `.btn-toolbar`. You can a also include a `.btn` as a direct child.
+You can combine multiple groups into a `btn-toolbar`. You can a also include a `btn` as a direct child.
 
 {{<example>}}
 <div class="btn-toolbar" role="toolbar">

@@ -4,12 +4,12 @@ description: The spacing utilities give you fine-grained control over the margin
 ---
 
 ## Margin and padding
-Mellow includes a set of responsive-enabled margin and padding classes for each breakpoint ranging from `.25rem` en `3rem`.
+Mellow includes a set of responsive-enabled margin and padding classes for each breakpoint ranging from `25rem` en `3rem`.
 
 ### Notation
 The general notation for the utility classes goes like this:
 
-`<property>-<responsive>-<size>`
+`[property]-[breakpoint]-[size]`
 
 You can pick from any of these properties:
 
@@ -30,8 +30,8 @@ Each class is available in all breakpoints ranging from `xs` to `xxl`. When you 
 And apply the following size:
 
 * `0` - sets the spacer to `0`
-* `1` - sets the spacer to `.25rem`
-* `2` - sets the spacer to `.5rem`
+* `1` - sets the spacer to `25rem`
+* `2` - sets the spacer to `5rem`
 * `3` - sets the spacer to `1rem`
 * `4` - sets the spacer to `1.5rem`
 * `5` - sets the spacer to `3rem`
