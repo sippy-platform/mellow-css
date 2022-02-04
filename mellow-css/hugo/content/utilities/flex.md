@@ -3,9 +3,9 @@ title: Flex
 description: CSS Flex gives you a lot of powerful tools to quickly make UI layouts. All flex classes have responsive modifiers.
 ---
 
-## Enable flex
+## Using flex
 
-To enable flex, you can use either the `flex` or `inline-flex` classes. These classes have responsive variants like `d-md-flex` and `d-xxl-inline-flex`. As usual, there is no `-xs`-variant.
+To use a flexbox layout, you can use the `d-[breakpoint]-flex` or `d-[breakpoint]-inline-flex` classes.
 
 {{<example class="docs-preview-flex">}}
 <div class="d-flex mb-3">
@@ -20,7 +20,9 @@ To enable flex, you can use either the `flex` or `inline-flex` classes. These cl
 
 ## Direction
 
-You can change the direction of a flex element by using the `flex-*`-classes.
+You can change the direction of a flex element by using the flex direction classes.
+
+* `flex-[row|column|row-reverse|column-reverse]`
 
 {{<example class="docs-preview-flex">}}
 <div class="d-flex mb-3 flex-row">
@@ -45,12 +47,14 @@ You can change the direction of a flex element by using the `flex-*`-classes.
 </div>
 {{</example>}}
 
-## Wrapping content
+## Wrap
 Classes to control the wrap behavior are also available. Make your window smaller if the flex examples aren't wrapping. In the first example, as soon as the width becomes to small, the last item will jump to the next line.
 
 The second example will compress each block to keep everything on a single line.
 
 The third example has the same behavior as the first, but puts the wrapped lines above the startline instead of underneath it.
+
+* `flex-[wrap|nowrap|wrap-reverse]`
 
 {{<example class="docs-preview-flex">}}
 <div class="d-flex mb-3 flex-wrap">
@@ -91,118 +95,162 @@ The third example has the same behavior as the first, but puts the wrapped lines
 </div>
 {{</example>}}
 
-## Justify content
-Use the `flex-justify-*`-classes to justify the flex elements.
+## Positioning
+### Justify content
+Use the justify content classes to justify the flex elements.
 
-* `flex-justify-start`
-* `flex-justify-end`
-* `flex-justify-center`
-* `flex-justify-between`
-* `flex-justify-around`
+* `justify-content-start`
+* `justify-content-end`
+* `justify-content-center`
+* `justify-content-between`
+* `justify-content-around`
 
 {{<example class="docs-preview-flex">}}
-<div class="d-flex mb-3 flex-justify-start">
+<div class="d-flex mb-3 justify-content-start">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-justify-end">
+<div class="d-flex mb-3 justify-content-end">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-justify-center">
+<div class="d-flex mb-3 justify-content-center">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-justify-between">
+<div class="d-flex mb-3 justify-content-between">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-justify-around">
+<div class="d-flex mb-3 justify-content-around">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
 {{</example>}}
 
-## Align items
-Use the `flex-items-*`-classes to align items in their flex box.
+### Align items
+Use the align item classes to align items in their flex box.
 
-* `flex-items-start`
-* `flex-items-end`
-* `flex-items-center`
-* `flex-items-baseline`
-* `flex-items-stretch`
+* `align-items-start`
+* `align-items-end`
+* `align-items-center`
+* `align-items-baseline`
+* `align-items-stretch`
 
 {{<example class="docs-preview-flex">}}
-<div class="d-flex mb-3 flex-items-start" style="height: 100px">
+<div class="d-flex mb-3 align-items-start" style="height: 100px">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-items-end" style="height: 100px">
+<div class="d-flex mb-3 align-items-end" style="height: 100px">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-items-center" style="height: 100px">
+<div class="d-flex mb-3 align-items-center" style="height: 100px">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-items-baseline" style="height: 100px">
+<div class="d-flex mb-3 align-items-baseline" style="height: 100px">
   <div class="md-item marketing-6">1</div>
   <div class="md-item">2</div>
   <div class="md-item h5">3</div>
 </div>
-<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
+<div class="d-flex mb-3 align-items-stretch" style="height: 100px">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
 {{</example>}}
 
-## Align content
-Use the `flex-content-*`-classes to align content in its flex box.
+### Align content
+Use the align content classes to align content in its flex box.
 
-* `flex-content-start`
-* `flex-content-end`
-* `flex-content-center`
-* `flex-content-between`
-* `flex-content-around`
-* `flex-content-stretch`
+* `align-content-start`
+* `align-content-end`
+* `align-content-center`
+* `align-content-between`
+* `align-content-around`
+* `align-content-stretch`
 
 {{<example class="docs-preview-flex">}}
-<div class="d-flex mb-3 flex-wrap flex-content-start" style="height: 100px">
+<div class="d-flex mb-3 flex-wrap align-content-start" style="height: 100px">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-wrap flex-content-end" style="height: 100px">
+<div class="d-flex mb-3 flex-wrap align-content-end" style="height: 100px">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-wrap flex-content-center" style="height: 100px">
+<div class="d-flex mb-3 flex-wrap align-content-center" style="height: 100px">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-wrap flex-content-between" style="height: 100px">
+<div class="d-flex mb-3 flex-wrap align-content-between" style="height: 100px">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-wrap flex-content-around" style="height: 100px">
+<div class="d-flex mb-3 flex-wrap align-content-around" style="height: 100px">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
-<div class="d-flex mb-3 flex-wrap flex-content-stretch" style="height: 100px">
+<div class="d-flex mb-3 flex-wrap align-content-stretch" style="height: 100px">
   <div class="md-item">1</div>
+  <div class="md-item">2</div>
+  <div class="md-item">3</div>
+</div>
+{{</example>}}
+
+### Align self
+Use the align self classes to align the item compared to the flex container. This overwrites any align items class that might be applied to the flex container.
+
+* `align-self-auto`
+* `align-self-start`
+* `align-self-end`
+* `align-self-center`
+* `align-self-baseline`
+* `align-self-stretch`
+
+{{<example class="docs-preview-flex">}}
+<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
+  <div class="md-item align-self-auto">1</div>
+  <div class="md-item">2</div>
+  <div class="md-item">3</div>
+</div>
+<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
+  <div class="md-item align-self-start">1</div>
+  <div class="md-item">2</div>
+  <div class="md-item">3</div>
+</div>
+<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
+  <div class="md-item align-self-end">1</div>
+  <div class="md-item">2</div>
+  <div class="md-item">3</div>
+</div>
+<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
+  <div class="md-item align-self-center">1</div>
+  <div class="md-item">2</div>
+  <div class="md-item">3</div>
+</div>
+<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
+  <div class="md-item align-self-baseline">1</div>
+  <div class="md-item">2</div>
+  <div class="md-item">3</div>
+</div>
+<div class="d-flex flex-items-stretch" style="height: 100px">
+  <div class="md-item align-self-stretch">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
 </div>
@@ -260,51 +308,11 @@ Mellow provides you with the `flex-grow-*` and `flex-shrink-*` utility classes t
 </div>
 {{</example>}}
 
-## Align self
-Use the `flex-self-*`-classes to align the item compared to the flex container. This overwrites any `flex-items-`-class that might be applied to the flex container.
-
-* `flex-self-auto`
-* `flex-self-start`
-* `flex-self-end`
-* `flex-self-center`
-* `flex-self-baseline`
-* `flex-self-stretch`
-
-{{<example class="docs-preview-flex">}}
-<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
-  <div class="md-item flex-self-auto">1</div>
-  <div class="md-item">2</div>
-  <div class="md-item">3</div>
-</div>
-<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
-  <div class="md-item flex-self-start">1</div>
-  <div class="md-item">2</div>
-  <div class="md-item">3</div>
-</div>
-<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
-  <div class="md-item flex-self-end">1</div>
-  <div class="md-item">2</div>
-  <div class="md-item">3</div>
-</div>
-<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
-  <div class="md-item flex-self-center">1</div>
-  <div class="md-item">2</div>
-  <div class="md-item">3</div>
-</div>
-<div class="d-flex mb-3 flex-items-stretch" style="height: 100px">
-  <div class="md-item flex-self-baseline">1</div>
-  <div class="md-item">2</div>
-  <div class="md-item">3</div>
-</div>
-<div class="d-flex flex-items-stretch" style="height: 100px">
-  <div class="md-item flex-self-stretch">1</div>
-  <div class="md-item">2</div>
-  <div class="md-item">3</div>
-</div>
-{{</example>}}
-
 ## Order
-You can also change the order the the items in a flex container with the `order-*`-classes. These range from 0 to 5, but also provide `first` and `last` variants.
+You can also change the order the the items in a flex container with the flex order classes. These range from 0 to 5, but also provide `first` and `last` variants.
+
+* `order-[breakpoint]-[0-5]`
+* `order-[breakpoint]-[first|last]`
 
 {{<example class="docs-preview-flex">}}
 <div class="d-flex mb-3">

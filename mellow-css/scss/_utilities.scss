@@ -293,25 +293,25 @@
     }
 
     @each $justify-name, $justify-value in $flex-justifies-content {
-      .flex-justify#{$breakpoint-suffix}-#{$justify-name} {
+      .justify-content#{$breakpoint-suffix}-#{$justify-name} {
         justify-content: $justify-value !important;
       }
     }
 
     @each $align-name, $align-value in $flex-aligns-items {
-      .flex-items#{$breakpoint-suffix}-#{$align-name} {
+      .align-items#{$breakpoint-suffix}-#{$align-name} {
         align-items: $align-value !important;
       }
     }
 
     @each $align-name, $align-value in $flex-aligns-content {
-      .flex-content#{$breakpoint-suffix}-#{$align-name} {
+      .align-content#{$breakpoint-suffix}-#{$align-name} {
         align-content: $align-value !important;
       }
     }
 
     @each $align-name, $align-value in $flex-aligns-self {
-      .flex-self#{$breakpoint-suffix}-#{$align-name} {
+      .align-self#{$breakpoint-suffix}-#{$align-name} {
         align-self: $align-value !important;
       }
     }
