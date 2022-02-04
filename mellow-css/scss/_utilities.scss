@@ -272,6 +272,14 @@
       flex-shrink: 0 !important;
     }
 
+    .flex#{$breakpoint-suffix}-grow-1 {
+      flex-grow: 1 !important;
+    }
+
+    .flex#{$breakpoint-suffix}-shrink-1 {
+      flex-shrink: 1 !important;
+    }
+
     @each $flex-direction in $flex-directions {
       .flex#{$breakpoint-suffix}-#{$flex-direction} {
         flex-direction: $flex-direction !important;
