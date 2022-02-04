@@ -209,7 +209,9 @@ Use the `flex-content-*`-classes to align content in its flex box.
 {{</example>}}
 
 ## Flex
-The `flex-*` classes allow you to set the flexability of an item within a flex-container.
+The `flex-*` classes allow you to set the flexability of an item within a flex-container. The following classes are supported:
+
+* `flex-[breakpoints]-[1|auto]`
 
 {{<example class="docs-preview-flex">}}
 <div class="d-flex mb-3">
@@ -226,6 +228,25 @@ The `flex-*` classes allow you to set the flexability of an item within a flex-c
   <div class="md-item flex-auto">Small</div>
   <div class="md-item flex-auto">I'm very wide, look at it</div>
   <div class="md-item flex-auto">Also small</div>
+</div>
+{{</example>}}
+
+### Grow and shrink
+Mellow provides you with the `flex-grow-*` and `flex-shrink-*` utility classes to allow you to set a flew item's ability to grow and fill the available space, and shrink to the minimum space it needs.
+
+* `flex-[breakpoints]-grow-[0|1]`
+* `flex-[breakpoints]-shrink-[0|1]`
+
+{{<example class="docs-preview-flex">}}
+<div class="d-flex mb-3">
+  <div class="md-item">1</div>
+  <div class="md-item flex-grow-1">I'm as wide as I can be</div>
+  <div class="md-item">3</div>
+</div>
+<div class="d-flex mb-3" style="max-width: 320px">
+  <div class="md-item">flex item block</div>
+  <div class="md-item flex-shrink-1">I'm as wide as possible</div>
+  <div class="md-item">flex item block</div>
 </div>
 <div class="d-flex mb-3">
   <div class="md-item">1</div>
