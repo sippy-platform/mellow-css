@@ -280,6 +280,10 @@
       flex-shrink: 1 !important;
     }
 
+    .flex#{$breakpoint-suffix}-fill {
+      flex: 1 1 auto !important;
+    }
+
     @each $flex-direction in $flex-directions {
       .flex#{$breakpoint-suffix}-#{$flex-direction} {
         flex-direction: $flex-direction !important;

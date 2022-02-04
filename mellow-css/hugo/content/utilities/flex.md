@@ -257,7 +257,7 @@ Use the align self classes to align the item compared to the flex container. Thi
 {{</example>}}
 
 ## Flex
-The `flex-*` classes allow you to set the flexability of an item within a flex-container. The following classes are supported:
+The flex classes allow you to set the flexability of an item within a flex-container. The following classes are supported:
 
 * `flex-[breakpoints]-[1|auto]`
 
@@ -278,6 +278,23 @@ The `flex-*` classes allow you to set the flexability of an item within a flex-c
   <div class="md-item flex-auto">Also small</div>
 </div>
 {{</example>}}
+
+### Fill
+The `flex-[breakpoint]-fill` class can be used on items in a flexbox layout to fill out the flexbox with the items getting equal additional space.
+
+{{<example class="docs-preview-flex">}}
+<div class="d-flex mb-3">
+  <div class="md-item flex-fill">These columns</div>
+  <div class="md-item flex-fill">Will all see the same amount</div>
+  <div class="md-item flex-fill">Of width added</div>
+</div>
+<div class="d-flex">
+  <div class="md-item flex-1">Despite their contents</div>
+  <div class="md-item flex-1">These columns</div>
+  <div class="md-item flex-1">Are equal in size</div>
+</div>
+{{</example>}}
+
 
 ### Grow and shrink
 Mellow provides you with the `flex-grow-*` and `flex-shrink-*` utility classes to allow you to set a flew item's ability to grow and fill the available space, and shrink to the minimum space it needs.
