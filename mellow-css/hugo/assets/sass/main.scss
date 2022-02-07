@@ -6,7 +6,7 @@
 .docs-grid {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 260px auto;
+  grid-template-columns: 240px auto;
   grid-template-rows: 56px auto;
   grid-template-areas:
     "navbar navbar"
@@ -27,15 +27,33 @@
 
 .docs-main {
   display: grid;
-  gap: 1rem;
+  max-width: calc(100vw - 240px);
+  gap: 2rem;
   grid-area: main;
   margin: 0 auto;
   padding: 36px;
-  grid-template-columns: calc(100% - 260px) 260px;
-  grid-template-rows: auto auto;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
-    "meta toc"
-    "article toc";
+    "meta"
+    "toc"
+    "article";
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 440px 200px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "meta toc"
+      "article toc";
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 640px 200px;
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: 840px 200px;
+  }
 
   .docs-main-meta {
     grid-area: meta;
@@ -148,6 +166,7 @@
   border-radius: .5rem;
   margin-bottom: 1rem;
   overflow: hidden;
+  width: 100%;
 
   .docs-preview {
     padding: 1.5rem;
