@@ -5,13 +5,43 @@
 // Docs grid
 .docs-grid {
   min-height: 100vh;
+  position: relative;
   display: grid;
-  grid-template-columns: 240px auto;
-  grid-template-rows: 56px auto;
+  grid-template-columns: auto;
+  grid-template-rows: 56px auto auto;
   grid-template-areas:
-    "navbar navbar"
-    "sidebar main"
-    "sidebar footer";
+    "navbar"
+    "main"
+    "footer";
+
+  @media (min-width: 800px) {
+    grid-template-columns: 240px auto;
+    grid-template-rows: 56px auto auto;
+    grid-template-areas:
+      "navbar navbar"
+      "sidebar main"
+      "sidebar footer";
+  }
+
+  @media (max-width: 800px) {
+    .docs-sidebar {
+      position: fixed;
+      bottom: 0;
+      z-index: 1050;
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      visibility: hidden;
+      background-clip: padding-box;
+      outline: 0;
+      transform: translateX(100%);
+      transition: transform .3s ease-in-out;
+
+      &.show {
+        transform: none;
+      }
+    }
+  }
 }
 
 .docs-navbar {
@@ -64,7 +94,7 @@
 
     .docs-toc {
       position: sticky;
-      top: 56px;
+      top: 92px;
     }
   }
 
@@ -74,7 +104,9 @@
 }
 
 .docs-sidebar {
-  grid-area: sidebar;
+  @media (min-width: 800px) {
+    grid-area: sidebar;
+  }
 }
 
 .docs-navigation {
