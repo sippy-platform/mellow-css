@@ -4,7 +4,7 @@ description: Change the way your text is displayed on your pages.
 ---
 
 ## Alignment
-Center your text to any side. As per usual, these have responsive variants in the format of `.text-<breakpoint>-*`.
+Center your text to any side. As per usual, these have responsive variants in the format of `text-[breakpoint]-*`.
 
 {{<example>}}
 <p class="text-start">To the left.</p>
@@ -24,7 +24,7 @@ Change the capitalization of your text with the transform utilities.
 ## Font weight
 Change the font weight with the font weight utilities.
 
-The `.fw-bolder` and `.fw-lighter` classes are relative to their parent and as a result can be stacked. While Mellow only provides utility classes to get bold, normal, and light fonts directly, you can stack these utilities to create strong and thin fonts as well.
+The `fw-bolder` and `fw-lighter` classes are relative to their parent and as a result can be stacked. While Mellow only provides utility classes to get bold, normal, and light fonts directly, you can stack these utilities to create strong and thin fonts as well.
 
 {{<example>}}
 <p class="fw-bold">Bold text.</p>
@@ -55,7 +55,7 @@ Change the line height with the line height utilities.
 {{</example>}}
 
 ## Wrap
-You can tell text to wrap with the `.text-wrap` class. Or tell it not to do that with the `.text-nowrap` class.
+You can tell text to wrap with the `text-wrap` class. Or tell it not to do that with the `text-nowrap` class.
 
 {{<example>}}
 <div class="d-inline-block bg-orange text-white p-3" style="width: 120px;">
@@ -70,7 +70,7 @@ You can tell text to wrap with the `.text-wrap` class. Or tell it not to do that
 {{</example>}}
 
 ## Word break
-Longs strings can break your layout. The `.text-break` class prevents that.
+Longs strings can break your layout. The `text-break` class prevents that.
 
 {{<example>}}
 <p class="text-break">mellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellowmellow</p>

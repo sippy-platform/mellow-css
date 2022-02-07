@@ -27,7 +27,7 @@ Additionally, styles are provided to style any text as any of the 6 headings.
 {{</example>}}
 
 ## Marketing
-The `.marketing-*`-heading classes are designed as an extension of the default headings. These are great for when you need a more obvious heading. Note that beyond the `font-size`-scaling from the headings, all other custom styling is lost.
+The `marketing-*`-heading classes are designed as an extension of the default headings. These are great for when you need a more obvious heading. Note that beyond the `font-size`-scaling from the headings, all other custom styling is lost.
 
 {{<example>}}
 <h1 class="marketing-1">Marketing 1</h1>
@@ -55,7 +55,7 @@ All of the usual inline styling options are available in Mellow. They are mostly
 {{</example>}}
 
 ## Small
-The `<small>`-element and `.small`-class share their styling. Using these in any context will reduce the size of the text to 87.5% of its parent.
+The `<small>`-element and `small` class share their styling. Using these in any context will reduce the size of the text to 87.5% of its parent.
 
 {{<example>}}
 <h1>Heading 1 <small>Small 1</small></h1>
@@ -70,7 +70,7 @@ The `<small>`-element and `.small`-class share their styling. Using these in any
 ## Lists
 
 ### Unstyles
-Often, you don't want most of a lists default styling. The `list-none`-class makes sure that any list styling is removed.
+Often, you don't want most of a lists default styling. The `list-none` class makes sure that any list styling is removed.
 
 {{<example>}}
 <ul class="list-none">
@@ -87,7 +87,7 @@ Often, you don't want most of a lists default styling. The `list-none`-class mak
 {{</example>}}
 
 ### Inline
-Making a horizontal menu? Showing your list in a row is a useful first step. The `list-inline`-classes help you with that.
+Making a horizontal menu? Showing your list in a row is a useful first step. The `list-inline` classes help you with that.
 
 {{<example>}}
 <ul class="list-inline">

@@ -272,6 +272,18 @@
       flex-shrink: 0 !important;
     }
 
+    .flex#{$breakpoint-suffix}-grow-1 {
+      flex-grow: 1 !important;
+    }
+
+    .flex#{$breakpoint-suffix}-shrink-1 {
+      flex-shrink: 1 !important;
+    }
+
+    .flex#{$breakpoint-suffix}-fill {
+      flex: 1 1 auto !important;
+    }
+
     @each $flex-direction in $flex-directions {
       .flex#{$breakpoint-suffix}-#{$flex-direction} {
         flex-direction: $flex-direction !important;
@@ -285,25 +297,25 @@
     }
 
     @each $justify-name, $justify-value in $flex-justifies-content {
-      .flex-justify#{$breakpoint-suffix}-#{$justify-name} {
+      .justify-content#{$breakpoint-suffix}-#{$justify-name} {
         justify-content: $justify-value !important;
       }
     }
 
     @each $align-name, $align-value in $flex-aligns-items {
-      .flex-items#{$breakpoint-suffix}-#{$align-name} {
+      .align-items#{$breakpoint-suffix}-#{$align-name} {
         align-items: $align-value !important;
       }
     }
 
     @each $align-name, $align-value in $flex-aligns-content {
-      .flex-content#{$breakpoint-suffix}-#{$align-name} {
+      .align-content#{$breakpoint-suffix}-#{$align-name} {
         align-content: $align-value !important;
       }
     }
 
     @each $align-name, $align-value in $flex-aligns-self {
-      .flex-self#{$breakpoint-suffix}-#{$align-name} {
+      .align-self#{$breakpoint-suffix}-#{$align-name} {
         align-self: $align-value !important;
       }
     }

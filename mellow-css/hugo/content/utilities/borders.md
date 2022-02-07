@@ -12,7 +12,7 @@ description: Add, subtract, and manipulate the look of borders of your elements.
 <div class="border-start"></div>
 {{</example>}}
 
-Every `border-*`-class has also an inverse version that removes the border.
+Every `border-*` class has also an inverse version that removes the border.
 
 {{<example class="docs-preview-border bordered">}}
 <div class="border-0"></div>

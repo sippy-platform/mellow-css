@@ -57,7 +57,7 @@ Where there is max, there is also min, and we've got those classes too.
 {{</example>}}
 
 ## Relatie to viewport
-You can also use these properties relative to the viewport. Note that there is no `.max`-variant for these.
+You can also use these properties relative to the viewport. Note that there is no `max`-variant for these.
 
 {{<example show_preview="false">}}
 <div class="vw-100">.vw-100</div>

@@ -20,7 +20,7 @@ Creating depth gives a clear sense of hierarchy. In light interfaces, this is be
 
 ## Elevation
 
-The `elevation`-classes provide the same shadows but also alter the background color. These classes are ment to be used in dark UIs where elevation solely based on the shadow of the element is not clear enough. A higher elevation level results in a lighter background color because the element approaches the "light source".
+The `elevation` classes provide the same shadows but also alter the background color. These classes are ment to be used in dark UIs where elevation solely based on the shadow of the element is not clear enough. A higher elevation level results in a lighter background color because the element approaches the "light source".
 
 {{<example>}}
 <div class="grid grid-2 grid-sm-3 grid-lg-6 gap-4 p-4 bg-dark">
