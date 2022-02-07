@@ -27,5 +27,3 @@ class OffCanvas {
     this.element.classList.add('show');
   }
 }
-
-export default OffCanvas;
