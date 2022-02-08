@@ -1,3 +1,4 @@
-**/*.min.js
-**/dist/
-**/hugo/
+*.min.js
+dist/
+hugo/
+build/
