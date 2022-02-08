@@ -16,7 +16,7 @@
     "js:minify": "terser --compress --mangle --comments \"/^!/\" --source-map \"content=dist/js/mellow.js.map,includeSources,url=mellow.min.js.map\" --output dist/js/mellow.min.js dist/js/mellow.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run prod",
-    "prod": "npm-run-all clean scss",
+    "prod": "npm-run-all clean scss js",
     "scss": "npm-run-all --continue-on-error scss:lint scss:compile scss:prefix scss:copy",
     "scss:lint": "npm-run-all --continue-on-error scss:lint:*",
     "scss:lint:style": "stylelint \"**/*.scss\"",
