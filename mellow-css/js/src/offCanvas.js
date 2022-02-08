@@ -1,4 +1,4 @@
-class OffCanvas {
+export default class OffCanvas {
   constructor(element) {
     this.element = element;
     this.isVisible = false;
@@ -27,5 +27,3 @@ class OffCanvas {
     this.element.classList.add('show');
   }
 }
-
-export default OffCanvas;
