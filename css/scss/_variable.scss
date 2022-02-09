@@ -146,6 +146,8 @@ $orange: map-get(map-get($palettes, "orange"), 500) !default;
 $pink: map-get(map-get($palettes, "pink"), 500) !default;
 $purple: map-get(map-get($palettes, "purple"), 500) !default;
 $grey: map-get(map-get($palettes, "grey"), 500) !default;
+$light: map-get($greys, 100);
+$dark: map-get($greys, 900);
 
 $colors: (
   blue: $blue,
@@ -157,8 +159,8 @@ $colors: (
   pink: $pink,
   purple: $purple,
   grey: $grey,
-  light: map-get($greys, 100),
-  dark: map-get($greys, 900),
+  light: $light,
+  dark: $dark,
   white: #fff
 ) !default;
 

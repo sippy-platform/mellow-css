@@ -101,6 +101,40 @@ You can also use heading tags to make your `card-header` pop more:
 </div>
 {{</example>}}
 
+## Images
+Mellow includes modifier classes for images at the top and bottom of the card.
+
+{{<example>}}
+<div class="card mb-3">
+  <svg class="card-img-top" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <rect width="100%" height="100%" fill="#e6f0fb" />
+    <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
+    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>{
+  </svg>
+
+  <div class="card-body">
+    <p>Hello world, this is a short text to show what a card can do in Mellow.</p>
+  </div>
+</div>
+<div class="card mb-3">
+  <svg class="card-img" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <rect width="100%" height="100%" fill="#e6f0fb" />
+    <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
+    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>{
+  </svg>
+</div>
+<div class="card">
+  <div class="card-body">
+    <p>Hello world, this is a short text to show what a card can do in Mellow.</p>
+  </div>
+  <svg class="card-img-bottom" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <rect width="100%" height="100%" fill="#e6f0fb" />
+    <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
+    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>{
+  </svg>
+</div>
+{{</example>}}
+
 ## Alignment
 Like all other components, the card component can be manipulated with the text alignment utilities.
 
