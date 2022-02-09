@@ -109,7 +109,7 @@ Mellow includes modifier classes for images at the top and bottom of the card.
   <svg class="card-img-top" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
     <rect width="100%" height="100%" fill="#e6f0fb" />
     <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
-    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>{
+    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>
   </svg>
 
   <div class="card-body">
@@ -120,7 +120,7 @@ Mellow includes modifier classes for images at the top and bottom of the card.
   <svg class="card-img" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
     <rect width="100%" height="100%" fill="#e6f0fb" />
     <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
-    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>{
+    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>
   </svg>
 </div>
 <div class="card">
@@ -130,7 +130,7 @@ Mellow includes modifier classes for images at the top and bottom of the card.
   <svg class="card-img-bottom" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
     <rect width="100%" height="100%" fill="#e6f0fb" />
     <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
-    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>{
+    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>
   </svg>
 </div>
 {{</example>}}
@@ -212,6 +212,26 @@ Alternatively, you can use the utility classes.
 ### (Inline) CSS
 Or you can use inline CSS, our "[Basic card](/components/card/#basic-card)" example uses this approach.
 
+
+## Horizontal
+By applying a `flex-row` class to a card, you can turn the cards content horizontal.
+
+{{<example>}}
+<div class="card flex-row mb-3">
+  <svg class="border-radius-start w-25" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <rect width="100%" height="100%" fill="#e6f0fb" />
+    <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
+    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>
+  </svg>
+
+  <div class="card-body">
+    <h5 class="card-title">Heading 5</h5>
+    <p>Hello world, this is a short text to show what a card can do in Mellow.</p>
+    <p class="text-small text-muted">Image uploaded last week</p>
+  </div>
+</div>
+{{</example>}}
+
 ## Form elements
 
 ### Button in header
@@ -242,7 +262,7 @@ Or include them in the contents of your body.
       <strong>Hello setting</strong>
       <p class="m-0 text-small text-muted">Small description</p>
     </div>
-    <a href="#" class="btn btn-success">Save</a>
+    <a href="#" class="btn btn-default">Open</a>
   </div>
 </div>
 {{</example>}}
@@ -256,14 +276,14 @@ Additionally, you can alter the behavior of the content. Prefer the text to trun
       <strong class="d-block text-truncate">Hello very long truncated setting title</strong>
       <p class="m-0 text-small text-muted text-truncate">Small description that should overflow at some point</p>
     </div>
-    <a href="#" class="btn btn-success ms-2">Save</a>
+    <a href="#" class="btn btn-default ms-2">Open</a>
   </div>
   <div class="card-body d-flex align-items-center border-top">
     <div class="flex-auto">
       <strong>Hello very long line-breaked setting title</strong>
       <p class="m-0 text-small text-muted">Small description that should overflow at some point</p>
     </div>
-    <a href="#" class="btn btn-success ms-2">Save</a>
+    <a href="#" class="btn btn-default ms-2">Open</a>
   </div>
 </div>
 {{</example>}}
