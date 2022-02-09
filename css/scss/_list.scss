@@ -1,0 +1,96 @@
+.list {
+  list-style: none;
+  padding: 0;
+  border-radius: $border-radius-sm;
+
+  > .list-item {
+    position: relative;
+    display: block;
+    padding: $spacer * .5 $spacer;
+    border-radius: $border-radius-sm;
+
+    &.list-item-danger {
+      color: map-get($reds, 500) !important;
+    }
+
+    &.list-item-action {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        background-color: map-get($greys, 100);
+
+        &::before {
+          content: initial !important;
+        }
+      }
+
+      &.list-item-danger {
+        &:hover {
+          background-color: map-get($reds, 50);
+        }
+      }
+    }
+
+    &.active {
+      background-color: map-get($greys, 50);
+
+      &:hover {
+        background-color: map-get($greys, 100);
+      }
+
+      &.list-item-danger {
+        background-color: map-get($reds, 50);
+      }
+
+      &::after {
+        position: absolute;
+        top: 8px;
+        left: -2px;
+        height: calc(100% - 16px);
+        width: 4px;
+        border-radius: $border-radius-sm;
+        content: "";
+        background-color: map-get($accent, 500);
+      }
+    }
+  }
+
+  &.list-dividers {
+    > .list-item:not(:first-child) {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 12px;
+        right: 12px;
+        height: 1px;
+        content: "";
+        background-color: $border-color;
+      }
+    }
+  }
+
+  &.list-dividers-full {
+    > .list-item:not(:first-child) {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        content: "";
+        background-color: $border-color;
+      }
+    }
+  }
+
+  .list-divider {
+    border-bottom: $border-color 1px solid;
+    margin: 0 12px;
+    width: calc(100% - 24px);
+  }
+
+  .list-divider-full {
+    border-bottom: $border-color 1px solid;
+  }
+}
