@@ -3,30 +3,27 @@
   <head>
     {{ partialCached "head" . }}
   </head>
-  <body>
+  <body class="docs-grid">
     {{ partialCached "navbar" . }}
 
-    <main class="container-lg pt-3">
-      <div class="grid grid-12">
-        <div class="col-12 col-sm-3 col-lg-2">
-          {{ partialCached "navigation" . }}
-        </div>
-        <div class="col-12 col-sm-9 col-lg-7 col-xxl-8 docs-content">
-          <h1>{{ .Title }}</h1>
-          <p class="lead">{{ .Description }}</p>
-          <div class="d-block d-lg-none ms-n2">
-            <p class="h6 mb-1 mt-5 ms-2">On this page</p>
-            {{ .TableOfContents }}
-          </div>
-          {{ .Content }}
-        </div>
-        <div class="d-none d-lg-block col-lg-3 col-xxl-2">
-          <div class="docs-toc">
-            <p class="h6 mb-1 mt-2 ms-2 pb-2">On this page</p>
-            {{ .TableOfContents }}
-          </div>
-        </div>
+    <div class="docs-sidebar border-end bg-light offcanvas" id="menu">
+      {{ partialCached "navigation" . }}
+    </div>
+
+    <main class="docs-main">
+      <div class="docs-main-meta">
+        <h1>{{ .Title }}</h1>
+        <p class="lead">{{ .Description }}</p>
       </div>
+      <side class="docs-main-toc">
+        <div class="docs-toc">
+          <p class="h6 ms-2">On this page</p>
+          {{ .TableOfContents }}
+        </div>
+      </side>
+      <article class="docs-main-content docs-content">
+        {{ .Content }}
+      </article>
     </main>
 
     {{ partialCached "footer" . }}
