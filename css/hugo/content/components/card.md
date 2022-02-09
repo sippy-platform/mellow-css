@@ -1,5 +1,5 @@
 ---
-title: Cards
+title: Card
 description: Cards can help you structure the content on your page.
 ---
 
@@ -17,7 +17,7 @@ Cards are designed as simple containers, a basic `card` is built with flexbox an
 </div>
 {{</example>}}
 
-## Contents
+## Elements
 Cards provide built-in support for a set of various content types, including headings, titles, footers, images, body, and more.
 
 ### Body
@@ -211,3 +211,59 @@ Alternatively, you can use the utility classes.
 
 ### (Inline) CSS
 Or you can use inline CSS, our "[Basic card](/components/card/#basic-card)" example uses this approach.
+
+## Form elements
+
+### Button in header
+You can add buttons to headers.
+
+{{<example>}}
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Hello Card
+    <a href="#" class="btn btn-success btn-sm">Save</a>
+  </div>
+  <div class="card-body">
+    <p>Hello world, this is a short text to show what a card can do in Mellow.</p>
+    <a href="#" class="card-link">Infinity</a>
+    <a href="#" class="card-link">Beyond</a>
+  </div>
+</div>
+{{</example>}}
+
+
+### Button in content
+Or include them in the contents of your body.
+
+{{<example>}}
+<div class="card">
+  <div class="card-body d-flex align-items-center">
+    <div class="flex-auto">
+      <strong>Hello setting</strong>
+      <p class="m-0 text-small text-muted">Small description</p>
+    </div>
+    <a href="#" class="btn btn-success">Save</a>
+  </div>
+</div>
+{{</example>}}
+
+Additionally, you can alter the behavior of the content. Prefer the text to truncate instead of line breaking? No problem.
+
+{{<example>}}
+<div class="card">
+  <div class="card-body d-flex align-items-center border-top">
+    <div class="flex-auto min-w-0">
+      <strong class="d-block text-truncate">Hello very long truncated setting title</strong>
+      <p class="m-0 text-small text-muted text-truncate">Small description that should overflow at some point</p>
+    </div>
+    <a href="#" class="btn btn-success ms-2">Save</a>
+  </div>
+  <div class="card-body d-flex align-items-center border-top">
+    <div class="flex-auto">
+      <strong>Hello very long line-breaked setting title</strong>
+      <p class="m-0 text-small text-muted">Small description that should overflow at some point</p>
+    </div>
+    <a href="#" class="btn btn-success ms-2">Save</a>
+  </div>
+</div>
+{{</example>}}

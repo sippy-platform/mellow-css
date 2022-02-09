@@ -16,9 +16,9 @@
 
 - title: Components
   pages:
-    - title: Buttons
-    - title: Button groups
-    - title: Cards
+    - title: Button
+    - title: Button group
+    - title: Card
 
 - title: Utilities
   pages:
