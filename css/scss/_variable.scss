@@ -161,7 +161,9 @@ $colors: (
   grey: $grey,
   light: $light,
   dark: $dark,
-  white: #fff
+  white: #fff,
+  muted: map-get($greys, 500),
+  reset: inherit
 ) !default;
 
 // Anchors
