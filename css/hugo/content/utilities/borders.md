@@ -49,10 +49,22 @@ Every `border-*` class has also an inverse version that removes the border.
 {{</example>}}
 
 ## Border radius
+The rounded classes give you control over the border radius of any corner. You can combine any position modifier (`t`, `e`, `b`, `s`, or none) with any size modifier (`0`, `sm`, `lg`, `pill`, or none).
+
+### Size
 {{<example class="docs-preview-border">}}
-<div class="border border-radius-0"></div>
-<div class="border border-radius-sm"></div>
-<div class="border border-radius"></div>
-<div class="border border-radius-lg"></div>
-<div class="border border-radius-pill"></div>
+<div class="border rounded-0"></div>
+<div class="border rounded-sm"></div>
+<div class="border rounded"></div>
+<div class="border rounded-lg"></div>
+<div class="border rounded-pill"></div>
+{{</example>}}
+
+### Direction
+{{<example class="docs-preview-border">}}
+<div class="border rounded"></div>
+<div class="border rounded-t"></div>
+<div class="border rounded-e"></div>
+<div class="border rounded-b"></div>
+<div class="border rounded-s"></div>
 {{</example>}}
