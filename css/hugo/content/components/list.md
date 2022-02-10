@@ -22,14 +22,14 @@ Lists provide a few divider styles including the default `list-dividers` and `li
 
 {{<example>}}
 <ul class="list list-dividers border mb-3">
-  <li class="list-item">This is an item</li>
-  <li class="list-item">This is also an item</li>
-  <li class="list-item">Yet another item</li>
+  <li class="list-item"><span class="list-item-label">This is an item</span></li>
+  <li class="list-item"><span class="list-item-label">This is also an item</span></li>
+  <li class="list-item"><span class="list-item-label">Yet another item</span></li>
 </ul>
 <ul class="list list-dividers-full border">
-  <li class="list-item">This is an item</li>
-  <li class="list-item">This is also an item</li>
-  <li class="list-item">Yet another item</li>
+  <li class="list-item"><span class="list-item-label">This is an item</span></li>
+  <li class="list-item"><span class="list-item-label">This is also an item</span></li>
+  <li class="list-item"><span class="list-item-label">Yet another item</span></li>
 </ul>
 {{</example>}}
 

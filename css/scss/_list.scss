@@ -19,10 +19,6 @@
 
       &:hover {
         background-color: map-get($greys, 100);
-
-        &::before {
-          content: initial !important;
-        }
       }
 
       &.list-item-danger {
@@ -30,6 +26,11 @@
           background-color: map-get($reds, 50);
         }
       }
+    }
+
+    .list-item-label {
+      position: relative;
+      display: block;
     }
 
     &.active {
@@ -57,12 +58,12 @@
   }
 
   &.list-dividers {
-    > .list-item:not(:first-child) {
+    > .list-item:not(:first-child) .list-item-label {
       &::before {
         position: absolute;
-        top: 0;
-        left: 12px;
-        right: 12px;
+        top: -7px;
+        left: 0;
+        right: 0;
         height: 1px;
         content: "";
         background-color: $border-color;
