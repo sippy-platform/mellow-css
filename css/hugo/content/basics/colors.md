@@ -73,7 +73,7 @@ $blues: (
 {{</example>}}
 
 {{<example show_code="false">}}
-<div class="grid grid-2 grid-sm-3 grid-lg-4 grid-xl-5">
+<div class="grid grid-2 grid-sm-3 grid-xl-4 grid-xxl-5">
   <div>
     <div class="bg-blue-500 p-3 mb-3 text-white">
       <p class="m-0 h6">Blue</p>
@@ -94,7 +94,7 @@ $blues: (
   <div>
     <div class="bg-purple-500 p-3 mb-3 text-white">
       <p class="m-0 h6">Purple</p>
-      <p class="m-0">#0068d8</p>
+      <p class="m-0">#a855f7</p>
     </div>
 
     <div class="bg-purple-50 py-2 px-3">Purple 50</div>
@@ -111,7 +111,7 @@ $blues: (
   <div>
     <div class="bg-pink-500 p-3 mb-3 text-white">
       <p class="m-0 h6">Pink</p>
-      <p class="m-0">#0068d8</p>
+      <p class="m-0">#ec4899</p>
     </div>
 
     <div class="bg-pink-50 py-2 px-3">Pink 50</div>
@@ -128,7 +128,7 @@ $blues: (
   <div>
     <div class="bg-red-500 p-3 mb-3 text-white">
       <p class="m-0 h6">Red</p>
-      <p class="m-0">#0068d8</p>
+      <p class="m-0">#ea002d</p>
     </div>
 
     <div class="bg-red-50 py-2 px-3">Red 50</div>
@@ -145,7 +145,7 @@ $blues: (
   <div>
     <div class="bg-orange-500 p-3 mb-3 text-white">
       <p class="m-0 h6">Orange</p>
-      <p class="m-0">#0068d8</p>
+      <p class="m-0">#f57600</p>
     </div>
 
     <div class="bg-orange-50 py-2 px-3">Orange 50</div>
@@ -153,7 +153,7 @@ $blues: (
     <div class="bg-orange-200 py-2 px-3">Orange 200</div>
     <div class="bg-orange-300 py-2 px-3">Orange 300</div>
     <div class="bg-orange-400 py-2 px-3">Orange 400</div>
-    <div class="bg-orange-500 py-2 px-3 text-white">Orange 500</div>
+    <div class="bg-orange-500 py-2 px-3">Orange 500</div>
     <div class="bg-orange-600 py-2 px-3 text-white">Orange 600</div>
     <div class="bg-orange-700 py-2 px-3 text-white">Orange 700</div>
     <div class="bg-orange-800 py-2 px-3 text-white">Orange 800</div>
@@ -162,7 +162,7 @@ $blues: (
   <div>
     <div class="bg-yellow-500 p-3 mb-3">
       <p class="m-0 h6">Yellow</p>
-      <p class="m-0">#0068d8</p>
+      <p class="m-0">#f5c800</p>
     </div>
 
     <div class="bg-yellow-50 py-2 px-3">Yellow 50</div>
@@ -179,7 +179,7 @@ $blues: (
   <div>
     <div class="bg-lime-500 p-3 mb-3">
       <p class="m-0 h6">Lime</p>
-      <p class="m-0">#0068d8</p>
+      <p class="m-0">#7acc00</p>
     </div>
 
     <div class="bg-lime-50 py-2 px-3">Lime 50</div>
@@ -196,7 +196,7 @@ $blues: (
   <div>
     <div class="bg-green-500 p-3 mb-3">
       <p class="m-0 h6">Green</p>
-      <p class="m-0">#0068d8</p>
+      <p class="m-0">#29b340</p>
     </div>
 
     <div class="bg-green-50 py-2 px-3">Green 50</div>
@@ -213,7 +213,7 @@ $blues: (
   <div>
     <div class="bg-grey-500 p-3 mb-3 text-white">
       <p class="m-0 h6">Grey</p>
-      <p class="m-0">#0068d8</p>
+      <p class="m-0">#747474</p>
     </div>
 
     <div class="bg-grey-50 py-2 px-3">Grey 50</div>
