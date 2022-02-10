@@ -218,24 +218,30 @@
   }
 }
 
-.border-radius-0 {
-  border-radius: 0 !important;
-}
+@each $rounded-type, $rounded-size in $border-radia {
+  .rounded#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
+    border-radius: $rounded-size !important;
+  }
 
-.border-radius-sm {
-  border-radius: $border-radius-sm !important;
-}
+  .rounded-t#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
+    border-top-left-radius: $rounded-size;
+    border-top-right-radius: $rounded-size;
+  }
 
-.border-radius {
-  border-radius: $border-radius !important;
-}
+  .rounded-e#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
+    border-bottom-right-radius: $rounded-size;
+    border-top-right-radius: $rounded-size;
+  }
 
-.border-radius-lg {
-  border-radius: $border-radius-lg !important;
-}
+  .rounded-b#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
+    border-bottom-left-radius: $rounded-size;
+    border-bottom-right-radius: $rounded-size;
+  }
 
-.border-radius-pill {
-  border-radius: $border-radius-pill !important;
+  .rounded-s#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
+    border-bottom-left-radius: $rounded-size;
+    border-top-left-radius: $rounded-size;
+  }
 }
 
 // Display

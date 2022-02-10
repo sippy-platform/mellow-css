@@ -55,16 +55,16 @@ All of the usual inline styling options are available in Mellow. They are mostly
 {{</example>}}
 
 ## Small
-The `<small>`-element and `small` class share their styling. Using these in any context will reduce the size of the text to 87.5% of its parent.
+The `<small>` element and `text-small` class share their styling. Using these in any context will reduce the size of the text to 75% of its parent.
 
 {{<example>}}
-<h1>Heading 1 <small>Small 1</small></h1>
-<h2>Heading 2 <small>Small 2</small></h2>
-<h3>Heading 3 <small>Small 3</small></h3>
-<h4>Heading 4 <small>Small 4</small></h4>
-<h5>Heading 5 <small>Small 5</small></h5>
-<h6>Heading 6 <small>Small 6</small></h6>
-<p>Paragraph <small>Small paragraph</small></p>
+<h1>Heading 1 <small class="text-muted">Small 1</small></h1>
+<h2>Heading 2 <span class="text-small text-muted">Small 2</span></h2>
+<h3>Heading 3 <small class="text-muted">Small 3</small></h3>
+<h4>Heading 4 <span class="text-small text-muted">Small 4</span></h4>
+<h5>Heading 5 <small class="text-muted">Small 5</small></h5>
+<h6>Heading 6 <span class="text-small text-muted">Small 6</span></h6>
+<p>Paragraph <small class="text-muted">Small paragraph</small></p>
 {{</example>}}
 
 ## Lists

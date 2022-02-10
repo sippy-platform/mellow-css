@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: $border-color solid $border-width;
+  border-radius: $border-radius-sm;
+
+  .card-body {
+    flex: 1 1 auto;
+    padding: $spacer;
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-title {
+    margin-bottom: $spacer * .5;
+  }
+
+  .card-link {
+    + .card-link {
+      margin-left: $spacer;
+    }
+  }
+
+  .card-header {
+    padding: $spacer * .75 $spacer;
+    border-bottom: $border-color solid $border-width;
+    margin-bottom: 0;
+    background-color: $light;
+    border-top-left-radius: $border-radius-sm;
+    border-top-right-radius: $border-radius-sm;
+  }
+
+  .card-footer {
+    padding: $spacer * .75 $spacer;
+    border-top: $border-color solid $border-width;
+    background-color: $light;
+    border-bottom-left-radius: $border-radius-sm;
+    border-bottom-right-radius: $border-radius-sm;
+  }
+
+  .card-img,
+  .card-img-top,
+  .card-img-bottom {
+    width: 100%;
+  }
+
+  .card-img,
+  .card-img-top {
+    border-top-left-radius: $border-radius-sm;
+    border-top-right-radius: $border-radius-sm;
+  }
+
+  .card-img,
+  .card-img-bottom {
+    border-bottom-left-radius: $border-radius-sm;
+    border-bottom-right-radius: $border-radius-sm;
+  }
+}
