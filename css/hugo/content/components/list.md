@@ -108,6 +108,15 @@ Need an interactive list, add the `list-item-action` class to your items.
 </div>
 {{</example>}}
 
+Adding the `border` class to the list will disable the border radius for all elements except the first and last.
+{{<example>}}
+<div class="list border">
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is an item</span></a>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also an item</span></a>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">Yet another item</span></a>
+</div>
+{{</example>}}
+
 ### Active
 When adding the `active` class, Mellow will show an active indicator and background for the item.
 
