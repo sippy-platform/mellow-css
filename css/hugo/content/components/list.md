@@ -32,7 +32,7 @@ You can also make this with the `nav` element.
 {{</example>}}
 
 ## Dividers
-### Global
+### Global borders
 Lists provide a few divider styles including the default `list-dividers` and `list-dividers-full` styles. These dividers are created by adding a `::before` element. Unlike many implementations you see of styles like this, we actually still use the `border` property instead of creating a `1px` high element and giving it a background.
 
 {{<example>}}
@@ -48,7 +48,7 @@ Lists provide a few divider styles including the default `list-dividers` and `li
 </ul>
 {{</example>}}
 
-### Per item
+### Per item borders
 If you rather have more fine-grainded control over where dividers appear, you can also use the individual classes.
 
 {{<example>}}
@@ -66,6 +66,30 @@ If you rather have more fine-grainded control over where dividers appear, you ca
   <li class="list-divider-full"></li>
   <li class="list-item"><span class="list-item-label">Yet another item</span></li>
 </ul>
+{{</example>}}
+
+Note that the `list-divider` class has not the same effect as applying `list-dividers`. The `list-dividers` class will create a divider the size of the label, the `list-divider` class on the other hand will always be the full width minus a margin on the left and right side.
+
+### Section dividers
+If a section needs a text label, you can do that with `list-item-divider`. When using any of the `list-dividers-*` classes, the `list-item-divider` will have a top border over the full width of the list.
+
+{{<example>}}
+<div class="list list-dividers border mb-3">
+  <div href="#" class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section Divider</div>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is an item</span></a>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also an item</span></a>
+  <div href="#" class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section Divider</div>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">Yet another item</span></a>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is an item</span></a>
+</div>
+<div class="list border">
+  <div href="#" class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section Divider</div>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is an item</span></a>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also an item</span></a>
+  <div href="#" class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section Divider</div>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">Yet another item</span></a>
+  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is an item</span></a>
+</div>
 {{</example>}}
 
 ## Links

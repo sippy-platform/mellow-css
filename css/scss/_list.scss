@@ -109,6 +109,22 @@
     }
   }
 
+  .list-item-divider {
+    padding: $spacer * .5 $spacer;
+    font-size: .75rem;
+    font-weight: 600;
+    color: $grey;
+  }
+
+  &.list-dividers,
+  &.list-dividers-full {
+    .list-item-divider {
+      &:not(:first-child) {
+        border-top: $border-color 1px solid;
+      }
+    }
+  }
+
   .list-divider {
     border-bottom: $border-color 1px solid;
     margin: 0 12px;
