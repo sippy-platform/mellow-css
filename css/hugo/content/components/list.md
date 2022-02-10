@@ -179,3 +179,39 @@ You can increase the size of the click target by making the entire `list-item` t
 {{</example>}}
 
 Note that, since this is a grid, the order of the contents of a `list-item` doesn't matter, however, Mellow applies a right margin to all children that are not the last child. As a result, the child that appears visually last should also be the last child element in your HTML, otherwise it will get this margin and another child that does need it won't.
+
+## Complex example
+Of course, all of these various options can be combined into more complex layouts.
+
+{{<example>}}
+<div class="list border list-dividers">
+  <label class="list-item list-item-action">
+    <span class="list-item-action-s">
+      <input type="checkbox" value="1">
+    </span>
+    <span class="list-item-icon-s">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="width: 20px; height: 16px; margin-top: -.25rem;"><path fill-rule="evenodd" d="M17 6.5a5.5 5.5 0 0 1-8.82 4.38L4.06 15A.75.75 0 1 1 3 13.94l4.12-4.12A5.5 5.5 0 1 1 17 6.5Zm-1.5 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/></svg>
+    </span>
+    <span class="list-item-label">
+      <span class="fw-bold">This is an item</span><br />
+      <span class="text-muted text-small">Hey, look at this</span>
+    </span>
+    <span class="list-item-icon-e"></span>
+  </label>
+  <label class="list-item list-item-action active">
+    <span class="list-item-action-s">
+      <input type="checkbox" value="1" checked>
+    </span>
+    <span class="list-item-icon-s">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="width: 20px; height: 16px; margin-top: -.25rem;"><path fill-rule="evenodd" d="M17 6.5a5.5 5.5 0 0 1-8.82 4.38L4.06 15A.75.75 0 1 1 3 13.94l4.12-4.12A5.5 5.5 0 1 1 17 6.5Zm-1.5 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/></svg>
+    </span>
+    <span class="list-item-label">
+      <span class="fw-bold">This is an item</span><br />
+      <span class="text-muted text-small">Hey, look at this</span>
+    </span>
+    <span class="list-item-icon-e">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="width: 20px; height: 16px; margin-top: -.25rem;"><path fill-rule="evenodd" d="M4.5 7.83V14c0 .28.22.5.5.5h10a.5.5 0 0 0 .5-.5V7.83a.5.5 0 0 0-.15-.36l-5-5a.5.5 0 0 0-.7 0l-5 5a.5.5 0 0 0-.15.36ZM3 14V7.83a2 2 0 0 1 .59-1.42l5-5a2 2 0 0 1 2.82 0l5 5A2 2 0 0 1 17 7.83V14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+    </span>
+  </label>
+</div>
+{{</example>}}
