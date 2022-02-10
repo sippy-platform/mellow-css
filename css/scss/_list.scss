@@ -5,7 +5,11 @@
 
   > .list-item {
     position: relative;
-    display: block;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content min-content minmax(0, auto) min-content min-content;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+    grid-template-areas: "item-action-s item-icon-s item-label item-icon-e item-action-e";
     padding: $spacer * .5 $spacer;
     border-radius: $border-radius-sm;
 
@@ -29,8 +33,28 @@
     }
 
     .list-item-label {
+      grid-area: item-label;
       position: relative;
-      display: block;
+    }
+
+    .list-item-icon-s {
+      grid-area: item-icon-s;
+    }
+
+    .list-item-icon-e {
+      grid-area: item-icon-e;
+    }
+
+    .list-item-action-s {
+      grid-area: item-action-s;
+    }
+
+    .list-item-action-e {
+      grid-area: item-action-e;
+    }
+
+    & > :not(:last-child) {
+      margin-right: $spacer * .5;
     }
 
     &.active {
@@ -60,13 +84,13 @@
   &.list-dividers {
     > .list-item:not(:first-child) .list-item-label {
       &::before {
+        border-top: $border-color 1px solid;
         position: absolute;
-        top: -7px;
+        top: -8px;
         left: 0;
         right: 0;
         height: 1px;
         content: "";
-        background-color: $border-color;
       }
     }
   }
