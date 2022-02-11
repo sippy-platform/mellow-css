@@ -163,7 +163,7 @@ $colors: (
   light: $light,
   dark: $dark,
   white: #fff,
-  muted: map-get($greys, 500),
+  muted: $grey,
   reset: inherit
 ) !default;
 
