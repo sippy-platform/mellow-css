@@ -4,9 +4,10 @@
  * Licensed under AGPLv3 (https://github.com/sippy-platform/mellow/blob/main/LICENSE)
  */
 
-@import "variable";
 @import "mixins";
 @import "utilities/color";
+
+@import "variable";
 
 @import "root";
 @import "vivify";

@@ -20,6 +20,7 @@
     "value-no-vendor-prefix": true,
     "scss/at-extend-no-missing-placeholder": null,
     "scss/at-rule-conditional-no-parentheses": null,
+    "scss/dollar-variable-colon-space-after": "at-least-one-space",
     "scss/dollar-variable-empty-line-before": null,
     "scss/no-global-function-names": null
   }
