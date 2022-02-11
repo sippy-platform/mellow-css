@@ -300,6 +300,7 @@
   @each $palette-code, $color in $palette {
     .bg-#{$palette-name}-#{$palette-code} {
       background-color: #{$color};
+      color: color-contrast($color);
     }
   }
 }
