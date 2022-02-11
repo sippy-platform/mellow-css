@@ -11,6 +11,7 @@ Make your input fields look nice with the `input` class.
   <input type="text" class="input" placeholder="Name" />
   <input type="email" class="input" placeholder="Email" />
   <input type="password" class="input" placeholder="Password" />
+  <textarea class="input" placeholder="Message"></textarea>
 </form>
 {{</example>}}
 
@@ -33,4 +34,12 @@ With `input-text` you can add a styled description to your input. use the `aria-
   <input type="email" class="input" id="emailInput1" placeholder="Email" aria-describedby="emailHelp" />
   <div id="emailHelp" class="input-text">We'll send you a mail with your details.</div>
 </form>
+{{</example>}}
+
+## States
+### Disabled
+If you want to disable a form input, add the `disabled` attribute to it.
+
+{{<example>}}
+<input type="password" class="input" placeholder="Password" disabled />
 {{</example>}}
