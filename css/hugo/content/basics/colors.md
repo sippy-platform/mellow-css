@@ -8,20 +8,20 @@ The main color set has `text-*` and `bg-*` classes available in our [text color]
 
 {{<example show_code="false">}}
 <div class="grid grid-2 grid-sm-3">
-  <div class="bg-blue-500 p-3">bg-blue</div>
-  <div class="bg-purple-500 p-3">bg-purple</div>
-  <div class="bg-pink-500 p-3">bg-pink</div>
-  <div class="bg-red-500 p-3">bg-red</div>
-  <div class="bg-orange-500 p-3">bg-orange</div>
-  <div class="bg-yellow-500 p-3">bg-yellow</div>
-  <div class="bg-lime-500 p-3">bg-lime</div>
-  <div class="bg-green-500 p-3">bg-green</div>
-  <div class="bg-light p-3">bg-light</div>
-  <div class="bg-dark text-white p-3">bg-dark</div>
+  <div class="bg-blue-500 p-3">Blue</div>
+  <div class="bg-purple-500 p-3">Purple</div>
+  <div class="bg-pink-500 p-3">Pink</div>
+  <div class="bg-red-500 p-3">Red</div>
+  <div class="bg-orange-500 p-3">Orange</div>
+  <div class="bg-yellow-500 p-3">Yellow</div>
+  <div class="bg-lime-500 p-3">Lime</div>
+  <div class="bg-green-500 p-3">Green</div>
+  <div class="bg-light p-3">Light</div>
+  <div class="bg-dark text-white p-3">Dark</div>
 </div>
 {{</example>}}
 
-These values are directly available in the `$colors`-sass variable, they are defined as followed. Every variable that is directly used in the `$colors`-map is equal to the `500`-color in its own map.
+These values are directly available and are defined in the `$colors` sass variable as shown below. Every variable that is directly used in the `$colors` map is equal to the `500` color in its palette.
 
 {{<example show_preview="false" lang="scss">}}
 $colors: (
@@ -55,20 +55,33 @@ $palettes: (
 );
 {{</example>}}
 
-A color map is made out of a color palette from 50 to 900:
+A color map is made out of a color palette from 50 to 900. Every color has its tints and shades defined by the same percentages as blue except for grey.
 
 {{<example show_preview="false" lang="scss">}}
 $blues: (
-  50: #e6f0fb,
-  100: #cce1f7,
-  200: #99c3ef,
-  300: #66a4e8,
-  400: #3386e0,
-  500: #0068d8,
-  600: #005ec2,
-  700: #0053ad,
-  800: #004997,
-  900: #003e82
+  50: tint($blue, 90%),
+  100: tint($blue, 80%),
+  200: tint($blue, 60%),
+  300: tint($blue, 40%),
+  400: tint($blue, 20%),
+  500: $blue,
+  600: shade($blue, 15%),
+  700: shade($blue, 30%),
+  800: shade($blue, 45%),
+  900: shade($blue, 60%)
+) !default;
+
+$greys: (
+  50: tint($grey, 95%),
+  100: tint($grey, 90%),
+  200: tint($grey, 75%),
+  300: tint($grey, 45%),
+  400: tint($grey, 20%),
+  500: $grey,
+  600: shade($grey, 20%),
+  700: shade($grey, 40%),
+  800: shade($grey, 60%),
+  900: shade($grey, 80%)
 ) !default;
 {{</example>}}
 
