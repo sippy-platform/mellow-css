@@ -16,9 +16,10 @@
 
 - title: Components
   pages:
-    - title: Button
-    - title: Button group
+    - title: Buttons
+    - title: Button groups
     - title: Card
+    - title: List
 
 - title: Utilities
   pages:

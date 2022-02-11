@@ -20,16 +20,16 @@ $blues: (
 ) !default;
 
 $reds: (
-  50: #fde6ea,
-  100: #fbccd5,
-  200: #f799ab,
-  300: #f04d6c,
-  400: #ee3357,
+  50: #ffe7ec,
+  100: #ffcbd5,
+  200: #ff93a8,
+  300: #ff5b7b,
+  400: #ff234d,
   500: #ea002d,
-  600: #d30029,
-  700: #bb0024,
-  800: #a4001f,
-  900: #8c001b
+  600: #d10028,
+  700: #b70023,
+  800: #9e001e,
+  900: #840019
 ) !default;
 
 $limes: (
@@ -39,22 +39,22 @@ $limes: (
   300: #b8ee64,
   400: #a0e931,
   500: #7acc00,
-  600: #6fac13,
-  700: #5a8c0f,
-  800: #456b0c,
-  900: #314b08
+  600: #6bb300,
+  700: #5b9900,
+  800: #4c8000,
+  900: #3d6600
 ) !default;
 
 $greens: (
-  50: #cdf4d4,
-  100: #b8efc1,
-  200: #8fe69d,
-  300: #65dc79,
-  400: #3cd355,
+  50: #f3fcf5,
+  100: #daf7df,
+  200: #a8ebb4,
+  300: #77e088,
+  400: #45d45d,
   500: #29b340,
-  600: #249e38,
-  700: #1f8931,
-  800: #1a7429,
+  600: #249e39,
+  700: #1f8a31,
+  800: #1b752a,
   900: #166022
 ) !default;
 
@@ -65,23 +65,23 @@ $yellows: (
   300: #ffe15c,
   400: #ffd829,
   500: #f5c800,
-  600: #d1ab00,
-  700: #ae8e00,
-  800: #8a7100,
-  900: #665300
+  600: #d6af00,
+  700: #b89600,
+  800: #997d00,
+  900: #7b6400
 ) !default;
 
 $oranges: (
-  50: #ffd5ae,
-  100: #ffca99,
-  200: #ffb570,
-  300: #ffa048,
-  400: #ff8b1f,
+  50: #ffeddb,
+  100: #ffdfc2,
+  200: #ffc58f,
+  300: #ffab5c,
+  400: #ff9029,
   500: #f57600,
-  600: #d16500,
-  700: #ae5400,
-  800: #8a4200,
-  900: #663100
+  600: #d66700,
+  700: #b85900,
+  800: #994a00,
+  900: #7b3b00
 ) !default;
 
 $pinks: (
@@ -202,7 +202,7 @@ $spacers: (
 
 // Fonts and typogrpahy
 $font-size-base: 1rem !default;
-$font-size-small: .75em !default; // Relative to its parent
+$font-size-small: .875em !default; // Relative to its parent
 
 $font-sizes-heading: (
   h1: $font-size-base * 2.5,
