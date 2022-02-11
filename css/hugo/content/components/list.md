@@ -59,13 +59,13 @@ If you rather have more fine-grainded control over where dividers appear, you ca
   <li class="list-divider"></li>
   <li class="list-item"><span class="list-item-label">Yet another item</span></li>
 </ul>
-<ul class="list border">
-  <li class="list-item"><span class="list-item-label">This is a list item</span></li>
-  <li class="list-divider-full"></li>
-  <li class="list-item"><span class="list-item-label">This is also a list item</span></li>
-  <li class="list-divider-full"></li>
-  <li class="list-item"><span class="list-item-label">Yet another item</span></li>
-</ul>
+<nav class="list border">
+  <div class="list-item"><span class="list-item-label">This is a list item</span></div>
+  <div class="list-divider-full"></div>
+  <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
+  <div class="list-divider-full"></div>
+  <div class="list-item"><span class="list-item-label">Yet another item</span></div>
+</nav>
 {{</example>}}
 
 Note that the `list-divider` class has not the same effect as applying `list-dividers`. The `list-dividers` class will create a divider the size of the label, the `list-divider` class on the other hand will always be the full width minus a margin on the left and right side.
@@ -143,15 +143,15 @@ If an action requires more attention from the user because it is destructive (or
 Use the `list-sm` and `list-lg` classes to change the size of the list. These classes only alter the padding of the list items.
 
 {{<example>}}
-<div class="list list-sm border list-dividers mb-3">
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action list-item-danger"><span class="list-item-label">Delete everything</span></a>
+<div class="list list-sm list-dividers mb-3">
+  <div class="list-item"><span class="list-item-label">This is a list item</span></div>
+  <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
+  <div class="list-item list-item-danger"><span class="list-item-label">Delete everything</span></div>
 </div>
-<div class="list list-lg border list-dividers">
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action list-item-danger"><span class="list-item-label">Delete everything</span></a>
+<div class="list list-lg list-dividers">
+  <div class="list-item"><span class="list-item-label">This is a list item</span></div>
+  <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
+  <div class="list-item list-item-danger"><span class="list-item-label">Delete everything</span></div>
 </div>
 {{</example>}}
 
@@ -159,7 +159,7 @@ Use the `list-sm` and `list-lg` classes to change the size of the list. These cl
 You can disable a `list-item` by adding `disabled` to it.
 
 {{<example>}}
-<div class="list border list-dividers mb-3">
+<div class="list">
   <a href="#" class="list-item list-item-action disabled"><span class="list-item-label">This is a list item</span></a>
   <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also a list item</span></a>
   <a href="#" class="list-item list-item-action"><span class="list-item-label">Yet another item</span></a>
