@@ -1,8 +1,0 @@
-// Change the tint or shade of the color
-@function tint($color, $weight) {
-  @return mix(white, $color, $weight);
-}
-
-@function shade($color, $weight) {
-  @return mix(black, $color, $weight);
-}
