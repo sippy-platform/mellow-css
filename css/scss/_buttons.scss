@@ -44,22 +44,22 @@
   // Variants
   @each $btn-name, $color in $btn-context-colored-text {
     &.btn-#{$btn-name} {
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
+      background-color: map-get($greys, 50);
+      border: 1px solid map-get($greys, 200);
       color: map-get($color, 500);
 
       &:focus {
-        box-shadow: $btn-box-shadow-inset, 0 0 0 3px rgba(#666, .25);
+        box-shadow: $btn-box-shadow-inset, 0 0 0 3px rgba(map-get($greys, 500), .25);
       }
 
       &:hover {
-        background-color: #eee;
+        background-color: map-get($greys, 100);
       }
 
       &:active,
       &.active {
-        background-color: #e8e8e8;
-        border-color: #d8d8d8;
+        background-color: map-get($greys, 100);
+        border-color: map-get($greys, 300);
       }
     }
   }
@@ -68,12 +68,12 @@
     $color-contrast: color-contrast(map-get($color, 600));
 
     &.btn-#{$btn-name} {
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
+      background-color: map-get($greys, 50);
+      border: 1px solid map-get($greys, 200);
       color: map-get($color, 500);
 
       &:focus {
-        box-shadow: $btn-box-shadow-inset, 0 0 0 3px rgba(#666, .25);
+        box-shadow: $btn-box-shadow-inset, 0 0 0 3px rgba(map-get($greys, 500), .25);
 
         &:active,
         &.active,
