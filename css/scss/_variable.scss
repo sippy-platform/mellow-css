@@ -6,121 +6,131 @@ $font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 // stylelint-enable value-keyword-case
 
 // Colors
+$blue:        #0068d8 !default;
+$purple:      #a855f7 !default;
+$pink:        #ec4899 !default;
+$red:         #ea002d !default;
+$orange:      #f57600 !default;
+$yellow:      #f5c800 !default;
+$lime:        #7acc00 !default;
+$green:       #29b340 !default;
+$grey:        #747474 !default;
+
 $blues: (
-  50: #e6f0fb,
-  100: #cce1f7,
-  200: #99c3ef,
-  300: #66a4e8,
-  400: #3386e0,
-  500: #0068d8,
-  600: #005ec2,
-  700: #0053ad,
-  800: #004997,
-  900: #003e82
+  50: tint($blue, 90%),
+  100: tint($blue, 80%),
+  200: tint($blue, 60%),
+  300: tint($blue, 40%),
+  400: tint($blue, 20%),
+  500: $blue,
+  600: shade($blue, 15%),
+  700: shade($blue, 30%),
+  800: shade($blue, 45%),
+  900: shade($blue, 60%)
 ) !default;
 
 $reds: (
-  50: #ffe7ec,
-  100: #ffcbd5,
-  200: #ff93a8,
-  300: #ff5b7b,
-  400: #ff234d,
-  500: #ea002d,
-  600: #d10028,
-  700: #b70023,
-  800: #9e001e,
-  900: #840019
+  50: tint($red, 90%),
+  100: tint($red, 80%),
+  200: tint($red, 60%),
+  300: tint($red, 40%),
+  400: tint($red, 20%),
+  500: $red,
+  600: shade($red, 15%),
+  700: shade($red, 30%),
+  800: shade($red, 45%),
+  900: shade($red, 60%)
 ) !default;
 
 $limes: (
-  50: #f3ffe0,
-  100: #e6f9c9,
-  200: #cff497,
-  300: #b8ee64,
-  400: #a0e931,
-  500: #7acc00,
-  600: #6bb300,
-  700: #5b9900,
-  800: #4c8000,
-  900: #3d6600
+  50: tint($lime, 90%),
+  100: tint($lime, 80%),
+  200: tint($lime, 60%),
+  300: tint($lime, 40%),
+  400: tint($lime, 20%),
+  500: $lime,
+  600: shade($lime, 15%),
+  700: shade($lime, 30%),
+  800: shade($lime, 45%),
+  900: shade($lime, 60%)
 ) !default;
 
 $greens: (
-  50: #f3fcf5,
-  100: #daf7df,
-  200: #a8ebb4,
-  300: #77e088,
-  400: #45d45d,
-  500: #29b340,
-  600: #249e39,
-  700: #1f8a31,
-  800: #1b752a,
-  900: #166022
+  50: tint($green, 90%),
+  100: tint($green, 80%),
+  200: tint($green, 60%),
+  300: tint($green, 40%),
+  400: tint($green, 20%),
+  500: $green,
+  600: shade($green, 15%),
+  700: shade($green, 30%),
+  800: shade($green, 45%),
+  900: shade($green, 60%)
 ) !default;
 
 $yellows: (
-  50: #fff8db,
-  100: #fff4c2,
-  200: #ffea8f,
-  300: #ffe15c,
-  400: #ffd829,
-  500: #f5c800,
-  600: #d6af00,
-  700: #b89600,
-  800: #997d00,
-  900: #7b6400
+  50: tint($yellow, 90%),
+  100: tint($yellow, 80%),
+  200: tint($yellow, 60%),
+  300: tint($yellow, 40%),
+  400: tint($yellow, 20%),
+  500: $yellow,
+  600: shade($yellow, 15%),
+  700: shade($yellow, 30%),
+  800: shade($yellow, 45%),
+  900: shade($yellow, 60%)
 ) !default;
 
 $oranges: (
-  50: #ffeddb,
-  100: #ffdfc2,
-  200: #ffc58f,
-  300: #ffab5c,
-  400: #ff9029,
-  500: #f57600,
-  600: #d66700,
-  700: #b85900,
-  800: #994a00,
-  900: #7b3b00
+  50: tint($orange, 90%),
+  100: tint($orange, 80%),
+  200: tint($orange, 60%),
+  300: tint($orange, 40%),
+  400: tint($orange, 20%),
+  500: $orange,
+  600: shade($orange, 15%),
+  700: shade($orange, 30%),
+  800: shade($orange, 45%),
+  900: shade($orange, 60%)
 ) !default;
 
 $pinks: (
-  50: #fdeef6,
-  100: #fbdceb,
-  200: #f8b7d7,
-  300: #f492c2,
-  400: #f06dae,
-  500: #ec4899,
-  600: #e82384,
-  700: #cd1570,
-  800: #a8115c,
-  900: #830e48
+  50: tint($pink, 90%),
+  100: tint($pink, 80%),
+  200: tint($pink, 60%),
+  300: tint($pink, 40%),
+  400: tint($pink, 20%),
+  500: $pink,
+  600: shade($pink, 10%),
+  700: shade($pink, 20%),
+  800: shade($pink, 30%),
+  900: shade($pink, 40%)
 ) !default;
 
 $purples: (
-  50: #f7eefe,
-  100: #eeddfd,
-  200: #dcbbfc,
-  300: #cb99fa,
-  400: #b977f9,
-  500: #a855f7,
-  600: #942ef5,
-  700: #800bef,
-  800: #6b09c8,
-  900: #5608a1
+  50: tint($purple, 90%),
+  100: tint($purple, 80%),
+  200: tint($purple, 60%),
+  300: tint($purple, 40%),
+  400: tint($purple, 20%),
+  500: $purple,
+  600: shade($purple, 10%),
+  700: shade($purple, 20%),
+  800: shade($purple, 30%),
+  900: shade($purple, 40%)
 ) !default;
 
 $greys: (
-  50: #f9f9f9,
-  100: #f4f4f4,
-  200: #e4e4e4,
-  300: #d4d4d4,
-  400: #a3a3a3,
-  500: #747474,
-  600: #535353,
-  700: #424242,
-  800: #282828,
-  900: #191919
+  50: tint($grey, 95%),
+  100: tint($grey, 90%),
+  200: tint($grey, 75%),
+  300: tint($grey, 45%),
+  400: tint($grey, 20%),
+  500: $grey,
+  600: shade($grey, 20%),
+  700: shade($grey, 40%),
+  800: shade($grey, 60%),
+  900: shade($grey, 80%)
 ) !default;
 
 $palettes: (
@@ -137,15 +147,6 @@ $palettes: (
 
 $accent: $blues;
 
-$blue: map-get(map-get($palettes, "blue"), 500) !default;
-$red: map-get(map-get($palettes, "red"), 500) !default;
-$lime: map-get(map-get($palettes, "lime"), 500) !default;
-$green: map-get(map-get($palettes, "green"), 500) !default;
-$yellow: map-get(map-get($palettes, "yellow"), 500) !default;
-$orange: map-get(map-get($palettes, "orange"), 500) !default;
-$pink: map-get(map-get($palettes, "pink"), 500) !default;
-$purple: map-get(map-get($palettes, "purple"), 500) !default;
-$grey: map-get(map-get($palettes, "grey"), 500) !default;
 $light: map-get($greys, 100);
 $dark: map-get($greys, 900);
 
