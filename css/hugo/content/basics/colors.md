@@ -230,7 +230,7 @@ $greys: (
   <div>
     <div class="bg-grey-500 p-3 mb-3">
       <p class="m-0 h6">Grey</p>
-      <p class="m-0">#747474</p>
+      <p class="m-0">#6b707a</p>
     </div>
 
     <div class="bg-grey-50 py-2 px-3">Grey 50</div>
