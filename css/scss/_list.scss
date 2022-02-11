@@ -157,10 +157,16 @@
   }
 
   .list-item-divider {
+    display: flex;
+    flex-direction: column;
     padding: $spacer * .5 $spacer;
     font-size: .75rem;
     font-weight: 600;
     color: $grey;
+  }
+
+  .list-item-divider-description {
+    font-weight: 400;
   }
 
   &.list-dividers,

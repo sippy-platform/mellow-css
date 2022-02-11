@@ -54,16 +54,16 @@ If you rather have more fine-grainded control over where dividers appear, you ca
 {{<example>}}
 <ul class="list border mb-3">
   <li class="list-item"><span class="list-item-label">This is a list item</span></li>
-  <li class="list-divider"></li>
+  <li class="list-divider" role="separator"></li>
   <li class="list-item"><span class="list-item-label">This is also a list item</span></li>
-  <li class="list-divider"></li>
+  <li class="list-divider" role="separator"></li>
   <li class="list-item"><span class="list-item-label">Yet another item</span></li>
 </ul>
 <nav class="list border">
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
-  <div class="list-divider-full"></div>
+  <div class="list-divider-full" role="separator"></div>
   <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
-  <div class="list-divider-full"></div>
+  <div class="list-divider-full" role="separator"></div>
   <div class="list-item"><span class="list-item-label">Yet another item</span></div>
 </nav>
 {{</example>}}
@@ -75,18 +75,18 @@ If a section needs a text label, you can do that with `list-item-divider`. When 
 
 {{<example>}}
 <div class="list list-dividers border mb-3">
-  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section Divider</div>
+  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider</div>
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
   <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
-  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section Divider</div>
+  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
   <div class="list-item"><span class="list-item-label">Yet another item</span></div>
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
 </div>
 <div class="list border">
-  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section Divider</div>
+  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider</div>
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
   <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
-  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section Divider</div>
+  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
   <div class="list-item"><span class="list-item-label">Yet another item</span></div>
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
 </div>
