@@ -28,15 +28,18 @@ These values are directly available and are defined in the `$colors` sass variab
 $colors: (
   blue: $blue,
   red: $red,
+  lime: $lime,
   green: $green,
   yellow: $yellow,
   orange: $orange,
   pink: $pink,
   purple: $purple,
   grey: $grey,
-  light: map-get($greys, 100),
-  dark: map-get($greys, 900),
-  white: #fff
+  light: $light,
+  dark: $dark,
+  white: #fff,
+  muted: $grey,
+  reset: inherit
 ) !default;
 {{</example>}}
 
