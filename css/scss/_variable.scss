@@ -145,7 +145,7 @@ $palettes: (
   "grey": $greys
 );
 
-$accent:                $blues;
+$accent:                map-get($palettes, "blue");
 
 $light:                 map-get($greys, 100);
 $dark:                  map-get($greys, 900);
@@ -168,8 +168,8 @@ $colors: (
 ) !default;
 
 // Anchors
-$anchor-color:          $blue !default;
-$anchor-hover-color:    shade($blue, 20%) !default;
+$anchor-color:          map-get($accent, 500) !default;
+$anchor-hover-color:    shade($anchor-color, 20%) !default;
 
 // Grid breakpoints
 $grid-breakpoints: (
