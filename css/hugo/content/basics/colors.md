@@ -16,6 +16,7 @@ The main color set has `text-*` and `bg-*` classes available in our [text color]
   <div class="bg-yellow-500 p-3">Yellow</div>
   <div class="bg-lime-500 p-3">Lime</div>
   <div class="bg-green-500 p-3">Green</div>
+  <div class="bg-grey-500 p-3">Grey</div>
   <div class="bg-light p-3">Light</div>
   <div class="bg-dark text-white p-3">Dark</div>
 </div>
