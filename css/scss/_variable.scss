@@ -447,3 +447,6 @@ $btn-colored: (
   purple: $purples,
   grey: $greys
 ) !default;
+
+// Forms
+$form-box-shadow-inset: inset 0 1px 0 rgba(0, 0, 0, .075) !default;
