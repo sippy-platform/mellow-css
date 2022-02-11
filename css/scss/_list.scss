@@ -21,15 +21,20 @@
       text-decoration: none;
       color: inherit;
 
-      &:hover {
+      &:hover:not(.disabled) {
         background-color: map-get($greys, 100);
       }
 
       &.list-item-danger {
-        &:hover {
+        &:hover:not(.disabled) {
           background-color: map-get($reds, 50);
         }
       }
+    }
+
+    &.disabled {
+      color: map-get($greys, 500);
+      pointer-events: none;
     }
 
     .list-item-label {
@@ -60,7 +65,7 @@
     &.active {
       background-color: map-get($greys, 50);
 
-      &:hover {
+      &:hover:not(.disabled) {
         background-color: map-get($greys, 100);
       }
 
@@ -78,6 +83,18 @@
         content: "";
         background-color: map-get($accent, 500);
       }
+    }
+  }
+
+  &.list-sm {
+    > .list-item {
+      padding: $spacer * .25 $spacer;
+    }
+  }
+
+  &.list-lg {
+    > .list-item {
+      padding: $spacer * .75 $spacer;
     }
   }
 
@@ -100,11 +117,27 @@
       &::before {
         border-top: $border-color 1px solid;
         position: absolute;
-        top: -8px;
+        top: -$spacer * .5;
         left: 0;
         right: 0;
         height: 1px;
         content: "";
+      }
+    }
+
+    &.list-sm {
+      > .list-item:not(:first-child) .list-item-label {
+        &::before {
+          top: -$spacer * .25;
+        }
+      }
+    }
+
+    &.list-lg {
+      > .list-item:not(:first-child) .list-item-label {
+        &::before {
+          top: -$spacer * .75;
+        }
       }
     }
   }
