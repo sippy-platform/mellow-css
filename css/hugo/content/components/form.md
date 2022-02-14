@@ -3,7 +3,9 @@ title: Form
 description: Forms are an extensive part of Mellow with various controls, layouts, and connected components.
 ---
 
-## Basic text input
+
+## Inputs
+### Text
 Make your input fields look nice with the `input` class.
 
 {{<example>}}
@@ -15,6 +17,42 @@ Make your input fields look nice with the `input` class.
 </form>
 {{</example>}}
 
+### Select
+Make your select input fields look nice with the `input` class.
+
+{{<example>}}
+<select class="input" aria-label="Name">
+  <option>Choose an option</option>
+  <option>Mellow</option>
+  <option>Sippy</option>
+  <option>Optimise</option>
+</select>
+{{</example>}}
+
+### Checkbox
+{{<example>}}
+<div class="input-form">
+  <input class="input-check" type="checkbox" value="" id="flexCheckDefault">
+  <label class="input-label" for="flexCheckDefault">
+    Default checkbox
+  </label>
+</div>
+<div class="input-form">
+  <input class="input-check" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="input-label" for="flexCheckChecked">
+    Checked checkbox
+  </label>
+</div>
+{{</example>}}
+
+### File
+Make your file input fields look nice with the `input` class.
+
+{{<example>}}
+<input class="input" type="file">
+{{</example>}}
+
+## Context
 ### Labels
 Use labels to properly indicate the purpose of an input. You can give a special style to the label with the `input-label` class. Make sure to connect a label to its input with the `for` attribute.
 
@@ -34,25 +72,6 @@ With `input-text` you can add a styled description to your input. use the `aria-
   <input type="email" class="input" id="emailInput1" placeholder="Email" aria-describedby="emailHelp" />
   <div id="emailHelp" class="input-text">We'll send you a mail with your details.</div>
 </form>
-{{</example>}}
-
-## Select input
-Make your select input fields look nice with the `input` class.
-
-{{<example>}}
-<select class="input" aria-label="Name">
-  <option>Choose an option</option>
-  <option>Mellow</option>
-  <option>Sippy</option>
-  <option>Optimise</option>
-</select>
-{{</example>}}
-
-## File input
-Make your file input fields look nice with the `input` class.
-
-{{<example>}}
-<input class="input" type="file">
 {{</example>}}
 
 ## States
