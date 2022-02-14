@@ -37,17 +37,22 @@ With `input-text` you can add a styled description to your input. use the `aria-
 {{</example>}}
 
 ## Select input
-Make your input fields look nice with the `input` class.
+Make your select input fields look nice with the `input` class.
 
 {{<example>}}
-<form>
-  <select class="input" aria-label="Name">
-    <option>Choose an option</option>
-    <option>Mellow</option>
-    <option>Sippy</option>
-    <option>Optimise</option>
-  </select>
-</form>
+<select class="input" aria-label="Name">
+  <option>Choose an option</option>
+  <option>Mellow</option>
+  <option>Sippy</option>
+  <option>Optimise</option>
+</select>
+{{</example>}}
+
+## File input
+Make your file input fields look nice with the `input` class.
+
+{{<example>}}
+<input class="input" type="file">
 {{</example>}}
 
 ## States
@@ -56,4 +61,11 @@ If you want to disable a form input, add the `disabled` attribute to it.
 
 {{<example>}}
 <input type="password" class="input" placeholder="Password" disabled />
+{{</example>}}
+
+### Readonly
+If you want to disable a form input, add the `disabled` attribute to it.
+
+{{<example>}}
+<input type="text" class="input" value="Readonly text" aria-label="readonly input" readonly>
 {{</example>}}
