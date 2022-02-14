@@ -36,6 +36,20 @@ With `input-text` you can add a styled description to your input. use the `aria-
 </form>
 {{</example>}}
 
+## Select input
+Make your input fields look nice with the `input` class.
+
+{{<example>}}
+<form>
+  <select class="input" aria-label="Name">
+    <option>Choose an option</option>
+    <option>Mellow</option>
+    <option>Sippy</option>
+    <option>Optimise</option>
+  </select>
+</form>
+{{</example>}}
+
 ## States
 ### Disabled
 If you want to disable a form input, add the `disabled` attribute to it.
