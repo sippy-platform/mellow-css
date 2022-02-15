@@ -213,3 +213,57 @@ select.input {
     margin-bottom: 0;
   }
 }
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+
+  > .input {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+
+    &:focus {
+      z-index: 3;
+    }
+  }
+
+  .btn {
+    position: relative;
+    z-index: 2;
+
+    &:focus {
+      z-index: 3;
+    }
+  }
+
+  .input-text {
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: $spacer * .25 $spacer * .75;
+    line-height: 1.5;
+    color: map-get($greys, 900);
+    text-align: center;
+    white-space: nowrap;
+    background-color: map-get($greys, 100);
+    border: $border-color 1px solid;
+    border-radius: $border-radius-sm;
+  }
+
+  & > :not(:first-child) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  & > :not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
