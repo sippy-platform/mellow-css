@@ -30,18 +30,59 @@ Make your select input fields look nice with the `input` class.
 {{</example>}}
 
 ### Checkbox
-{{<example>}}
+The `input-form` class creates a grid with space for the input, its label and a helper text.
+
+{{<example class="docs-preview-checkbox">}}
 <div class="input-form">
-  <input class="input-check" type="checkbox" value="" id="flexCheckDefault">
-  <label class="input-label" for="flexCheckDefault">
-    Default checkbox
+  <input class="input-check" type="checkbox" value="1" id="firstCheckbox">
+  <label class="input-label" for="firstCheckbox">
+    First checkbox
   </label>
 </div>
 <div class="input-form">
-  <input class="input-check" type="checkbox" value="" id="flexCheckChecked" checked>
-  <label class="input-label" for="flexCheckChecked">
-    Checked checkbox
+  <input class="input-check" type="checkbox" value="2" id="secondCheckbox" checked>
+  <label class="input-label" for="secondCheckbox">
+    Second checkbox
   </label>
+  <span class="input-text">Help with the checkbox if it isn't clear enough.</span>
+</div>
+<div class="input-form">
+  <input class="input-check" type="checkbox" value="" id="thirdCheckbox">
+  <label class="input-label" for="thirdCheckbox">
+    Third checkbox
+  </label>
+</div>
+{{</example>}}
+
+You can only set indeterminate with Javascript, there is no HTML attribute for this. This is how we do it for this documentation:
+
+{{<example lang="js" show_preview="false">}}
+(function () {
+  'use strict';
+
+  document.querySelectorAll('.docs-preview-checkbox #thirdCheckbox')
+    .forEach(function (checkbox) {
+      checkbox.indeterminate = true;
+    });
+})();
+{{</example>}}
+
+### Radio
+The `input-form` class creates a grid with space for the input, its label and a helper text.
+
+{{<example>}}
+<div class="input-form">
+  <input class="input-check" type="radio" value="1" id="firstRadio" name="radioInput">
+  <label class="input-label" for="firstRadio">
+    First radio
+  </label>
+</div>
+<div class="input-form">
+  <input class="input-check" type="radio" value="2" id="secondRadio" name="radioInput" checked>
+  <label class="input-label" for="secondRadio">
+    Second radio
+  </label>
+  <span class="input-text">Help with the radio if it isn't clear enough.</span>
 </div>
 {{</example>}}
 
