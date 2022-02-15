@@ -93,6 +93,14 @@ Make your file input fields look nice with the `input` class.
 <input class="input" type="file">
 {{</example>}}
 
+### Range
+Make your file input fields look nice with the `input` class.
+
+{{<example>}}
+<label for="rangeInput" class="input-label">Range example</label>
+<input type="range" class="input-range" id="rangeInput">
+{{</example>}}
+
 ## Context
 ### Labels
 Use labels to properly indicate the purpose of an input. You can give a special style to the label with the `input-label` class. Make sure to connect a label to its input with the `for` attribute.
@@ -121,6 +129,41 @@ If you want to disable a form input, add the `disabled` attribute to it.
 
 {{<example>}}
 <input type="password" class="input" placeholder="Password" disabled />
+{{</example>}}
+
+{{<example>}}
+<div class="input-form">
+  <input class="input-check" type="checkbox" value="1" id="disabledCheckbox" disabled>
+  <label class="input-label" for="disabledCheckbox">
+    Disabled checkbox
+  </label>
+</div>
+<div class="input-form">
+  <input class="input-check" type="checkbox" value="1" id="disabledCheckbox" disabled checked>
+  <label class="input-label" for="disabledCheckbox">
+    Disabled checkbox
+  </label>
+</div>
+{{</example>}}
+
+{{<example>}}
+<div class="input-form">
+  <input class="input-check" type="radio" value="1" id="disabledRadio" name="disabledRadioInput" disabled>
+  <label class="input-label" for="disabledRadio">
+    Disabled radio
+  </label>
+</div>
+<div class="input-form">
+  <input class="input-check" type="radio" value="2" id="disabledRadioChecked" name="disabledRadioInput" disabled checked>
+  <label class="input-label" for="disabledRadioChecked">
+    Disabled radio
+  </label>
+</div>
+{{</example>}}
+
+{{<example>}}
+<label for="disabledRangeInput" class="input-label">Disabled example</label>
+<input type="range" class="input-range" id="disabledRangeInput" disabled>
 {{</example>}}
 
 ### Readonly
