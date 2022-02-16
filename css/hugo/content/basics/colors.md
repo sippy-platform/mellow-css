@@ -96,7 +96,6 @@ $greys: (
       <p class="m-0 h6">Blue</p>
       <p class="m-0">#0068d8</p>
     </div>
-
     <div class="bg-blue-50 py-2 px-3">Blue 50</div>
     <div class="bg-blue-100 py-2 px-3">Blue 100</div>
     <div class="bg-blue-200 py-2 px-3">Blue 200</div>
@@ -113,7 +112,6 @@ $greys: (
       <p class="m-0 h6">Purple</p>
       <p class="m-0">#a855f7</p>
     </div>
-
     <div class="bg-purple-50 py-2 px-3">Purple 50</div>
     <div class="bg-purple-100 py-2 px-3">Purple 100</div>
     <div class="bg-purple-200 py-2 px-3">Purple 200</div>
@@ -130,7 +128,6 @@ $greys: (
       <p class="m-0 h6">Pink</p>
       <p class="m-0">#ec4899</p>
     </div>
-
     <div class="bg-pink-50 py-2 px-3">Pink 50</div>
     <div class="bg-pink-100 py-2 px-3">Pink 100</div>
     <div class="bg-pink-200 py-2 px-3">Pink 200</div>
@@ -147,7 +144,6 @@ $greys: (
       <p class="m-0 h6">Red</p>
       <p class="m-0">#ea002d</p>
     </div>
-
     <div class="bg-red-50 py-2 px-3">Red 50</div>
     <div class="bg-red-100 py-2 px-3">Red 100</div>
     <div class="bg-red-200 py-2 px-3">Red 200</div>
@@ -164,7 +160,6 @@ $greys: (
       <p class="m-0 h6">Orange</p>
       <p class="m-0">#f57600</p>
     </div>
-
     <div class="bg-orange-50 py-2 px-3">Orange 50</div>
     <div class="bg-orange-100 py-2 px-3">Orange 100</div>
     <div class="bg-orange-200 py-2 px-3">Orange 200</div>
@@ -181,7 +176,6 @@ $greys: (
       <p class="m-0 h6">Yellow</p>
       <p class="m-0">#f5c800</p>
     </div>
-
     <div class="bg-yellow-50 py-2 px-3">Yellow 50</div>
     <div class="bg-yellow-100 py-2 px-3">Yellow 100</div>
     <div class="bg-yellow-200 py-2 px-3">Yellow 200</div>
@@ -198,7 +192,6 @@ $greys: (
       <p class="m-0 h6">Lime</p>
       <p class="m-0">#7acc00</p>
     </div>
-
     <div class="bg-lime-50 py-2 px-3">Lime 50</div>
     <div class="bg-lime-100 py-2 px-3">Lime 100</div>
     <div class="bg-lime-200 py-2 px-3">Lime 200</div>
@@ -215,7 +208,6 @@ $greys: (
       <p class="m-0 h6">Green</p>
       <p class="m-0">#29b340</p>
     </div>
-
     <div class="bg-green-50 py-2 px-3">Green 50</div>
     <div class="bg-green-100 py-2 px-3">Green 100</div>
     <div class="bg-green-200 py-2 px-3">Green 200</div>
@@ -232,7 +224,6 @@ $greys: (
       <p class="m-0 h6">Grey</p>
       <p class="m-0">#6b707a</p>
     </div>
-
     <div class="bg-grey-50 py-2 px-3">Grey 50</div>
     <div class="bg-grey-100 py-2 px-3">Grey 100</div>
     <div class="bg-grey-200 py-2 px-3">Grey 200</div>

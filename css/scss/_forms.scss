@@ -1,0 +1,269 @@
+.input {
+  display: block;
+  width: 100%;
+  border: $border-color 1px solid;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-base;
+  padding: $spacer * .25 $spacer * .75;
+  line-height: 1.5;
+  box-shadow: $form-box-shadow-inset;
+
+  &:focus {
+    outline: 0;
+    border-color: map-get($accent, 500);
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px rgba(map-get($accent, 500), .25);
+  }
+
+  &:disabled,
+  &[readonly] {
+    box-shadow: none;
+    background-color: map-get($greys, 100);
+  }
+
+  &[type="file"] {
+    overflow: hidden;
+
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
+    }
+  }
+
+  // File input buttons theming
+  &::file-selector-button {
+    font-family: $font-family-sans;
+    height: 34px;
+    padding: .25rem .75rem;
+    background-color: map-get($greys, 50);
+    border: 0;
+    border-right: 1px solid map-get($greys, 200);
+    color: map-get($greys, 500);
+    border-radius: $border-radius-sm 0 0 $border-radius-sm;
+    box-shadow: $btn-box-shadow-inset;
+    line-height: 1.5;
+    margin: (-$spacer * .5) ($spacer * .75) (-$spacer * .5) (-$spacer * .875);
+  }
+
+  &:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: map-get($greys, 100);
+  }
+}
+
+.input-check {
+  width: 1rem;
+  height: 1rem;
+  margin-top: .25em;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid map-get($greys, 500);
+  appearance: none;
+
+  &[type="checkbox"] {
+    border-radius: .25em;
+  }
+
+  &[type="radio"] {
+    border-radius: 50%;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: map-get($accent, 500);
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px rgba(map-get($accent, 500), .25);
+  }
+
+  &:checked {
+    background-color: map-get($accent, 500);
+    border-color: map-get($accent, 500);
+
+    &[type="checkbox"] {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4 7.75 2.75 2.75 4.5-4.5'/%3E%3C/svg%3E");
+    }
+
+    &[type="radio"] {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3E%3Cpath d='M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z'/%3E%3C/svg%3E");
+    }
+  }
+
+  &[type="checkbox"]:indeterminate {
+    background-color: map-get($accent, 500);
+    border-color: map-get($accent, 500);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' %3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-width='2' d='M4 8h8'/%3E%3C/svg%3E");
+  }
+
+  &[disabled],
+  &:disabled {
+    pointer-events: none;
+    filter: none;
+    opacity: .5;
+
+    ~ .form-check-label {
+      opacity: .5;
+    }
+  }
+}
+
+.input-range {
+  width: 100%;
+  padding: 0;
+  appearance: none;
+
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 1rem;
+    height: 1rem;
+    margin-top: (.5rem - 1rem) * .5;
+    background-color: map-get($accent, 500);
+    border: 0;
+    border-radius: 1rem;
+    appearance: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 1rem;
+    height: .5rem;
+    background-color: map-get($greys, 200);
+    border-radius: 1rem;
+  }
+
+  &::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    background-color: map-get($accent, 500);
+    border: 0;
+    border-radius: 1rem;
+    appearance: none;
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: .5rem;
+    background-color: map-get($greys, 200);
+    border-radius: 1rem;
+  }
+
+  &:focus {
+    outline: 0;
+
+    &::-webkit-slider-thumb {
+      box-shadow: 0 0 0 3px rgba(map-get($accent, 500), .25);
+    }
+
+    &::-moz-range-thumb {
+      box-shadow: 0 0 0 3px rgba(map-get($accent, 500), .25);
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    &::-webkit-slider-thumb {
+      background-color: map-get($greys, 400);
+    }
+
+    &::-moz-range-thumb {
+      background-color: map-get($greys, 400);
+    }
+  }
+}
+
+select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%232b2d31' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m4 6 4 4 4-4'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right $spacer * .75 center;
+  background-size: 16px;
+}
+
+.input-label {
+  margin-bottom: $spacer * .5;
+}
+
+.input-text {
+  color: map-get($colors, "muted");
+  margin-top: $spacer * .25;
+  font-size: $font-size-small;
+}
+
+.input-form {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: min-content minmax(0, auto);
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  grid-template-areas: "input label" "input helper";
+  margin-bottom: .5rem;
+
+  .input-check {
+    grid-area: input;
+    margin-right: $spacer * .5;
+  }
+
+  .input-label {
+    grid-area: label;
+    margin-bottom: 0;
+  }
+
+  .input-text {
+    grid-area: helper;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+
+  > .input {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+
+    &:focus {
+      z-index: 3;
+    }
+  }
+
+  .btn {
+    position: relative;
+    z-index: 2;
+
+    &:focus {
+      z-index: 3;
+    }
+  }
+
+  .input-text {
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: $spacer * .25 $spacer * .75;
+    line-height: 1.5;
+    color: map-get($greys, 900);
+    text-align: center;
+    white-space: nowrap;
+    background-color: map-get($greys, 100);
+    border: $border-color 1px solid;
+    border-radius: $border-radius-sm;
+  }
+
+  & > :not(:first-child) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  & > :not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
