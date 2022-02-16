@@ -34,20 +34,20 @@ The `input-form` class creates a grid with space for the input, its label and a 
 
 {{<example class="docs-preview-checkbox">}}
 <div class="input-form">
-  <input class="input" type="checkbox" value="1" id="firstCheckbox">
+  <input class="input-check" type="checkbox" value="1" id="firstCheckbox">
   <label class="input-label" for="firstCheckbox">
     First checkbox
   </label>
 </div>
 <div class="input-form">
-  <input class="input" type="checkbox" value="2" id="secondCheckbox" checked>
+  <input class="input-check" type="checkbox" value="2" id="secondCheckbox" checked>
   <label class="input-label" for="secondCheckbox">
     Second checkbox
   </label>
   <span class="input-text">Help with the checkbox if it isn't clear enough.</span>
 </div>
 <div class="input-form">
-  <input class="input" type="checkbox" value="" id="thirdCheckbox">
+  <input class="input-check" type="checkbox" value="" id="thirdCheckbox">
   <label class="input-label" for="thirdCheckbox">
     Third checkbox
   </label>
@@ -72,13 +72,13 @@ The `input-form` class creates a grid with space for the input, its label and a 
 
 {{<example>}}
 <div class="input-form">
-  <input class="input" type="radio" value="1" id="firstRadio" name="radioInput">
+  <input class="input-check" type="radio" value="1" id="firstRadio" name="radioInput">
   <label class="input-label" for="firstRadio">
     First radio
   </label>
 </div>
 <div class="input-form">
-  <input class="input" type="radio" value="2" id="secondRadio" name="radioInput" checked>
+  <input class="input-check" type="radio" value="2" id="secondRadio" name="radioInput" checked>
   <label class="input-label" for="secondRadio">
     Second radio
   </label>
@@ -98,7 +98,7 @@ Make your file input fields look nice with the `input` class.
 
 {{<example>}}
 <label for="rangeInput" class="input-label">Range example</label>
-<input type="range" class="input" id="rangeInput">
+<input type="range" class="input-range" id="rangeInput">
 {{</example>}}
 
 ## Context
