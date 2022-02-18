@@ -28,7 +28,7 @@
     "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm-run-all --parallel watch:*",
-    "watch:js": "nodemon --watch js/src/ -ext js -exec \"npm-run-all js\"",
+    "watch:js": "nodemon --watch js/src/ --ext js --exec \"npm-run-all js\"",
     "watch:scss": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss\""
   },
   "repository": {
