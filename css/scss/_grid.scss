@@ -12,7 +12,7 @@
       // End at 11 because 12 would just result in the default column count
       @for $i from 2 through 12 {
         &.grid#{$breakpoint-suffix}-#{$i} {
-          grid-template-columns: [grid-start] repeat($i, minmax(0, 1fr)) [grid-end];
+          grid-template-columns: repeat($i, minmax(0, 1fr));
         }
       }
 

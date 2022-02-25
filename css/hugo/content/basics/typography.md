@@ -3,6 +3,18 @@ title: Typography
 description: Get started with the basics of typography for body text, headings, various text decorations, and lists.
 ---
 
+## Font families
+You can use the `font-*` classes to pick 1 of 4 font families.
+
+{{<example>}}
+<p class="font-sans">This is a sans serif font</p>
+<p class="font-serif">This is a serif font</p>
+<p class="font-heading">This is a heading font</p>
+<p class="font-mono">This is a mono font</p>
+{{</example>}}
+
+Additionally, styles are provided to style any text as any of the 6 headings.
+
 ## Headings
 All default HTML heading are available.
 

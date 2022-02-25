@@ -1,3 +1,20 @@
+// Font families
+.font-sans {
+  font-family: $font-family-sans;
+}
+
+.font-heading {
+  font-family: $font-family-sans-heading;
+}
+
+.font-serif {
+  font-family: $font-family-serif;
+}
+
+.font-mono {
+  font-family: $font-family-mono;
+}
+
 // Heading, and heading classes
 @each $heading, $font-size in $font-sizes-heading {
   #{$heading} {
