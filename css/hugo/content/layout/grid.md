@@ -66,6 +66,32 @@ The grid also provides a set of responsive classes to change the column span dep
 </div>
 {{</example>}}
 
+### Full width
+Imagen you have a grid with cards for which the grids column count changes based on the width of the viewport. There are grid items in there that always have to span the full width of the grid. In this scenario the `col-[breakpoints]-full` class is what you're looking for. The demo below shows how you'd do this with and without the class to show is functionality.
+
+{{<example class="docs-preview-grid">}}
+<div class="grid grid-1 grid-sm-2 grid-md-3 grid-lg-4 grid-xl-5 grid-xxl-6">
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div class="col-full">Title</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div class="col-sm-2 col-md-3 col-lg-4 col-xl-5 col-xxl-6">Title</div>
+  <div>Unit</div>
+  <div>Unit</div>
+</div>
+{{</example>}}
+
 ## Column start position
 By using the `col-start-*` classes, you can tell a grid item to to start at a certain position in the grid. When a grid item starts at a point an earlier grid item already occupies space, it will wrap into the next column.
 
