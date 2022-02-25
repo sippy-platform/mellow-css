@@ -3,6 +3,7 @@
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: repeat(1, 1fr);
   gap: $spacer;
+  width: 100%;
 
   @each $breakpoint in map-keys($grid-breakpoints) {
     $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
