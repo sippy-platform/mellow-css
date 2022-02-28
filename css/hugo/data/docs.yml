@@ -21,6 +21,7 @@
     - title: Card
     - title: Form
     - title: List
+    - title: Pagination
 
 - title: Utilities
   pages:
