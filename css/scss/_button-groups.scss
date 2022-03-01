@@ -33,8 +33,8 @@
   justify-content: flex-start;
   flex-wrap: wrap;
 
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
-    margin-left: .5rem;
+  > .btn:not(:last-child),
+  > .btn-group:not(:last-child) {
+    margin-right: .5rem;
   }
 }
