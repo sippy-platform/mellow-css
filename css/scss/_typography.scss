@@ -46,6 +46,12 @@
   @extend h6;
 }
 
+@each $heading, $font-size in $font-sizes-heading {
+  .fs-#{$heading} {
+    font-size: $font-size;
+  }
+}
+
 // Text
 .lead {
   font-size: $font-size-base * 1.5;
