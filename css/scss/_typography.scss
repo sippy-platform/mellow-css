@@ -18,7 +18,7 @@
 // Heading, and heading classes
 @each $heading, $font-size in $font-sizes-heading {
   #{$heading} {
-    @include rfs(calc($font-size * .65), $font-size);
+    @include rfs($font-size * .65, $font-size);
   }
 }
 
@@ -67,6 +67,7 @@ small,
 @each $marketing, $font-size in $font-sizes-marketing {
   .marketing-#{$marketing} {
     @include rfs(min(1.5rem, $font-size * .75), $font-size);
+
     font-weight: 500;
   }
 }
