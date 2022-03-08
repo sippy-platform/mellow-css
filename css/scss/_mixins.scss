@@ -24,3 +24,24 @@
     @content;
   }
 }
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin rfs($min-font-size, $max-font-size) {
+  $u1: unit($min-font-size);
+  $u2: unit($max-font-size);
+
+  @if $u1 == "rem" and $u2 == "rem" {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: 18.75rem) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - 18.75rem) / #{strip-unit(87.5rem - 18.75rem)}));
+      }
+      @media screen and (min-width: 87.5rem) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
