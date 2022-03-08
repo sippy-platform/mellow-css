@@ -37,6 +37,12 @@
           gap: #{$value};
         }
       }
+
+      @each $key, $value in $orders {
+        &.order#{$breakpoint-suffix}-#{$key} {
+          order: #{$value};
+        }
+      }
     }
   }
 }

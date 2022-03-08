@@ -184,6 +184,17 @@ $grid-breakpoints: (
   xxl: 1400px
 ) !default;
 
+$orders: (
+  first: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  last: 6
+) !default;
+
 // Container width
 $container-max-widths: (
   sm: 560px,
