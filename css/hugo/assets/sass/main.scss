@@ -281,6 +281,21 @@
         }
       }
     }
+
+    &.docs-preview-position {
+      .position-relative {
+        background: map-get($greys, 100);
+        height: 150px;
+        width: 100%;
+        border-radius: $border-radius-sm;
+      }
+
+      .position-absolute {
+        width: 32px;
+        height: 32px;
+        border-radius: $border-radius-sm;
+      }
+    }
   }
 
   .highlight {

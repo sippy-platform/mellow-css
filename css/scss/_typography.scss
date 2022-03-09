@@ -1,7 +1,24 @@
+// Font families
+.font-sans {
+  font-family: $font-family-sans;
+}
+
+.font-heading {
+  font-family: $font-family-sans-heading;
+}
+
+.font-serif {
+  font-family: $font-family-serif;
+}
+
+.font-mono {
+  font-family: $font-family-mono;
+}
+
 // Heading, and heading classes
 @each $heading, $font-size in $font-sizes-heading {
   #{$heading} {
-    font-size: $font-size;
+    @include rfs($font-size * .65, $font-size);
   }
 }
 
@@ -29,6 +46,12 @@
   @extend h6;
 }
 
+@each $heading, $font-size in $font-sizes-heading {
+  .fs-#{$heading} {
+    font-size: $font-size;
+  }
+}
+
 // Text
 .lead {
   font-size: $font-size-base * 1.5;
@@ -43,7 +66,8 @@ small,
 // Marketing classes
 @each $marketing, $font-size in $font-sizes-marketing {
   .marketing-#{$marketing} {
-    font-size: $font-size;
+    @include rfs(min(1.5rem, $font-size * .75), $font-size);
+
     font-weight: 500;
   }
 }

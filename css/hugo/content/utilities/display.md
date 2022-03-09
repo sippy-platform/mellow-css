@@ -16,6 +16,7 @@ Mellow supports the following properties:
 * `flex`
 * `grid`
 * `inline-block`
+* `inline-grid`
 * `inline-flex`
 * `inline`
 * `none`
@@ -30,6 +31,9 @@ Note that a `d-grid` class exists distinct from the `grid` class, while `d-grid`
   .d-inline
   <div class="d-inline-block border">
     .d-inline-block
+  </div>
+  <div class="d-inline-grid border">
+    .d-inline-grid
   </div>
 </div>
 <span class="d-block border">.d-block</span>

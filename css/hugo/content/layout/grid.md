@@ -66,6 +66,32 @@ The grid also provides a set of responsive classes to change the column span dep
 </div>
 {{</example>}}
 
+### Full width
+Imagen you have a grid with cards for which the grids column count changes based on the width of the viewport. There are grid items in there that always have to span the full width of the grid. In this scenario the `col-[breakpoints]-full` class is what you're looking for. The demo below shows how you'd do this with and without the class to show is functionality.
+
+{{<example class="docs-preview-grid">}}
+<div class="grid grid-1 grid-sm-2 grid-md-3 grid-lg-4 grid-xl-5 grid-xxl-6">
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div class="col-full">Title</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div>Unit</div>
+  <div class="col-sm-2 col-md-3 col-lg-4 col-xl-5 col-xxl-6">Title</div>
+  <div>Unit</div>
+  <div>Unit</div>
+</div>
+{{</example>}}
+
 ## Column start position
 By using the `col-start-*` classes, you can tell a grid item to to start at a certain position in the grid. When a grid item starts at a point an earlier grid item already occupies space, it will wrap into the next column.
 
@@ -122,5 +148,53 @@ Like every other grid class, the `gap-*` classes are also responsive.
   <div class="col-4">gap 2 md:4</div>
   <div class="col-4">gap 2 md:4</div>
   <div class="col-4">gap 2 md:4</div>
+</div>
+{{</example>}}
+
+## Order
+With the order-utility classes, you can change the order in which items are inserted into the grid.
+
+* `order-[breakpoint]-first`
+* `order-[breakpoint]-[0-5]`
+* `order-[breakpoint]-last`
+
+{{<example class="docs-preview-grid">}}
+<div class="grid grid-5">
+  <div class="order-0">1</div>
+  <div class="order-1">2</div>
+  <div class="order-3">3</div>
+  <div class="order-2">4</div>
+  <div class="order-4">5</div>
+</div>
+{{</example>}}
+
+You can use `order-first` and `order-last` to set an item to the first or last position. The `order-last` class sets the order position to `6`, so you can still overwrite this by manually setting a higher order.
+
+{{<example class="docs-preview-grid">}}
+<div class="grid grid-5 mb-3">
+  <div class="order-0">1</div>
+  <div class="order-1">2</div>
+  <div class="order-first">3</div>
+  <div class="order-2">4</div>
+  <div class="order-4">5</div>
+</div>
+<div class="grid grid-5">
+  <div class="order-0">1</div>
+  <div class="order-1">2</div>
+  <div class="order-last">3</div>
+  <div class="order-2">4</div>
+  <div class="order-4">5</div>
+</div>
+{{</example>}}
+
+**Note**: by default, grid items behave as if `order: 0` has been set to them. This means that the `order`-utility classes only work relative to eachother. For example, setting `order-2` to the third item and no classes to any other column will result in the 3rd item being moved to the end of the line.
+
+{{<example class="docs-preview-grid">}}
+<div class="grid grid-5">
+  <div>1</div>
+  <div>2</div>
+  <div class="order-2">3</div>
+  <div>4</div>
+  <div>5</div>
 </div>
 {{</example>}}

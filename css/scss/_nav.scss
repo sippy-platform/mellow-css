@@ -1,0 +1,52 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $spacer * .5 $spacer * .75;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $body-text;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: map-get($accent, 500);
+    text-decoration: none;
+  }
+
+  &.disabled {
+    color: map-get($colors, "muted");
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.nav-pills {
+  .nav-link {
+    border: 0;
+    background: none;
+    border-radius: $border-radius-sm;
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: #fff;
+    background-color: map-get($accent, 500);
+  }
+}
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}

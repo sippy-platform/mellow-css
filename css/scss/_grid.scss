@@ -3,6 +3,7 @@
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: repeat(1, 1fr);
   gap: $spacer;
+  width: 100%;
 
   @each $breakpoint in map-keys($grid-breakpoints) {
     $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
@@ -21,6 +22,10 @@
         }
       }
 
+      .col#{$breakpoint-suffix}-full {
+        grid-column: 1 / -1;
+      }
+
       @for $i from 1 through 12 {
         .col-start#{$breakpoint-suffix}-#{$i} {
           grid-column-start: $i;
@@ -30,6 +35,12 @@
       @each $key, $value in $spacers {
         &.gap#{$breakpoint-suffix}-#{$key} {
           gap: #{$value};
+        }
+      }
+
+      @each $key, $value in $orders {
+        &.order#{$breakpoint-suffix}-#{$key} {
+          order: #{$value};
         }
       }
     }

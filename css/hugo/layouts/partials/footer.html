@@ -10,10 +10,3 @@
 
 {{ $scriptApp := resources.Get "js/documentation.js" | fingerprint }}
 <script src="{{ $scriptApp.Permalink }}"></script>
-
-<script>
-  let mellowMenu;
-  document.addEventListener("DOMContentLoaded", function() {
-    mellowMenu = new mellow.OffCanvas(document.getElementById('menu'));
-  });
-</script>

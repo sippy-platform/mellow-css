@@ -3,6 +3,18 @@ title: Typography
 description: Get started with the basics of typography for body text, headings, various text decorations, and lists.
 ---
 
+## Font families
+You can use the `font-*` classes to pick 1 of 4 font families.
+
+{{<example>}}
+<p class="font-sans">This is a sans serif font</p>
+<p class="font-serif">This is a serif font</p>
+<p class="font-heading">This is a heading font</p>
+<p class="font-mono">This is a mono font</p>
+{{</example>}}
+
+Additionally, styles are provided to style any text as any of the 6 headings.
+
 ## Headings
 All default HTML heading are available.
 
@@ -24,6 +36,18 @@ Additionally, styles are provided to style any text as any of the 6 headings.
 <p class="h4">Heading 4</p>
 <p class="h5">Heading 5</p>
 <p class="h6">Heading 6</p>
+{{</example>}}
+
+### Font sizes
+The `fs-h[1-6]` classes give you the font size of the heading classes and nothing else.
+
+{{<example>}}
+<p class="fs-h1">Heading 1</p>
+<p class="fs-h2">Heading 2</p>
+<p class="fs-h3">Heading 3</p>
+<p class="fs-h4">Heading 4</p>
+<p class="fs-h5">Heading 5</p>
+<p class="fs-h6">Heading 6</p>
 {{</example>}}
 
 ## Marketing
@@ -96,3 +120,8 @@ Making a horizontal menu? Showing your list in a row is a useful first step. The
   <li>No dots either</li>
 </ul>
 {{</example>}}
+
+## Responsive font sizes
+Mellow uses responsive font sizes. This means that the size of ours fonts (heading, marketing headings, and leads) will automatically scale with the size of the viewport.
+
+Check out the Headings and Marketing demos above and resize your window to test this.

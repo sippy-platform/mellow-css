@@ -21,6 +21,7 @@
     - title: Card
     - title: Form
     - title: List
+    - title: Tab
     - title: Pagination
 
 - title: Utilities
@@ -34,6 +35,7 @@
     - title: Layout
     - title: Opacity
     - title: Overflow
+    - title: Position
     - title: Sizing
     - title: Spacing
     - title: Text
