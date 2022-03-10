@@ -6,7 +6,7 @@
   border: 1px solid transparent;
   cursor: pointer;
   user-select: none;
-  padding: .25rem .75rem;
+  padding: $spacer * .3125 $spacer * .75;
   font-size: 1rem;
   border-radius: $border-radius-sm;
   box-shadow: $btn-box-shadow-inset;
@@ -32,7 +32,7 @@
   }
 
   &.btn-lg {
-    padding: .365rem 1rem;
+    padding: .375rem 1rem;
     font-size: 1.25rem;
   }
 
