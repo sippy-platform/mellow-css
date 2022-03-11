@@ -37,9 +37,9 @@
     & {
       font-size: $min-font-size;
       @media screen and (min-width: 18.75rem) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - 18.75rem) / #{strip-unit(87.5rem - 18.75rem)}));
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - 18.75rem) / #{strip-unit(75rem - 18.75rem)}));
       }
-      @media screen and (min-width: 87.5rem) {
+      @media screen and (min-width: 75rem) {
         font-size: $max-font-size;
       }
     }
