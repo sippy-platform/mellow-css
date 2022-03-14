@@ -52,6 +52,10 @@
       .offcanvas-header {
         display: flex;
       }
+
+      .offcanvas-body {
+        padding: $spacer;
+      }
     }
   }
 }
@@ -75,7 +79,6 @@
 }
 
 .offcanvas-body {
-  padding: $spacer;
   overflow-y: auto;
   flex-grow: 1;
 }
