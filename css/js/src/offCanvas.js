@@ -30,7 +30,7 @@ const ESCAPE_KEY = 'Escape';
 const CLASS_NAME_SHOW = 'show';
 const CLASS_NAME_SHOWING = 'showing';
 const CLASS_NAME_HIDING = 'hiding';
-const CLASS_NAME_BACKDROP = 'offcanvas-backdrop';
+const CLASS_NAME_BACKDROP = 'backdrop';
 const OPEN_SELECTOR = '.offcanvas.show';
 
 const EVENT_SHOW = `show${EVENT_KEY}`;
@@ -179,6 +179,13 @@ class Offcanvas extends BaseComponent {
   _addEventListeners() {
     EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
       if (this._config.keyboard && event.key === ESCAPE_KEY) {
+        this.hide();
+      }
+    });
+
+    EventHandler.on(window, 'resize', () => {
+      // Add this check to help js be aligned with css changes on responsive offcanvas
+      if (this._isShown && getComputedStyle(this._element).position !== 'fixed') {
         this.hide();
       }
     });

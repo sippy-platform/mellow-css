@@ -11,7 +11,7 @@
       visibility: hidden;
       background-clip: padding-box;
       outline: 0;
-      transition: $base-transition;
+      transition: transform .2s ease-in-out;
 
       @supports (backdrop-filter: blur(15px) saturate(350%)) {
         background: rgba(#fff, .85);
