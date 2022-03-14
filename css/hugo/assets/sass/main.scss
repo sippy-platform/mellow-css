@@ -32,6 +32,16 @@
   z-index: 1030;
 }
 
+.docs-sidebar {
+  @media (min-width: 800px) {
+    grid-area: navbar;
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 60px);
+    z-index: 1020;
+  }
+}
+
 .docs-footer {
   grid-area: footer;
 }
