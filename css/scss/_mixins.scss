@@ -6,6 +6,12 @@
   @return if($min != 0, $min, null);
 }
 
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $max: map-get($breakpoints, $name);
+
+  @return if($max != 0, $max, null);
+}
+
 // Create the breakpoint suffix, when it matches the 0-breakpoint, return an empty
 // string instead.
 @function breakpoint-suffix($name, $breakpoints: $grid-breakpoints) {
@@ -18,6 +24,18 @@
 
   @if $min {
     @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-width($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if $max {
+    @media (max-width: $max) {
       @content;
     }
   } @else {

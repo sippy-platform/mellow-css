@@ -6,8 +6,16 @@
   <body class="docs-grid">
     {{ partialCached "navbar" . }}
 
-    <div class="docs-sidebar border-end bg-light offcanvas" id="menu">
-      {{ partialCached "navigation" . }}
+    <div class="docs-sidebar offcanvas-md offcanvas-start" tabindex="-1" id="docsNav" aria-labelledby="docsNavLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="docsNavLabel">Pages</h5>
+        <button type="button" class="btn btn-close btn-primary" data-mellow-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="width: 20px; height: 16px; margin-top: -.25rem;"><path fill-rule="evenodd" d="m11.06 8 3.89 3.89c.3.3.3.77 0 1.06-.3.3-.77.3-1.06 0L10 9.06l-3.89 3.89c-.3.3-.77.3-1.06 0a.75.75 0 0 1 0-1.06L8.94 8 5.05 4.11a.75.75 0 0 1 1.06-1.06L10 6.94l3.89-3.89c.3-.3.77-.3 1.06 0 .3.3.3.77 0 1.06L11.06 8Z"/></svg>
+        </button>
+      </div>
+      <div class="offcanvas-body p-0">
+        {{ partialCached "navigation" . }}
+      </div>
     </div>
 
     <main class="docs-main">

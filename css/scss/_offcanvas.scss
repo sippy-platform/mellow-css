@@ -1,0 +1,81 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-max-width($breakpoint, $grid-breakpoints) {
+    .offcanvas#{$breakpoint-suffix} {
+      position: fixed;
+      background: rgba(#fff, .95);
+      z-index: 1050;
+      display: flex;
+      flex-direction: column;
+      visibility: hidden;
+      background-clip: padding-box;
+      outline: 0;
+      transition: $base-transition;
+
+      @supports (backdrop-filter: blur(15px) saturate(350%)) {
+        background: rgba(#fff, .85);
+        backdrop-filter: blur(15px) saturate(250%);
+      }
+
+      &.showing,
+      &.hiding,
+      &.show {
+        visibility: visible;
+      }
+
+      &.showing,
+      &.show:not(.hiding) {
+        transform: none;
+      }
+
+      &.offcanvas-start {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 360px;
+        max-width: 100%;
+        border-right: $border-width solid $border-color;
+        transform: translateX(-100%);
+      }
+
+      &.offcanvas-end {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 360px;
+        max-width: 100%;
+        border-left: $border-width solid $border-color;
+        transform: translateX(100%);
+      }
+
+      .offcanvas-header {
+        display: flex;
+      }
+    }
+  }
+}
+
+.offcanvas-header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $spacer;
+  height: 60px;
+  border-bottom: $border-width solid $border-color;
+  flex-shrink: 0;
+
+  .offcanvas-title {
+    margin: 0;
+  }
+
+  .btn-close {
+    padding: .3125rem .4375rem;
+  }
+}
+
+.offcanvas-body {
+  padding: $spacer;
+  overflow-y: auto;
+  flex-grow: 1;
+}
