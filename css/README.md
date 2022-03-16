@@ -17,8 +17,8 @@ Mellow CSS contains a number of npm scripts. We'll list their function below:
 | ------ | ------- |
 | `bundlewatch` | Checks if the CSS size is below a given threshold configured in `package.json`. |
 | `clean` | Removes the `/dist` folder. |
-| `hugo:build` | Builds the documentation into the `/build` folder. |
-| `hugo` | Runs the doucmentation server on localhost:1313. |
+| `docs:build` | Builds the documentation into the `/build` folder. |
+| `docs` | Runs the documentation server on localhost:1313. |
 | `js:compile` | Compiles the JS as configured in `build/rollup.config.js` into the `/dist` folder. |
 | `js:minify` | Compresses the javascript in the `/dist` folder with Terser. |
 | `js` | Runs `js:compile`, then `js:minify`. |
@@ -32,10 +32,12 @@ Mellow CSS contains a number of npm scripts. We'll list their function below:
 | `scss:lint:style` | Runs stylelint. |
 | `scss:lint:vars` | Runs a check for unused vars in the SCSS. |
 | `scss:prefix` | Runs PostCSS to properly prefix all CSS features that need it. |
-| `start` | Runs `watch`. |
-| `watch` | Runs `watch:js` and `watch:css`. |
-| `watch:js` | Runs `js` while watching `js/src`. |
-| `watch:scss` | Runs `scss` while watching `scss/`. |
+| `start` | Runs `docs` and `watch`. |
+| `watch` | Runs `watch:js:core`, `watch:js:docs`, `watch:css:core`, and `watch:css:docs`. |
+| `watch:js:core` | Runs `js` while watching `js/src`. |
+| `watch:js:docs` | Runs `js:lint` while watching `hugo/assets/js/`. |
+| `watch:scss:core` | Runs `scss` while watching `scss/`. |
+| `watch:scss:docs` | Runs `scss:lint` while watching `hugo/assets/scss/`. |
 
 # License
 AGPL v3
