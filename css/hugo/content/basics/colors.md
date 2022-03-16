@@ -22,7 +22,7 @@ The main color set has `text-*` and `bg-*` classes available in our [text color]
 </div>
 {{</example>}}
 
-These values are directly available and are defined in the `$colors` sass variable as shown below. Every variable that is directly used in the `$colors` map is equal to the `500` color in its palette.
+These values are directly available and are defined in the `$colors` scss variable as shown below. Every variable that is directly used in the `$colors` map is equal to the `500` color in its palette.
 
 {{<example show_preview="false" lang="scss">}}
 $colors: (
