@@ -20,7 +20,9 @@ jobs:
           cache-dependency-path: ./css/package-lock.json
       - name: Install dependencies
         run: npm ci
-      - name: Run scss
-        run: npm run scss
+      - name: Run scss:compile
+        run: npm run scss:compile
+      - name: Run scss:prefix
+        run: npm run scss:prefix
       - name: Run bundlewatch
         run: npm run bundlewatch
