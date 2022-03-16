@@ -1,7 +1,10 @@
 // stylelint-disable declaration-block-no-redundant-longhand-properties
 // stylelint-disable no-descending-specificity
 
-@import "../../../scss/mellow";
+@import "../../../scss/mixins";
+@import "../../../scss/utilities/color";
+
+@import "../../../scss/variable";
 
 // Docs grid
 .docs-grid {

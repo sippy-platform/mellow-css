@@ -3,5 +3,6 @@
 <link rel="canonical" href="{{ .Permalink }}">
 <title>Mellow CSS</title>
 
-{{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+{{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+<link href="/dist/css/mellow.css" rel="stylesheet" crossorigin="anonymous">

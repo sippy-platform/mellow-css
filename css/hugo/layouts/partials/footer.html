@@ -5,8 +5,7 @@
   </div>
 </footer>
 
-{{ $scriptMellow := resources.Get "js/mellow.min.js" | fingerprint }}
-<script src="{{ $scriptMellow.Permalink }}"></script>
+<script src="/dist/js/mellow.min.js"></script>
 
 {{ $scriptApp := resources.Get "js/documentation.js" | fingerprint }}
 <script src="{{ $scriptApp.Permalink }}"></script>

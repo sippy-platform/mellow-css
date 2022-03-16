@@ -1,0 +1,31 @@
+baseURL:            'https://sippy.cloud/'
+languageCode:       'en-us'
+title:              'Mellow'
+
+markup:
+  highlight:
+    style:          'monokailight'
+  goldmark:
+    renderer:
+      unsafe:       true
+  tableOfContents:
+    endLevel:       3
+    ordered:        false
+    startLevel:     2
+
+disableKinds:       ['taxonomy', 'term', 'RSS']
+
+module:
+  mounts:
+    - source:       hugo/assets
+      target:       assets
+    - source:       hugo/content
+      target:       content
+    - source:       hugo/data
+      target:       data
+    - source:       hugo/layouts
+      target:       layouts
+    - source:       hugo/static
+      target:       static
+    - source:       dist
+      target:       static/dist
