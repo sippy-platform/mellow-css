@@ -1,0 +1,109 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-max-width($breakpoint, $grid-breakpoints) {
+    .offcanvas#{$breakpoint-suffix} {
+      position: fixed;
+      background: rgba(#fff, .95);
+      z-index: 1050;
+      display: flex;
+      flex-direction: column;
+      visibility: hidden;
+      background-clip: padding-box;
+      outline: 0;
+      transition: transform .2s ease-in-out;
+
+      @supports (backdrop-filter: blur(15px) saturate(350%)) {
+        background: rgba(#fff, .85);
+        backdrop-filter: blur(15px) saturate(250%);
+      }
+
+      &.showing,
+      &.hiding,
+      &.show {
+        visibility: visible;
+      }
+
+      &.showing,
+      &.show:not(.hiding) {
+        transform: none;
+      }
+
+      &.offcanvas-start {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 360px;
+        max-width: 100%;
+        border-right: $border-width solid $border-color;
+        transform: translateX(-100%);
+      }
+
+      &.offcanvas-end {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 360px;
+        max-width: 100%;
+        border-left: $border-width solid $border-color;
+        transform: translateX(100%);
+      }
+
+      .offcanvas-header {
+        display: flex;
+      }
+
+      .offcanvas-body {
+        padding: $spacer;
+      }
+    }
+  }
+}
+
+.offcanvas-header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $spacer;
+  height: 60px;
+  border-bottom: $border-width solid $border-color;
+  flex-shrink: 0;
+
+  .offcanvas-title {
+    margin: 0;
+  }
+}
+
+.offcanvas-body {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.btn-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  padding: 0;
+  border-radius: $border-radius-sm;
+  line-height: 1;
+  transition: all .2s ease-in-out, box-shadow .2s ease-in-out;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+
+  &:focus {
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px rgba(map-get($accent, 500), .4);
+  }
+
+  &:hover {
+    background-color: rgba($dark, .1);
+    border-color: map-get($accent, 700);
+  }
+}

@@ -6,6 +6,12 @@
   @return if($min != 0, $min, null);
 }
 
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $max: map-get($breakpoints, $name);
+
+  @return if($max != 0, $max, null);
+}
+
 // Create the breakpoint suffix, when it matches the 0-breakpoint, return an empty
 // string instead.
 @function breakpoint-suffix($name, $breakpoints: $grid-breakpoints) {
@@ -25,6 +31,18 @@
   }
 }
 
+@mixin breakpoint-max-width($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
@@ -37,9 +55,9 @@
     & {
       font-size: $min-font-size;
       @media screen and (min-width: 18.75rem) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - 18.75rem) / #{strip-unit(87.5rem - 18.75rem)}));
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - 18.75rem) / #{strip-unit(75rem - 18.75rem)}));
       }
-      @media screen and (min-width: 87.5rem) {
+      @media screen and (min-width: 75rem) {
         font-size: $max-font-size;
       }
     }
