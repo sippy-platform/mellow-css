@@ -9,7 +9,6 @@
     "bundlewatch": "bundlewatch",
     "clean": "rimraf dist",
     "hugo:build": "hugo -d build -s hugo -d \"../build\"",
-    "hugo:clean": "rm -rf build resources public",
     "hugo": "hugo server -s hugo",
     "js:compile": "rollup --sourcemap --config build/rollup.config.js",
     "js:lint": "eslint js/**/*.js",
