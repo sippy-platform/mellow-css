@@ -2,16 +2,10 @@
   $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
   @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    @each $key, $value in $spacers {
-      // Margin
+    // Margin
+    @each $key, $value in $margins {
       .m#{$breakpoint-suffix}-#{$key} {
         margin: #{$value} !important;
-      }
-
-      @if ($key >= 1) {
-        .m#{$breakpoint-suffix}-n#{$key} {
-          margin: -#{$value} !important;
-        }
       }
 
       .mx#{$breakpoint-suffix}-#{$key} {
@@ -19,65 +13,30 @@
         margin-right: #{$value} !important;
       }
 
-      @if ($key >= 1) {
-        .mx#{$breakpoint-suffix}-n#{$key} {
-          margin-left: -#{$value} !important;
-          margin-right: -#{$value} !important;
-        }
-      }
-
       .my#{$breakpoint-suffix}-#{$key} {
         margin-top: #{$value} !important;
         margin-bottom: #{$value} !important;
-      }
-
-      @if ($key >= 1) {
-        .my#{$breakpoint-suffix}-n#{$key} {
-          margin-top: -#{$value} !important;
-          margin-bottom: -#{$value} !important;
-        }
       }
 
       .mt#{$breakpoint-suffix}-#{$key} {
         margin-top: #{$value} !important;
       }
 
-      @if ($key >= 1) {
-        .mt#{$breakpoint-suffix}-n#{$key} {
-          margin-top: -#{$value} !important;
-        }
-      }
-
       .me#{$breakpoint-suffix}-#{$key} {
         margin-right: #{$value} !important;
       }
 
-      @if ($key >= 1) {
-        .me#{$breakpoint-suffix}-n#{$key} {
-          margin-right: -#{$value} !important;
-        }
-      }
       .mb#{$breakpoint-suffix}-#{$key} {
         margin-bottom: #{$value} !important;
-      }
-
-      @if ($key >= 1) {
-        .mb#{$breakpoint-suffix}-n#{$key} {
-          margin-bottom: -#{$value} !important;
-        }
       }
 
       .ms#{$breakpoint-suffix}-#{$key} {
         margin-left: #{$value} !important;
       }
+    }
 
-      @if ($key >= 1) {
-        .ms#{$breakpoint-suffix}-n#{$key} {
-          margin-left: -#{$value} !important;
-        }
-      }
-
-      // Padding
+    // Padding
+    @each $key, $value in $paddings {
       .p#{$breakpoint-suffix}-#{$key} {
         padding: #{$value} !important;
       }

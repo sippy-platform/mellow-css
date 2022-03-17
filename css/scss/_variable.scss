@@ -206,13 +206,38 @@ $container-max-widths: (
 
 // Gap
 $spacer: 1rem !default;
-$spacers: (
+$margins: (
+  n5: (-$spacer * 3),
+  n4: (-$spacer * 1.5),
+  n3: (-$spacer),
+  n2: (-$spacer * .5),
+  n1: (-$spacer * .25),
   0: 0,
   1: $spacer * .25,
   2: $spacer * .5,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  auto: auto
+) !default;
+
+$paddings: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  auto: auto
+) !default;
+
+$gaps: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3
 ) !default;
 
 // Fonts and typogrpahy

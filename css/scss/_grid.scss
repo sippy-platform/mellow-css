@@ -32,7 +32,7 @@
         }
       }
 
-      @each $key, $value in $spacers {
+      @each $key, $value in $gaps {
         &.gap#{$breakpoint-suffix}-#{$key} {
           gap: #{$value};
         }
