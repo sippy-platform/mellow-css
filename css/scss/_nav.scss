@@ -12,14 +12,11 @@
   padding: $spacer * .5 $spacer * .75;
   font-size: 1rem;
   font-weight: 500;
-  color: $body-text;
   text-decoration: none;
   border-radius: $border-radius-sm;
   background: none;
-
-  &.active {
-    color: map-get($accent, 500);
-  }
+  color: map-get($accent, 500);
+  border: none;
 
   &:hover,
   &:focus {
@@ -53,7 +50,6 @@
     &:hover,
     &:focus {
       position: relative;
-      color: inherit;
 
       &::after {
         content: "";
@@ -73,8 +69,8 @@
   }
 }
 
-.tab-content {
-  > .tab-pane {
+.tab-box {
+  > .tab-content {
     display: none;
   }
 
