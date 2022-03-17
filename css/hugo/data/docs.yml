@@ -21,10 +21,11 @@
     - title: Card
     - title: Form
     - title: List
-    - title: Navs
+    - title: Navbar
     - title: Offcanvas
     - title: Tab
     - title: Pagination
+    - title: Pivot
 
 - title: Utilities
   pages:
