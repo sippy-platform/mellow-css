@@ -7,8 +7,7 @@ The Mellow Design System is the design language used for Sippy starting with the
 2. Run `npm install` to install de npm dependencies.
 
 ### Starting development server
-1. Run `php run hugo` to run the documentation, which will be available on localhost:1313.
-2. Run `npm start` to start up the watch script that is responsible for linting and compiling Mellow.
+1. Run `npm start` to start the script that will watch and (re)compile Mellow when changes are made as well as launch the documentation ot http://localhost:1313.
 
 ### Scripts
 Mellow CSS contains a number of npm scripts. We'll list their function below:
