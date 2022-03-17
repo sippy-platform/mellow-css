@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -13,11 +14,22 @@
   font-weight: 500;
   color: $body-text;
   text-decoration: none;
+  border-radius: $border-radius-sm;
+  background: none;
+
+  &.active {
+    color: map-get($accent, 500);
+  }
 
   &:hover,
   &:focus {
     color: map-get($accent, 500);
     text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(map-get($accent, 500), .4);
+    outline: none;
   }
 
   &.disabled {
@@ -28,16 +40,36 @@
 }
 
 .nav-pills {
-  .nav-link {
-    border: 0;
-    background: none;
-    border-radius: $border-radius-sm;
-  }
-
   .nav-link.active,
   .show > .nav-link {
     color: #fff;
     background-color: map-get($accent, 500);
+  }
+}
+
+.nav-underline {
+  .nav-link {
+    &.active,
+    &:hover,
+    &:focus {
+      position: relative;
+      color: inherit;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - .75rem);
+        width: 1.5rem;
+        height: 3px;
+        background-color: map-get($accent, 500);
+        border-radius: 4px;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(map-get($accent, 500), .4);
+    }
   }
 }
 

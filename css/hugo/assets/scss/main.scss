@@ -20,7 +20,6 @@
 
   @media (min-width: 800px) {
     grid-template-columns: 240px auto;
-    grid-template-rows: 60px auto auto;
     grid-template-areas:
       "navbar navbar"
       "sidebar main"
