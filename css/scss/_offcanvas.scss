@@ -65,7 +65,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 $spacer;
-  height: 60px;
+  height: map-get($nav-sizes, "md");
   border-bottom: $border-width solid $border-color;
   flex-shrink: 0;
 

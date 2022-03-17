@@ -82,3 +82,72 @@ Or use any of the other `bg-*` utility classes. You can match the `nav-light` or
   </div>
 </nav>
 {{</example>}}
+
+## Sizes
+Fancy a smaller or larger navigation? Use the `nav-sm` and `nav-lg` classes.
+
+{{<example>}}
+<nav class="nav nav-light bg-light nav-sm">
+  <div class="container">
+    <a class="nav-brand" href="#">Small</a>
+    <ul class="nav-bar me-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+    </ul>
+    <ul class="nav-bar">
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<nav class="nav nav-light bg-light">
+  <div class="container">
+    <a class="nav-brand" href="#">Medium</a>
+    <ul class="nav-bar me-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+    </ul>
+    <ul class="nav-bar">
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<nav class="nav nav-light bg-light nav-lg">
+  <div class="container">
+    <a class="nav-brand" href="#">Large</a>
+    <ul class="nav-bar me-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+    </ul>
+    <ul class="nav-bar">
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{{</example>}}

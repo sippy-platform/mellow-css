@@ -1,15 +1,25 @@
 /* stylelint-disable no-descending-specificity */
 .nav {
   display: flex;
+  height: map-get($nav-sizes, "md");
 
   .container,
   .container-fluid {
     display: flex;
   }
+
+  &.nav-sm {
+    height: map-get($nav-sizes, "sm");
+  }
+
+  &.nav-lg {
+    height: map-get($nav-sizes, "lg");
+  }
 }
 
 .nav-bar {
   display: flex;
+  align-content: stretch;
   flex-direction: row;
   padding-left: 0;
   margin-bottom: 0;
@@ -33,12 +43,12 @@
 .nav-item {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-content: stretch;
   justify-content: center;
 }
 
 .nav-link {
-  padding: 18px 0;
+  padding: 0;
   text-decoration: none;
   display: inline-block;
 

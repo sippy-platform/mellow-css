@@ -12,7 +12,7 @@
   position: relative;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 60px auto auto;
+  grid-template-rows: 56px auto auto;
   grid-template-areas:
     "navbar"
     "main"
@@ -90,14 +90,14 @@
   @media (min-width: 800px) {
     grid-area: sidebar;
     position: sticky;
-    top: 60px;
+    top: 56px;
     border-right: $border-width solid $border-color;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 56px);
     z-index: 1020;
 
     .offcanvas-body {
       overflow: auto;
-      height: calc(100vh - 60px);
+      height: calc(100vh - 56px);
     }
   }
 }
@@ -197,6 +197,10 @@
 
     & > :last-child {
       margin-bottom: 0;
+    }
+
+    .nav + .nav {
+      margin-top: 1rem;
     }
 
     &.docs-preview-grid {
