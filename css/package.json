@@ -86,7 +86,7 @@
   "bundlewatch": {
     "files": [
       {
-        "path": "dist/*.css",
+        "path": "dist/css/*.css",
         "maxSize": "20kB"
       }
     ]
