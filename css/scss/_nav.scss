@@ -1,0 +1,70 @@
+/* stylelint-disable no-descending-specificity */
+.nav {
+  display: flex;
+
+  .container {
+    display: flex;
+  }
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  color: $body-text;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.nav-link {
+  padding: 18px 0;
+  text-decoration: none;
+  display: inline-block;
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(map-get($accent, 500), .4);
+    outline: none;
+  }
+
+  :not(:first-child) > & {
+    margin-left: 1rem;
+  }
+}
+
+.nav-light {
+  .nav-link {
+    color: lighten($dark, 45);
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: $dark;
+    }
+  }
+}
+
+.nav-dark {
+  .nav-link {
+    color: darken($light, 35);
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: $light;
+    }
+  }
+}

@@ -17,8 +17,6 @@ $lime:                #7acc00 !default;
 $green:               #29b340 !default;
 $grey:                #6b707a !default;
 
-// $body-text:           #000;
-
 $blues: (
   50: tint($blue, 90%),
   100: tint($blue, 80%),
@@ -148,10 +146,12 @@ $palettes: (
   "grey": $greys
 );
 
-$accent:                map-get($palettes, "blue");
+$accent:              map-get($palettes, "blue");
 
-$light:                 map-get($greys, 100);
-$dark:                  map-get($greys, 900);
+$light:               map-get($greys, 100);
+$dark:                map-get($greys, 900);
+
+$body-text:           $dark;
 
 $colors: (
   blue: $blue,
