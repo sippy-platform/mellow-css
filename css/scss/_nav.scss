@@ -2,7 +2,8 @@
 .nav {
   display: flex;
 
-  .container {
+  .container,
+  .container-fluid {
     display: flex;
   }
 }
@@ -21,13 +22,19 @@
   display: flex;
   align-items: center;
   margin-right: 1rem;
-  color: $body-text;
   text-decoration: none;
 
   &:hover {
     text-decoration: none;
     color: inherit;
   }
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 
 .nav-link {
@@ -47,7 +54,7 @@
 
 .nav-light {
   .nav-link {
-    color: lighten($dark, 45);
+    color: rgba($dark, .65);
 
     &.active,
     &:hover,
@@ -55,16 +62,24 @@
       color: $dark;
     }
   }
+
+  .nav-brand {
+    color: $dark;
+  }
 }
 
 .nav-dark {
   .nav-link {
-    color: darken($light, 35);
+    color: rgba($light, .65);
 
     &.active,
     &:hover,
     &:focus {
       color: $light;
     }
+  }
+
+  .nav-brand {
+    color: $light;
   }
 }
