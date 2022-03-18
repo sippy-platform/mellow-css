@@ -5,17 +5,19 @@
 <aside class="docs-navigation">
   {{- range $section := .Site.Data.docs -}}
     {{- $section_slug := $section.title | urlize -}}
+    {{- $is_active_section := eq $.Page.Params.section $section_slug -}}
 
     <div class="border-top p-3">
-      <p class="h6">{{ $section.title }}</p>
-      <ul class="list-none">
+      <p class="h6 mb-2 ms-3">{{ $section.title }}</p>
+      <nav class="list list-sm">
         {{- range $page := $section.pages -}}
           {{- $page_slug := $page.title | urlize -}}
+          {{- $is_active := and $is_active_section (eq $slug $page_slug) -}}
           {{- $href := printf "/%s/%s/" $section_slug $page_slug }}
 
-          <li><a href="{{ $href }}">{{ $page.title }}</a></li>
+          <a class="list-item list-item-action{{ if $is_active }} active{{ end }}" href="{{ $href }}"><span class="list-item-label">{{ $page.title }}</span></a>
         {{- end }}
-      </ul>
+      </nav>
     </div>
   {{- end }}
 </aside>
