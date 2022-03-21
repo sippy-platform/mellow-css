@@ -28,7 +28,7 @@ const CLASS_NAME_FADE = 'fade';
 const CLASS_NAME_SHOW = 'show';
 
 const SELECTOR_DROPDOWN = '.dropdown';
-const SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
+const SELECTOR_NAV_LIST_GROUP = '.pivot, .list-group';
 const SELECTOR_ACTIVE = '.active';
 const SELECTOR_ACTIVE_UL = ':scope > li > .active';
 const SELECTOR_DATA_TOGGLE = '[data-mellow-toggle="tab"], [data-mellow-toggle="pill"], [data-mellow-toggle="list"]';
