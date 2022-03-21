@@ -50,7 +50,7 @@
   "homepage": "https://sippy-platform.github.io/mellow",
   "devDependencies": {
     "@babel/cli": "7.17.6",
-    "@babel/core": "7.17.7",
+    "@babel/core": "7.17.8",
     "@babel/preset-env": "7.16.11",
     "@rollup/plugin-babel": "5.3.1",
     "autoprefixer": "10.4.4",
