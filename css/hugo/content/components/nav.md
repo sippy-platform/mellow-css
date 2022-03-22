@@ -245,6 +245,12 @@ Or use any of the other `bg-*` utility classes. You can match the `nav-light` or
   <div class="container">
     <a class="nav-brand" href="#">Mellow</a>
     <div class="nav-collapse-md nav-collapse-end" tabindex="-1" id="navCollapse" aria-labelledby="navCollapseLabel">
+      <div class="nav-collapse-header">
+        <h5 class="nav-collapse-title" id="offcanvasLabel">Mellow</h5>
+        <button type="button" class="btn-close" data-mellow-dismiss="offcanvas" data-mellow-target="#navCollapse" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em;"><path fill-rule="evenodd" d="m11.06 8 3.89 3.89c.3.3.3.77 0 1.06-.3.3-.77.3-1.06 0L10 9.06l-3.89 3.89c-.3.3-.77.3-1.06 0a.75.75 0 0 1 0-1.06L8.94 8 5.05 4.11a.75.75 0 0 1 1.06-1.06L10 6.94l3.89-3.89c.3-.3.77-.3 1.06 0 .3.3.3.77 0 1.06L11.06 8Z"/></svg>
+        </button>
+      </div>
       <div class="nav-collapse-body">
         <ul class="nav-bar me-auto">
           <li class="nav-item">

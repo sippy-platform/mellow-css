@@ -126,6 +126,10 @@
   }
 }
 
+.nav-collapse-header {
+  display: none;
+}
+
 @each $breakpoint in map-keys($grid-breakpoints) {
   $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
@@ -187,6 +191,20 @@
         max-width: 100%;
         border-left: $border-width solid $border-color;
         transform: translateX(100%);
+      }
+
+      .nav-collapse-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 $spacer;
+        height: map-get($nav-sizes, "md");
+        border-bottom: $border-width solid $border-color;
+        flex-shrink: 0;
+
+        .nav-collapse-title {
+          margin: 0;
+        }
       }
 
       .nav-collapse-body {
