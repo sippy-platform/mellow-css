@@ -15,8 +15,7 @@ The `progress` element in HTML provides all accessibility tools by default. Ther
 <progress class="progress" value="0" max="100">0%</progress> 
 <progress class="progress" value="33" max="100">33%</progress> 
 <progress class="progress" value="67" max="100">67%</progress> 
-<progress class="progress" value="100"
- max="100">100%</progress> 
+<progress class="progress" value="100" max="100">100%</progress> 
 {{</example>}}
 
 ### `progress` class
