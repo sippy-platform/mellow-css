@@ -176,7 +176,11 @@
       margin-bottom: 0;
     }
 
-    .nav + .nav {
+    .nav + .nav,
+    progress + progress,
+    progress + .progress,
+    .progress + progress,
+    .progress + .progress {
       margin-top: 1rem;
     }
 

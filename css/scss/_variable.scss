@@ -522,3 +522,11 @@ $nav-sizes: (
   md: 56px,
   lg: 72px
 ) !default;
+
+// Progress
+$progress-heights: (
+  1: 1px,
+  sm: .25rem,
+  md: .5rem,
+  lg: 1rem,
+) !default;
