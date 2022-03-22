@@ -8,7 +8,6 @@ A basic navigation bar can contain a brand, and 2 lists of links.
 {{<example>}}
 <nav class="nav nav-light bg-light">
   <div class="container">
-    <a class="nav-brand" href="#">Mellow</a>
     <ul class="nav-bar me-auto">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -35,7 +34,6 @@ Swap out the `nav-light` and `bg-light` classes for `nav-dark` and `bg-dark` to 
 {{<example>}}
 <nav class="nav nav-dark bg-dark">
   <div class="container">
-    <a class="nav-brand" href="#">Mellow</a>
     <ul class="nav-bar me-auto">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -62,6 +60,34 @@ Or use any of the other `bg-*` utility classes. You can match the `nav-light` or
 {{<example>}}
 <nav class="nav nav-dark bg-blue">
   <div class="container">
+    <ul class="nav-bar me-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+    </ul>
+    <ul class="nav-bar">
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{{</example>}}
+
+## Content
+
+### Branding
+Use the `nav-brand` class to add a brand to your navbar.
+
+{{<example>}}
+<nav class="nav nav-light bg-light">
+  <div class="container">
     <a class="nav-brand" href="#">Mellow</a>
     <ul class="nav-bar me-auto">
       <li class="nav-item">
@@ -77,6 +103,65 @@ Or use any of the other `bg-*` utility classes. You can match the `nav-light` or
     <ul class="nav-bar">
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{{</example>}}
+
+### Buttons
+You can put a button in the `nav-item`.
+
+{{<example>}}
+<nav class="nav nav-light bg-light">
+  <div class="container">
+    <a class="nav-brand" href="#">Mellow</a>
+    <ul class="nav-bar me-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+    </ul>
+    <ul class="nav-bar">
+      <li class="nav-item">
+        <button type="button" class="btn btn-primary">Login</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+{{</example>}}
+
+### Forms
+Instead of just a button, an entire form can be used as well:
+
+{{<example>}}
+<nav class="nav nav-light bg-light">
+  <div class="container">
+    <a class="nav-brand" href="#">Mellow</a>
+    <ul class="nav-bar me-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+    </ul>
+    <ul class="nav-bar">
+      <li class="nav-item">
+        <form class="d-flex input-group">
+          <input class="input" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-default" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path fill-rule="evenodd" d="M17 6.5a5.5 5.5 0 0 1-8.82 4.38L4.06 15A.75.75 0 1 1 3 13.94l4.12-4.12A5.5 5.5 0 1 1 17 6.5Zm-1.5 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/></svg>
+          </button>
+        </form>
       </li>
     </ul>
   </div>
