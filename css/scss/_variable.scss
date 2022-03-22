@@ -522,3 +522,19 @@ $nav-sizes: (
   md: 56px,
   lg: 72px
 ) !default;
+
+// Alerts
+$colors: (
+  blue: $blue,
+  red: $red,
+  lime: $lime,
+  green: $green,
+  yellow: $yellow,
+  orange: $orange,
+  pink: $pink,
+  purple: $purple,
+  grey: $grey,
+  light: $light,
+  muted: $grey,
+  dark: $dark,
+) !default;
