@@ -524,17 +524,14 @@ $nav-sizes: (
 ) !default;
 
 // Alerts
-$colors: (
-  blue: $blue,
-  red: $red,
-  lime: $lime,
-  green: $green,
-  yellow: $yellow,
-  orange: $orange,
-  pink: $pink,
-  purple: $purple,
-  grey: $grey,
-  light: $light,
-  muted: $grey,
-  dark: $dark,
+$alert-colors: (
+  blue: $blues,
+  red: $reds,
+  lime: $limes,
+  green: $greens,
+  yellow: $yellows,
+  orange: $oranges,
+  pink: $pinks,
+  purple: $purples,
+  grey: $greys
 ) !default;

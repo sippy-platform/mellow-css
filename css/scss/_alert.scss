@@ -7,8 +7,22 @@
   border-radius: $border-radius-sm;
 }
 
-@each $color-name, $bg-color in $colors {
+@each $color-name, $bg-color in $alert-colors {
   .alert-#{$color-name} {
-    border-left-color: #{$bg-color} !important;
+    border-left-color: map-get($bg-color, 500) !important;
+
+    .alert-title {
+      color: map-get($bg-color, 800) !important;
+      margin-bottom: $spacer * .25;
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: map-get($bg-color, 700) !important;
+
+      &:hover {
+        color: map-get($bg-color, 800) !important;
+      }
+    }
   }
 }
