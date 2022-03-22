@@ -17,8 +17,6 @@ $lime:                #7acc00 !default;
 $green:               #29b340 !default;
 $grey:                #6b707a !default;
 
-$body-text:           #000;
-
 $blues: (
   50: tint($blue, 90%),
   100: tint($blue, 80%),
@@ -148,10 +146,12 @@ $palettes: (
   "grey": $greys
 );
 
-$accent:                map-get($palettes, "blue");
+$accent:              map-get($palettes, "blue");
 
-$light:                 map-get($greys, 100);
-$dark:                  map-get($greys, 900);
+$light:               map-get($greys, 100);
+$dark:                map-get($greys, 900);
+
+// $body-text:           $dark;
 
 $colors: (
   blue: $blue,
@@ -206,13 +206,38 @@ $container-max-widths: (
 
 // Gap
 $spacer: 1rem !default;
-$spacers: (
+$margins: (
+  n5: (-$spacer * 3),
+  n4: (-$spacer * 1.5),
+  n3: (-$spacer),
+  n2: (-$spacer * .5),
+  n1: (-$spacer * .25),
   0: 0,
   1: $spacer * .25,
   2: $spacer * .5,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  auto: auto
+) !default;
+
+$paddings: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  auto: auto
+) !default;
+
+$gaps: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3
 ) !default;
 
 // Fonts and typogrpahy
@@ -490,3 +515,10 @@ $form-box-shadow-inset: inset 0 1px 0 rgba(0, 0, 0, .075) !default;
 
 // Transitions
 $base-transition: all .2s ease-in-out;
+
+// Navigation
+$nav-sizes: (
+  sm: 40px,
+  md: 56px,
+  lg: 72px
+) !default;
