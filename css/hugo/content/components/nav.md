@@ -152,8 +152,7 @@ Fancy a smaller or larger navigation? Use the `nav-sm` and `nav-lg` classes.
 </nav>
 {{</example>}}
 
-
-### Responsive
+## Responsive
 Or use any of the other `bg-*` utility classes. You can match the `nav-light` or `nav-dark` classes with whatever fits best for the color you opt for.
 
 {{<example>}}

@@ -129,6 +129,18 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
   $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    .nav-collapse#{$breakpoint-suffix} {
+      flex-grow: 1;
+
+      .nav-collapse-body {
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+      }
+    }
+  }
+
   @include breakpoint-max-width($breakpoint, $grid-breakpoints) {
     .nav-collapse#{$breakpoint-suffix} {
       position: fixed;
