@@ -530,3 +530,16 @@ $progress-heights: (
   md: .5rem,
   lg: 1rem,
 ) !default;
+ 
+// Alerts
+$alert-colors: (
+  blue: $blues,
+  red: $reds,
+  lime: $limes,
+  green: $greens,
+  yellow: $yellows,
+  orange: $oranges,
+  pink: $pinks,
+  purple: $purples,
+  grey: $greys
+) !default;

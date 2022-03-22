@@ -16,6 +16,7 @@
 
 - title: Components
   pages:
+    - title: Alert
     - title: Button
     - title: Button group
     - title: Card

@@ -1,0 +1,28 @@
+.alert {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid $border-color;
+  border-left-width: 3px;
+  border-radius: $border-radius-sm;
+}
+
+@each $color-name, $bg-color in $alert-colors {
+  .alert-#{$color-name} {
+    border-left-color: map-get($bg-color, 500) !important;
+
+    .alert-title {
+      color: map-get($bg-color, 800) !important;
+      margin-bottom: $spacer * .25;
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: map-get($bg-color, 700) !important;
+
+      &:hover {
+        color: map-get($bg-color, 800) !important;
+      }
+    }
+  }
+}
