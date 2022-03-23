@@ -15,33 +15,39 @@
           grid-template-columns: repeat($i, minmax(0, 1fr));
         }
       }
+    }
+  }
+}
 
-      @for $i from 1 through 12 {
-        .col#{$breakpoint-suffix}-#{$i} {
-          grid-column: auto/ span $i;
-        }
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    @for $i from 1 through 12 {
+      .col#{$breakpoint-suffix}-#{$i} {
+        grid-column: auto/ span $i;
       }
+    }
 
-      .col#{$breakpoint-suffix}-full {
-        grid-column: 1 / -1;
+    .col#{$breakpoint-suffix}-full {
+      grid-column: 1 / -1;
+    }
+
+    @for $i from 1 through 12 {
+      .col-start#{$breakpoint-suffix}-#{$i} {
+        grid-column-start: $i;
       }
+    }
 
-      @for $i from 1 through 12 {
-        .col-start#{$breakpoint-suffix}-#{$i} {
-          grid-column-start: $i;
-        }
+    @each $key, $value in $gaps {
+      .gap#{$breakpoint-suffix}-#{$key} {
+        gap: #{$value};
       }
+    }
 
-      @each $key, $value in $gaps {
-        &.gap#{$breakpoint-suffix}-#{$key} {
-          gap: #{$value};
-        }
-      }
-
-      @each $key, $value in $orders {
-        &.order#{$breakpoint-suffix}-#{$key} {
-          order: #{$value};
-        }
+    @each $key, $value in $orders {
+      .order#{$breakpoint-suffix}-#{$key} {
+        order: #{$value};
       }
     }
   }
