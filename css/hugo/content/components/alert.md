@@ -143,7 +143,6 @@ Use the `alert-icon` class to plae an icon in your alerts.
 </div>
 {{</example>}}
 
-
 ## Floating
 Add the `alert-float` class to get an alert that's optimized for floating over content. This is useful for notifications, etc. The `alert-float` class makes the following changes:
 
@@ -154,12 +153,38 @@ Add the `alert-float` class to get an alert that's optimized for floating over c
 * Removes the borders from all sides but the left.
 
 {{<example class="docs-preview-img">}}
-<div class="alert alert-red alert-float position-absolute top-0 start-50" role="alert">
+<div class="alert alert-red alert-float position-absolute top-0 start-50 translate-middle-x mt-3" role="alert">
   <div class="alert-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path d="M6.64 10.3 8.94 8l-2.3-2.3A.75.75 0 1 1 7.7 4.64l2.3 2.3 2.3-2.3a.75.75 0 1 1 1.06 1.06L11.06 8l2.3 2.3a.75.75 0 0 1-1.06 1.06L10 9.06l-2.3 2.3a.75.75 0 1 1-1.06-1.06Z"/><path fill-rule="evenodd" d="M18 8A8 8 0 1 0 2 8a8 8 0 0 0 16 0Zm-1.5 0a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
   </div>
   <div class="alert-message">
-    This alert is floating.
+    <h4 class="alert-title">The alert title</h4>
+    This alert is floating in the middle.
+  </div>
+</div>
+{{</example>}}
+
+## Alert stack
+The `alert-stack` class is a simple utility class that creates a 1 column wide grid for alerts to be stacked in.
+
+{{<example class="docs-preview-img" style="height: 250px">}}
+<div class="alert-stack position-absolute bottom-0 end-0 me-3 mb-3">
+  <div class="alert alert-red alert-float" role="alert">
+    <div class="alert-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path d="M6.64 10.3 8.94 8l-2.3-2.3A.75.75 0 1 1 7.7 4.64l2.3 2.3 2.3-2.3a.75.75 0 1 1 1.06 1.06L11.06 8l2.3 2.3a.75.75 0 0 1-1.06 1.06L10 9.06l-2.3 2.3a.75.75 0 1 1-1.06-1.06Z"/><path fill-rule="evenodd" d="M18 8A8 8 0 1 0 2 8a8 8 0 0 0 16 0Zm-1.5 0a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
+    </div>
+    <div class="alert-message">
+      <h4 class="alert-title">The alert title</h4>
+      This alert is in a stack.
+    </div>
+  </div>
+  <div class="alert alert-lime alert-float" role="alert">
+    <div class="alert-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path d="M12.44 5.5 9 8.94 7.56 7.5A.75.75 0 0 0 6.5 8.56l1.8 1.8a1 1 0 0 0 1.4 0l3.8-3.8a.75.75 0 1 0-1.06-1.06Z"/><path fill-rule="evenodd" d="M18 8A8 8 0 1 1 2 8a8 8 0 0 1 16 0Zm-1.5 0a6.5 6.5 0 1 0-13 0 6.5 6.5 0 0 0 13 0Z"/></svg>
+    </div>
+    <div class="alert-message">
+      Success! How nice.
+    </div>
   </div>
 </div>
 {{</example>}}
