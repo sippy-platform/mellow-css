@@ -458,3 +458,16 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+// Translation
+.translate-middle {
+  transform: translate(-50%, -50%);
+}
+
+.translate-middle-x {
+  transform: translateX(-50%);
+}
+
+.translate-middle-y {
+  transform: translateY(-50%);
+}
