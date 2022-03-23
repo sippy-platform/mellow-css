@@ -1,28 +1,47 @@
 .alert {
+  display: flex;
   position: relative;
   padding: 1rem;
   margin-bottom: 1rem;
   border: 1px solid $border-color;
   border-left-width: 3px;
   border-radius: $border-radius-sm;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-@each $color-name, $bg-color in $alert-colors {
+@each $color-name, $color in $alert-colors {
   .alert-#{$color-name} {
-    border-left-color: map-get($bg-color, 500) !important;
+    border-left-color: map-get($color, 500) !important;
 
     .alert-title {
-      color: map-get($bg-color, 800) !important;
+      color: map-get($color, 800) !important;
       margin-bottom: $spacer * .25;
       font-size: 1.1rem;
     }
 
     a {
-      color: map-get($bg-color, 700) !important;
+      color: map-get($color, 700) !important;
 
       &:hover {
-        color: map-get($bg-color, 800) !important;
+        color: map-get($color, 800) !important;
       }
     }
+
+    .alert-icon {
+      color: map-get($color, 500);
+    }
   }
+}
+
+.alert-icon {
+  margin-right: .5rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.alert-float {
+  display: inline-flex;
+  padding: .75rem 1rem;
+  box-shadow: map-get($box-shadows, 5);
 }
