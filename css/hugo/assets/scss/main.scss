@@ -184,6 +184,15 @@
       margin-top: 1rem;
     }
 
+    &.docs-preview-img {
+      background-image: url("/img/background.png");
+      background-size: cover;
+      background-position: center bottom;
+      height: 150px;
+      width: 100%;
+      position: relative;
+    }
+
     &.docs-preview-grid {
       .grid {
         border-radius: .5rem;
