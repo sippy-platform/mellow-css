@@ -35,6 +35,42 @@ $utilities: (
     values: $margins,
     responsive: true
   ),
+  // Padding
+  "p": (
+    property: padding,
+    values: $paddings,
+    responsive: true
+  ),
+  "pt": (
+    property: padding-top,
+    values: $paddings,
+    responsive: true
+  ),
+  "pe": (
+    property: padding-right,
+    values: $paddings,
+    responsive: true
+  ),
+  "pb": (
+    property: padding-bottom,
+    values: $paddings,
+    responsive: true
+  ),
+  "ps": (
+    property: padding-left,
+    values: $paddings,
+    responsive: true
+  ),
+  "py": (
+    property: padding-top padding-bottom,
+    values: $paddings,
+    responsive: true
+  ),
+  "px": (
+    property: padding-right padding-left,
+    values: $paddings,
+    responsive: true
+  ),
   // Backgorund
   "bg": (
     property: background-color,
