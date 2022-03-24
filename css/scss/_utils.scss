@@ -173,6 +173,74 @@ $utilities: (
     values: $display-types,
     responsive: true
   ),
+  // Flex
+  "flex": (
+    responsive: true,
+    property: flex,
+    values: (
+      1: 1,
+      fill: 1 1 auto,
+      auto: auto
+    )
+  ),
+  "flex-direction": (
+    responsive: true,
+    class: flex,
+    property: flex-direction,
+    values: $flex-directions
+  ),
+  "flex-grow": (
+    responsive: true,
+    property: flex-grow,
+    values: (
+      0: 0,
+      1: 1,
+    )
+  ),
+  "flex-shrink": (
+    responsive: true,
+    property: flex-shrink,
+    values: (
+      0: 0,
+      1: 1,
+    )
+  ),
+  "flex-wrap": (
+    responsive: true,
+    property: flex-wrap,
+    class: flex,
+    values: $flex-wraps
+  ),
+  "gap": (
+    responsive: true,
+    property: gap,
+    values: $gaps
+  ),
+  "justify-content": (
+    responsive: true,
+    property: justify-content,
+    values: $flex-justifies-content
+  ),
+  "align-items": (
+    responsive: true,
+    property: align-items,
+    values: $flex-aligns-items
+  ),
+  "align-content": (
+    responsive: true,
+    property: align-content,
+    values: $flex-aligns-content
+  ),
+  "align-self": (
+    responsive: true,
+    property: align-self,
+    values: $flex-aligns-self
+  ),
+  "order": (
+    responsive: true,
+    property: order,
+    values: $flex-orders
+  ),
   // Position
   "translate-center": (
     property: transform,

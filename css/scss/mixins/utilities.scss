@@ -7,11 +7,13 @@
     $values: zip($values, $values);
   }
 
+  $property-class: if(map-has-key($definition, class), map-get($definition, class), $name);
+
   @each $property-suffix, $value in $values {
     // Use breakpoint suffix if present
     $property-suffix: if($property-suffix, if($property-suffix == "", "", "-") + $property-suffix, "");
 
-    .#{$name + $breakpoint-suffix + $property-suffix} {
+    .#{$property-class + $breakpoint-suffix + $property-suffix} {
       @each $property in $properties {
         #{$property}: $value !important;
       }
