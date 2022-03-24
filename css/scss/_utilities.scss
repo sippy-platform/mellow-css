@@ -55,7 +55,7 @@ $utilities: (
   "border-width": (
     property: border-width,
     values: $border-widths,
-    class: "border"
+    class: border
   ),
   "border-color": (
     property: border-color,
@@ -69,7 +69,7 @@ $utilities: (
         "reset": inherit,
       )
     ),
-    class: "border"
+    class: border
   ),
   "rounded": (
     property: border-radius,
@@ -100,7 +100,7 @@ $utilities: (
         "reset": inherit
       )
     ),
-    class: "text"
+    class: text
   ),
   // Shadows
   "shadow": (
@@ -242,12 +242,12 @@ $utilities: (
     responsive: true,
     property: text-align,
     values: $text-directions,
-    class: "text"
+    class: text
   ),
   "text-wrap": (
     property: white-space,
     values: $text-wraps,
-    class: "text"
+    class: text
   ),
   "text-break": (
     property: word-wrap word-break,
