@@ -153,7 +153,7 @@ Add the `alert-float` class to get an alert that's optimized for floating over c
 * Removes the borders from all sides but the left.
 
 {{<example class="docs-preview-img">}}
-<div class="alert alert-red alert-float position-absolute top-0 start-50 translate-middle-x mt-3" role="alert">
+<div class="alert alert-red alert-float position-absolute top-0 start-50 translate-center-x mt-3" role="alert">
   <div class="alert-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path d="M6.64 10.3 8.94 8l-2.3-2.3A.75.75 0 1 1 7.7 4.64l2.3 2.3 2.3-2.3a.75.75 0 1 1 1.06 1.06L11.06 8l2.3 2.3a.75.75 0 0 1-1.06 1.06L10 9.06l-2.3 2.3a.75.75 0 1 1-1.06-1.06Z"/><path fill-rule="evenodd" d="M18 8A8 8 0 1 0 2 8a8 8 0 0 0 16 0Zm-1.5 0a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
   </div>

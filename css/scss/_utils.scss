@@ -1,0 +1,23 @@
+$utilities: (
+  "translate-center": (
+    property: transform,
+    values: (
+      null: translate(-50%, -50%),
+      x: translateX(-50%),
+      y: translateY(-50%),
+    )
+  )
+);
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include breakpoint-min-width($breakpoint) {
+    $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+    @each $name, $definition in $utilities {
+      // Prevent generating responsive utilities if the utility doesn't require it
+      @if (map-get($definition, responsive) or $breakpoint-suffix == "") {
+        @include upi($name, $definition, $breakpoint-suffix);
+      }
+    }
+  }
+}
