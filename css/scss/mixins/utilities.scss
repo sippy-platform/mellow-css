@@ -1,21 +1,31 @@
 @mixin upi($name, $definition, $breakpoint-suffix) {
   $values: map-get($definition, values);
   $properties: map-get($definition, property);
+  $variant-dash: map-get($definition, variant-dash);
+
+  // Convert to a key => value pair if just a string or list for properties
+  @if type-of($properties) == "string" or type-of(nth($properties, 1)) != "list" {
+    $properties: (null: $properties);
+  }
 
   // Convert to a key => value pair if just a string or list
   @if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
     $values: zip($values, $values);
   }
 
-  $property-class: if(map-has-key($definition, class), map-get($definition, class), $name);
+  @each $variant, $variant-properties in $properties {
+    // Create the class name by getting the utility key or class property when set
+    // And add a possible variant modifier with or without a dash depending on "variant-dash"
+    $property-class: if(map-has-key($definition, class), map-get($definition, class), $name) + if($variant, if($variant-dash, "-" + $variant, $variant), "");
 
-  @each $property-suffix, $value in $values {
-    // Use breakpoint suffix if present
-    $property-suffix: if($property-suffix, if($property-suffix == "", "", "-") + $property-suffix, "");
+    @each $property-suffix, $value in $values {
+      // Use breakpoint suffix if present
+      $property-suffix: if($property-suffix, if($property-suffix == "", "", "-") + $property-suffix, "");
 
-    .#{$property-class + $breakpoint-suffix + $property-suffix} {
-      @each $property in $properties {
-        #{$property}: $value !important;
+      .#{$property-class + $breakpoint-suffix + $property-suffix} {
+        @each $property in $variant-properties {
+          #{$property}: $value !important;
+        }
       }
     }
   }

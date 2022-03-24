@@ -1,73 +1,29 @@
 $utilities: (
   // Margin
   "m": (
-    property: margin,
-    values: $margins,
-    responsive: true
-  ),
-  "mt": (
-    property: margin-top,
-    values: $margins,
-    responsive: true
-  ),
-  "me": (
-    property: margin-right,
-    values: $margins,
-    responsive: true
-  ),
-  "mb": (
-    property: margin-bottom,
-    values: $margins,
-    responsive: true
-  ),
-  "ms": (
-    property: margin-left,
-    values: $margins,
-    responsive: true
-  ),
-  "my": (
-    property: margin-top margin-bottom,
-    values: $margins,
-    responsive: true
-  ),
-  "mx": (
-    property: margin-right margin-left,
+    property: (
+      null: margin,
+      t: margin-top,
+      e: margin-right,
+      b: margin-bottom,
+      s: margin-left,
+      y: margin-top margin-bottom,
+      x: margin-right margin-left
+    ),
     values: $margins,
     responsive: true
   ),
   // Padding
   "p": (
-    property: padding,
-    values: $paddings,
-    responsive: true
-  ),
-  "pt": (
-    property: padding-top,
-    values: $paddings,
-    responsive: true
-  ),
-  "pe": (
-    property: padding-right,
-    values: $paddings,
-    responsive: true
-  ),
-  "pb": (
-    property: padding-bottom,
-    values: $paddings,
-    responsive: true
-  ),
-  "ps": (
-    property: padding-left,
-    values: $paddings,
-    responsive: true
-  ),
-  "py": (
-    property: padding-top padding-bottom,
-    values: $paddings,
-    responsive: true
-  ),
-  "px": (
-    property: padding-right padding-left,
+    property: (
+      null: padding,
+      t: padding-top,
+      e: padding-right,
+      b: padding-bottom,
+      s: padding-left,
+      y: padding-top padding-bottom,
+      x: padding-right padding-left
+    ),
     values: $paddings,
     responsive: true
   ),
@@ -86,24 +42,15 @@ $utilities: (
   ),
   // Borders
   "border": (
-    property: border,
-    values: $borders
-  ),
-  "border-top": (
-    property: border-top,
-    values: $borders
-  ),
-  "border-end": (
-    property: border-right,
-    values: $borders
-  ),
-  "border-bottom": (
-    property: border-bottom,
-    values: $borders
-  ),
-  "border-start": (
-    property: border-left,
-    values: $borders
+    property: (
+      null: border,
+      top: border-top,
+      end: border-right,
+      bottom: border-bottom,
+      start: border-left
+    ),
+    values: $borders,
+    variant-dash: true
   ),
   "border-width": (
     property: border-width,
@@ -129,21 +76,16 @@ $utilities: (
     values: $border-radia,
     class: rounded
   ),
-  "rounded-t": (
-    property: border-top-left-radius border-top-right-radius,
-    values: (null: $border-radius)
-  ),
-  "rounded-e": (
-    property: border-top-right-radius border-bottom-right-radius,
-    values: (null: $border-radius)
-  ),
-  "rounded-b": (
-    property: border-bottom-right-radius border-bottom-left-radius,
-    values: (null: $border-radius)
-  ),
-  "rounded-s": (
-    property: border-bottom-left-radius border-top-left-radius,
-    values: (null: $border-radius)
+  "rounded-directions": (
+    property: (
+      t: border-top-left-radius border-top-right-radius,
+      e: border-top-right-radius border-bottom-right-radius,
+      b: border-bottom-right-radius border-bottom-left-radius,
+      s: border-bottom-left-radius border-top-left-radius
+    ),
+    values: (null: $border-radius),
+    class: rounded,
+    variant-dash: true
   ),
   // Color
   "text-color": (
