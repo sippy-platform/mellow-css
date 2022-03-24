@@ -82,7 +82,66 @@ $utilities: (
         "dark": $dark,
         "white": #fff
       )
-    )
+    ),
+  ),
+  // Borders
+  "border": (
+    property: border,
+    values: $borders
+  ),
+  "border-top": (
+    property: border-top,
+    values: $borders
+  ),
+  "border-end": (
+    property: border-right,
+    values: $borders
+  ),
+  "border-bottom": (
+    property: border-bottom,
+    values: $borders
+  ),
+  "border-start": (
+    property: border-left,
+    values: $borders
+  ),
+  "border-width": (
+    property: border-width,
+    values: $border-widths
+  ),
+  "border-color": (
+    property: border-color,
+    values: map-merge(
+      $util-colors,
+      (
+        "light": $light,
+        "muted": $grey,
+        "dark": $dark,
+        "white": #fff,
+        "reset": inherit,
+      )
+    ),
+  ),
+  "rounded": (
+    property: border-radius,
+    class: rounded,
+    values: $border-radia
+  ),
+  "rounded-t": (
+    property: border-top-left-radius border-top-right-radius,
+    values: (null: $border-radius)
+  ),
+  "rounded-e": (
+    property: border-top-right-radius border-bottom-right-radius,
+    values: (null: $border-radius)
+  ),
+  "rounded-b": (
+    property: border-bottom-right-radius border-bottom-left-radius,
+    values: (null: $border-radius)
+  ),
+  "rounded-s": (
+    property: border-bottom-left-radius border-top-left-radius,
+    values: (null: $border-radius)
   ),
   // Color
   "text": (

@@ -294,7 +294,7 @@ $box-shadows: (
 ) !default;
 
 // Borders
-$border-color:        map-get($greys, 200);
+$border-color:        map-get($greys, 200) !default;
 $border-width:        1px !default;
 $border-widths: (
   1: 1px,
@@ -302,6 +302,11 @@ $border-widths: (
   3: 3px,
   4: 4px,
   5: 5px
+) !default;
+$border: $border-width solid $border-color !default;
+$borders: (
+  null: $border,
+  0: 0
 ) !default;
 
 $border-radius-sm:    .5rem !default;
@@ -311,7 +316,7 @@ $border-radius-pill:  50rem !default;
 $border-radia: (
   0: 0,
   sm: $border-radius-sm,
-  md: $border-radius,
+  null: $border-radius,
   lg: $border-radius-lg,
   pill: $border-radius-pill
 ) !default;
