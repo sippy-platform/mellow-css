@@ -1,10 +1,38 @@
 $utilities: (
+  // Backgorund
+  "bg": (
+    property: background-color,
+    values: map-merge(
+      $util-colors,
+      (
+        "transparent": transparent,
+        "light": $light,
+        "dark": $dark,
+        "white": #fff
+      )
+    )
+  ),
+  // Color
+  "text": (
+    property: color,
+    values: map-merge(
+      $util-colors,
+      (
+        "light": $light,
+        "muted": $grey,
+        "dark": $dark,
+        "white": #fff,
+        "reset": inherit
+      )
+    )
+  ),
+  // Position
   "translate-center": (
     property: transform,
     values: (
       null: translate(-50%, -50%),
       x: translateX(-50%),
-      y: translateY(-50%),
+      y: translateY(-50%)
     )
   )
 );

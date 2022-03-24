@@ -153,6 +153,18 @@ $dark:                map-get($greys, 900);
 
 // $body-text:           $dark;
 
+$util-colors: (
+  blue: $blue,
+  red: $red,
+  lime: $lime,
+  green: $green,
+  yellow: $yellow,
+  orange: $orange,
+  pink: $pink,
+  purple: $purple,
+  grey: $grey
+) !default;
+
 $colors: (
   blue: $blue,
   red: $red,

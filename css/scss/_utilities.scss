@@ -70,24 +70,6 @@
   }
 }
 
-// Background colors
-@each $color-name, $bg-color in $colors {
-  .bg-#{$color-name} {
-    background-color: #{$bg-color} !important;
-  }
-}
-
-.bg-transparent {
-  background-color: transparent;
-}
-
-// Text colors
-@each $color-name, $text-color in $colors {
-  .text-#{$color-name} {
-    color: #{$text-color} !important;
-  }
-}
-
 // Elevation
 @each $level, $box-shadow in $box-shadows {
   .shadow-#{$level} {
