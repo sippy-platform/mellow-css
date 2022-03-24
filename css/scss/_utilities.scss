@@ -7,59 +7,6 @@
   }
 }
 
-// Sizing
-@each $level, $size in $sizes {
-  .w-#{$level} {
-    width: #{$size} !important;
-  }
-}
-
-@each $level, $size in $sizes {
-  .h-#{$level} {
-    height: #{$size} !important;
-  }
-}
-
-@each $level, $size in $max-sizes {
-  .max-w-#{$level} {
-    max-width: #{$size} !important;
-  }
-}
-
-@each $level, $size in $max-sizes {
-  .max-h-#{$level} {
-    max-height: #{$size} !important;
-  }
-}
-
-@each $level, $size in $min-sizes {
-  .min-w-#{$level} {
-    min-width: #{$size} !important;
-  }
-}
-
-@each $level, $size in $min-sizes {
-  .min-h-#{$level} {
-    min-height: #{$size} !important;
-  }
-}
-
-.vw-100 {
-  width: 100vw;
-}
-
-.vh-100 {
-  height: 100vh;
-}
-
-.min-vw-100 {
-  min-width: 100vw;
-}
-
-.min-vh-100 {
-  min-height: 100vh;
-}
-
 // Text
 @each $breakpoint in map-keys($grid-breakpoints) {
   $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);

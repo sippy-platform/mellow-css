@@ -440,12 +440,7 @@ $sizes: (
   auto: auto
 ) !default;
 
-$min-sizes: (
-  0: 0,
-  100: 100%
-) !default;
-
-$max-sizes: (
+$limit-sizes: (
   0: 0,
   100: 100%
 ) !default;

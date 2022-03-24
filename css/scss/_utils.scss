@@ -259,6 +259,47 @@ $utilities: (
   "float": (
     property: float,
     values: $floats
+  ),
+  // Width & height
+  "w": (
+    property: width,
+    values: $sizes
+  ),
+  "h": (
+    property: height,
+    values: $sizes
+  ),
+  "min-w": (
+    property: min-width,
+    values: $limit-sizes
+  ),
+  "min-h": (
+    property: min-height,
+    values: $limit-sizes
+  ),
+  "max-w": (
+    property: max-width,
+    values: $limit-sizes
+  ),
+  "max-h": (
+    property: max-height,
+    values: $limit-sizes
+  ),
+  "vw": (
+    property: width,
+    values: (100: 100vw)
+  ),
+  "vh": (
+    property: height,
+    values: (100: 100vh)
+  ),
+  "min-vw": (
+    property: min-width,
+    values: (100: 100vw)
+  ),
+  "min-vh": (
+    property: min-height,
+    values: (100: 100vh)
   )
 );
 
