@@ -7,15 +7,29 @@ $font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 // stylelint-enable value-keyword-case
 
 // Colors
-$blue:                #0068d8 !default;
-$purple:              #a855f7 !default;
-$pink:                #ec4899 !default;
 $red:                 #ea002d !default;
 $orange:              #f57600 !default;
 $yellow:              #f5c800 !default;
 $lime:                #7acc00 !default;
 $green:               #29b340 !default;
+$cyan:                #00b3d3 !default;
+$blue:                #0068d8 !default;
+$purple:              #a855f7 !default;
+$pink:                #ec4899 !default;
 $grey:                #6b707a !default;
+
+$cyans: (
+  50: tint($cyan, 90%),
+  100: tint($cyan, 80%),
+  200: tint($cyan, 60%),
+  300: tint($cyan, 40%),
+  400: tint($cyan, 20%),
+  500: $cyan,
+  600: shade($cyan, 15%),
+  700: shade($cyan, 30%),
+  800: shade($cyan, 45%),
+  900: shade($cyan, 60%)
+) !default;
 
 $blues: (
   50: tint($blue, 90%),
@@ -135,6 +149,7 @@ $greys: (
 ) !default;
 
 $palettes: (
+  "cyan": $cyans,
   "blue": $blues,
   "red": $reds,
   "lime": $limes,
@@ -154,6 +169,7 @@ $dark:                map-get($greys, 900);
 // $body-text:           $dark;
 
 $util-colors: (
+  cyan: $cyan,
   blue: $blue,
   red: $red,
   lime: $lime,
@@ -166,6 +182,7 @@ $util-colors: (
 ) !default;
 
 $colors: (
+  cyan: $cyan,
   blue: $blue,
   red: $red,
   lime: $lime,
@@ -505,6 +522,7 @@ $btn-context-colored: (
 ) !default;
 
 $btn-colored: (
+  cyan: $cyans,
   blue: $blues,
   red: $reds,
   lime: $limes,
@@ -539,6 +557,7 @@ $progress-heights: (
 
 // Alerts
 $alert-colors: (
+  cyan: $cyans,
   blue: $blues,
   red: $reds,
   lime: $limes,

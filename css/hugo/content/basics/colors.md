@@ -8,16 +8,17 @@ The main color set has `text-*` and `bg-*` classes available in our [text color]
 
 {{<example show_code="false">}}
 <div class="grid grid-2 grid-sm-3">
-  <div class="bg-blue-500 p-3">Blue</div>
-  <div class="bg-purple-500 p-3">Purple</div>
-  <div class="bg-pink-500 p-3">Pink</div>
   <div class="bg-red-500 p-3">Red</div>
   <div class="bg-orange-500 p-3">Orange</div>
   <div class="bg-yellow-500 p-3">Yellow</div>
   <div class="bg-lime-500 p-3">Lime</div>
   <div class="bg-green-500 p-3">Green</div>
-  <div class="bg-grey-500 p-3">Grey</div>
+  <div class="bg-cyan-500 p-3">Cyan</div>
+  <div class="bg-blue-500 p-3">Blue</div>
+  <div class="bg-purple-500 p-3">Purple</div>
+  <div class="bg-pink-500 p-3">Pink</div>
   <div class="bg-light p-3">Light</div>
+  <div class="bg-grey-500 p-3">Grey</div>
   <div class="bg-dark text-white p-3">Dark</div>
 </div>
 {{</example>}}
@@ -26,6 +27,7 @@ These values are directly available and are defined in the `$colors` scss variab
 
 {{<example show_preview="false" lang="scss">}}
 $colors: (
+  cyan: $cyan,
   blue: $blue,
   red: $red,
   lime: $lime,
@@ -48,6 +50,7 @@ The full color palette is accessible from the `$plaettes`-variable.
 
 {{<example show_preview="false" lang="scss">}}
 $palettes: (
+  cyans: $cyans,
   blues: $blues,
   reds: $reds,
   greens: $greens,
@@ -91,54 +94,6 @@ $greys: (
 
 {{<example show_code="false">}}
 <div class="grid grid-2 grid-sm-3 grid-xl-4 grid-xxl-5">
-  <div>
-    <div class="bg-blue-500 p-3 mb-3">
-      <p class="m-0 h6">Blue</p>
-      <p class="m-0">#0068d8</p>
-    </div>
-    <div class="bg-blue-50 py-2 px-3">Blue 50</div>
-    <div class="bg-blue-100 py-2 px-3">Blue 100</div>
-    <div class="bg-blue-200 py-2 px-3">Blue 200</div>
-    <div class="bg-blue-300 py-2 px-3">Blue 300</div>
-    <div class="bg-blue-400 py-2 px-3">Blue 400</div>
-    <div class="bg-blue-500 py-2 px-3">Blue 500</div>
-    <div class="bg-blue-600 py-2 px-3">Blue 600</div>
-    <div class="bg-blue-700 py-2 px-3">Blue 700</div>
-    <div class="bg-blue-800 py-2 px-3">Blue 800</div>
-    <div class="bg-blue-900 py-2 px-3">Blue 900</div>
-  </div>
-  <div>
-    <div class="bg-purple-500 p-3 mb-3">
-      <p class="m-0 h6">Purple</p>
-      <p class="m-0">#a855f7</p>
-    </div>
-    <div class="bg-purple-50 py-2 px-3">Purple 50</div>
-    <div class="bg-purple-100 py-2 px-3">Purple 100</div>
-    <div class="bg-purple-200 py-2 px-3">Purple 200</div>
-    <div class="bg-purple-300 py-2 px-3">Purple 300</div>
-    <div class="bg-purple-400 py-2 px-3">Purple 400</div>
-    <div class="bg-purple-500 py-2 px-3">Purple 500</div>
-    <div class="bg-purple-600 py-2 px-3">Purple 600</div>
-    <div class="bg-purple-700 py-2 px-3">Purple 700</div>
-    <div class="bg-purple-800 py-2 px-3">Purple 800</div>
-    <div class="bg-purple-900 py-2 px-3">Purple 900</div>
-  </div>
-  <div>
-    <div class="bg-pink-500 p-3 mb-3">
-      <p class="m-0 h6">Pink</p>
-      <p class="m-0">#ec4899</p>
-    </div>
-    <div class="bg-pink-50 py-2 px-3">Pink 50</div>
-    <div class="bg-pink-100 py-2 px-3">Pink 100</div>
-    <div class="bg-pink-200 py-2 px-3">Pink 200</div>
-    <div class="bg-pink-300 py-2 px-3">Pink 300</div>
-    <div class="bg-pink-400 py-2 px-3">Pink 400</div>
-    <div class="bg-pink-500 py-2 px-3">Pink 500</div>
-    <div class="bg-pink-600 py-2 px-3">Pink 600</div>
-    <div class="bg-pink-700 py-2 px-3">Pink 700</div>
-    <div class="bg-pink-800 py-2 px-3">Pink 800</div>
-    <div class="bg-pink-900 py-2 px-3">Pink 900</div>
-  </div>
   <div>
     <div class="bg-red-500 p-3 mb-3">
       <p class="m-0 h6">Red</p>
@@ -218,6 +173,70 @@ $greys: (
     <div class="bg-green-700 py-2 px-3">Green 700</div>
     <div class="bg-green-800 py-2 px-3">Green 800</div>
     <div class="bg-green-900 py-2 px-3">Green 900</div>
+  </div>
+  <div>
+    <div class="bg-cyan-500 p-3 mb-3">
+      <p class="m-0 h6">Cyan</p>
+      <p class="m-0">#00b3d3</p>
+    </div>
+    <div class="bg-cyan-50 py-2 px-3">Cyan 50</div>
+    <div class="bg-cyan-100 py-2 px-3">Cyan 100</div>
+    <div class="bg-cyan-200 py-2 px-3">Cyan 200</div>
+    <div class="bg-cyan-300 py-2 px-3">Cyan 300</div>
+    <div class="bg-cyan-400 py-2 px-3">Cyan 400</div>
+    <div class="bg-cyan-500 py-2 px-3">Cyan 500</div>
+    <div class="bg-cyan-600 py-2 px-3">Cyan 600</div>
+    <div class="bg-cyan-700 py-2 px-3">Cyan 700</div>
+    <div class="bg-cyan-800 py-2 px-3">Cyan 800</div>
+    <div class="bg-cyan-900 py-2 px-3">Cyan 900</div>
+  </div>
+  <div>
+    <div class="bg-blue-500 p-3 mb-3">
+      <p class="m-0 h6">Blue</p>
+      <p class="m-0">#0068d8</p>
+    </div>
+    <div class="bg-blue-50 py-2 px-3">Blue 50</div>
+    <div class="bg-blue-100 py-2 px-3">Blue 100</div>
+    <div class="bg-blue-200 py-2 px-3">Blue 200</div>
+    <div class="bg-blue-300 py-2 px-3">Blue 300</div>
+    <div class="bg-blue-400 py-2 px-3">Blue 400</div>
+    <div class="bg-blue-500 py-2 px-3">Blue 500</div>
+    <div class="bg-blue-600 py-2 px-3">Blue 600</div>
+    <div class="bg-blue-700 py-2 px-3">Blue 700</div>
+    <div class="bg-blue-800 py-2 px-3">Blue 800</div>
+    <div class="bg-blue-900 py-2 px-3">Blue 900</div>
+  </div>
+  <div>
+    <div class="bg-purple-500 p-3 mb-3">
+      <p class="m-0 h6">Purple</p>
+      <p class="m-0">#a855f7</p>
+    </div>
+    <div class="bg-purple-50 py-2 px-3">Purple 50</div>
+    <div class="bg-purple-100 py-2 px-3">Purple 100</div>
+    <div class="bg-purple-200 py-2 px-3">Purple 200</div>
+    <div class="bg-purple-300 py-2 px-3">Purple 300</div>
+    <div class="bg-purple-400 py-2 px-3">Purple 400</div>
+    <div class="bg-purple-500 py-2 px-3">Purple 500</div>
+    <div class="bg-purple-600 py-2 px-3">Purple 600</div>
+    <div class="bg-purple-700 py-2 px-3">Purple 700</div>
+    <div class="bg-purple-800 py-2 px-3">Purple 800</div>
+    <div class="bg-purple-900 py-2 px-3">Purple 900</div>
+  </div>
+  <div>
+    <div class="bg-pink-500 p-3 mb-3">
+      <p class="m-0 h6">Pink</p>
+      <p class="m-0">#ec4899</p>
+    </div>
+    <div class="bg-pink-50 py-2 px-3">Pink 50</div>
+    <div class="bg-pink-100 py-2 px-3">Pink 100</div>
+    <div class="bg-pink-200 py-2 px-3">Pink 200</div>
+    <div class="bg-pink-300 py-2 px-3">Pink 300</div>
+    <div class="bg-pink-400 py-2 px-3">Pink 400</div>
+    <div class="bg-pink-500 py-2 px-3">Pink 500</div>
+    <div class="bg-pink-600 py-2 px-3">Pink 600</div>
+    <div class="bg-pink-700 py-2 px-3">Pink 700</div>
+    <div class="bg-pink-800 py-2 px-3">Pink 800</div>
+    <div class="bg-pink-900 py-2 px-3">Pink 900</div>
   </div>
   <div>
     <div class="bg-grey-500 p-3 mb-3">

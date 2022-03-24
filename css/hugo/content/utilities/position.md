@@ -38,12 +38,12 @@ With the above utilities, it is impossible to actually center elements. That's w
   <div class="position-absolute bg-red top-0 start-0 translate-center"></div>
   <div class="position-absolute bg-orange top-0 start-50 translate-center"></div>
   <div class="position-absolute bg-yellow top-0 start-100 translate-center"></div>
-  <div class="position-absolute bg-blue top-50 start-0 translate-center"></div>
+  <div class="position-absolute bg-cyan top-50 start-0 translate-center"></div>
   <div class="position-absolute bg-green top-50 start-50 translate-center"></div>
   <div class="position-absolute bg-lime top-50 start-100 translate-center"></div>
-  <div class="position-absolute bg-purple top-100 start-0 translate-center"></div>
-  <div class="position-absolute bg-pink top-100 start-50 translate-center"></div>
-  <div class="position-absolute bg-dark top-100 start-100 translate-center"></div>
+  <div class="position-absolute bg-blue top-100 start-0 translate-center"></div>
+  <div class="position-absolute bg-purple top-100 start-50 translate-center"></div>
+  <div class="position-absolute bg-pink top-100 start-100 translate-center"></div>
 </div>
 {{</example>}}
 
