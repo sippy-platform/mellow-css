@@ -242,15 +242,6 @@ $utilities: (
     property: order,
     values: $flex-orders
   ),
-  // Position
-  "translate-center": (
-    property: transform,
-    values: (
-      null: translate(-50%, -50%),
-      x: translateX(-50%),
-      y: translateY(-50%)
-    )
-  ),
   // Opacity
   "opacity": (
     property: opacity,
@@ -338,6 +329,40 @@ $utilities: (
   "fs": (
     property: font-style,
     values: italic normal
+  ),
+  // Position
+  "position": (
+    property: position,
+    values: $positions
+  ),
+  "top": (
+    property: top,
+    values: $direction-values
+  ),
+  "bottom": (
+    property: bottom,
+    values: $direction-values
+  ),
+  "start": (
+    property: left,
+    values: $direction-values
+  ),
+  "end": (
+    property: right,
+    values: $direction-values
+  ),
+  "translate-center": (
+    property: transform,
+    values: (
+      null: translate(-50%, -50%),
+      x: translateX(-50%),
+      y: translateY(-50%)
+    )
+  ),
+  // Overflow
+  "overflow": (
+    property: overflow,
+    values: $overflows
   )
 );
 

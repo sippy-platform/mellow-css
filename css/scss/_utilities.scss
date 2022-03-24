@@ -7,28 +7,6 @@
   }
 }
 
-// Overflows
-@each $overflow in $overflows {
-  .overflow-#{$overflow} {
-    overflow: #{$overflow} !important;
-  }
-}
-
-// Positions
-@each $position in $positions {
-  .position-#{$position} {
-    position: #{$position} !important;
-  }
-}
-
-@each $direction, $property in $directions {
-  @each $direction-value, $value in $direction-values {
-    .#{$direction}-#{$direction-value} {
-      #{$property}: #{$value} !important;
-    }
-  }
-}
-
 // Truncate
 .text-truncate {
   overflow: hidden;
