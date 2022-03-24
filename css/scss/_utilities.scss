@@ -70,20 +70,6 @@
   }
 }
 
-// Elevation
-@each $level, $box-shadow in $box-shadows {
-  .shadow-#{$level} {
-    box-shadow: #{$box-shadow} !important;
-  }
-}
-
-@each $level, $box-shadow in $box-shadows {
-  .elevation-#{$level} {
-    box-shadow: #{$box-shadow} !important;
-    background-color: map-get($elevations-dark, $level) !important;
-  }
-}
-
 // Borders
 %border-style {
   border-color: $border-color;

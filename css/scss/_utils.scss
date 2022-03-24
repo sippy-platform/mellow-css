@@ -26,6 +26,16 @@ $utilities: (
       )
     )
   ),
+  // Shadows
+  "shadow": (
+    property: box-shadow,
+    values: map-merge(
+      $box-shadows,
+      (
+        "none": none
+      )
+    )
+  ),
   // Position
   "translate-center": (
     property: transform,
