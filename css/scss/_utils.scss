@@ -1,4 +1,40 @@
 $utilities: (
+  // Margin
+  "m": (
+    property: margin,
+    values: $margins,
+    responsive: true
+  ),
+  "mt": (
+    property: margin-top,
+    values: $margins,
+    responsive: true
+  ),
+  "me": (
+    property: margin-right,
+    values: $margins,
+    responsive: true
+  ),
+  "mb": (
+    property: margin-bottom,
+    values: $margins,
+    responsive: true
+  ),
+  "ms": (
+    property: margin-left,
+    values: $margins,
+    responsive: true
+  ),
+  "my": (
+    property: margin-top margin-bottom,
+    values: $margins,
+    responsive: true
+  ),
+  "mx": (
+    property: margin-right margin-left,
+    values: $margins,
+    responsive: true
+  ),
   // Backgorund
   "bg": (
     property: background-color,

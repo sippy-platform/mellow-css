@@ -1,13 +1,15 @@
 @mixin upi($name, $definition, $breakpoint-suffix) {
   $values: map-get($definition, values);
-  $property: map-get($definition, property);
+  $properties: map-get($definition, property);
 
   @each $property-suffix, $value in $values {
     // Use breakpoint suffix if present
     $property-suffix: if($property-suffix, if($property-suffix == "", "", "-") + $property-suffix, "");
 
     .#{$name + $breakpoint-suffix + $property-suffix} {
-      #{$property}: $value !important;
+      @each $property in $properties {
+        #{$property}: $value !important;
+      }
     }
   }
 }
