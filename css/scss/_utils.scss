@@ -249,6 +249,16 @@ $utilities: (
       x: translateX(-50%),
       y: translateY(-50%)
     )
+  ),
+  // Opacity
+  "opacity": (
+    property: opacity,
+    values: $opacities
+  ),
+  // Float
+  "float": (
+    property: float,
+    values: $floats
   )
 );
 
