@@ -239,7 +239,8 @@ $margins: (
   2: map-get($spacers, 2),
   3: map-get($spacers, 3),
   4: map-get($spacers, 4),
-  5: map-get($spacers, 5)
+  5: map-get($spacers, 5),
+  auto: auto
 ) !default;
 
 $paddings: (
