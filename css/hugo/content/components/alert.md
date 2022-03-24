@@ -8,7 +8,7 @@ A default alert provides a border to draw attention.
 
 {{<example>}}
 <div class="alert" role="alert">
-  <div class="alert-message">This is a basic alert message. <a href="#">Link</a> is color-matched.</div></div>
+  <div class="alert-message">This is a basic alert message. <a href="#">Link</a> is color-matched.</div>
 </div>
 {{</example>}}
 
