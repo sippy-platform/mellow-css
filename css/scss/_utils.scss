@@ -167,6 +167,12 @@ $utilities: (
       )
     )
   ),
+  // Display
+  "d": (
+    property: display,
+    values: $display-types,
+    responsive: true
+  ),
   // Position
   "translate-center": (
     property: transform,

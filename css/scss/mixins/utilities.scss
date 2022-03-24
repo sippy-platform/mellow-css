@@ -2,6 +2,11 @@
   $values: map-get($definition, values);
   $properties: map-get($definition, property);
 
+  // Convert to a key => value pair if just a string or list
+  @if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
+    $values: zip($values, $values);
+  }
+
   @each $property-suffix, $value in $values {
     // Use breakpoint suffix if present
     $property-suffix: if($property-suffix, if($property-suffix == "", "", "-") + $property-suffix, "");

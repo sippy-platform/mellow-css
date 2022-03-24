@@ -1,16 +1,3 @@
-// Display
-@each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-
-  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    @each $display-type in $display-types {
-      .d#{$breakpoint-suffix}-#{$display-type} {
-        display: $display-type !important;
-      }
-    }
-  }
-}
-
 // Flex
 @each $breakpoint in map-keys($grid-breakpoints) {
   $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
