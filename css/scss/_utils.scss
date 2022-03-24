@@ -124,8 +124,8 @@ $utilities: (
   ),
   "rounded": (
     property: border-radius,
-    class: rounded,
-    values: $border-radia
+    values: $border-radia,
+    class: rounded
   ),
   "rounded-t": (
     property: border-top-left-radius border-top-right-radius,
@@ -144,7 +144,7 @@ $utilities: (
     values: (null: $border-radius)
   ),
   // Color
-  "text": (
+  "text-color": (
     property: color,
     values: map-merge(
       $util-colors,
@@ -155,7 +155,8 @@ $utilities: (
         "white": #fff,
         "reset": inherit
       )
-    )
+    ),
+    class: "text"
   ),
   // Shadows
   "shadow": (
@@ -169,9 +170,9 @@ $utilities: (
   ),
   // Display
   "d": (
+    responsive: true,
     property: display,
-    values: $display-types,
-    responsive: true
+    values: $display-types
   ),
   // Flex
   "flex": (
@@ -185,9 +186,9 @@ $utilities: (
   ),
   "flex-direction": (
     responsive: true,
-    class: flex,
     property: flex-direction,
-    values: $flex-directions
+    values: $flex-directions,
+    class: flex,
   ),
   "flex-grow": (
     responsive: true,
@@ -208,8 +209,8 @@ $utilities: (
   "flex-wrap": (
     responsive: true,
     property: flex-wrap,
-    class: flex,
-    values: $flex-wraps
+    values: $flex-wraps,
+    class: flex
   ),
   "gap": (
     responsive: true,
@@ -300,6 +301,43 @@ $utilities: (
   "min-vh": (
     property: min-height,
     values: (100: 100vh)
+  ),
+  // Text
+  "text-direction": (
+    responsive: true,
+    property: text-align,
+    values: $text-directions,
+    class: "text"
+  ),
+  "text-wrap": (
+    property: white-space,
+    values: $text-wraps,
+    class: "text"
+  ),
+  "text-break": (
+    property: word-wrap word-break,
+    values: (null: break-word)
+  ),
+  "text-transform": (
+    property: text-transform,
+    values: $text-transforms,
+    class: text
+  ),
+  "text-decoration": (
+    property: text-decoration,
+    values: $text-decorations
+  ),
+  "lh": (
+    property: line-height,
+    values: $line-heights
+  ),
+  "fw": (
+    property: font-weight,
+    values: $font-weights
+  ),
+  "fs": (
+    property: font-style,
+    values: italic normal
   )
 );
 

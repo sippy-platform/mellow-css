@@ -7,62 +7,6 @@
   }
 }
 
-// Text
-@each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-
-  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    @each $text-name, $text-value in $text-directions {
-      .text#{$breakpoint-suffix}-#{$text-name} {
-        text-align: $text-value !important;
-      }
-    }
-  }
-}
-
-@each $text-name, $text-value in $text-wraps {
-  .text-#{$text-name} {
-    white-space: $text-value !important;
-  }
-}
-
-.text-break {
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-}
-
-@each $transform in $text-transforms {
-  .text-#{$transform} {
-    text-transform: #{$transform} !important;
-  }
-}
-
-@each $decoration in $text-decorations {
-  .text-#{$decoration} {
-    text-decoration: #{$decoration} !important;
-  }
-}
-
-@each $line-name, $line-value in $line-heights {
-  .lh-#{$line-name} {
-    line-height: $line-value !important;
-  }
-}
-
-@each $font-name, $font-value in $font-weights {
-  .fw-#{$font-name} {
-    font-weight: $font-value !important;
-  }
-}
-
-.fs-italic {
-  font-style: italic !important;
-}
-
-.fs-normal {
-  font-style: normal !important;
-}
-
 // Overflows
 @each $overflow in $overflows {
   .overflow-#{$overflow} {
