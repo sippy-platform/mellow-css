@@ -182,12 +182,19 @@ $colors: (
   grey: $grey
 ) !default;
 
-$variant-colors: merge-map(
-  $colors,
-  (
-    light: $light,
-    dark: $dark
-  )
+$variant-colors: (
+  cyan: $cyan,
+  blue: $blue,
+  red: $red,
+  lime: $lime,
+  green: $green,
+  "yellow": $yellow,
+  orange: $orange,
+  pink: $pink,
+  purple: $purple,
+  grey: $grey,
+  light: $light,
+  dark: $dark
 ) !default;
 
 // Anchors

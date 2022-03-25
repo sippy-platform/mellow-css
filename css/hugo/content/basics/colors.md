@@ -23,7 +23,7 @@ The main color set has `text-*` and `bg-*` classes available in our [text color]
 </div>
 {{</example>}}
 
-These values are directly available and are defined in the `$colors` scss variable as shown below. Every variable that is directly used in the `$colors` map is equal to the `500` color in its palette. Additionally, there is also the `$variant-colors` map, which merges the `$colors` map with an additional `light` and `dark` color. The colors in the `$variant-colors` map don't correspond with palettes and are used to generate variants for components that don't need more than the base color.
+These values are directly available and are defined in the `$colors` scss variable as shown below. Every variable that is directly used in the `$colors` map is equal to the `500` color in its palette. Additionally, there is also the `$variant-colors` map, which includes all colors from the `$colors` map with an additional `light` and `dark` color. The colors in the `$variant-colors` map don't correspond with palettes and are used to generate variants for components that don't need more than the base color.
 
 {{<example show_preview="false" lang="scss">}}
 $colors: (
@@ -39,12 +39,19 @@ $colors: (
   grey: $grey
 ) !default;
 
-$variant-colors: merge-map(
-  $colors,
-  (
-    light: $light,
-    dark: $dark
-  )
+$variant-colors: (
+  cyan: $cyan,
+  blue: $blue,
+  red: $red,
+  lime: $lime,
+  green: $green,
+  "yellow": $yellow,
+  orange: $orange,
+  pink: $pink,
+  purple: $purple,
+  grey: $grey,
+  light: $light,
+  dark: $dark
 ) !default;
 {{</example>}}
 
