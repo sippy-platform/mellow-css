@@ -31,7 +31,7 @@ $utilities: (
   "bg": (
     property: background-color,
     values: map-merge(
-      $util-colors,
+      $colors,
       (
         "transparent": transparent,
         "light": $light,
@@ -60,7 +60,7 @@ $utilities: (
   "border-color": (
     property: border-color,
     values: map-merge(
-      $util-colors,
+      $colors,
       (
         "light": $light,
         "muted": $grey,
@@ -91,7 +91,7 @@ $utilities: (
   "text-color": (
     property: color,
     values: map-merge(
-      $util-colors,
+      $colors,
       (
         "light": $light,
         "muted": $grey,

@@ -165,10 +165,11 @@ $accent:              map-get($palettes, "blue");
 
 $light:               map-get($greys, 100);
 $dark:                map-get($greys, 900);
+$muted:               map-get($greys, 500);
 
 // $body-text:           $dark;
 
-$util-colors: (
+$colors: (
   cyan: $cyan,
   blue: $blue,
   red: $red,
@@ -181,22 +182,12 @@ $util-colors: (
   grey: $grey
 ) !default;
 
-$colors: (
-  cyan: $cyan,
-  blue: $blue,
-  red: $red,
-  lime: $lime,
-  green: $green,
-  yellow: $yellow,
-  orange: $orange,
-  pink: $pink,
-  purple: $purple,
-  grey: $grey,
-  light: $light,
-  dark: $dark,
-  white: #fff,
-  muted: $grey,
-  reset: inherit
+$variant-colors: merge-map(
+  $colors,
+  (
+    light: $light,
+    dark: $dark
+  )
 ) !default;
 
 // Anchors
@@ -559,18 +550,4 @@ $progress-heights: (
   sm: .25rem,
   md: .5rem,
   lg: 1rem,
-) !default;
-
-// Alerts
-$alert-colors: (
-  cyan: $cyans,
-  blue: $blues,
-  red: $reds,
-  lime: $limes,
-  green: $greens,
-  yellow: $yellows,
-  orange: $oranges,
-  pink: $pinks,
-  purple: $purples,
-  grey: $greys
 ) !default;

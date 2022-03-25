@@ -30,7 +30,7 @@
   }
 
   &.disabled {
-    color: map-get($colors, "muted");
+    color: $muted;
     pointer-events: none;
     cursor: default;
   }
