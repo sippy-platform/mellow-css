@@ -6,7 +6,7 @@ description: With the display-utilities, you can easily change the display behav
 ## Notation
 The general notation for these utility classes goes like this:
 
-`d-[responsive]-[property]`
+`d-[breakpoint]-[property]`
 
 As per usual, the `xs`-breakpoint is omitted because it has the same effect as not including a responsive modifier at all.
 

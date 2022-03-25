@@ -4,6 +4,8 @@ description: Add, subtract, and manipulate the look of borders of your elements.
 ---
 
 ## Borders
+With the `border` utilities, you can add borders to any element.
+
 {{<example class="docs-preview-border">}}
 <div class="border"></div>
 <div class="border-top"></div>
@@ -12,7 +14,7 @@ description: Add, subtract, and manipulate the look of borders of your elements.
 <div class="border-start"></div>
 {{</example>}}
 
-Every `border-*` class has also an inverse version that removes the border.
+Every `border-*` class has also an inverse version that removes the border. All blocks below have a border, and a `-0` class applied on top of them.
 
 {{<example class="docs-preview-border bordered">}}
 <div class="border-0"></div>
@@ -24,24 +26,28 @@ Every `border-*` class has also an inverse version that removes the border.
 
 ## Color
 {{<example>}}
-<div class="border border-blue p-3 mb-2">.border-blue</div>
-<div class="border border-purple p-3 mb-2">.border-purple</div>
-<div class="border border-pink p-3 mb-2">.border-pink</div>
 <div class="border border-red p-3 mb-2">.border-red</div>
 <div class="border border-orange p-3 mb-2">.border-orange</div>
 <div class="border border-yellow p-3 mb-2">.border-yellow</div>
 <div class="border border-lime p-3 mb-2">.border-lime</div>
 <div class="border border-green p-3 mb-2">.border-green</div>
-<div class="border border-grey p-3 mb-2">.border-grey</div>
+<div class="border border-cyan p-3 mb-2">.border-cyan</div>
+<div class="border border-blue p-3 mb-2">.border-blue</div>
+<div class="border border-purple p-3 mb-2">.border-purple</div>
+<div class="border border-pink p-3 mb-2">.border-pink</div>
 <div class="border border-light p-3 mb-2">.border-light</div>
+<div class="border border-grey p-3 mb-2">.border-grey</div>
 <div class="border border-dark p-3 mb-2">.border-dark</div>
-<div class="border border-white p-3">.border-white</div>
+<div class="border border-white p-3 mb-2">.border-white</div>
+<div class="border border-reset p-3">.border-reset</div>
 {{</example>}}
 
 ## Width
+You can change the width of a border with the `border-[1-5]` classes. Note that `border-1` exists as well, but has the same purpose as `border` in the demo below.
+
 {{<example class="docs-preview-border">}}
-<div class="border border-0"></div>
-<div class="border border-1"></div>
+<div class="border-0"></div>
+<div class="border"></div>
 <div class="border border-2"></div>
 <div class="border border-3"></div>
 <div class="border border-4"></div>
@@ -49,9 +55,9 @@ Every `border-*` class has also an inverse version that removes the border.
 {{</example>}}
 
 ## Border radius
-The rounded classes give you control over the border radius of any corner. You can combine any position modifier (`t`, `e`, `b`, `s`, or none) with any size modifier (`0`, `sm`, `lg`, `pill`, or none).
-
 ### Size
+You can set multiple sizes for border radius with the `rounded` classes.
+
 {{<example class="docs-preview-border">}}
 <div class="border rounded-0"></div>
 <div class="border rounded-sm"></div>
@@ -61,6 +67,8 @@ The rounded classes give you control over the border radius of any corner. You c
 {{</example>}}
 
 ### Direction
+Set the border radius only in one direction with these classes.
+
 {{<example class="docs-preview-border">}}
 <div class="border rounded"></div>
 <div class="border rounded-t"></div>

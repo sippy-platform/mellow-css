@@ -1,302 +1,325 @@
+$utilities: (
+  // Margin
+  "m": (
+    property: (
+      null: margin,
+      t: margin-top,
+      e: margin-right,
+      b: margin-bottom,
+      s: margin-left,
+      y: margin-top margin-bottom,
+      x: margin-right margin-left
+    ),
+    values: $margins,
+    responsive: true
+  ),
+  // Padding
+  "p": (
+    property: (
+      null: padding,
+      t: padding-top,
+      e: padding-right,
+      b: padding-bottom,
+      s: padding-left,
+      y: padding-top padding-bottom,
+      x: padding-right padding-left
+    ),
+    values: $paddings,
+    responsive: true
+  ),
+  // Backgorund
+  "bg": (
+    property: background-color,
+    values: map-merge(
+      $util-colors,
+      (
+        "transparent": transparent,
+        "light": $light,
+        "dark": $dark,
+        "white": #fff
+      )
+    ),
+  ),
+  // Borders
+  "border": (
+    property: (
+      null: border,
+      top: border-top,
+      end: border-right,
+      bottom: border-bottom,
+      start: border-left
+    ),
+    values: $borders,
+    variant-dash: true
+  ),
+  "border-width": (
+    property: border-width,
+    values: $border-widths,
+    class: border
+  ),
+  "border-color": (
+    property: border-color,
+    values: map-merge(
+      $util-colors,
+      (
+        "light": $light,
+        "muted": $grey,
+        "dark": $dark,
+        "white": #fff,
+        "reset": inherit,
+      )
+    ),
+    class: border
+  ),
+  "rounded": (
+    property: border-radius,
+    values: $border-radia,
+    class: rounded
+  ),
+  "rounded-directions": (
+    property: (
+      t: border-top-left-radius border-top-right-radius,
+      e: border-top-right-radius border-bottom-right-radius,
+      b: border-bottom-right-radius border-bottom-left-radius,
+      s: border-bottom-left-radius border-top-left-radius
+    ),
+    values: (null: $border-radius),
+    class: rounded,
+    variant-dash: true
+  ),
+  // Color
+  "text-color": (
+    property: color,
+    values: map-merge(
+      $util-colors,
+      (
+        "light": $light,
+        "muted": $grey,
+        "dark": $dark,
+        "white": #fff,
+        "reset": inherit
+      )
+    ),
+    class: text
+  ),
+  // Shadows
+  "shadow": (
+    property: box-shadow,
+    values: map-merge(
+      $box-shadows,
+      (
+        "none": none
+      )
+    )
+  ),
+  // Display
+  "d": (
+    responsive: true,
+    property: display,
+    values: $display-types
+  ),
+  // Flex
+  "flex": (
+    responsive: true,
+    property: flex,
+    values: (
+      1: 1,
+      fill: 1 1 auto,
+      auto: auto
+    )
+  ),
+  "flex-direction": (
+    responsive: true,
+    property: flex-direction,
+    values: $flex-directions,
+    class: flex,
+  ),
+  "flex-grow": (
+    responsive: true,
+    property: flex-grow,
+    values: (
+      0: 0,
+      1: 1,
+    )
+  ),
+  "flex-shrink": (
+    responsive: true,
+    property: flex-shrink,
+    values: (
+      0: 0,
+      1: 1,
+    )
+  ),
+  "flex-wrap": (
+    responsive: true,
+    property: flex-wrap,
+    values: $flex-wraps,
+    class: flex
+  ),
+  "gap": (
+    responsive: true,
+    property: gap,
+    values: $gaps
+  ),
+  "justify-content": (
+    responsive: true,
+    property: justify-content,
+    values: $flex-justifies-content
+  ),
+  "align-items": (
+    responsive: true,
+    property: align-items,
+    values: $flex-aligns-items
+  ),
+  "align-content": (
+    responsive: true,
+    property: align-content,
+    values: $flex-aligns-content
+  ),
+  "align-self": (
+    responsive: true,
+    property: align-self,
+    values: $flex-aligns-self
+  ),
+  "order": (
+    responsive: true,
+    property: order,
+    values: $flex-orders
+  ),
+  // Opacity
+  "opacity": (
+    property: opacity,
+    values: $opacities
+  ),
+  // Float
+  "float": (
+    property: float,
+    values: $floats
+  ),
+  // Width & height
+  "w": (
+    property: width,
+    values: $sizes
+  ),
+  "h": (
+    property: height,
+    values: $sizes
+  ),
+  "min-w": (
+    property: min-width,
+    values: $limit-sizes
+  ),
+  "min-h": (
+    property: min-height,
+    values: $limit-sizes
+  ),
+  "max-w": (
+    property: max-width,
+    values: $limit-sizes
+  ),
+  "max-h": (
+    property: max-height,
+    values: $limit-sizes
+  ),
+  "vw": (
+    property: width,
+    values: (100: 100vw)
+  ),
+  "vh": (
+    property: height,
+    values: (100: 100vh)
+  ),
+  "min-vw": (
+    property: min-width,
+    values: (100: 100vw)
+  ),
+  "min-vh": (
+    property: min-height,
+    values: (100: 100vh)
+  ),
+  // Text
+  "text-direction": (
+    responsive: true,
+    property: text-align,
+    values: $text-directions,
+    class: text
+  ),
+  "text-wrap": (
+    property: white-space,
+    values: $text-wraps,
+    class: text
+  ),
+  "text-break": (
+    property: word-wrap word-break,
+    values: (null: break-word)
+  ),
+  "text-transform": (
+    property: text-transform,
+    values: $text-transforms,
+    class: text
+  ),
+  "text-decoration": (
+    property: text-decoration,
+    values: $text-decorations
+  ),
+  "lh": (
+    property: line-height,
+    values: $line-heights
+  ),
+  "fw": (
+    property: font-weight,
+    values: $font-weights
+  ),
+  "fs": (
+    property: font-style,
+    values: italic normal
+  ),
+  // Position
+  "position": (
+    property: position,
+    values: $positions
+  ),
+  "top": (
+    property: top,
+    values: $direction-values
+  ),
+  "bottom": (
+    property: bottom,
+    values: $direction-values
+  ),
+  "start": (
+    property: left,
+    values: $direction-values
+  ),
+  "end": (
+    property: right,
+    values: $direction-values
+  ),
+  "translate-center": (
+    property: transform,
+    values: (
+      null: translate(-50%, -50%),
+      x: translateX(-50%),
+      y: translateY(-50%)
+    )
+  ),
+  // Overflow
+  "overflow": (
+    property: overflow,
+    values: $overflows
+  )
+);
+
 @each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+  @include breakpoint-min-width($breakpoint) {
+    $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
-  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    // Margin
-    @each $key, $value in $margins {
-      .m#{$breakpoint-suffix}-#{$key} {
-        margin: #{$value} !important;
-      }
-
-      .mx#{$breakpoint-suffix}-#{$key} {
-        margin-left: #{$value} !important;
-        margin-right: #{$value} !important;
-      }
-
-      .my#{$breakpoint-suffix}-#{$key} {
-        margin-top: #{$value} !important;
-        margin-bottom: #{$value} !important;
-      }
-
-      .mt#{$breakpoint-suffix}-#{$key} {
-        margin-top: #{$value} !important;
-      }
-
-      .me#{$breakpoint-suffix}-#{$key} {
-        margin-right: #{$value} !important;
-      }
-
-      .mb#{$breakpoint-suffix}-#{$key} {
-        margin-bottom: #{$value} !important;
-      }
-
-      .ms#{$breakpoint-suffix}-#{$key} {
-        margin-left: #{$value} !important;
+    @each $name, $definition in $utilities {
+      // Prevent generating responsive utilities if the utility doesn't require it
+      @if (map-get($definition, responsive) or $breakpoint-suffix == "") {
+        @include upi($name, $definition, $breakpoint-suffix);
       }
     }
-
-    // Padding
-    @each $key, $value in $paddings {
-      .p#{$breakpoint-suffix}-#{$key} {
-        padding: #{$value} !important;
-      }
-
-      .px#{$breakpoint-suffix}-#{$key} {
-        padding-left: #{$value} !important;
-        padding-right: #{$value} !important;
-      }
-
-      .py#{$breakpoint-suffix}-#{$key} {
-        padding-top: #{$value} !important;
-        padding-bottom: #{$value} !important;
-      }
-
-      .pt#{$breakpoint-suffix}-#{$key} {
-        padding-top: #{$value} !important;
-      }
-
-      .pe#{$breakpoint-suffix}-#{$key} {
-        padding-right: #{$value} !important;
-      }
-
-      .pb#{$breakpoint-suffix}-#{$key} {
-        padding-bottom: #{$value} !important;
-      }
-
-      .ps#{$breakpoint-suffix}-#{$key} {
-        padding-left: #{$value} !important;
-      }
-    }
-  }
-}
-
-// Background colors
-@each $color-name, $bg-color in $colors {
-  .bg-#{$color-name} {
-    background-color: #{$bg-color} !important;
-  }
-}
-
-.bg-transparent {
-  background-color: transparent;
-}
-
-// Text colors
-@each $color-name, $text-color in $colors {
-  .text-#{$color-name} {
-    color: #{$text-color} !important;
-  }
-}
-
-// Elevation
-@each $level, $box-shadow in $box-shadows {
-  .shadow-#{$level} {
-    box-shadow: #{$box-shadow} !important;
-  }
-}
-
-@each $level, $box-shadow in $box-shadows {
-  .elevation-#{$level} {
-    box-shadow: #{$box-shadow} !important;
-    background-color: map-get($elevations-dark, $level) !important;
-  }
-}
-
-// Borders
-%border-style {
-  border-color: $border-color;
-  border-style: solid;
-  border-width: 0;
-}
-
-.border {
-  @extend %border-style;
-
-  border-width: $border-width !important;
-}
-
-.border-top {
-  @extend %border-style;
-
-  border-top-width: $border-width !important;
-}
-
-.border-end {
-  @extend %border-style;
-
-  border-right-width: $border-width !important;
-}
-
-.border-bottom {
-  @extend %border-style;
-
-  border-bottom-width: $border-width !important;
-}
-
-.border-start {
-  @extend %border-style;
-
-  border-left-width: $border-width !important;
-}
-
-@each $level, $border-width in $border-widths {
-  .border-#{$level} {
-    border-width: #{$border-width} !important;
-  }
-}
-
-.border-0 {
-  border-width: 0 !important;
-}
-
-.border-top-0 {
-  border-top-width: 0 !important;
-}
-
-.border-end-0 {
-  border-right-width: 0 !important;
-}
-
-.border-bottom-0 {
-  border-bottom-width: 0 !important;
-}
-
-.border-start-0 {
-  border-left-width: 0 !important;
-}
-
-@each $color-name, $border-color in $colors {
-  .border-#{$color-name} {
-    border-color: #{$border-color} !important;
-  }
-}
-
-@each $width-key, $border-width in $border-widths {
-  .border-#{$width-key} {
-    border-width: #{$border-width} !important;
-  }
-}
-
-@each $rounded-type, $rounded-size in $border-radia {
-  .rounded#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
-    border-radius: $rounded-size !important;
-  }
-
-  .rounded-t#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
-    border-top-left-radius: $rounded-size;
-    border-top-right-radius: $rounded-size;
-  }
-
-  .rounded-e#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
-    border-bottom-right-radius: $rounded-size;
-    border-top-right-radius: $rounded-size;
-  }
-
-  .rounded-b#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
-    border-bottom-left-radius: $rounded-size;
-    border-bottom-right-radius: $rounded-size;
-  }
-
-  .rounded-s#{if($rounded-type == "md", "", "-#{$rounded-type}")} {
-    border-bottom-left-radius: $rounded-size;
-    border-top-left-radius: $rounded-size;
-  }
-}
-
-// Display
-@each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-
-  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    @each $display-type in $display-types {
-      .d#{$breakpoint-suffix}-#{$display-type} {
-        display: $display-type !important;
-      }
-    }
-  }
-}
-
-// Flex
-@each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-
-  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    .flex#{$breakpoint-suffix}-1 {
-      flex: 1 !important;
-    }
-
-    .flex#{$breakpoint-suffix}-auto {
-      flex: auto !important;
-    }
-
-    .flex#{$breakpoint-suffix}-grow-0 {
-      flex-grow: 0 !important;
-    }
-
-    .flex#{$breakpoint-suffix}-shrink-0 {
-      flex-shrink: 0 !important;
-    }
-
-    .flex#{$breakpoint-suffix}-grow-1 {
-      flex-grow: 1 !important;
-    }
-
-    .flex#{$breakpoint-suffix}-shrink-1 {
-      flex-shrink: 1 !important;
-    }
-
-    .flex#{$breakpoint-suffix}-fill {
-      flex: 1 1 auto !important;
-    }
-
-    @each $flex-direction in $flex-directions {
-      .flex#{$breakpoint-suffix}-#{$flex-direction} {
-        flex-direction: $flex-direction !important;
-      }
-    }
-
-    @each $flex-wrap in $flex-wraps {
-      .flex#{$breakpoint-suffix}-#{$flex-wrap} {
-        flex-wrap: $flex-wrap !important;
-      }
-    }
-
-    @each $justify-name, $justify-value in $flex-justifies-content {
-      .justify-content#{$breakpoint-suffix}-#{$justify-name} {
-        justify-content: $justify-value !important;
-      }
-    }
-
-    @each $align-name, $align-value in $flex-aligns-items {
-      .align-items#{$breakpoint-suffix}-#{$align-name} {
-        align-items: $align-value !important;
-      }
-    }
-
-    @each $align-name, $align-value in $flex-aligns-content {
-      .align-content#{$breakpoint-suffix}-#{$align-name} {
-        align-content: $align-value !important;
-      }
-    }
-
-    @each $align-name, $align-value in $flex-aligns-self {
-      .align-self#{$breakpoint-suffix}-#{$align-name} {
-        align-self: $align-value !important;
-      }
-    }
-
-    @each $order-name, $order-value in $flex-orders {
-      .order#{$breakpoint-suffix}-#{$order-name} {
-        order: $order-value !important;
-      }
-    }
-  }
-}
-
-// Opacity
-@each $level, $opacity in $opacities {
-  .opacity-#{$level} {
-    opacity: #{$opacity} !important;
   }
 }
 
@@ -309,165 +332,9 @@
   }
 }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-
-  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    @each $float-name, $float-value in $floats {
-      .float#{$breakpoint-suffix}-#{$float-name} {
-        float: $float-value !important;
-      }
-    }
-  }
-}
-
-// Sizing
-@each $level, $size in $sizes {
-  .w-#{$level} {
-    width: #{$size} !important;
-  }
-}
-
-@each $level, $size in $sizes {
-  .h-#{$level} {
-    height: #{$size} !important;
-  }
-}
-
-@each $level, $size in $max-sizes {
-  .max-w-#{$level} {
-    max-width: #{$size} !important;
-  }
-}
-
-@each $level, $size in $max-sizes {
-  .max-h-#{$level} {
-    max-height: #{$size} !important;
-  }
-}
-
-@each $level, $size in $min-sizes {
-  .min-w-#{$level} {
-    min-width: #{$size} !important;
-  }
-}
-
-@each $level, $size in $min-sizes {
-  .min-h-#{$level} {
-    min-height: #{$size} !important;
-  }
-}
-
-.vw-100 {
-  width: 100vw;
-}
-
-.vh-100 {
-  height: 100vh;
-}
-
-.min-vw-100 {
-  min-width: 100vw;
-}
-
-.min-vh-100 {
-  min-height: 100vh;
-}
-
-// Text
-@each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-
-  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    @each $text-name, $text-value in $text-directions {
-      .text#{$breakpoint-suffix}-#{$text-name} {
-        text-align: $text-value !important;
-      }
-    }
-  }
-}
-
-@each $text-name, $text-value in $text-wraps {
-  .text-#{$text-name} {
-    white-space: $text-value !important;
-  }
-}
-
-.text-break {
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-}
-
-@each $transform in $text-transforms {
-  .text-#{$transform} {
-    text-transform: #{$transform} !important;
-  }
-}
-
-@each $decoration in $text-decorations {
-  .text-#{$decoration} {
-    text-decoration: #{$decoration} !important;
-  }
-}
-
-@each $line-name, $line-value in $line-heights {
-  .lh-#{$line-name} {
-    line-height: $line-value !important;
-  }
-}
-
-@each $font-name, $font-value in $font-weights {
-  .fw-#{$font-name} {
-    font-weight: $font-value !important;
-  }
-}
-
-.fs-italic {
-  font-style: italic !important;
-}
-
-.fs-normal {
-  font-style: normal !important;
-}
-
-// Overflows
-@each $overflow in $overflows {
-  .overflow-#{$overflow} {
-    overflow: #{$overflow} !important;
-  }
-}
-
-// Positions
-@each $position in $positions {
-  .position-#{$position} {
-    position: #{$position} !important;
-  }
-}
-
-@each $direction, $property in $directions {
-  @each $direction-value, $value in $direction-values {
-    .#{$direction}-#{$direction-value} {
-      #{$property}: #{$value} !important;
-    }
-  }
-}
-
 // Truncate
 .text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-// Translation
-.translate-middle {
-  transform: translate(-50%, -50%);
-}
-
-.translate-middle-x {
-  transform: translateX(-50%);
-}
-
-.translate-middle-y {
-  transform: translateY(-50%);
 }

@@ -104,6 +104,7 @@ Use the justify content classes to justify the flex elements.
 * `justify-content-center`
 * `justify-content-between`
 * `justify-content-around`
+* `justify-content-evenly`
 
 {{<example class="docs-preview-flex">}}
 <div class="d-flex mb-3 justify-content-start">
@@ -127,6 +128,11 @@ Use the justify content classes to justify the flex elements.
   <div class="md-item">3</div>
 </div>
 <div class="d-flex mb-3 justify-content-around">
+  <div class="md-item">1</div>
+  <div class="md-item">2</div>
+  <div class="md-item">3</div>
+</div>
+<div class="d-flex mb-3 justify-content-evenly">
   <div class="md-item">1</div>
   <div class="md-item">2</div>
   <div class="md-item">3</div>
