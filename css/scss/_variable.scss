@@ -159,7 +159,7 @@ $palettes: (
   "pink": $pinks,
   "purple": $purples,
   "grey": $greys
-);
+) !default;
 
 $accent:              map-get($palettes, "blue");
 
