@@ -29,14 +29,15 @@ Contextual buttons are ment to be used in situations where the action performed 
 Colored buttons are variations of the button component that use one of the colors in the color pallette.
 
 {{<example>}}
-<button type="button" class="btn btn-blue">Blue</button>
-<button type="button" class="btn btn-purple">Purple</button>
-<button type="button" class="btn btn-pink">Pink</button>
 <button type="button" class="btn btn-red">Red</button>
 <button type="button" class="btn btn-orange">Orange</button>
 <button type="button" class="btn btn-yellow">Yellow</button>
 <button type="button" class="btn btn-lime">Lime</button>
 <button type="button" class="btn btn-green">Green</button>
+<button type="button" class="btn btn-cyan">Cyan</button>
+<button type="button" class="btn btn-blue">Blue</button>
+<button type="button" class="btn btn-purple">Purple</button>
+<button type="button" class="btn btn-pink">Pink</button>
 <button type="button" class="btn btn-grey">Grey</button>
 {{</example>}}
 
