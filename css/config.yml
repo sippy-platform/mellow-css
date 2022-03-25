@@ -29,3 +29,5 @@ module:
       target:       static
     - source:       dist
       target:       static/dist
+    - source:       ./node_modules/@optimisegroup/valkyrie/dist/fonts
+      target:       static/dist/fonts

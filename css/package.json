@@ -30,7 +30,7 @@
     "watch:js:core": "nodemon --watch js/src/ --ext js --exec \"npm-run-all js\"",
     "watch:js:docs": "nodemon --watch hugo/assets/js/ --ext js --exec \"npm-run-all js:lint\"",
     "watch:scss:core": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss\"",
-    "watch:scss:docs":  "nodemon --watch hugo/assets/scss/ --ext scss --exec \"npm run scss:lint\""
+    "watch:scss:docs": "nodemon --watch hugo/assets/scss/ --ext scss --exec \"npm run scss:lint\""
   },
   "repository": {
     "type": "git",
@@ -90,5 +90,8 @@
         "maxSize": "20kB"
       }
     ]
+  },
+  "dependencies": {
+    "@optimisegroup/valkyrie": "0.14.1"
   }
 }
