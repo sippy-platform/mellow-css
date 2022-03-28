@@ -48,6 +48,9 @@
     "url": "https://github.com/sippy-platform/mellow/issues"
   },
   "homepage": "https://sippy-platform.github.io/mellow",
+  "dependencies": {
+    "@optimisegroup/valkyrie": "0.14.2"
+  },
   "devDependencies": {
     "@babel/cli": "7.17.6",
     "@babel/core": "7.17.8",
@@ -90,8 +93,5 @@
         "maxSize": "20kB"
       }
     ]
-  },
-  "dependencies": {
-    "@optimisegroup/valkyrie": "0.14.1"
   }
 }
