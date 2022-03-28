@@ -49,3 +49,61 @@ Like other components, the color of a label can be changed with ease:
 <span class="label label-filled label-grey">grey</span>
 <span class="label label-filled label-dark">dark</span>
 {{</example>}}
+
+## Sizing
+Badges scale with the text of their parent.
+
+{{<example>}}
+<h1>Heading 1 <span class="label label-blue">Label</span></h1>
+<h2>Heading 2 <span class="label label-blue">Label</span></h2>
+<h3>Heading 3 <span class="label label-blue">Label</span></h3>
+<h4>Heading 4 <span class="label label-blue">Label</span></h4>
+<h5>Heading 5 <span class="label label-blue">Label</span></h5>
+<h6>Heading 6 <span class="label label-blue">Label</span></h6>
+{{</example>}}
+
+## Usage
+### Buttons
+{{<example>}}
+<button type="button" class="btn btn-primary">
+  Registrations <span class="label label-filled label-light">4</span>
+</button>
+{{</example>}}
+
+### Positioning
+{{<example>}}
+<button type="button" class="btn btn-primary position-relative">
+  Mails
+  <span class="position-absolute top-0 start-100 translate-center label label-filled label-red">
+    4
+  </span>
+</button>
+{{</example>}}
+
+### List
+When using a label in a list, you can set it in any of the available locations, but we recommend using the `list-item-icon-[s|e]` class.
+{{<example>}}
+<div class="list list-dividers-full border">
+  <a href="#" class="list-item list-item-action">
+    <span class="list-item-icon-s">
+      <span class="label label-filled label-blue">4</span>
+    </span>
+    <span class="list-item-label">This is a list item</span>
+  </a>
+  <a href="#" class="list-item list-item-action">
+    <span class="list-item-label">This is a list item</span>
+    <span class="list-item-icon-e">
+      <span class="label label-filled label-blue">4</span>
+    </span>
+  </a>
+  <a href="#" class="list-item list-item-action">
+    <span class="list-item-icon-s">
+      <span class="label label-filled label-blue">4</span>
+    </span>
+    <span class="list-item-label">This is a list item</span>
+    <span class="list-item-icon-e">
+      <span class="label label-filled label-blue">4</span>
+    </span>
+  </a>
+</div>
+{{</example>}}
