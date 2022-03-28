@@ -54,12 +54,12 @@ Like other components, the color of a label can be changed with ease:
 Badges scale with the text of their parent.
 
 {{<example>}}
-<h1>Heading 1 <span class="label label-blue">Label</span></h1>
-<h2>Heading 2 <span class="label label-blue">Label</span></h2>
-<h3>Heading 3 <span class="label label-blue">Label</span></h3>
-<h4>Heading 4 <span class="label label-blue">Label</span></h4>
-<h5>Heading 5 <span class="label label-blue">Label</span></h5>
-<h6>Heading 6 <span class="label label-blue">Label</span></h6>
+<h1>Heading 1 <span class="label label-filled label-blue">Label</span></h1>
+<h2>Heading 2 <span class="label label-filled label-green">Label</span></h2>
+<h3>Heading 3 <span class="label label-filled label-yellow">Label</span></h3>
+<h4>Heading 4 <span class="label label-filled label-orange">Label</span></h4>
+<h5>Heading 5 <span class="label label-filled label-red">Label</span></h5>
+<h6>Heading 6 <span class="label label-filled label-purple">Label</span></h6>
 {{</example>}}
 
 ## Usage
