@@ -5,6 +5,10 @@
   font-weight: 600;
   padding: 0 $spacer * .375;
   color: color-contrast($border-color);
+
+  &.rounded-pill {
+    padding: 0 $spacer * .5;
+  }
 }
 
 .label-filled {

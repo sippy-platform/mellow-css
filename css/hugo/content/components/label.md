@@ -10,11 +10,18 @@ Labels appear as slightly smaller fonts inside a colored or bordered surface.
 <span class="label">default label</span>
 {{</example>}}
 
-### Filled variant
+### Filled
 {{<example>}}
 <span class="label label-filled">default label</span>
 {{</example>}}
 
+### Pill
+By using the `rounded-pill` class you can make a rounded variant. The rounded variant of a pill will have more padding on the left and right side.
+
+{{<example>}}
+<span class="label rounded-pill">default label</span>
+<span class="label label-filled rounded-pill">default label</span>
+{{</example>}}
 
 ## Colors
 Like other components, the color of a label can be changed with ease:
@@ -62,6 +69,15 @@ Badges scale with the text of their parent.
 <h6>Heading 6 <span class="label label-filled label-purple">Label</span></h6>
 {{</example>}}
 
+{{<example>}}
+<h1>Heading 1 <span class="label label-filled label-blue rounded-pill">Label</span></h1>
+<h2>Heading 2 <span class="label label-filled label-green rounded-pill">Label</span></h2>
+<h3>Heading 3 <span class="label label-filled label-yellow rounded-pill">Label</span></h3>
+<h4>Heading 4 <span class="label label-filled label-orange rounded-pill">Label</span></h4>
+<h5>Heading 5 <span class="label label-filled label-red rounded-pill">Label</span></h5>
+<h6>Heading 6 <span class="label label-filled label-purple rounded-pill">Label</span></h6>
+{{</example>}}
+
 ## Usage
 ### Buttons
 {{<example>}}
@@ -74,7 +90,7 @@ Badges scale with the text of their parent.
 {{<example>}}
 <button type="button" class="btn btn-primary position-relative">
   Mails
-  <span class="position-absolute top-0 start-100 translate-center label label-filled label-red">
+  <span class="position-absolute top-0 start-100 translate-center label label-filled label-red rounded-pill">
     4
   </span>
 </button>
