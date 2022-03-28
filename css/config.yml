@@ -9,9 +9,9 @@ markup:
     renderer:
       unsafe:       true
   tableOfContents:
-    endLevel:       3
     ordered:        false
     startLevel:     2
+    endLevel:       4
 
 disableKinds:       ['taxonomy', 'term', 'RSS']
 
@@ -29,3 +29,5 @@ module:
       target:       static
     - source:       dist
       target:       static/dist
+    - source:       ./node_modules/@optimisegroup/valkyrie/dist/fonts
+      target:       static/dist/fonts

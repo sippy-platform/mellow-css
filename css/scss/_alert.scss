@@ -10,7 +10,7 @@
   justify-content: flex-start;
 }
 
-@each $color-name, $color in $alert-colors {
+@each $color-name, $color in $palettes {
   .alert-#{$color-name} {
     border-left-color: map-get($color, 500) !important;
 

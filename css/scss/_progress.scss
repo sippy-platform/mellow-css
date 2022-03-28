@@ -45,7 +45,7 @@ progress.progress::-moz-progress-bar {
   background-color: map-get($accent, 500);
 }
 
-@each $color-name, $bg-color in $colors {
+@each $color-name, $bg-color in $variant-colors {
   progress.bg-#{$color-name} {
     &::-webkit-progress-value {
       background-color: #{$bg-color} !important;

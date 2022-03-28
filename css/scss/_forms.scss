@@ -184,7 +184,7 @@ select.input {
 }
 
 .input-text {
-  color: map-get($colors, "muted");
+  color: $muted;
   margin-top: $spacer * .25;
   font-size: $font-size-small;
 }

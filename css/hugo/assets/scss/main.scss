@@ -53,15 +53,11 @@
     "article";
 
   @media (min-width: 1000px) {
-    grid-template-columns: 440px 200px;
+    grid-template-columns: auto 200px;
     grid-template-rows: auto auto;
     grid-template-areas:
       "meta toc"
       "article toc";
-  }
-
-  @media (min-width: 1200px) {
-    grid-template-columns: 640px 200px;
   }
 
   @media (min-width: 1400px) {
@@ -182,6 +178,68 @@
     .progress + progress,
     .progress + .progress {
       margin-top: 1rem;
+    }
+
+    &.docs-preview-sizing-rows {
+      & > div {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+          margin-bottom: $spacer * .5;
+        }
+
+        & > div:first-child {
+          width: $spacer * 6;
+          flex-shrink: 0;
+        }
+
+        & > div:last-child {
+          flex-grow: 1;
+
+          & > div {
+            background-color: map-get($accent, 500);
+            border-radius: $border-radius-sm;
+            padding-top: $spacer;
+            padding-bottom: $spacer;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &.docs-preview-sizing-columns {
+      display: flex;
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:not(:last-child) {
+          margin-right: $spacer * .5;
+        }
+
+        & > div:first-child {
+          width: $spacer * 6;
+          flex-shrink: 0;
+          text-align: center;
+          margin-bottom: .5rem;
+        }
+
+        & > div:last-child {
+          flex-grow: 1;
+          width: 100%;
+
+          & > div {
+            background-color: map-get($accent, 500);
+            border-radius: $border-radius-sm;
+            padding-left: $spacer;
+            padding-right: $spacer;
+            color: #fff;
+          }
+        }
+      }
     }
 
     &.docs-preview-img {

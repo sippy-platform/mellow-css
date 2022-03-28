@@ -173,23 +173,23 @@ List items can have icons. These can be positioned either at the start or end of
 <div class="list">
   <a href="#" class="list-item list-item-action">
     <span class="list-item-icon-s">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path fill-rule="evenodd" d="M17 6.5a5.5 5.5 0 0 1-8.82 4.38L4.06 15A.75.75 0 1 1 3 13.94l4.12-4.12A5.5 5.5 0 1 1 17 6.5Zm-1.5 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/></svg>
+      <i class="vi vi-magnifying-glass"></i>
     </span>
     <span class="list-item-label">This is a list item</span>
   </a>
   <a href="#" class="list-item list-item-action">
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-icon-e">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path fill-rule="evenodd" d="M17 6.5a5.5 5.5 0 0 1-8.82 4.38L4.06 15A.75.75 0 1 1 3 13.94l4.12-4.12A5.5 5.5 0 1 1 17 6.5Zm-1.5 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/></svg>
+      <i class="vi vi-magnifying-glass"></i>
     </span>
   </a>
   <a href="#" class="list-item list-item-action">
     <span class="list-item-icon-s">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path fill-rule="evenodd" d="M17 6.5a5.5 5.5 0 0 1-8.82 4.38L4.06 15A.75.75 0 1 1 3 13.94l4.12-4.12A5.5 5.5 0 1 1 17 6.5Zm-1.5 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/></svg>
+      <i class="vi vi-magnifying-glass"></i>
     </span>
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-icon-e">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path fill-rule="evenodd" d="M17 6.5a5.5 5.5 0 0 1-8.82 4.38L4.06 15A.75.75 0 1 1 3 13.94l4.12-4.12A5.5 5.5 0 1 1 17 6.5Zm-1.5 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/></svg>
+      <i class="vi vi-magnifying-glass"></i>
     </span>
   </a>
 </div>
@@ -250,7 +250,7 @@ Of course, all of these various options can be combined into more complex layout
       <input type="radio" name="listItemRadio" value="1">
     </span>
     <span class="list-item-icon-s">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path fill-rule="evenodd" d="M17 6.5a5.5 5.5 0 0 1-8.82 4.38L4.06 15A.75.75 0 1 1 3 13.94l4.12-4.12A5.5 5.5 0 1 1 17 6.5Zm-1.5 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/></svg>
+      <i class="vi vi-magnifying-glass"></i>
     </span>
     <span class="list-item-label">
       <span class="fw-bold">This is a list item</span><br />
@@ -263,14 +263,14 @@ Of course, all of these various options can be combined into more complex layout
       <input type="radio" name="listItemRadio" value="1" checked>
     </span>
     <span class="list-item-icon-s">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path fill-rule="evenodd" d="M17 6.5a5.5 5.5 0 0 1-8.82 4.38L4.06 15A.75.75 0 1 1 3 13.94l4.12-4.12A5.5 5.5 0 1 1 17 6.5Zm-1.5 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"/></svg>
+      <i class="vi vi-magnifying-glass"></i>
     </span>
     <span class="list-item-label">
       <span class="fw-bold">This is a list item</span><br />
       <span class="text-muted text-small">Hey, look at this</span>
     </span>
     <span class="list-item-icon-e">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path fill-rule="evenodd" d="M4.5 7.83V14c0 .28.22.5.5.5h10a.5.5 0 0 0 .5-.5V7.83a.5.5 0 0 0-.15-.36l-5-5a.5.5 0 0 0-.7 0l-5 5a.5.5 0 0 0-.15.36ZM3 14V7.83a2 2 0 0 1 .59-1.42l5-5a2 2 0 0 1 2.82 0l5 5A2 2 0 0 1 17 7.83V14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+      <i class="vi vi-house"></i>
     </span>
   </label>
   <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
@@ -279,14 +279,14 @@ Of course, all of these various options can be combined into more complex layout
       <input type="radio" name="listItemRadio" value="1" disabled>
     </span>
     <span class="list-item-icon-s">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path d="M10.75 10.25a1.25 1.25 0 1 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2Z"/><path fill-rule="evenodd" d="M13 5h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h2V3a3 3 0 0 1 6 0v2Zm-1.5 0V3a1.5 1.5 0 0 0-3 0v2h3Zm-7 2v7c0 .28.22.5.5.5h10a.5.5 0 0 0 .5-.5V7a.5.5 0 0 0-.5-.5H5a.5.5 0 0 0-.5.5Z"/></svg>
+      <i class="vi vi-lock"></i>
     </span>
     <span class="list-item-label">
       <span class="fw-bold">This is a disabled list item</span><br />
       <span class="text-muted text-small">Hey, look at this</span>
     </span>
     <span class="list-item-icon-e">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="height: 1em; margin-top: -.25rem;"><path fill-rule="evenodd" d="M4.5 7.83V14c0 .28.22.5.5.5h10a.5.5 0 0 0 .5-.5V7.83a.5.5 0 0 0-.15-.36l-5-5a.5.5 0 0 0-.7 0l-5 5a.5.5 0 0 0-.15.36ZM3 14V7.83a2 2 0 0 1 .59-1.42l5-5a2 2 0 0 1 2.82 0l5 5A2 2 0 0 1 17 7.83V14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+      <i class="vi vi-house"></i>
     </span>
   </label>
 </div>

@@ -30,7 +30,7 @@
     "watch:js:core": "nodemon --watch js/src/ --ext js --exec \"npm-run-all js\"",
     "watch:js:docs": "nodemon --watch hugo/assets/js/ --ext js --exec \"npm-run-all js:lint\"",
     "watch:scss:core": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss\"",
-    "watch:scss:docs":  "nodemon --watch hugo/assets/scss/ --ext scss --exec \"npm run scss:lint\""
+    "watch:scss:docs": "nodemon --watch hugo/assets/scss/ --ext scss --exec \"npm run scss:lint\""
   },
   "repository": {
     "type": "git",
@@ -48,6 +48,9 @@
     "url": "https://github.com/sippy-platform/mellow/issues"
   },
   "homepage": "https://sippy-platform.github.io/mellow",
+  "dependencies": {
+    "@optimisegroup/valkyrie": "0.14.2"
+  },
   "devDependencies": {
     "@babel/cli": "7.17.6",
     "@babel/core": "7.17.8",
@@ -58,9 +61,9 @@
     "bundlewatch": "0.3.3",
     "clsx": "1.1.1",
     "copyfiles": "2.4.1",
-    "eslint": "8.11.0",
+    "eslint": "8.12.0",
     "find-unused-sass-variables": "4.0.3",
-    "hugo-bin": "0.83.1",
+    "hugo-bin": "0.84.0",
     "node-sass": "7.0.1",
     "nodemon": "2.0.15",
     "npm-run-all": "4.1.5",
@@ -68,7 +71,7 @@
     "postcss-cli": "9.1.0",
     "rimraf": "3.0.2",
     "sass": "1.49.9",
-    "stylelint": "14.6.0",
+    "stylelint": "14.6.1",
     "stylelint-config-standard-scss": "3.0.0",
     "terser": "5.12.1"
   },
