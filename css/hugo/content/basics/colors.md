@@ -252,3 +252,4 @@ Each color palette consists out of 12 colors with incremental steps of 50 or 100
 | 500, 550, 600 | Use as borders and seperators. |
 | 700, 750 | Use as solid backgrounds. |
 | 800, 900 | Usage for text. |
+| text | Use for text on 700 and 750. |
