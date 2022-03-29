@@ -25,7 +25,7 @@ All properties can be exted with a specifier to determine on which sides the pro
 * `x` - applies the utility on the x-axis (right and left)
 * `y` - applies the utility on the y-axis (top and bottom)
 
-Each class is available in all breakpoints ranging from `xs` to `xxl`. When you are targetting the extra small breakpoint, the breakpoint-suffix is redundant and should not be included in the class (e.g.: use `m-1` instead of `m-xs-1`).
+Each class is available in all breakpoints ranging from `xs` to `ul`. When you are targetting the extra small breakpoint, the breakpoint-suffix is redundant and should not be included in the class (e.g.: use `m-1` instead of `m-xs-1`).
 
 And apply the following size:
 

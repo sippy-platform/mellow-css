@@ -83,7 +83,7 @@ A container provides a maximum width for your content to take at any given break
       <td>1320px</td>
     </tr>
     <tr>
-      <th scope="row"><code>.container-xxl</code></th>
+      <th scope="row"><code>.container-ul</code></th>
       <td class="text-grey">100%</td>
       <td class="text-grey">100%</td>
       <td class="text-grey">100%</td>
