@@ -47,6 +47,19 @@ $colors: (
   --grey-800: #{shade($grey, 22%)};
   --grey-900: #{shade($grey, 70%)};
   --color-text: #{color-contrast($grey)};
+  --accent-50: #{tint($accent, 98%)};
+  --accent-100: #{tint($accent, 96%)};
+  --accent-200: #{tint($accent, 92%)};
+  --accent-300: #{tint($accent, 87%)};
+  --accent-400: #{tint($accent, 80%)};
+  --accent-500: #{tint($accent, 70%)};
+  --accent-550: #{tint($accent, 57%)};
+  --accent-600: #{tint($accent, 28%)};
+  --accent-700: #{$accent};
+  --accent-750: #{shade($accent, 7%)};
+  --accent-800: #{shade($accent, 22%)};
+  --accent-900: #{shade($accent, 70%)};
+  --accent-text: #{color-contrast($accent)};
 }
 
 .accent {

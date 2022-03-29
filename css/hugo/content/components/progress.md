@@ -41,57 +41,50 @@ You can manipulate the color of the progress bar by using the `bg` classes.
 
 {{<example>}}
 <div class="progress">
-  <div class="progress-bar bg-red" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar red" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-orange" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar orange" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-yellow" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar yellow" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-lime" role="progressbar" style="width: 36%" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar lime" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-green" role="progressbar" style="width: 44%" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar green" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-cyan" role="progressbar" style="width: 52%" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar cyan" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-blue" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar blue" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-purple" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar purple" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-pink" role="progressbar" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar pink" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-light" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar bg-grey" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar bg-dark" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar grey" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {{</example>}}
 
 This also works on the `progress` elements.
 
 {{<example>}}
-<progress class="progress bg-blue" value="20" max="100">20%</progress>
-<progress class="progress bg-purple" value="28" max="100">28%</progress>
-<progress class="progress bg-pink" value="36" max="100">36%</progress>
-<progress class="progress bg-red" value="44" max="100">44%</progress>
-<progress class="progress bg-orange" value="52" max="100">52%</progress>
-<progress class="progress bg-yellow" value="60" max="100">60%</progress>
-<progress class="progress bg-lime" value="68" max="100">68%</progress>
-<progress class="progress bg-green" value="76" max="100">76%</progress>
-<progress class="progress bg-light" value="84" max="100">84%</progress>
-<progress class="progress bg-grey" value="92" max="100">92%</progress>
-<progress class="progress bg-dark" value="100" max="100">100%</progress>
+<progress class="progress red" value="10" max="100">10%</progress>
+<progress class="progress orange" value="20" max="100">20%</progress>
+<progress class="progress yellow" value="30" max="100">30%</progress>
+<progress class="progress lime" value="40" max="100">40%</progress>
+<progress class="progress green" value="50" max="100">50%</progress>
+<progress class="progress cyan" value="60" max="100">60%</progress>
+<progress class="progress blue" value="70" max="100">70%</progress>
+<progress class="progress purple" value="80" max="100">80%</progress>
+<progress class="progress pink" value="90" max="100">90%</progress>
+<progress class="progress grey" value="100" max="100">100%</progress>
 {{</example>}}
 
 ## Stacked bars
@@ -99,9 +92,19 @@ You can stack multiple progress bars within a single progress bar. When more the
 
 {{<example>}}
 <div class="progress">
-  <div class="progress-bar bg-green" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-orange" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-red" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar green" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar orange" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar red" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+{{</example>}}
+
+If you'd want to have multiple progress bars with the same color, you can also apply the color class to the root element. Subsequently, you can override one of them by adding a color class to a single progress bar again.
+
+{{<example>}}
+<div class="progress lime">
+  <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar cyan" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {{</example>}}
 
