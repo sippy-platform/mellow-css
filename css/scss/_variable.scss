@@ -46,7 +46,7 @@ $colors: (
   --grey-750: #{shade($grey, 7%)};
   --grey-800: #{shade($grey, 22%)};
   --grey-900: #{shade($grey, 70%)};
-  --color-text: #{color-contrast($grey)};
+  --grey-text: #{color-contrast($grey)};
   --accent-50: #{tint($accent, 98%)};
   --accent-100: #{tint($accent, 96%)};
   --accent-200: #{tint($accent, 92%)};
@@ -246,21 +246,6 @@ $dark:                map-get($greys, 900);
 $muted:               map-get($greys, 500);
 
 // $body-text:           $dark;
-
-$variant-colors: (
-  cyan: $cyan,
-  blue: $blue,
-  red: $red,
-  lime: $lime,
-  green: $green,
-  "yellow": $yellow,
-  orange: $orange,
-  pink: $pink,
-  purple: $purple,
-  grey: $grey,
-  light: $light,
-  dark: $dark
-) !default;
 
 // Anchors
 $anchor-color:          map-get($accent, 500) !default;

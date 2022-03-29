@@ -1,10 +1,10 @@
 .label {
   border-radius: $border-radius-sm;
   font-size: .85em;
-  border: $border-width solid $border-color;
+  border: $border-width solid var(--color-600, $border-color);
   font-weight: 600;
   padding: 0 $spacer * .375;
-  color: color-contrast($border-color);
+  color: var(--color-800, color-contrast($border-color));
 
   &.rounded-pill {
     padding: 0 $spacer * .5;
@@ -12,19 +12,7 @@
 }
 
 .label-filled {
-  background-color: $border-color;
-}
-
-@each $color-name, $color in $variant-colors {
-  $color-contrast: color-contrast($color);
-
-  .label-#{$color-name} {
-    border-color: #{$color};
-    color: shade($color, 45%);
-  }
-
-  .label-filled.label-#{$color-name} {
-    background-color: #{$color};
-    color: $color-contrast;
-  }
+  border-color: var(--color-700, $border-color);
+  background-color: var(--color-700, $border-color);
+  color: var(--color-text, color-contrast($border-color));
 }
