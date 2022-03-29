@@ -34,8 +34,24 @@
   z-index: 1030;
 }
 
+.docs-navigation {
+  .list {
+    .list-item.list-item-action {
+      font-size: 87.5%;
+      border-radius: 0;
+      color: var(--grey-800) !important;
+
+      &:hover {
+        background-color: var(--accent-100) !important;
+        color: var(--accent-800) !important;
+      }
+    }
+  }
+}
+
 .docs-footer {
   grid-area: footer;
+  border-top: 1px solid var(--grey-400);
 }
 
 .docs-main {
@@ -87,7 +103,7 @@
     grid-area: sidebar;
     position: sticky;
     top: 56px;
-    border-right: $border-width solid $border-color;
+    border-right: $border-width solid var(--grey-400);
     height: calc(100vh - 56px);
     z-index: 1020;
 
