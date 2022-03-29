@@ -42,69 +42,29 @@ $colors: (
   purple: $purple,
   grey: $grey
 ) !default;
-
-$variant-colors: (
-  cyan: $cyan,
-  blue: $blue,
-  red: $red,
-  lime: $lime,
-  green: $green,
-  "yellow": $yellow,
-  orange: $orange,
-  pink: $pink,
-  purple: $purple,
-  grey: $grey,
-  light: $light,
-  dark: $dark
-) !default;
 {{</example>}}
 
 ## Palettes
-The full color palette is accessible from the `$plaettes`-variable.
-
-{{<example show_preview="false" lang="scss">}}
-$palettes: (
-  "cyan": $cyans,
-  "blue": $blues,
-  "red": $reds,
-  "lime": $limes,
-  "green": $greens,
-  "yellow": $yellows,
-  "orange": $oranges,
-  "pink": $pinks,
-  "purple": $purples,
-  "grey": $greys
-) !default;
-{{</example>}}
-
 A color map is made out of a color palette from 50 to 900. Every color has its tints and shades defined by the same percentages as blue except for grey.
 
 {{<example show_preview="false" lang="scss">}}
-$blues: (
-  50: tint($blue, 90%),
-  100: tint($blue, 80%),
-  200: tint($blue, 60%),
-  300: tint($blue, 40%),
-  400: tint($blue, 20%),
-  500: $blue,
-  600: shade($blue, 15%),
-  700: shade($blue, 30%),
-  800: shade($blue, 45%),
-  900: shade($blue, 60%)
-) !default;
-
-$greys: (
-  50: tint($grey, 95%),
-  100: tint($grey, 90%),
-  200: tint($grey, 75%),
-  300: tint($grey, 45%),
-  400: tint($grey, 20%),
-  500: $grey,
-  600: shade($grey, 20%),
-  700: shade($grey, 40%),
-  800: shade($grey, 60%),
-  900: shade($grey, 80%)
-) !default;
+@each $name, $color in $colors {
+  .#{$name} {
+    --color-50: #{tint($color, 98%)};
+    --color-100: #{tint($color, 96%)};
+    --color-200: #{tint($color, 92%)};
+    --color-300: #{tint($color, 87%)};
+    --color-400: #{tint($color, 80%)};
+    --color-500: #{tint($color, 70%)};
+    --color-550: #{tint($color, 57%)};
+    --color-600: #{tint($color, 28%)};
+    --color-700: #{$color};
+    --color-750: #{shade($color, 7%)};
+    --color-800: #{shade($color, 22%)};
+    --color-900: #{shade($color, 70%)};
+    --color-text: #{color-contrast($color)};
+  }
+}
 {{</example>}}
 
 ### Colors
@@ -281,3 +241,14 @@ $greys: (
     </div>
   </div>
 </div>
+
+## Using the color system
+Each color palette consists out of 12 colors with incremental steps of 50 or 100. These colors all have a functional use.
+
+| Color | Use |
+| ----- | --- |
+| 50, 100 | Use as background. |
+| 200, 300, 400 | Use as component backgrounds  (default, hover, active). |
+| 500, 550, 600 | Use as borders and seperators. |
+| 700, 750 | Use as solid backgrounds. |
+| 800, 900 | Usage for text. |
