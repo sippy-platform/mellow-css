@@ -14,7 +14,7 @@
     border-radius: $border-radius-sm;
 
     &.list-item-danger {
-      color: map-get($reds, 500) !important;
+      color: var(--red-700) !important;
     }
 
     &.list-item-action {
@@ -22,18 +22,18 @@
       color: inherit;
 
       &:hover:not(.disabled) {
-        background-color: map-get($greys, 100);
+        background-color: var(--grey-200);
       }
 
       &.list-item-danger {
         &:hover:not(.disabled) {
-          background-color: map-get($reds, 50);
+          background-color: var(--red-200);
         }
       }
     }
 
     &.disabled {
-      color: map-get($greys, 500);
+      color: var(--grey-700);
       pointer-events: none;
     }
 
@@ -63,14 +63,14 @@
     }
 
     &.active {
-      background-color: map-get($greys, 50);
+      background-color: var(--grey-100);
 
       &:hover:not(.disabled) {
-        background-color: map-get($greys, 100);
+        background-color: var(--grey-200);
       }
 
       &.list-item-danger {
-        background-color: map-get($reds, 50);
+        background-color: var(--red-100);
       }
 
       &::after {
@@ -81,7 +81,7 @@
         width: 4px;
         border-radius: $border-radius-sm;
         content: "";
-        background-color: map-get($accent, 500);
+        background-color: var(--accent-700);
       }
     }
   }

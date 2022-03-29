@@ -99,11 +99,11 @@
   border: none;
 
   &:focus {
-    box-shadow: 0 0 0 3px rgba(map-get($accent, 500), .4);
+    box-shadow: 0 0 0 3px var(--accent-500);
   }
 
   &:hover {
     background-color: rgba($dark, .1);
-    border-color: map-get($accent, 700);
+    border-color: var(--accent-800);
   }
 }

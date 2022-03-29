@@ -19,6 +19,9 @@ $pink:                #ec4899 !default;
 $grey:                #6b707a !default;
 
 $accent:              $blue;
+$light:               tint($accent, 92%);
+$muted:               $grey;
+$dark:                shade($grey, 70%);
 
 $colors: (
   cyan: $cyan,
@@ -47,6 +50,19 @@ $colors: (
   --grey-800: #{shade($grey, 22%)};
   --grey-900: #{shade($grey, 70%)};
   --grey-text: #{color-contrast($grey)};
+  --red-50: #{tint($red, 98%)};
+  --red-100: #{tint($red, 96%)};
+  --red-200: #{tint($red, 92%)};
+  --red-300: #{tint($red, 87%)};
+  --red-400: #{tint($red, 80%)};
+  --red-500: #{tint($red, 70%)};
+  --red-550: #{tint($red, 57%)};
+  --red-600: #{tint($red, 28%)};
+  --red-700: #{$red};
+  --red-750: #{shade($red, 7%)};
+  --red-800: #{shade($red, 22%)};
+  --red-900: #{shade($red, 70%)};
+  --red-text: #{color-contrast($red)};
   --accent-50: #{tint($accent, 98%)};
   --accent-100: #{tint($accent, 96%)};
   --accent-200: #{tint($accent, 92%)};
@@ -96,160 +112,9 @@ $colors: (
   }
 }
 
-$cyans: (
-  50: tint($cyan, 90%),
-  100: tint($cyan, 80%),
-  200: tint($cyan, 60%),
-  300: tint($cyan, 40%),
-  400: tint($cyan, 20%),
-  500: $cyan,
-  600: shade($cyan, 15%),
-  700: shade($cyan, 30%),
-  800: shade($cyan, 45%),
-  900: shade($cyan, 60%)
-) !default;
-
-$blues: (
-  50: tint($blue, 90%),
-  100: tint($blue, 80%),
-  200: tint($blue, 60%),
-  300: tint($blue, 40%),
-  400: tint($blue, 20%),
-  500: $blue,
-  600: shade($blue, 15%),
-  700: shade($blue, 30%),
-  800: shade($blue, 45%),
-  900: shade($blue, 60%)
-) !default;
-
-$reds: (
-  50: tint($red, 90%),
-  100: tint($red, 80%),
-  200: tint($red, 60%),
-  300: tint($red, 40%),
-  400: tint($red, 20%),
-  500: $red,
-  600: shade($red, 15%),
-  700: shade($red, 30%),
-  800: shade($red, 45%),
-  900: shade($red, 60%)
-) !default;
-
-$limes: (
-  50: tint($lime, 90%),
-  100: tint($lime, 80%),
-  200: tint($lime, 60%),
-  300: tint($lime, 40%),
-  400: tint($lime, 20%),
-  500: $lime,
-  600: shade($lime, 15%),
-  700: shade($lime, 30%),
-  800: shade($lime, 45%),
-  900: shade($lime, 60%)
-) !default;
-
-$greens: (
-  50: tint($green, 90%),
-  100: tint($green, 80%),
-  200: tint($green, 60%),
-  300: tint($green, 40%),
-  400: tint($green, 20%),
-  500: $green,
-  600: shade($green, 15%),
-  700: shade($green, 30%),
-  800: shade($green, 45%),
-  900: shade($green, 60%)
-) !default;
-
-$yellows: (
-  50: tint($yellow, 90%),
-  100: tint($yellow, 80%),
-  200: tint($yellow, 60%),
-  300: tint($yellow, 40%),
-  400: tint($yellow, 20%),
-  500: $yellow,
-  600: shade($yellow, 15%),
-  700: shade($yellow, 30%),
-  800: shade($yellow, 45%),
-  900: shade($yellow, 60%)
-) !default;
-
-$oranges: (
-  50: tint($orange, 90%),
-  100: tint($orange, 80%),
-  200: tint($orange, 60%),
-  300: tint($orange, 40%),
-  400: tint($orange, 20%),
-  500: $orange,
-  600: shade($orange, 15%),
-  700: shade($orange, 30%),
-  800: shade($orange, 45%),
-  900: shade($orange, 60%)
-) !default;
-
-$pinks: (
-  50: tint($pink, 90%),
-  100: tint($pink, 80%),
-  200: tint($pink, 60%),
-  300: tint($pink, 40%),
-  400: tint($pink, 20%),
-  500: $pink,
-  600: shade($pink, 10%),
-  700: shade($pink, 20%),
-  800: shade($pink, 30%),
-  900: shade($pink, 40%)
-) !default;
-
-$purples: (
-  50: tint($purple, 90%),
-  100: tint($purple, 80%),
-  200: tint($purple, 60%),
-  300: tint($purple, 40%),
-  400: tint($purple, 20%),
-  500: $purple,
-  600: shade($purple, 10%),
-  700: shade($purple, 20%),
-  800: shade($purple, 30%),
-  900: shade($purple, 40%)
-) !default;
-
-$greys: (
-  50: tint($grey, 95%),
-  100: tint($grey, 90%),
-  200: tint($grey, 75%),
-  300: tint($grey, 45%),
-  400: tint($grey, 20%),
-  500: $grey,
-  600: shade($grey, 20%),
-  700: shade($grey, 40%),
-  800: shade($grey, 60%),
-  900: shade($grey, 80%)
-) !default;
-
-$palettes: (
-  "cyan": $cyans,
-  "blue": $blues,
-  "red": $reds,
-  "lime": $limes,
-  "green": $greens,
-  "yellow": $yellows,
-  "orange": $oranges,
-  "pink": $pinks,
-  "purple": $purples,
-  "grey": $greys
-) !default;
-
-$accent:              map-get($palettes, "blue");
-
-$light:               map-get($greys, 100);
-$dark:                map-get($greys, 900);
-$muted:               map-get($greys, 500);
-
-// $body-text:           $dark;
-
 // Anchors
-$anchor-color:          map-get($accent, 500) !default;
-$anchor-hover-color:    shade($anchor-color, 20%) !default;
+$anchor-color:          shade($accent, 7%) !default;
+$anchor-hover-color:    shade($accent, 22%) !default;
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -359,7 +224,7 @@ $box-shadows: (
 ) !default;
 
 // Borders
-$border-color:        map-get($greys, 200) !default;
+$border-color:        tint($grey, 70%) !default;
 $border-width:        1px !default;
 $border-widths: (
   1: 1px,

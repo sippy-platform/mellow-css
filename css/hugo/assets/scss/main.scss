@@ -126,7 +126,7 @@
       font-size: .875rem;
 
       &:hover {
-        background-color: map-get($blues, 50);
+        background-color: var(--accent-200);
         color: inherit;
       }
 
@@ -198,7 +198,7 @@
           flex-grow: 1;
 
           & > div {
-            background-color: map-get($accent, 500);
+            background-color: var(--accent-700);
             border-radius: $border-radius-sm;
             padding-top: $spacer;
             padding-bottom: $spacer;
@@ -232,7 +232,7 @@
           width: 100%;
 
           & > div {
-            background-color: map-get($accent, 500);
+            background-color: var(--accent-700);
             border-radius: $border-radius-sm;
             padding-left: $spacer;
             padding-right: $spacer;
@@ -301,7 +301,7 @@
         height: 100px;
         margin-right: 1rem;
         margin-bottom: 1rem;
-        background-color: map-get($greys, 50);
+        background-color: var(--grey-200);
 
         &:last-child {
           margin-right: 0;
@@ -310,14 +310,14 @@
 
       &.bordered {
         [class^="border"] {
-          border: 1px solid map-get($greys, 200);
+          border: 1px solid var(--grey-500);
         }
       }
     }
 
     &.docs-preview-position {
       .position-relative {
-        background: map-get($greys, 100);
+        background: var(--grey-200);
         height: 150px;
         width: 100%;
         border-radius: $border-radius-sm;
@@ -352,15 +352,6 @@
       line-height: 1.5;
       font-family: $font-family-mono;
       white-space: pre-wrap;
-    }
-  }
-}
-
-@each $palette-name, $palette in $palettes {
-  @each $palette-code, $color in $palette {
-    .bg-#{$palette-name}-#{$palette-code} {
-      background-color: #{$color};
-      color: color-contrast($color);
     }
   }
 }
