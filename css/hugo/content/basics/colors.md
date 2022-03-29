@@ -6,7 +6,32 @@ description: Mellow has a built-in extensive color palette.
 ## Main colors
 The main color set has `text-*` and `bg-*` classes available in our [text color](/utilities/color) and [background](/utilities/background) utilities, as well as variants for other components (like [alerts](/components/alert)) and urilities (like [borders](/utilities/borders)).
 
+<div class="alert alert-cyan" role="alert">
+  <div class="alert-icon">
+    <i class="vi vi-circle-info"></i>
+  </div>
+  <div class="alert-message">
+    The <code>light</code> and <code>dark</code> colors aren't their own palette, but instead variants of the <code>grey</code> palette.
+  </div>
+</div>
+
 {{<example show_code="false">}}
+<h4>Functional palette</h4>
+<div class="grid grid-2 grid-sm-3 mb-5">
+  <div class="red text-white p-3 rounded-sm" style="background: var(--color-700)">Red</div>
+  <div class="orange text-white p-3 rounded-sm" style="background: var(--color-700)">Orange</div>
+  <div class="yellow p-3 rounded-sm" style="background: var(--color-700)">Yellow</div>
+  <div class="lime p-3 rounded-sm" style="background: var(--color-700)">Lime</div>
+  <div class="green text-white p-3 rounded-sm" style="background: var(--color-700)">Green</div>
+  <div class="cyan p-3 rounded-sm" style="background: var(--color-700)">Cyan</div>
+  <div class="blue text-white p-3 rounded-sm" style="background: var(--color-700)">Blue</div>
+  <div class="purple text-white p-3 rounded-sm" style="background: var(--color-700)">Purple</div>
+  <div class="pink text-white p-3 rounded-sm" style="background: var(--color-700)">Pink</div>
+  <div class="grey p-3 rounded-sm" style="background: var(--color-200)">Light</div>
+  <div class="grey text-white p-3 rounded-sm" style="background: var(--color-700)">Grey</div>
+  <div class="grey text-white p-3 rounded-sm" style="background: var(--color-900)">Dark</div>
+</div>
+<h4>Legacy palette</h4>
 <div class="grid grid-2 grid-sm-3">
   <div class="bg-red-500 p-3 rounded-sm">Red</div>
   <div class="bg-orange-500 p-3 rounded-sm">Orange</div>
@@ -104,6 +129,182 @@ $greys: (
 {{</example>}}
 
 ### Colors
+#### Functional colors
+<div class="d-flex mb-3">
+  <div class="w-4 flex-shrink-0">
+    <div class="grid grid-1 gap-1">
+      <span style="height: 21px"></span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Red</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Orange</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Yellow</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Lime</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Green</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Cyan</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Blue</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Purple</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Pink</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center justify-content-end me-2">Grey</span>
+    </div>
+  </div>
+  <div class="grid grid-1 gap-1">
+    <div class="grid grid-12 gap-1">
+      <span class="text-center">50</span>
+      <span class="text-center">100</span>
+      <span class="text-center">200</span>
+      <span class="text-center">300</span>
+      <span class="text-center">400</span>
+      <span class="text-center">500</span>
+      <span class="text-center">550</span>
+      <span class="text-center">600</span>
+      <span class="text-center">700</span>
+      <span class="text-center">750</span>
+      <span class="text-center">800</span>
+      <span class="text-center">900</span>
+    </div>
+    <div class="grid grid-12 gap-1 red">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 orange">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 yellow">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 lime">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 green">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 cyan">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 blue">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 purple">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 pink">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 grey">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+  </div>
+</div>
+
+#### Legacy colors
 <div class="d-flex mb-3">
   <div class="w-4 flex-shrink-0">
     <span class="fw-bold">Red</span>
