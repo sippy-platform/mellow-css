@@ -1,0 +1,7 @@
+{{- $css_class := .Get 0 | default "cyan" -}}
+
+<div class="alert alert-{{ $css_class }}" role="alert">
+  <div class="alert-message">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

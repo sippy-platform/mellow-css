@@ -12,10 +12,50 @@ When applying to a button, make sure to set the `type` attribute. When applying 
 <a role="button" href="#" class="btn btn-default">Anchor</a>
 {{</example>}}
 
-## Variants
+## Styles
+Mellow provides 3 variants for button coloring.
 
-### Contextual buttons
-Contextual buttons are ment to be used in situations where the action performed by the button is important.
+### Default button
+The default button has no variants. It's a plain, grey button. Simple.
+
+{{<example>}}
+<button type="button" class="btn btn-default">Default</button>
+{{</example>}}
+
+### Colored buttons
+Colored buttons take on the color of the class you assign to it. These are in general great for primary actions.
+
+{{<example>}}
+<button type="button" class="btn btn-color red">Red</button>
+<button type="button" class="btn btn-color orange">Orange</button>
+<button type="button" class="btn btn-color yellow">Yellow</button>
+<button type="button" class="btn btn-color lime">Lime</button>
+<button type="button" class="btn btn-color green">Green</button>
+<button type="button" class="btn btn-color cyan">Cyan</button>
+<button type="button" class="btn btn-color blue">Blue</button>
+<button type="button" class="btn btn-color purple">Purple</button>
+<button type="button" class="btn btn-color pink">Pink</button>
+<button type="button" class="btn btn-color grey">Grey</button>
+{{</example>}}
+
+### Colored on hover
+colored on hover buttons are button with colored text on a grey background that turn fully colored on hover. These are great for secondary actions or destructive actions.
+
+{{<example>}}
+<button type="button" class="btn btn-hover red">Red</button>
+<button type="button" class="btn btn-hover orange">Orange</button>
+<button type="button" class="btn btn-hover yellow">Yellow</button>
+<button type="button" class="btn btn-hover lime">Lime</button>
+<button type="button" class="btn btn-hover green">Green</button>
+<button type="button" class="btn btn-hover cyan">Cyan</button>
+<button type="button" class="btn btn-hover blue">Blue</button>
+<button type="button" class="btn btn-hover purple">Purple</button>
+<button type="button" class="btn btn-hover pink">Pink</button>
+<button type="button" class="btn btn-hover grey">Grey</button>
+{{</example>}}
+
+## Semantic buttons
+Having so many variants to customize your interface is great, but often you probably would prefer to refer to these buttons in a more semantically correct way. This is why Mellow has mapped a number of these buttons to semantic classes.
 
 {{<example>}}
 <button type="button" class="btn btn-default">Default</button>
@@ -25,21 +65,9 @@ Contextual buttons are ment to be used in situations where the action performed 
 <button type="button" class="btn btn-success">Success</button>
 {{</example>}}
 
-### Colored buttons
-Colored buttons are variations of the button component that use one of the colors in the color pallette.
-
-{{<example>}}
-<button type="button" class="btn btn-red">Red</button>
-<button type="button" class="btn btn-orange">Orange</button>
-<button type="button" class="btn btn-yellow">Yellow</button>
-<button type="button" class="btn btn-lime">Lime</button>
-<button type="button" class="btn btn-green">Green</button>
-<button type="button" class="btn btn-cyan">Cyan</button>
-<button type="button" class="btn btn-blue">Blue</button>
-<button type="button" class="btn btn-purple">Purple</button>
-<button type="button" class="btn btn-pink">Pink</button>
-<button type="button" class="btn btn-grey">Grey</button>
-{{</example>}}
+{{<note>}}
+The `.btn-primary` and `.btn-secondary` classes aren't remapped versions of the `.blue` variants, instead they use a special accent variant.
+{{</note>}}
 
 ## Active
 You can use the `active` class to make the button appear as if it is `:active`.
@@ -63,7 +91,9 @@ Buttons can be disabled with the `aria-disabled` property. This will reduce the 
 <button type="button" class="btn btn-success" aria-disabled="true">Success</button>
 {{</example>}}
 
+{{<note>}}
 Note the use of the `aria-disabled` property instead of `disabled`. Unlike `disabled`, `aria-disabled` leaves the button discoverable for assistive technologies and will remain in the tab-flow when navigating with a keyboard (so that any tooltips that may be connected to it can still appear for users without a pointer).
+{{</note>}}
 
 When disabling an anchor, note that you should not inlcude the `href` property:
 

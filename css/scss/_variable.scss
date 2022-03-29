@@ -18,6 +18,8 @@ $purple:              #a855f7 !default;
 $pink:                #ec4899 !default;
 $grey:                #6b707a !default;
 
+$accent:              $blue;
+
 $colors: (
   cyan: $cyan,
   blue: $blue,
@@ -30,6 +32,38 @@ $colors: (
   purple: $purple,
   grey: $grey
 ) !default;
+
+:root {
+  --grey-50: #{tint($grey, 98%)};
+  --grey-100: #{tint($grey, 96%)};
+  --grey-200: #{tint($grey, 92%)};
+  --grey-300: #{tint($grey, 87%)};
+  --grey-400: #{tint($grey, 80%)};
+  --grey-500: #{tint($grey, 70%)};
+  --grey-550: #{tint($grey, 57%)};
+  --grey-600: #{tint($grey, 28%)};
+  --grey-700: #{$grey};
+  --grey-750: #{shade($grey, 7%)};
+  --grey-800: #{shade($grey, 22%)};
+  --grey-900: #{shade($grey, 70%)};
+  --color-text: #{color-contrast($grey)};
+}
+
+.accent {
+  --color-50: #{tint($accent, 98%)};
+  --color-100: #{tint($accent, 96%)};
+  --color-200: #{tint($accent, 92%)};
+  --color-300: #{tint($accent, 87%)};
+  --color-400: #{tint($accent, 80%)};
+  --color-500: #{tint($accent, 70%)};
+  --color-550: #{tint($accent, 57%)};
+  --color-600: #{tint($accent, 28%)};
+  --color-700: #{$accent};
+  --color-750: #{shade($accent, 7%)};
+  --color-800: #{shade($accent, 22%)};
+  --color-900: #{shade($accent, 70%)};
+  --color-text: #{color-contrast($accent)};
+}
 
 @each $name, $color in $colors {
   .#{$name} {
@@ -45,6 +79,7 @@ $colors: (
     --color-750: #{shade($color, 7%)};
     --color-800: #{shade($color, 22%)};
     --color-900: #{shade($color, 70%)};
+    --color-text: #{color-contrast($color)};
   }
 }
 
@@ -526,33 +561,14 @@ $overflows: (
 // Buttons
 $btn-box-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .15) !default;
 
-$btn-context-colored-text: (
-  default: (
-    500: #000
-  )
+$btn-semantic-color-hover: (
+  secondary: "accent",
+  danger: "red"
 ) !default;
 
-$btn-context-colored-hover: (
-  secondary: $accent,
-  danger: $reds
-) !default;
-
-$btn-context-colored: (
-  primary: $accent,
-  success: $greens
-) !default;
-
-$btn-colored: (
-  cyan: $cyans,
-  blue: $blues,
-  red: $reds,
-  lime: $limes,
-  green: $greens,
-  yellow: $yellows,
-  orange: $oranges,
-  pink: $pinks,
-  purple: $purples,
-  grey: $greys
+$btn-semantic-color: (
+  primary: "accent",
+  success: "green"
 ) !default;
 
 // Forms

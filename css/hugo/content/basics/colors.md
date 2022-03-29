@@ -6,14 +6,9 @@ description: Mellow has a built-in extensive color palette.
 ## Main colors
 The main color set has `text-*` and `bg-*` classes available in our [text color](/utilities/color) and [background](/utilities/background) utilities, as well as variants for other components (like [alerts](/components/alert)) and urilities (like [borders](/utilities/borders)).
 
-<div class="alert alert-cyan" role="alert">
-  <div class="alert-icon">
-    <i class="vi vi-circle-info"></i>
-  </div>
-  <div class="alert-message">
-    The <code>light</code> and <code>dark</code> colors aren't their own palette, but instead variants of the <code>grey</code> palette.
-  </div>
-</div>
+{{<note>}}
+The `light` and `dark` colors aren't their own palette, but instead variants of the `grey` palette.
+{{</note>}}
 
 {{<example show_code="false">}}
 <h4>Functional palette</h4>
