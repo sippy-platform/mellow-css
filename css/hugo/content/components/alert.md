@@ -48,6 +48,38 @@ Use the `alert-[color]` classes to add a color to the left border and links.
 </div>
 {{</example>}}
 
+### Buttons, progress, etc.
+As a result of the use of CSS variable to style the colors, any element that responds to colors will automatically follow the alert color. You can still set them to another color if you want to.
+
+{{<example>}}
+<div class="alert red" role="alert">
+  <div class="alert-message">
+    <p>Look at this alert message! <a href="#">Link</a> is color-matched.</p>
+    <progress class="progress mb-3" value="50" max="100">50%</progress>
+    <div class="btn-toolbar">
+      <div class="btn-group">
+        <button type="button" class="btn btn-color">Colored</button>
+        <button type="button" class="btn btn-hover">On hover</button>
+      </div>
+      <button type="button" class="btn btn-hover cyan">Override to cyan</button>
+    </div>
+  </div>
+</div>
+<div class="alert lime" role="alert">
+  <div class="alert-message">
+    <p>Look at this alert message! <a href="#">Link</a> is color-matched.</p>
+    <progress class="progress mb-3" value="50" max="100">50%</progress>
+    <div class="btn-toolbar">
+      <div class="btn-group">
+        <button type="button" class="btn btn-color">Colored</button>
+        <button type="button" class="btn btn-hover">On hover</button>
+      </div>
+      <button type="button" class="btn btn-hover purple">Override to purple</button>
+    </div>
+  </div>
+</div>
+{{</example>}}
+
 ## Titles
 When applying a color modifier, titles with the `alert-title` class will also adapt to this color.
 
