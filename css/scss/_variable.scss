@@ -9,13 +9,18 @@ $font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 // Colors
 $red:                 #eb0000 !default;
 $orange:              #f57600 !default;
-$yellow:              #f5c800 !default;
+$amber:               #f5b400 !default;
+$yellow:              #f5d000 !default;
 $lime:                #7acc00 !default;
-$green:               #29b340 !default;
+$green:               #1ea835 !default;
+$teal:                #00d3b0 !default;
 $cyan:                #00b3d3 !default;
 $blue:                #0068d8 !default;
-$purple:              #a855f7 !default;
+$indigo:              #5560f7 !default;
+$violet:              #8055f7 !default;
+$purple:              #c455f7 !default;
 $pink:                #ec4899 !default;
+$rose:                #fd194b !default;
 $grey:                #6b707a !default;
 
 $accent:              $blue;
@@ -24,15 +29,20 @@ $muted:               $grey;
 $dark:                shade($grey, 70%);
 
 $colors: (
-  cyan: $cyan,
-  blue: $blue,
   red: $red,
+  orange: $orange,
+  amber: $amber,
+  "yellow": $yellow,
   lime: $lime,
   green: $green,
-  "yellow": $yellow,
-  orange: $orange,
-  pink: $pink,
+  teal: $teal,
+  cyan: $cyan,
+  blue: $blue,
+  indigo: $indigo,
+  violet: $violet,
   purple: $purple,
+  pink: $pink,
+  rose: $rose,
   grey: $grey
 ) !default;
 

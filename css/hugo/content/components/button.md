@@ -28,13 +28,18 @@ Colored buttons take on the color of the class you assign to it. These are in ge
 {{<example>}}
 <button type="button" class="btn btn-color red">Red</button>
 <button type="button" class="btn btn-color orange">Orange</button>
+<button type="button" class="btn btn-color amber">Amber</button>
 <button type="button" class="btn btn-color yellow">Yellow</button>
 <button type="button" class="btn btn-color lime">Lime</button>
 <button type="button" class="btn btn-color green">Green</button>
+<button type="button" class="btn btn-color teal">Teal</button>
 <button type="button" class="btn btn-color cyan">Cyan</button>
 <button type="button" class="btn btn-color blue">Blue</button>
+<button type="button" class="btn btn-color indigo">Indigo</button>
+<button type="button" class="btn btn-color violet">Violet</button>
 <button type="button" class="btn btn-color purple">Purple</button>
 <button type="button" class="btn btn-color pink">Pink</button>
+<button type="button" class="btn btn-color rose">Rose</button>
 <button type="button" class="btn btn-color grey">Grey</button>
 {{</example>}}
 
@@ -44,13 +49,18 @@ colored on hover buttons are button with colored text on a grey background that 
 {{<example>}}
 <button type="button" class="btn btn-hover red">Red</button>
 <button type="button" class="btn btn-hover orange">Orange</button>
+<button type="button" class="btn btn-hover amber">Amber</button>
 <button type="button" class="btn btn-hover yellow">Yellow</button>
 <button type="button" class="btn btn-hover lime">Lime</button>
 <button type="button" class="btn btn-hover green">Green</button>
+<button type="button" class="btn btn-hover teal">Teal</button>
 <button type="button" class="btn btn-hover cyan">Cyan</button>
 <button type="button" class="btn btn-hover blue">Blue</button>
+<button type="button" class="btn btn-hover indigo">Indigo</button>
+<button type="button" class="btn btn-hover violet">Violet</button>
 <button type="button" class="btn btn-hover purple">Purple</button>
 <button type="button" class="btn btn-hover pink">Pink</button>
+<button type="button" class="btn btn-hover rose">Rose</button>
 <button type="button" class="btn btn-hover grey">Grey</button>
 {{</example>}}
 

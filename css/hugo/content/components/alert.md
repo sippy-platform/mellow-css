@@ -22,6 +22,9 @@ Use the `alert-[color]` classes to add a color to the left border and links.
 <div class="alert orange" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
+<div class="alert amber" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
 <div class="alert yellow" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
@@ -31,16 +34,28 @@ Use the `alert-[color]` classes to add a color to the left border and links.
 <div class="alert green" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
+<div class="alert teal" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
 <div class="alert cyan" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
 <div class="alert blue" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
+<div class="alert indigo" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
+<div class="alert violet" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
 <div class="alert purple" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
 <div class="alert pink" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
+<div class="alert rose" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
 <div class="alert grey" role="alert">
@@ -96,6 +111,12 @@ When applying a color modifier, titles with the `alert-title` class will also ad
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
+<div class="alert amber" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
 <div class="alert yellow" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
@@ -114,6 +135,12 @@ When applying a color modifier, titles with the `alert-title` class will also ad
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
+<div class="alert teal" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
 <div class="alert cyan" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
@@ -126,6 +153,18 @@ When applying a color modifier, titles with the `alert-title` class will also ad
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
+<div class="alert indigo" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
+<div class="alert violet" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
 <div class="alert purple" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
@@ -133,6 +172,12 @@ When applying a color modifier, titles with the `alert-title` class will also ad
   </div>
 </div>
 <div class="alert pink" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
+<div class="alert rose" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.

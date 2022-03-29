@@ -41,31 +41,46 @@ You can manipulate the color of the progress bar by using the `bg` classes.
 
 {{<example>}}
 <div class="progress">
-  <div class="progress-bar red" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar red" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar orange" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar orange" role="progressbar" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar yellow" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar amber" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar yellow" role="progressbar" style="width: 34%" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
   <div class="progress-bar lime" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar green" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar green" role="progressbar" style="width: 46%" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar cyan" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar teal" role="progressbar" style="width: 52%" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar blue" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar cyan" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar purple" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar blue" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar pink" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar indigo" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar violet" role="progressbar" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar purple" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar pink" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar rose" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress">
   <div class="progress-bar grey" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -75,15 +90,20 @@ You can manipulate the color of the progress bar by using the `bg` classes.
 This also works on the `progress` elements.
 
 {{<example>}}
-<progress class="progress red" value="10" max="100">10%</progress>
-<progress class="progress orange" value="20" max="100">20%</progress>
-<progress class="progress yellow" value="30" max="100">30%</progress>
+<progress class="progress red" value="16" max="100">16%</progress>
+<progress class="progress orange" value="22" max="100">22%</progress>
+<progress class="progress amber" value="28" max="100">28%</progress>
+<progress class="progress yellow" value="34" max="100">34%</progress>
 <progress class="progress lime" value="40" max="100">40%</progress>
-<progress class="progress green" value="50" max="100">50%</progress>
-<progress class="progress cyan" value="60" max="100">60%</progress>
-<progress class="progress blue" value="70" max="100">70%</progress>
-<progress class="progress purple" value="80" max="100">80%</progress>
-<progress class="progress pink" value="90" max="100">90%</progress>
+<progress class="progress green" value="46" max="100">46%</progress>
+<progress class="progress teal" value="52" max="100">52%</progress>
+<progress class="progress cyan" value="58" max="100">58%</progress>
+<progress class="progress blue" value="64" max="100">64%</progress>
+<progress class="progress indigo" value="70" max="100">70%</progress>
+<progress class="progress violet" value="76" max="100">76%</progress>
+<progress class="progress purple" value="82" max="100">82%</progress>
+<progress class="progress pink" value="88" max="100">88%</progress>
+<progress class="progress rose" value="94" max="100">94%</progress>
 <progress class="progress grey" value="100" max="100">100%</progress>
 {{</example>}}
 

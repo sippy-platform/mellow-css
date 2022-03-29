@@ -196,6 +196,15 @@
       margin-top: 1rem;
     }
 
+    &.docs-colors-preview {
+      .color {
+        border-radius: $border-radius;
+        padding: 1rem;
+        background: var(--color-700);
+        color: var(--color-text);
+      }
+    }
+
     &.docs-preview-sizing-rows {
       & > div {
         display: flex;

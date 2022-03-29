@@ -27,30 +27,40 @@ By using the `rounded-pill` class you can make a rounded variant. The rounded va
 Like other components, the color of a label can be changed with ease:
 
 {{<example>}}
-<span class="label red">red</span>
-<span class="label orange">orange</span>
-<span class="label yellow">yellow</span>
-<span class="label lime">lime</span>
-<span class="label green">green</span>
-<span class="label cyan">cyan</span>
-<span class="label blue">blue</span>
-<span class="label purple">purple</span>
-<span class="label pink">pink</span>
-<span class="label grey">grey</span>
+<span class="label red">Red</span>
+<span class="label orange">Orange</span>
+<span class="label amber">Amber</span>
+<span class="label yellow">Yellow</span>
+<span class="label lime">Lime</span>
+<span class="label green">Green</span>
+<span class="label teal">Teal</span>
+<span class="label cyan">Cyan</span>
+<span class="label blue">Blue</span>
+<span class="label indigo">Indigo</span>
+<span class="label violet">Violet</span>
+<span class="label purple">Purple</span>
+<span class="label pink">Pink</span>
+<span class="label rose">Rose</span>
+<span class="label grey">Grey</span>
 {{</example>}}
 
 ### Filled variant
 {{<example>}}
-<span class="label label-filled red">red</span>
-<span class="label label-filled orange">orange</span>
-<span class="label label-filled yellow">yellow</span>
-<span class="label label-filled lime">lime</span>
-<span class="label label-filled green">green</span>
-<span class="label label-filled cyan">cyan</span>
-<span class="label label-filled blue">blue</span>
-<span class="label label-filled purple">purple</span>
-<span class="label label-filled pink">pink</span>
-<span class="label label-filled grey">grey</span>
+<span class="label label-filled red">Red</span>
+<span class="label label-filled orange">Orange</span>
+<span class="label label-filled amber">Amber</span>
+<span class="label label-filled yellow">Yellow</span>
+<span class="label label-filled lime">Lime</span>
+<span class="label label-filled green">Green</span>
+<span class="label label-filled teal">Teal</span>
+<span class="label label-filled cyan">Cyan</span>
+<span class="label label-filled blue">Blue</span>
+<span class="label label-filled indigo">Indigo</span>
+<span class="label label-filled violet">Violet</span>
+<span class="label label-filled purple">Purple</span>
+<span class="label label-filled pink">Pink</span>
+<span class="label label-filled rose">Rose</span>
+<span class="label label-filled grey">Grey</span>
 {{</example>}}
 
 ## Sizing
