@@ -4,10 +4,10 @@
   list-style: none;
   margin-bottom: 0;
   border: $border-color solid 1px;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius;
 
   .page-link {
-    border-radius: $border-radius-sm;
+    border-radius: $border-radius;
     width: 34px;
     height: 34px;
     display: flex;

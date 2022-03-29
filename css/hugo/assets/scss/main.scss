@@ -199,7 +199,7 @@
 
           & > div {
             background-color: var(--accent-700);
-            border-radius: $border-radius-sm;
+            border-radius: $border-radius;
             padding-top: $spacer;
             padding-bottom: $spacer;
             color: #fff;
@@ -233,7 +233,7 @@
 
           & > div {
             background-color: var(--accent-700);
-            border-radius: $border-radius-sm;
+            border-radius: $border-radius;
             padding-left: $spacer;
             padding-right: $spacer;
             color: #fff;
@@ -320,13 +320,13 @@
         background: var(--grey-200);
         height: 150px;
         width: 100%;
-        border-radius: $border-radius-sm;
+        border-radius: $border-radius;
       }
 
       .position-absolute {
         width: 32px;
         height: 32px;
-        border-radius: $border-radius-sm;
+        border-radius: $border-radius;
       }
     }
 

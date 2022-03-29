@@ -1,7 +1,7 @@
 .list {
   list-style: none;
   padding: 0;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius;
 
   > .list-item {
     position: relative;
@@ -11,7 +11,7 @@
     /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
     grid-template-areas: "item-action-s item-icon-s item-label item-icon-e item-action-e";
     padding: $spacer * .5 $spacer;
-    border-radius: $border-radius-sm;
+    border-radius: $border-radius;
 
     &.list-item-danger {
       color: var(--red-700) !important;
@@ -79,7 +79,7 @@
         left: -2px;
         height: calc(100% - 16px);
         width: 4px;
-        border-radius: $border-radius-sm;
+        border-radius: $border-radius;
         content: "";
         background-color: var(--accent-700);
       }

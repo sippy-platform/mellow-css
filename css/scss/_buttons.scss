@@ -8,7 +8,7 @@
   user-select: none;
   padding: $spacer * .3125 $spacer * .75;
   font-size: 1rem;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius;
   box-shadow: $btn-box-shadow-inset;
   line-height: 1.5;
   transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
@@ -40,85 +40,85 @@
     display: block;
     width: 100%;
   }
+}
 
-  // Variants
-  &.btn-default {
-    background-color: var(--grey-100);
-    border: 1px solid var(--grey-500);
-    color: #000;
+// Variants
+.btn-default {
+  background-color: var(--grey-100);
+  border: 1px solid var(--grey-500);
+  color: #000;
 
-    &:focus {
-      box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--grey-550);
-    }
-
-    &:hover {
-      background-color: var(--grey-300);
-    }
-
-    &:active,
-    &.active {
-      background-color: var(--grey-300);
-      border-color: var(--grey-550);
-    }
+  &:focus {
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--grey-550);
   }
 
-  &.btn-color {
-    background-color: var(--color-700);
-    border: 1px solid var(--color-800);
+  &:hover {
+    background-color: var(--grey-300);
+  }
+
+  &:active,
+  &.active {
+    background-color: var(--grey-300);
+    border-color: var(--grey-550);
+  }
+}
+
+.btn-color {
+  background-color: var(--color-700);
+  border: 1px solid var(--color-800);
+  color: var(--color-text);
+  font-weight: 600;
+
+  &:focus {
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--color-550);
+  }
+
+  &:hover {
+    background-color: var(--color-750);
+  }
+
+  &:active,
+  &.active {
     color: var(--color-text);
-    font-weight: 600;
+    background-color: var(--color-800);
+    border-color: var(--color-900);
+  }
+}
 
-    &:focus {
-      box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--color-550);
-    }
+.btn-hover {
+  background-color: var(--grey-100);
+  border: 1px solid var(--grey-500);
+  color: var(--color-700);
 
-    &:hover {
-      background-color: var(--color-750);
-    }
-
-    &:active,
-    &.active {
-      color: var(--color-text);
-      background-color: var(--color-800);
-      border-color: var(--color-900);
-    }
+  &:focus {
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--color-550);
   }
 
-  &.btn-hover {
-    background-color: var(--grey-100);
-    border: 1px solid var(--grey-500);
-    color: var(--color-700);
-
-    &:focus {
-      box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--color-550);
-    }
-
-    &:hover {
-      color: var(--color-text);
-      background-color: var(--color-750);
-      border-color: var(--color-800);
-    }
-
-    &:active,
-    &.active {
-      color: var(--color-text);
-      background-color: var(--color-800);
-      border-color: var(--color-900);
-    }
+  &:hover {
+    color: var(--color-text);
+    background-color: var(--color-750);
+    border-color: var(--color-800);
   }
 
-  // Generate contextual classes like .btn-primary and .btn-success
-  @each $btn-name, $color in $btn-semantic-color {
-    &.btn-#{$btn-name} {
-      @extend .#{$color};
-      @extend .btn-color;
-    }
+  &:active,
+  &.active {
+    color: var(--color-text);
+    background-color: var(--color-800);
+    border-color: var(--color-900);
   }
+}
 
-  @each $btn-name, $color in $btn-semantic-color-hover {
-    &.btn-#{$btn-name} {
-      @extend .#{$color};
-      @extend .btn-hover;
-    }
+// Generate contextual classes like .btn-primary and .btn-success
+@each $btn-name, $color in $btn-semantic-color {
+  &.btn-#{$btn-name} {
+    @extend .#{$color};
+    @extend .btn-color;
+  }
+}
+
+@each $btn-name, $color in $btn-semantic-color-hover {
+  &.btn-#{$btn-name} {
+    @extend .#{$color};
+    @extend .btn-hover;
   }
 }

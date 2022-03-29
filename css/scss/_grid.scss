@@ -4,16 +4,16 @@
   grid-template-columns: repeat(1, 1fr);
   gap: $spacer;
   width: 100%;
+}
 
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
-    @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-      // End at 11 because 12 would just result in the default column count
-      @for $i from 2 through 12 {
-        &.grid#{$breakpoint-suffix}-#{$i} {
-          grid-template-columns: repeat($i, minmax(0, 1fr));
-        }
+  @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
+    // End at 11 because 12 would just result in the default column count
+    @for $i from 2 through 12 {
+      &.grid#{$breakpoint-suffix}-#{$i} {
+        grid-template-columns: repeat($i, minmax(0, 1fr));
       }
     }
   }
