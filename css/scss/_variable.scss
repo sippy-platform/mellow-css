@@ -7,199 +7,127 @@ $font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 // stylelint-enable value-keyword-case
 
 // Colors
-$red:                 #ea002d !default;
+$red:                 #eb0000 !default;
 $orange:              #f57600 !default;
-$yellow:              #f5c800 !default;
+$amber:               #f5b400 !default;
+$yellow:              #f5d000 !default;
 $lime:                #7acc00 !default;
-$green:               #29b340 !default;
+$green:               #1ea835 !default;
+$teal:                #00d3b0 !default;
 $cyan:                #00b3d3 !default;
 $blue:                #0068d8 !default;
-$purple:              #a855f7 !default;
+$indigo:              #5560f7 !default;
+$violet:              #8055f7 !default;
+$purple:              #c455f7 !default;
 $pink:                #ec4899 !default;
+$rose:                #fd194b !default;
+$brown:               #795548 !default;
+$brown:               #a57041;
 $grey:                #6b707a !default;
 
-$cyans: (
-  50: tint($cyan, 90%),
-  100: tint($cyan, 80%),
-  200: tint($cyan, 60%),
-  300: tint($cyan, 40%),
-  400: tint($cyan, 20%),
-  500: $cyan,
-  600: shade($cyan, 15%),
-  700: shade($cyan, 30%),
-  800: shade($cyan, 45%),
-  900: shade($cyan, 60%)
-) !default;
-
-$blues: (
-  50: tint($blue, 90%),
-  100: tint($blue, 80%),
-  200: tint($blue, 60%),
-  300: tint($blue, 40%),
-  400: tint($blue, 20%),
-  500: $blue,
-  600: shade($blue, 15%),
-  700: shade($blue, 30%),
-  800: shade($blue, 45%),
-  900: shade($blue, 60%)
-) !default;
-
-$reds: (
-  50: tint($red, 90%),
-  100: tint($red, 80%),
-  200: tint($red, 60%),
-  300: tint($red, 40%),
-  400: tint($red, 20%),
-  500: $red,
-  600: shade($red, 15%),
-  700: shade($red, 30%),
-  800: shade($red, 45%),
-  900: shade($red, 60%)
-) !default;
-
-$limes: (
-  50: tint($lime, 90%),
-  100: tint($lime, 80%),
-  200: tint($lime, 60%),
-  300: tint($lime, 40%),
-  400: tint($lime, 20%),
-  500: $lime,
-  600: shade($lime, 15%),
-  700: shade($lime, 30%),
-  800: shade($lime, 45%),
-  900: shade($lime, 60%)
-) !default;
-
-$greens: (
-  50: tint($green, 90%),
-  100: tint($green, 80%),
-  200: tint($green, 60%),
-  300: tint($green, 40%),
-  400: tint($green, 20%),
-  500: $green,
-  600: shade($green, 15%),
-  700: shade($green, 30%),
-  800: shade($green, 45%),
-  900: shade($green, 60%)
-) !default;
-
-$yellows: (
-  50: tint($yellow, 90%),
-  100: tint($yellow, 80%),
-  200: tint($yellow, 60%),
-  300: tint($yellow, 40%),
-  400: tint($yellow, 20%),
-  500: $yellow,
-  600: shade($yellow, 15%),
-  700: shade($yellow, 30%),
-  800: shade($yellow, 45%),
-  900: shade($yellow, 60%)
-) !default;
-
-$oranges: (
-  50: tint($orange, 90%),
-  100: tint($orange, 80%),
-  200: tint($orange, 60%),
-  300: tint($orange, 40%),
-  400: tint($orange, 20%),
-  500: $orange,
-  600: shade($orange, 15%),
-  700: shade($orange, 30%),
-  800: shade($orange, 45%),
-  900: shade($orange, 60%)
-) !default;
-
-$pinks: (
-  50: tint($pink, 90%),
-  100: tint($pink, 80%),
-  200: tint($pink, 60%),
-  300: tint($pink, 40%),
-  400: tint($pink, 20%),
-  500: $pink,
-  600: shade($pink, 10%),
-  700: shade($pink, 20%),
-  800: shade($pink, 30%),
-  900: shade($pink, 40%)
-) !default;
-
-$purples: (
-  50: tint($purple, 90%),
-  100: tint($purple, 80%),
-  200: tint($purple, 60%),
-  300: tint($purple, 40%),
-  400: tint($purple, 20%),
-  500: $purple,
-  600: shade($purple, 10%),
-  700: shade($purple, 20%),
-  800: shade($purple, 30%),
-  900: shade($purple, 40%)
-) !default;
-
-$greys: (
-  50: tint($grey, 95%),
-  100: tint($grey, 90%),
-  200: tint($grey, 75%),
-  300: tint($grey, 45%),
-  400: tint($grey, 20%),
-  500: $grey,
-  600: shade($grey, 20%),
-  700: shade($grey, 40%),
-  800: shade($grey, 60%),
-  900: shade($grey, 80%)
-) !default;
-
-$palettes: (
-  "cyan": $cyans,
-  "blue": $blues,
-  "red": $reds,
-  "lime": $limes,
-  "green": $greens,
-  "yellow": $yellows,
-  "orange": $oranges,
-  "pink": $pinks,
-  "purple": $purples,
-  "grey": $greys
-) !default;
-
-$accent:              map-get($palettes, "blue");
-
-$light:               map-get($greys, 100);
-$dark:                map-get($greys, 900);
-$muted:               map-get($greys, 500);
-
-// $body-text:           $dark;
+$accent:              $blue;
+$light:               tint($grey, 92%);
+$muted:               $grey;
+$dark:                shade($grey, 70%);
 
 $colors: (
-  cyan: $cyan,
-  blue: $blue,
   red: $red,
+  orange: $orange,
+  amber: $amber,
+  "yellow": $yellow,
   lime: $lime,
   green: $green,
-  "yellow": $yellow,
-  orange: $orange,
-  pink: $pink,
+  teal: $teal,
+  cyan: $cyan,
+  blue: $blue,
+  indigo: $indigo,
+  violet: $violet,
   purple: $purple,
+  pink: $pink,
+  rose: $rose,
+  brown: $brown,
   grey: $grey
 ) !default;
 
-$variant-colors: (
-  cyan: $cyan,
-  blue: $blue,
-  red: $red,
-  lime: $lime,
-  green: $green,
-  "yellow": $yellow,
-  orange: $orange,
-  pink: $pink,
-  purple: $purple,
-  grey: $grey,
-  light: $light,
-  dark: $dark
-) !default;
+:root {
+  --grey-50: #{tint($grey, 98%)};
+  --grey-100: #{tint($grey, 96%)};
+  --grey-200: #{tint($grey, 92%)};
+  --grey-300: #{tint($grey, 87%)};
+  --grey-400: #{tint($grey, 80%)};
+  --grey-500: #{tint($grey, 70%)};
+  --grey-550: #{tint($grey, 57%)};
+  --grey-600: #{tint($grey, 28%)};
+  --grey-700: #{$grey};
+  --grey-750: #{shade($grey, 7%)};
+  --grey-800: #{shade($grey, 22%)};
+  --grey-900: #{shade($grey, 70%)};
+  --grey-text: #{color-contrast($grey)};
+  --red-50: #{tint($red, 98%)};
+  --red-100: #{tint($red, 96%)};
+  --red-200: #{tint($red, 92%)};
+  --red-300: #{tint($red, 87%)};
+  --red-400: #{tint($red, 80%)};
+  --red-500: #{tint($red, 70%)};
+  --red-550: #{tint($red, 57%)};
+  --red-600: #{tint($red, 28%)};
+  --red-700: #{$red};
+  --red-750: #{shade($red, 7%)};
+  --red-800: #{shade($red, 22%)};
+  --red-900: #{shade($red, 70%)};
+  --red-text: #{color-contrast($red)};
+  --accent-50: #{tint($accent, 98%)};
+  --accent-100: #{tint($accent, 96%)};
+  --accent-200: #{tint($accent, 92%)};
+  --accent-300: #{tint($accent, 87%)};
+  --accent-400: #{tint($accent, 80%)};
+  --accent-500: #{tint($accent, 70%)};
+  --accent-550: #{tint($accent, 57%)};
+  --accent-600: #{tint($accent, 28%)};
+  --accent-700: #{$accent};
+  --accent-750: #{shade($accent, 7%)};
+  --accent-800: #{shade($accent, 22%)};
+  --accent-900: #{shade($accent, 70%)};
+  --accent-text: #{color-contrast($accent)};
+}
+
+.accent {
+  --color-50: #{tint($accent, 98%)};
+  --color-100: #{tint($accent, 96%)};
+  --color-200: #{tint($accent, 92%)};
+  --color-300: #{tint($accent, 87%)};
+  --color-400: #{tint($accent, 80%)};
+  --color-500: #{tint($accent, 70%)};
+  --color-550: #{tint($accent, 57%)};
+  --color-600: #{tint($accent, 28%)};
+  --color-700: #{$accent};
+  --color-750: #{shade($accent, 7%)};
+  --color-800: #{shade($accent, 22%)};
+  --color-900: #{shade($accent, 70%)};
+  --color-text: #{color-contrast($accent)};
+}
+
+@each $name, $color in $colors {
+  .#{$name} {
+    --color-50: #{tint($color, 98%)};
+    --color-100: #{tint($color, 96%)};
+    --color-200: #{tint($color, 92%)};
+    --color-300: #{tint($color, 87%)};
+    --color-400: #{tint($color, 80%)};
+    --color-500: #{tint($color, 70%)};
+    --color-550: #{tint($color, 57%)};
+    --color-600: #{tint($color, 28%)};
+    --color-700: #{$color};
+    --color-750: #{shade($color, 7%)};
+    --color-800: #{shade($color, 22%)};
+    --color-900: #{shade($color, 70%)};
+    --color-text: #{color-contrast($color)};
+  }
+}
 
 // Anchors
-$anchor-color:          map-get($accent, 500) !default;
-$anchor-hover-color:    shade($anchor-color, 20%) !default;
+$anchor-color:          shade($accent, 7%) !default;
+$anchor-hover-color:    shade($accent, 22%) !default;
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -208,7 +136,7 @@ $grid-breakpoints: (
   md: 800px,
   lg: 1000px,
   xl: 1200px,
-  xxl: 1400px
+  ul: 1400px
 ) !default;
 
 $orders: (
@@ -228,7 +156,7 @@ $container-max-widths: (
   md: 750px,
   lg: 970px,
   xl: 1140px,
-  xxl: 1320px
+  ul: 1320px
 ) !default;
 
 // Gap
@@ -309,7 +237,7 @@ $box-shadows: (
 ) !default;
 
 // Borders
-$border-color:        map-get($greys, 200) !default;
+$border-color:        tint($grey, 70%) !default;
 $border-width:        1px !default;
 $border-widths: (
   1: 1px,
@@ -324,9 +252,9 @@ $borders: (
   0: 0
 ) !default;
 
-$border-radius-sm:    .5rem !default;
-$border-radius:       1rem !default;
-$border-radius-lg:    1.5rem !default;
+$border-radius-sm:    .25rem !default;
+$border-radius:       .5rem !default;
+$border-radius-lg:    1rem !default;
 $border-radius-pill:  50rem !default;
 $border-radia: (
   0: 0,
@@ -509,33 +437,14 @@ $overflows: (
 // Buttons
 $btn-box-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .15) !default;
 
-$btn-context-colored-text: (
-  default: (
-    500: #000
-  )
+$btn-semantic-color-hover: (
+  secondary: "accent",
+  danger: "red"
 ) !default;
 
-$btn-context-colored-hover: (
-  secondary: $accent,
-  danger: $reds
-) !default;
-
-$btn-context-colored: (
-  primary: $accent,
-  success: $greens
-) !default;
-
-$btn-colored: (
-  cyan: $cyans,
-  blue: $blues,
-  red: $reds,
-  lime: $limes,
-  green: $greens,
-  yellow: $yellows,
-  orange: $oranges,
-  pink: $pinks,
-  purple: $purples,
-  grey: $greys
+$btn-semantic-color: (
+  primary: "accent",
+  success: "green"
 ) !default;
 
 // Forms

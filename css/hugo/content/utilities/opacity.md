@@ -1,6 +1,7 @@
 ---
 title: Opacity
 description: Let something shine through.
+section: utilities
 ---
 
 ## Opacity

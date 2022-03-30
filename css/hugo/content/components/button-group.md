@@ -1,6 +1,7 @@
 ---
 title: Button group
 description: Group buttons together in a row to indicate their relation.
+section: components
 ---
 
 ## Simple group

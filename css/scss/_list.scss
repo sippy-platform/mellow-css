@@ -1,7 +1,7 @@
 .list {
   list-style: none;
   padding: 0;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius;
 
   > .list-item {
     position: relative;
@@ -11,10 +11,10 @@
     /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
     grid-template-areas: "item-action-s item-icon-s item-label item-icon-e item-action-e";
     padding: $spacer * .5 $spacer;
-    border-radius: $border-radius-sm;
+    border-radius: $border-radius;
 
     &.list-item-danger {
-      color: map-get($reds, 500) !important;
+      color: var(--red-700) !important;
     }
 
     &.list-item-action {
@@ -22,18 +22,18 @@
       color: inherit;
 
       &:hover:not(.disabled) {
-        background-color: map-get($greys, 100);
+        background-color: var(--grey-200);
       }
 
       &.list-item-danger {
         &:hover:not(.disabled) {
-          background-color: map-get($reds, 50);
+          background-color: var(--red-200);
         }
       }
     }
 
     &.disabled {
-      color: map-get($greys, 500);
+      color: var(--grey-700);
       pointer-events: none;
     }
 
@@ -63,25 +63,25 @@
     }
 
     &.active {
-      background-color: map-get($greys, 50);
+      background-color: var(--grey-100);
 
       &:hover:not(.disabled) {
-        background-color: map-get($greys, 100);
+        background-color: var(--grey-200);
       }
 
       &.list-item-danger {
-        background-color: map-get($reds, 50);
+        background-color: var(--red-100);
       }
 
       &::after {
         position: absolute;
         top: 8px;
-        left: -2px;
+        left: 0;
         height: calc(100% - 16px);
         width: 4px;
-        border-radius: $border-radius-sm;
+        border-radius: $border-radius;
         content: "";
-        background-color: map-get($accent, 500);
+        background-color: var(--accent-700);
       }
     }
   }

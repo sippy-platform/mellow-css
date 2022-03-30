@@ -1,6 +1,7 @@
 ---
 title: Container
 description: Containers provide a simple and important building block for your website to easily align your content properly.
+section: layout
 ---
 
 ## Function
@@ -31,7 +32,7 @@ A container provides a maximum width for your content to take at any given break
         <span>&ge;1200px</span>
       </th>
       <th scope="col">
-        Extra Extra Large<br>
+        Ultra Large<br>
         <span>&ge;1400px</span>
       </th>
     </tr>
@@ -83,7 +84,7 @@ A container provides a maximum width for your content to take at any given break
       <td>1320px</td>
     </tr>
     <tr>
-      <th scope="row"><code>.container-xxl</code></th>
+      <th scope="row"><code>.container-ul</code></th>
       <td class="text-grey">100%</td>
       <td class="text-grey">100%</td>
       <td class="text-grey">100%</td>

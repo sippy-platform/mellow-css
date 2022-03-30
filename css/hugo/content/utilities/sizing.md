@@ -1,6 +1,7 @@
 ---
 title: Sizing
 description: With the sizing utilities you can change the width and height of elements.
+section: utilities
 ---
 
 ## Relative to parent

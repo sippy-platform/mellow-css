@@ -1,6 +1,7 @@
 ---
 title: Grid
 description: The grid allows you to create layouts anyway you want.
+section: layout
 ---
 
 ## Grid columns
@@ -70,7 +71,7 @@ The grid also provides a set of responsive classes to change the column span dep
 Imagen you have a grid with cards for which the grids column count changes based on the width of the viewport. There are grid items in there that always have to span the full width of the grid. In this scenario the `col-[breakpoints]-full` class is what you're looking for. The demo below shows how you'd do this with and without the class to show is functionality.
 
 {{<example class="docs-preview-grid">}}
-<div class="grid grid-1 grid-sm-2 grid-md-3 grid-lg-4 grid-xl-5 grid-xxl-6">
+<div class="grid grid-1 grid-sm-2 grid-md-3 grid-lg-4 grid-xl-5 grid-ul-6">
   <div>Unit</div>
   <div>Unit</div>
   <div>Unit</div>
@@ -86,7 +87,7 @@ Imagen you have a grid with cards for which the grids column count changes based
   <div>Unit</div>
   <div>Unit</div>
   <div>Unit</div>
-  <div class="col-sm-2 col-md-3 col-lg-4 col-xl-5 col-xxl-6">Title</div>
+  <div class="col-sm-2 col-md-3 col-lg-4 col-xl-5 col-ul-6">Title</div>
   <div>Unit</div>
   <div>Unit</div>
 </div>

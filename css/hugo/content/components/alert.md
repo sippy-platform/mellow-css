@@ -1,6 +1,7 @@
 ---
 title: Alert
 description: Provide people with urgent information.
+section: components
 ---
 
 ## Example
@@ -16,35 +17,85 @@ A default alert provides a border to draw attention.
 Use the `alert-[color]` classes to add a color to the left border and links.
 
 {{<example>}}
-<div class="alert alert-red" role="alert">
+<div class="alert red" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
-<div class="alert alert-orange" role="alert">
+<div class="alert orange" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
-<div class="alert alert-yellow" role="alert">
+<div class="alert amber" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
-<div class="alert alert-lime" role="alert">
+<div class="alert yellow" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
-<div class="alert alert-green" role="alert">
+<div class="alert lime" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
-<div class="alert alert-cyan" role="alert">
+<div class="alert green" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
-<div class="alert alert-blue" role="alert">
+<div class="alert teal" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
-<div class="alert alert-purple" role="alert">
+<div class="alert cyan" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
-<div class="alert alert-pink" role="alert">
+<div class="alert blue" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
-<div class="alert alert-grey" role="alert">
+<div class="alert indigo" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
+<div class="alert violet" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
+<div class="alert purple" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
+<div class="alert pink" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
+<div class="alert rose" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
+<div class="alert brown" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
+<div class="alert grey" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
+{{</example>}}
+
+### Buttons, progress, etc.
+As a result of the use of CSS variable to style the colors, any element that responds to colors will automatically follow the alert color. You can still set them to another color if you want to.
+
+{{<example>}}
+<div class="alert rose" role="alert">
+  <div class="alert-message">
+    <p>Look at this alert message! <a href="#">Link</a> is color-matched.</p>
+    <progress class="progress mb-3" value="50" max="100">50%</progress>
+    <div class="btn-toolbar">
+      <div class="btn-group">
+        <button type="button" class="btn btn-color">Colored</button>
+        <button type="button" class="btn btn-hover">On hover</button>
+      </div>
+      <button type="button" class="btn btn-hover cyan">Override to cyan</button>
+    </div>
+  </div>
+</div>
+<div class="alert green" role="alert">
+  <div class="alert-message">
+    <p>Look at this alert message! <a href="#">Link</a> is color-matched.</p>
+    <progress class="progress mb-3" value="50" max="100">50%</progress>
+    <div class="btn-toolbar">
+      <div class="btn-group">
+        <button type="button" class="btn btn-color">Colored</button>
+        <button type="button" class="btn btn-hover">On hover</button>
+      </div>
+      <button type="button" class="btn btn-hover purple">Override to purple</button>
+    </div>
+  </div>
 </div>
 {{</example>}}
 
@@ -52,61 +103,97 @@ Use the `alert-[color]` classes to add a color to the left border and links.
 When applying a color modifier, titles with the `alert-title` class will also adapt to this color.
 
 {{<example>}}
-<div class="alert alert-red" role="alert">
+<div class="alert red" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
-<div class="alert alert-orange" role="alert">
+<div class="alert orange" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
-<div class="alert alert-yellow" role="alert">
+<div class="alert amber" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
-<div class="alert alert-lime" role="alert">
+<div class="alert yellow" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
-<div class="alert alert-green" role="alert">
+<div class="alert lime" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
-<div class="alert alert-cyan" role="alert">
+<div class="alert green" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
-<div class="alert alert-blue" role="alert">
+<div class="alert teal" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
-<div class="alert alert-purple" role="alert">
+<div class="alert cyan" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
-<div class="alert alert-pink" role="alert">
+<div class="alert blue" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
   </div>
 </div>
-<div class="alert alert-grey" role="alert">
+<div class="alert indigo" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
+<div class="alert violet" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
+<div class="alert purple" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
+<div class="alert pink" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
+<div class="alert rose" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
+<div class="alert brown" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
+<div class="alert grey" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.
@@ -118,7 +205,7 @@ When applying a color modifier, titles with the `alert-title` class will also ad
 Use the `alert-icon` class to plae an icon in your alerts.
 
 {{<example>}}
-<div class="alert alert-lime" role="alert">
+<div class="alert lime" role="alert">
   <div class="alert-icon">
     <i class="vi vi-circle-check"></i>
   </div>
@@ -126,7 +213,7 @@ Use the `alert-icon` class to plae an icon in your alerts.
     Success! How nice.
   </div>
 </div>
-<div class="alert alert-cyan" role="alert">
+<div class="alert cyan" role="alert">
   <div class="alert-icon">
     <i class="vi vi-circle-info"></i>
   </div>
@@ -134,7 +221,7 @@ Use the `alert-icon` class to plae an icon in your alerts.
     We'd like to tell you something.
   </div>
 </div>
-<div class="alert alert-orange" role="alert">
+<div class="alert orange" role="alert">
   <div class="alert-icon">
     <i class="vi vi-circle-exclamation"></i>
   </div>
@@ -142,7 +229,7 @@ Use the `alert-icon` class to plae an icon in your alerts.
     Careful! This may not do what you expect.
   </div>
 </div>
-<div class="alert alert-red" role="alert">
+<div class="alert red" role="alert">
   <div class="alert-icon">
     <i class="vi vi-circle-xmark"></i>
   </div>
@@ -162,7 +249,7 @@ Add the `alert-float` class to get an alert that's optimized for floating over c
 * Removes the borders from all sides but the left.
 
 {{<example class="docs-preview-img">}}
-<div class="alert alert-red alert-float position-absolute top-0 start-50 translate-center-x mt-3" role="alert">
+<div class="alert red alert-float position-absolute top-0 start-50 translate-center-x mt-3" role="alert">
   <div class="alert-icon">
     <i class="vi vi-circle-xmark"></i>
   </div>
@@ -178,7 +265,7 @@ The `alert-stack` class is a simple utility class that creates a 1 column wide g
 
 {{<example class="docs-preview-img" style="height: 250px">}}
 <div class="alert-stack position-absolute bottom-0 end-0 me-3 mb-3">
-  <div class="alert alert-red alert-float" role="alert">
+  <div class="alert red alert-float" role="alert">
     <div class="alert-icon">
       <i class="vi vi-circle-xmark"></i>
     </div>
@@ -187,7 +274,7 @@ The `alert-stack` class is a simple utility class that creates a 1 column wide g
       This alert is in a stack.
     </div>
   </div>
-  <div class="alert alert-lime alert-float" role="alert">
+  <div class="alert lime alert-float" role="alert">
     <div class="alert-icon">
       <i class="vi vi-circle-check"></i>
     </div>

@@ -1,6 +1,7 @@
 ---
 title: Text
 description: Change the way your text is displayed on your pages.
+section: utilities
 ---
 
 ## Alignment

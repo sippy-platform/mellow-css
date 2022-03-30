@@ -1,6 +1,7 @@
 ---
 title: Layout
 description: Alter the document layout with these utilities.
+section: utilities
 ---
 
 ## Float

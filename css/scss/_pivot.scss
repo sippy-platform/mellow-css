@@ -13,19 +13,19 @@
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius;
   background: none;
-  color: map-get($accent, 500);
+  color: var(--accent-700);
   border: none;
 
   &:hover,
   &:focus {
-    color: map-get($accent, 500);
+    color: var(--accent-700);
     text-decoration: none;
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px rgba(map-get($accent, 500), .4);
+    box-shadow: 0 0 0 3px var(--accent-500);
     outline: none;
   }
 
@@ -40,7 +40,7 @@
   .pivot-link.active,
   .show > .pivot-link {
     color: #fff;
-    background-color: map-get($accent, 500);
+    background-color: var(--accent-700);
   }
 }
 
@@ -58,13 +58,13 @@
         left: calc(50% - .75rem);
         width: 1.5rem;
         height: 3px;
-        background-color: map-get($accent, 500);
+        background-color: var(--accent-700);
         border-radius: 4px;
       }
     }
 
     &:focus {
-      box-shadow: 0 0 0 3px rgba(map-get($accent, 500), .4);
+      box-shadow: 0 0 0 3px var(--accent-500);
     }
   }
 }

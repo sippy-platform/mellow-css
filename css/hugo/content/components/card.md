@@ -1,6 +1,7 @@
 ---
 title: Card
 description: Cards can help you structure the content on your page.
+section: components
 ---
 
 Cards provide you with an simple to use container for your layouts with custom styling for headings, footer, titles, buttons and more.
@@ -139,7 +140,7 @@ Mellow includes modifier classes for images at the top and bottom of the card.
 Like all other components, the card component can be manipulated with the text alignment utilities.
 
 {{<example>}}
-<div class="grid grid-1 grid-md-2 grid-xxl-3">
+<div class="grid grid-1 grid-md-2 grid-ul-3">
   <div class="card text-start">
     <div class="card-body">
       <h5 class="card-title">Heading 5</h5>

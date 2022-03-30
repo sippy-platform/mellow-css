@@ -4,36 +4,36 @@
   list-style: none;
   margin-bottom: 0;
   border: $border-color solid 1px;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius;
 
   .page-link {
-    border-radius: $border-radius-sm;
+    border-radius: $border-radius;
     width: 34px;
     height: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    color: map-get($accent, 500);
+    color: var(--accent-700);
     text-decoration: none;
     padding: .25rem .75rem;
     transition: $base-transition;
 
     &:hover {
       z-index: 2;
-      background-color: map-get($greys, 100);
+      background-color: var(--grey-200);
     }
   }
 
   .page-item {
     &.active .page-link {
-      background-color: map-get($accent, 500);
+      background-color: var(--accent-700);
       color: #fff;
     }
 
     &.disabled .page-link {
       pointer-events: none;
-      color: map-get($greys, 400);
+      color: var(--grey-600);
     }
   }
 }

@@ -5,32 +5,23 @@
   margin-bottom: 1rem;
   border: 1px solid $border-color;
   border-left-width: 3px;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius;
+  border-left-color: var(--color-700, $border-color);
   align-items: center;
   justify-content: flex-start;
 }
 
-@each $color-name, $color in $palettes {
-  .alert-#{$color-name} {
-    border-left-color: map-get($color, 500) !important;
+.alert-title {
+  color: var(--color-800);
+  margin-bottom: $spacer * .25;
+  font-size: 1.1rem;
+}
 
-    .alert-title {
-      color: map-get($color, 800) !important;
-      margin-bottom: $spacer * .25;
-      font-size: 1.1rem;
-    }
+a {
+  color: var(--color-750);
 
-    a {
-      color: map-get($color, 700) !important;
-
-      &:hover {
-        color: map-get($color, 800) !important;
-      }
-    }
-
-    .alert-icon {
-      color: map-get($color, 500);
-    }
+  &:hover {
+    color: var(--color-800);
   }
 }
 
@@ -40,6 +31,7 @@
   flex-shrink: 0;
   align-self: flex-start;
   line-height: 1.5;
+  color: var(--color-800);
 }
 
 .alert-float {

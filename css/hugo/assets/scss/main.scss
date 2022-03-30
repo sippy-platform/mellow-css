@@ -34,8 +34,30 @@
   z-index: 1030;
 }
 
+.docs-navigation {
+  .list {
+    .list-item.list-item-action {
+      font-size: 87.5%;
+      border-radius: 0;
+      color: var(--grey-800) !important;
+
+      &:hover {
+        background-color: var(--accent-100) !important;
+        color: var(--accent-800) !important;
+      }
+
+      &:hover.active,
+      &.active {
+        background-color: var(--accent-200) !important;
+        color: var(--accent-800) !important;
+      }
+    }
+  }
+}
+
 .docs-footer {
   grid-area: footer;
+  border-top: 1px solid var(--grey-400);
 }
 
 .docs-main {
@@ -87,7 +109,7 @@
     grid-area: sidebar;
     position: sticky;
     top: 56px;
-    border-right: $border-width solid $border-color;
+    border-right: $border-width solid var(--grey-400);
     height: calc(100vh - 56px);
     z-index: 1020;
 
@@ -126,7 +148,7 @@
       font-size: .875rem;
 
       &:hover {
-        background-color: map-get($blues, 50);
+        background-color: var(--accent-200);
         color: inherit;
       }
 
@@ -180,6 +202,22 @@
       margin-top: 1rem;
     }
 
+    &.docs-colors-preview {
+      .color {
+        border-radius: $border-radius;
+        padding: 1rem;
+        background: var(--color-700);
+        color: var(--color-text);
+      }
+    }
+
+    &.docs-bg-colors-preview {
+      .grid > div {
+        border-radius: $border-radius;
+        padding: 1rem;
+      }
+    }
+
     &.docs-preview-sizing-rows {
       & > div {
         display: flex;
@@ -198,8 +236,8 @@
           flex-grow: 1;
 
           & > div {
-            background-color: map-get($accent, 500);
-            border-radius: $border-radius-sm;
+            background-color: var(--accent-700);
+            border-radius: $border-radius;
             padding-top: $spacer;
             padding-bottom: $spacer;
             color: #fff;
@@ -232,8 +270,8 @@
           width: 100%;
 
           & > div {
-            background-color: map-get($accent, 500);
-            border-radius: $border-radius-sm;
+            background-color: var(--accent-700);
+            border-radius: $border-radius;
             padding-left: $spacer;
             padding-right: $spacer;
             color: #fff;
@@ -301,7 +339,7 @@
         height: 100px;
         margin-right: 1rem;
         margin-bottom: 1rem;
-        background-color: map-get($greys, 50);
+        background-color: var(--grey-200);
 
         &:last-child {
           margin-right: 0;
@@ -310,23 +348,23 @@
 
       &.bordered {
         [class^="border"] {
-          border: 1px solid map-get($greys, 200);
+          border: 1px solid var(--grey-500);
         }
       }
     }
 
     &.docs-preview-position {
       .position-relative {
-        background: map-get($greys, 100);
+        background: var(--grey-200);
         height: 150px;
         width: 100%;
-        border-radius: $border-radius-sm;
+        border-radius: $border-radius;
       }
 
       .position-absolute {
         width: 32px;
         height: 32px;
-        border-radius: $border-radius-sm;
+        border-radius: $border-radius;
       }
     }
 
@@ -352,15 +390,6 @@
       line-height: 1.5;
       font-family: $font-family-mono;
       white-space: pre-wrap;
-    }
-  }
-}
-
-@each $palette-name, $palette in $palettes {
-  @each $palette-code, $color in $palette {
-    .bg-#{$palette-name}-#{$palette-code} {
-      background-color: #{$color};
-      color: color-contrast($color);
     }
   }
 }
