@@ -26,7 +26,7 @@ $brown:               #a57041;
 $grey:                #6b707a !default;
 
 $accent:              $blue;
-$light:               tint($accent, 92%);
+$light:               tint($grey, 92%);
 $muted:               $grey;
 $dark:                shade($grey, 70%);
 
