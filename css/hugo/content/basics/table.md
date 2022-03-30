@@ -353,3 +353,76 @@ Create a denser table by adding the `table-sm` class.
   </tbody>
 </table>
 {{</example>}}
+
+## Borders
+### Bordered table
+Show all borders by using the `table-bordered` class.
+
+{{<example>}}
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Project</th>
+      <th scope="col">Codename</th>
+      <th scope="col">Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Icons</td>
+      <td>Valkyrie</td>
+      <td>v0.14.2</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>CSS</td>
+      <td>Mellow CSS</td>
+      <td>v0.1.0</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>React components</td>
+      <td>Mellow UI</td>
+      <td>v0.1.0</td>
+    </tr>
+  </tbody>
+</table>
+{{</example>}}
+
+### No borders table
+Show no borders by using the `table-borderless` class.
+
+{{<example>}}
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Project</th>
+      <th scope="col">Codename</th>
+      <th scope="col">Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Icons</td>
+      <td>Valkyrie</td>
+      <td>v0.14.2</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>CSS</td>
+      <td>Mellow CSS</td>
+      <td>v0.1.0</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>React components</td>
+      <td>Mellow UI</td>
+      <td>v0.1.0</td>
+    </tr>
+  </tbody>
+</table>
+{{</example>}}
