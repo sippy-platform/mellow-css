@@ -29,9 +29,7 @@ Sometimes, there is a string in a flex layout that must be truncated but is loca
     <p class="text-muted text-small m-0">Lover</p>
   </div>
   <div class="bg-light rounded-pill ms-3 flex-shrink-0 d-flex justify-content-center align-items-center" style="width: 32px; height: 32px;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="currentColor" style="width: 20px; height: 16px;">
-      <path fill-rule="evenodd" d="M9.25 8.75v5.5a.75.75 0 0 0 1.5 0v-5.5h5.5a.75.75 0 0 0 0-1.5h-5.5v-5.5a.75.75 0 0 0-1.5 0v5.5h-5.5a.75.75 0 0 0 0 1.5h5.5Z"/>
-    </svg>
+    <i class="vi vi-plus"></i>
   </div>
 </div>
 {{</example>}}
