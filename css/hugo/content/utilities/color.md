@@ -20,6 +20,7 @@ description: Add some color to your text.
 <p class="text-purple">.text-purple</p>
 <p class="text-pink">.text-pink</p>
 <p class="text-rose">.text-rose</p>
+<p class="text-brown">.text-brown</p>
 <p class="text-grey">.text-grey</p>
 <p class="text-light bg-dark">.text-light</p>
 <p class="text-dark">.text-dark</p>

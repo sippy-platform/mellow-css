@@ -21,6 +21,8 @@ $violet:              #8055f7 !default;
 $purple:              #c455f7 !default;
 $pink:                #ec4899 !default;
 $rose:                #fd194b !default;
+$brown:               #795548 !default;
+$brown:               #a57041;
 $grey:                #6b707a !default;
 
 $accent:              $blue;
@@ -43,6 +45,7 @@ $colors: (
   purple: $purple,
   pink: $pink,
   rose: $rose,
+  brown: $brown,
   grey: $grey
 ) !default;
 

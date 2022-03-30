@@ -58,6 +58,9 @@ Use the `alert-[color]` classes to add a color to the left border and links.
 <div class="alert rose" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
+<div class="alert brown" role="alert">
+  <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
+</div>
 <div class="alert grey" role="alert">
   <div class="alert-message">Look at this alert message! <a href="#">Link</a> is color-matched.</div>
 </div>
@@ -178,6 +181,12 @@ When applying a color modifier, titles with the `alert-title` class will also ad
   </div>
 </div>
 <div class="alert rose" role="alert">
+  <div class="alert-message">
+    <h4 class="alert-title">The alert title</h4>
+    Look at this alert message! <a href="#">Link</a> is color-matched.
+  </div>
+</div>
+<div class="alert brown" role="alert">
   <div class="alert-message">
     <h4 class="alert-title">The alert title</h4>
     Look at this alert message! <a href="#">Link</a> is color-matched.

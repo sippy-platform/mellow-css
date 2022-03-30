@@ -26,25 +26,26 @@ Every `border-*` class has also an inverse version that removes the border. All 
 
 ## Color
 {{<example>}}
-<div class="border border-red p-3 mb-2">.border-red</div>
-<div class="border border-orange p-3 mb-2">.border-orange</div>
-<div class="border border-amber p-3 mb-2">.border-amber</div>
-<div class="border border-yellow p-3 mb-2">.border-yellow</div>
-<div class="border border-lime p-3 mb-2">.border-lime</div>
-<div class="border border-green p-3 mb-2">.border-green</div>
-<div class="border border-teal p-3 mb-2">.border-teal</div>
-<div class="border border-cyan p-3 mb-2">.border-cyan</div>
-<div class="border border-blue p-3 mb-2">.border-blue</div>
-<div class="border border-indigo p-3 mb-2">.border-indigo</div>
-<div class="border border-violet p-3 mb-2">.border-violet</div>
-<div class="border border-purple p-3 mb-2">.border-purple</div>
-<div class="border border-pink p-3 mb-2">.border-pink</div>
-<div class="border border-rose p-3 mb-2">.border-rose</div>
-<div class="border border-light p-3 mb-2">.border-light</div>
-<div class="border border-grey p-3 mb-2">.border-grey</div>
-<div class="border border-dark p-3 mb-2">.border-dark</div>
-<div class="border border-white p-3 mb-2">.border-white</div>
-<div class="border border-reset p-3">.border-reset</div>
+<div class="border border-2 border-red p-3 mb-2">.border-red</div>
+<div class="border border-2 border-orange p-3 mb-2">.border-orange</div>
+<div class="border border-2 border-amber p-3 mb-2">.border-amber</div>
+<div class="border border-2 border-yellow p-3 mb-2">.border-yellow</div>
+<div class="border border-2 border-lime p-3 mb-2">.border-lime</div>
+<div class="border border-2 border-green p-3 mb-2">.border-green</div>
+<div class="border border-2 border-teal p-3 mb-2">.border-teal</div>
+<div class="border border-2 border-cyan p-3 mb-2">.border-cyan</div>
+<div class="border border-2 border-blue p-3 mb-2">.border-blue</div>
+<div class="border border-2 border-indigo p-3 mb-2">.border-indigo</div>
+<div class="border border-2 border-violet p-3 mb-2">.border-violet</div>
+<div class="border border-2 border-purple p-3 mb-2">.border-purple</div>
+<div class="border border-2 border-pink p-3 mb-2">.border-pink</div>
+<div class="border border-2 border-rose p-3 mb-2">.border-rose</div>
+<div class="border border-2 border-brown p-3 mb-2">.border-brown</div>
+<div class="border border-2 border-light p-3 mb-2">.border-light</div>
+<div class="border border-2 border-grey p-3 mb-2">.border-grey</div>
+<div class="border border-2 border-dark p-3 mb-2">.border-dark</div>
+<div class="border border-2 border-white p-3 mb-2">.border-white</div>
+<div class="border border-2 border-reset p-3">.border-reset</div>
 {{</example>}}
 
 ## Width

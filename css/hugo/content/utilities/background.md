@@ -21,10 +21,11 @@ description: Add some color to your background.
   <div class="bg-purple text-white">.bg-purple</div>
   <div class="bg-pink text-white">.bg-pink</div>
   <div class="bg-rose text-white">.bg-rose</div>
+  <div class="bg-brown text-white">.bg-brown</div>
+  <div class="bg-transparent">.bg-transparent</div>
   <div class="bg-white">.bg-white</div>
   <div class="bg-light">.bg-light</div>
   <div class="bg-grey text-white">.bg-grey</div>
   <div class="bg-dark text-white">.bg-dark</div>
-  <div class="bg-transparent">.bg-transparent</div>
 </div>
 {{</example>}}

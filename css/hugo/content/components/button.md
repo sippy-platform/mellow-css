@@ -40,6 +40,7 @@ Colored buttons take on the color of the class you assign to it. These are in ge
 <button type="button" class="btn btn-color purple">Purple</button>
 <button type="button" class="btn btn-color pink">Pink</button>
 <button type="button" class="btn btn-color rose">Rose</button>
+<button type="button" class="btn btn-color brown">Brown</button>
 <button type="button" class="btn btn-color grey">Grey</button>
 {{</example>}}
 
@@ -61,6 +62,7 @@ colored on hover buttons are button with colored text on a grey background that 
 <button type="button" class="btn btn-hover purple">Purple</button>
 <button type="button" class="btn btn-hover pink">Pink</button>
 <button type="button" class="btn btn-hover rose">Rose</button>
+<button type="button" class="btn btn-hover brown">Brown</button>
 <button type="button" class="btn btn-hover grey">Grey</button>
 {{</example>}}
 

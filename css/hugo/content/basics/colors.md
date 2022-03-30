@@ -22,6 +22,7 @@ The main color set has `text-*` and `bg-*` classes available in our [text color]
   <div class="color purple">Purple</div>
   <div class="color pink">Pink</div>
   <div class="color rose">Rose</div>
+  <div class="color brown">Brown</div>
   <div class="color grey">Grey</div>
 </div>
 {{</example>}}
@@ -76,21 +77,22 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
   <div class="w-4 flex-shrink-0">
     <div class="grid grid-1 gap-1">
       <span style="height: 21px"></span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Red</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Orange</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Amber</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Yellow</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Lime</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Green</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Teal</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Cyan</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Blue</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Indigo</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Violet</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Purple</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Pink</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Rose</span>
-      <span style="height: 48px" class="fw-bold d-flex align-items-center me-2">Grey</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-red">Red</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-orange">Orange</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-amber">Amber</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-yellow">Yellow</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-lime">Lime</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-green">Green</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-teal">Teal</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-cyan">Cyan</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-blue">Blue</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-indigo">Indigo</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-violet">Violet</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-purple">Purple</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-pink">Pink</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-rose">Rose</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-brown">Brown</span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center text-grey">Grey</span>
     </div>
   </div>
   <div class="grid grid-1 gap-1">
@@ -291,6 +293,20 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
     </div>
     <div class="grid grid-12 gap-1 rose">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 brown">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
