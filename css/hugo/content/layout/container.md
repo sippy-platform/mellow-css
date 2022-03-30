@@ -31,7 +31,7 @@ A container provides a maximum width for your content to take at any given break
         <span>&ge;1200px</span>
       </th>
       <th scope="col">
-        Extra Extra Large<br>
+        Ultra Large<br>
         <span>&ge;1400px</span>
       </th>
     </tr>
