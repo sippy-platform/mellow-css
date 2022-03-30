@@ -7,14 +7,47 @@ section: layout
 ## Breakpoints
 Breakpoints determine at which points Mellow changes the behavior of any breakpoint-related class.
 
-| Breakpoint | Suffix | Pixels |
-| ---------- | ------ | ------ |
-| Extra Small | - | < 600px |
-| Small | `sm` | >= 600px |
-| Medium | `md` | >= 800px |
-| Large | `lg` | >= 1000px |
-| Extra Large | `xl` | >= 1200px |
-| Ultra Large | `ul` | >= 1400px |
+<table class="table">
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Class</th>
+      <th>Pixels</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Extra Small</td>
+      <td>-</td>
+      <td>&lt; 600px</td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td><code>sm</code></td>
+      <td>&ge; 600px</td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td><code>md</code></td>
+      <td>&ge; 800px</td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td><code>lg</code></td>
+      <td>&ge; 1000px</td>
+    </tr>
+    <tr>
+      <td>Extra Large</td>
+      <td><code>xl</code></td>
+      <td>&ge; 1200px</td>
+    </tr>
+    <tr>
+      <td>Ultra Large</td>
+      <td><code>xxl</code></td>
+      <td>&ge; 1400px</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Usage in documentation
 To indicate that a class has support for these responsive breakpoints, we'll often refer to them as `[breakpoint]` as a placeholder for the suffix. Note that the extra small breakpoint does not have a suffic. As a result, when we say that you can use `flex-[breakpoint]-shrink-[0|1]` this would result in the following classes:

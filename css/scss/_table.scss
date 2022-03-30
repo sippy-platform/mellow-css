@@ -1,0 +1,91 @@
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable selector-max-universal */
+.table {
+  width: 100%;
+  vertical-align: top;
+  border-color: var(--accent-700);
+
+  > :not(caption) > * > * {
+    padding: $spacer * .5;
+    background-color: var(--color-200);
+    border-bottom-width: $border-width;
+    border-color: var(--color-500, $border-color);
+  }
+
+  > tbody:last-child > *:last-child > * {
+    border-bottom-width: 0;
+  }
+
+  > tbody {
+    vertical-align: inherit;
+  }
+
+  > thead {
+    vertical-align: bottom;
+
+    > * > * {
+      font-weight: 600;
+      border-bottom-width: 2px !important;
+      border-bottom-color: var(--color-550, var(--grey-700)) !important;
+    }
+  }
+
+  &.table-sm > :not(caption) > * > * {
+    padding: $spacer * .25 $spacer * .5;
+  }
+}
+
+.light {
+  --color-200: var(--grey-100);
+  --color-300: var(--grey-200);
+  --color-500: var(--grey-700);
+}
+
+.dark {
+  --color-200: var(--grey-700);
+  --color-300: var(--grey-800);
+  --color-400: var(--grey-900);
+  --color-500: var(--grey-600);
+
+  color: #fff;
+}
+
+.table-striped {
+  > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--color-300, var(--grey-100));
+  }
+}
+
+.table-hover {
+  > tbody > tr:hover > * {
+    background-color: var(--color-400, var(--grey-200));
+  }
+}
+
+.table-bordered {
+  > :not(caption) > * {
+    border-color: var(--color-500, $border-color);
+    border-width: $border-width 0;
+
+    > * {
+      border-color: var(--color-500, $border-color);
+      border-width: 0 $border-width;
+    }
+  }
+}
+
+.table-borderless {
+  > :not(caption) > * > * {
+    border-bottom-width: 0;
+  }
+
+  > :not(:first-child) {
+    border-top-width: 0;
+  }
+
+  > thead {
+    > * > * {
+      border-bottom-width: 0 !important;
+    }
+  }
+}
