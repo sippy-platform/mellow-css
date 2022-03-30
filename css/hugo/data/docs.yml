@@ -5,8 +5,9 @@
 
 - title: Basics
   pages:
-    - title: Typography
     - title: Colors
+    - title: Typography
+    - title: Table
 
 - title: Layout
   pages:

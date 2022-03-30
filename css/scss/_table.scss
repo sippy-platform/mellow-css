@@ -1,0 +1,61 @@
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable selector-max-universal */
+.table {
+  width: 100%;
+  vertical-align: top;
+  border-color: var(--accent-700);
+
+  > :not(caption) > * > * {
+    padding: $spacer * .5;
+    background-color: var(--color-200);
+    border-bottom: $border-width solid $border-color;
+    border-bottom-color: var(--color-500, $border-color);
+  }
+
+  > tbody:last-child > *:last-child > * {
+    border-bottom-width: 0;
+  }
+
+  > tbody {
+    vertical-align: inherit;
+  }
+
+  > thead {
+    vertical-align: bottom;
+
+    > * > * {
+      border-bottom-width: 2px;
+    }
+  }
+
+  &.table-sm > :not(caption) > * > * {
+    padding: $spacer * .25 $spacer * .5;
+  }
+}
+
+.light {
+  --color-200: var(--grey-100);
+  --color-300: var(--grey-200);
+  --color-500: var(--grey-700);
+}
+
+.dark {
+  --color-200: var(--grey-700);
+  --color-300: var(--grey-800);
+  --color-400: var(--grey-900);
+  --color-500: var(--grey-600);
+
+  color: #fff;
+}
+
+.table-striped {
+  > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--color-300, var(--grey-100));
+  }
+}
+
+.table-hover {
+  > tbody > tr:hover > * {
+    background-color: var(--color-400, var(--grey-200));
+  }
+}
