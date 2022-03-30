@@ -7,8 +7,8 @@ description: Shadow is an important concept in UI design. Use these classes to c
 
 Creating depth gives a clear sense of hierarchy. In light interfaces, this is best done with shadows. Mellow provides a set of 6 classes to alter the elevation given to any given element.
 
-{{<example>}}
-<div class="grid grid-2 grid-sm-3 grid-lg-6 gap-4 p-4 bg-light">
+{{<example class="bg-light">}}
+<div class="grid grid-2 grid-sm-3 grid-lg-6 gap-4">
   <div class="shadow-none bg-white p-3">Level 0</div>
   <div class="shadow-1 bg-white p-3">Level 1</div>
   <div class="shadow-2 bg-white p-3">Level 2</div>

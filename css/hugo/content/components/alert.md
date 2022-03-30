@@ -67,7 +67,7 @@ Use the `alert-[color]` classes to add a color to the left border and links.
 As a result of the use of CSS variable to style the colors, any element that responds to colors will automatically follow the alert color. You can still set them to another color if you want to.
 
 {{<example>}}
-<div class="alert red" role="alert">
+<div class="alert rose" role="alert">
   <div class="alert-message">
     <p>Look at this alert message! <a href="#">Link</a> is color-matched.</p>
     <progress class="progress mb-3" value="50" max="100">50%</progress>
@@ -80,7 +80,7 @@ As a result of the use of CSS variable to style the colors, any element that res
     </div>
   </div>
 </div>
-<div class="alert lime" role="alert">
+<div class="alert green" role="alert">
   <div class="alert-message">
     <p>Look at this alert message! <a href="#">Link</a> is color-matched.</p>
     <progress class="progress mb-3" value="50" max="100">50%</progress>
