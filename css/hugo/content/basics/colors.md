@@ -35,7 +35,7 @@ $colors: (
   red: $red,
   orange: $orange,
   amber: $amber,
-  yellow: $yellow,
+  "yellow": $yellow,
   lime: $lime,
   green: $green,
   teal: $teal,
@@ -46,6 +46,7 @@ $colors: (
   purple: $purple,
   pink: $pink,
   rose: $rose,
+  brown: $brown,
   grey: $grey
 ) !default;
 {{</example>}}
@@ -341,11 +342,37 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
 ## Using the color system
 Each color palette consists out of 12 colors with incremental steps of 50 or 100. These colors all have a functional use.
 
-| Color | Use |
-| ----- | --- |
-| 50, 100 | Use as background. |
-| 200, 300, 400 | Use as component backgrounds  (default, hover, active). |
-| 500, 550, 600 | Use as borders and seperators. |
-| 700, 750 | Use as solid backgrounds. |
-| 800, 900 | Usage for text. |
-| text | Use for text on 700 and 750. |
+<table class="table">
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50, 100</td>
+      <td>Use as background.</td>
+    </tr>
+    <tr>
+      <td>200, 300, 400</td>
+      <td>Use as component backgrounds  (default, hover, active).</td>
+    </tr>
+    <tr>
+      <td>500, 550, 600</td>
+      <td>Use as borders and seperators.</td>
+    </tr>
+    <tr>
+      <td>700, 750</td>
+      <td>Use as solid backgrounds.</td>
+    </tr>
+    <tr>
+      <td>800, 900</td>
+      <td>Usage for text.</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>Use for text on 700 and 750.</td>
+    </tr>
+  </tbody>
+</table>
