@@ -41,6 +41,7 @@ Like other components, the color of a label can be changed with ease:
 <span class="label purple">Purple</span>
 <span class="label pink">Pink</span>
 <span class="label rose">Rose</span>
+<span class="label brown">Brown</span>
 <span class="label grey">Grey</span>
 {{</example>}}
 
@@ -60,6 +61,7 @@ Like other components, the color of a label can be changed with ease:
 <span class="label label-filled purple">Purple</span>
 <span class="label label-filled pink">Pink</span>
 <span class="label label-filled rose">Rose</span>
+<span class="label label-filled brown">Brown</span>
 <span class="label label-filled grey">Grey</span>
 {{</example>}}
 
@@ -67,21 +69,21 @@ Like other components, the color of a label can be changed with ease:
 Badges scale with the text of their parent.
 
 {{<example>}}
-<h1>Heading 1 <span class="label label-filled blue">Label</span></h1>
-<h2>Heading 2 <span class="label label-filled green">Label</span></h2>
-<h3>Heading 3 <span class="label label-filled yellow">Label</span></h3>
-<h4>Heading 4 <span class="label label-filled orange">Label</span></h4>
-<h5>Heading 5 <span class="label label-filled red">Label</span></h5>
-<h6>Heading 6 <span class="label label-filled purple">Label</span></h6>
+<h1>Heading 1 <span class="label rose">Label</span></h1>
+<h2>Heading 2 <span class="label red">Label</span></h2>
+<h3>Heading 3 <span class="label orange">Label</span></h3>
+<h4>Heading 4 <span class="label amber">Label</span></h4>
+<h5>Heading 5 <span class="label yellow">Label</span></h5>
+<h6>Heading 6 <span class="label brown">Label</span></h6>
 {{</example>}}
 
 {{<example>}}
-<h1>Heading 1 <span class="label label-filled blue rounded-pill">Label</span></h1>
-<h2>Heading 2 <span class="label label-filled green rounded-pill">Label</span></h2>
-<h3>Heading 3 <span class="label label-filled yellow rounded-pill">Label</span></h3>
-<h4>Heading 4 <span class="label label-filled orange rounded-pill">Label</span></h4>
-<h5>Heading 5 <span class="label label-filled red rounded-pill">Label</span></h5>
-<h6>Heading 6 <span class="label label-filled purple rounded-pill">Label</span></h6>
+<h1>Heading 1 <span class="label purple rounded-pill">Label</span></h1>
+<h2>Heading 2 <span class="label violet rounded-pill">Label</span></h2>
+<h3>Heading 3 <span class="label indigo rounded-pill">Label</span></h3>
+<h4>Heading 4 <span class="label blue rounded-pill">Label</span></h4>
+<h5>Heading 5 <span class="label cyan rounded-pill">Label</span></h5>
+<h6>Heading 6 <span class="label teal rounded-pill">Label</span></h6>
 {{</example>}}
 
 ## Usage
@@ -115,12 +117,12 @@ When using a label in a list, you can set it in any of the available locations, 
   <a href="#" class="list-item list-item-action">
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-icon-e">
-      <span class="label label-filled blue">4</span>
+      <span class="label blue">4</span>
     </span>
   </a>
   <a href="#" class="list-item list-item-action">
     <span class="list-item-icon-s">
-      <span class="label label-filled blue">4</span>
+      <span class="label blue">4</span>
     </span>
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-icon-e">
