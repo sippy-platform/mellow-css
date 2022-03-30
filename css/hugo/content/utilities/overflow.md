@@ -1,6 +1,7 @@
 ---
 title: Overflow
 description: Use these utilities to manage how your content should overflow.
+section: utilities
 ---
 
 ## Overflow

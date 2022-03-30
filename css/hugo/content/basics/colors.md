@@ -1,6 +1,7 @@
 ---
 title: Colors
 description: Mellow has a built-in extensive color palette.
+section: basics
 ---
 
 ## Main colors

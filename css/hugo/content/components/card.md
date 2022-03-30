@@ -1,6 +1,7 @@
 ---
 title: Card
 description: Cards can help you structure the content on your page.
+section: components
 ---
 
 Cards provide you with an simple to use container for your layouts with custom styling for headings, footer, titles, buttons and more.

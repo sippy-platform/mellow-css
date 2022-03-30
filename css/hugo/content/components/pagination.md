@@ -1,6 +1,7 @@
 ---
 title: Pagination
 description: Show a series of pages for easy navigation in the pagination component.
+section: components
 ---
 
 ## Usage

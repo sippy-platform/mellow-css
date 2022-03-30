@@ -1,6 +1,7 @@
 ---
 title: Color
 description: Add some color to your text.
+section: utilities
 ---
 
 ## Text color

@@ -1,6 +1,7 @@
 ---
 title: Typography
 description: Get started with the basics of typography for body text, headings, various text decorations, and lists.
+section: basics
 ---
 
 ## Font families

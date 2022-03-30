@@ -1,6 +1,7 @@
 ---
 title: Breakpoints
 description: All you need to know about the breakpoints in Mellow.
+section: layout
 ---
 
 ## Breakpoints

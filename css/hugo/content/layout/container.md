@@ -1,6 +1,7 @@
 ---
 title: Container
 description: Containers provide a simple and important building block for your website to easily align your content properly.
+section: layout
 ---
 
 ## Function

@@ -1,6 +1,7 @@
 ---
 title: Background
 description: Add some color to your background.
+section: utilities
 ---
 
 ## Background color

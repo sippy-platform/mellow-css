@@ -1,6 +1,7 @@
 ---
 title: Display
 description: With the display-utilities, you can easily change the display behavior of an element, with responsive variants included.
+section: utilities
 ---
 
 ## Notation

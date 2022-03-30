@@ -1,6 +1,7 @@
 ---
 title: Grid
 description: The grid allows you to create layouts anyway you want.
+section: layout
 ---
 
 ## Grid columns

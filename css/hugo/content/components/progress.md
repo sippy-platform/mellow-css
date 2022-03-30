@@ -1,6 +1,7 @@
 ---
 title: Progress
 description: Show the progress of an action with the progress bar.
+section: components
 ---
 
 ## About

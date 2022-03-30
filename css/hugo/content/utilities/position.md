@@ -1,6 +1,7 @@
 ---
 title: Position
 description: Change the position of elements with these utilities.
+section: utilities
 ---
 
 ## Position

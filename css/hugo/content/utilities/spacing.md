@@ -1,6 +1,7 @@
 ---
 title: Spacing
 description: The spacing utilities give you fine-grained control over the margin and padding of your elements in a responsive manner.
+section: utilities
 ---
 
 ## Margin and padding

@@ -1,6 +1,7 @@
 ---
 title: Button
 description: Make buttons and anchors look great with button styles.
+section: components
 ---
 
 Buttons are used to indication clickable surface that perform actions like sending a form, navigating through the app, etc. The button style should be applied to buttons or anchors.

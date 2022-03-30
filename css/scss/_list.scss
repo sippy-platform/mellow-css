@@ -76,7 +76,7 @@
       &::after {
         position: absolute;
         top: 8px;
-        left: -2px;
+        left: 0;
         height: calc(100% - 16px);
         width: 4px;
         border-radius: $border-radius;

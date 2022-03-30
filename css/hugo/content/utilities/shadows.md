@@ -1,6 +1,7 @@
 ---
 title: Shadows
 description: Shadow is an important concept in UI design. Use these classes to create a visual hierarchy in your apps.
+section: utilities
 ---
 
 ## Shadows

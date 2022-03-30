@@ -1,6 +1,7 @@
 ---
 title: Borders
 description: Add, subtract, and manipulate the look of borders of your elements.
+section: utilities
 ---
 
 ## Borders

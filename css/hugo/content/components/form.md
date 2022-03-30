@@ -1,6 +1,7 @@
 ---
 title: Form
 description: Forms are an extensive part of Mellow with various controls, layouts, and connected components.
+section: components
 ---
 
 

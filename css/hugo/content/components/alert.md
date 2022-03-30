@@ -1,6 +1,7 @@
 ---
 title: Alert
 description: Provide people with urgent information.
+section: components
 ---
 
 ## Example

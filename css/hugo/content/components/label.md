@@ -1,6 +1,7 @@
 ---
 title: Labels
 description: Highlight meta data on your pages.
+section: components
 ---
 
 ## Introduction

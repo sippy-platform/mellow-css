@@ -1,6 +1,7 @@
 ---
 title: Text truncation
 description: Truncate text when it gets to long with ellipsis.
+section: utilities
 ---
 
 Sometimes you don't want a long string to keep going. That is where the `text-truncate` class comes in. It stops you text from going further and ends it with ellipsis instead.

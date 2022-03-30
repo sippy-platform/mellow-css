@@ -45,6 +45,12 @@
         background-color: var(--accent-100) !important;
         color: var(--accent-800) !important;
       }
+
+      &:hover.active,
+      &.active {
+        background-color: var(--accent-200) !important;
+        color: var(--accent-800) !important;
+      }
     }
   }
 }

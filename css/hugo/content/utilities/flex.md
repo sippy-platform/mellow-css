@@ -1,6 +1,7 @@
 ---
 title: Flex
 description: CSS Flex gives you a lot of powerful tools to quickly make UI layouts. All flex classes have responsive modifiers.
+section: utilities
 ---
 
 ## Using flex
