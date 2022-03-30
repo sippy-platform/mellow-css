@@ -11,8 +11,14 @@
   }
 }
 
-.label-filled {
+.label-solid {
   border-color: var(--color-700, $border-color);
   background-color: var(--color-700, $border-color);
   color: var(--color-text, color-contrast($border-color));
+}
+
+.label-plated {
+  border-color: var(--color-300, var(--grey-300));
+  background-color: var(--color-300, var(--grey-300));
+  color: var(--color-800, var(--grey-800));
 }

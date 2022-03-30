@@ -8,11 +8,8 @@ Labels appear as slightly smaller fonts inside a colored or bordered surface.
 
 {{<example>}}
 <span class="label">default label</span>
-{{</example>}}
-
-### Filled
-{{<example>}}
-<span class="label label-filled">default label</span>
+<span class="label label-plated">plated label</span>
+<span class="label label-solid">solid label</span>
 {{</example>}}
 
 ### Pill
@@ -20,7 +17,8 @@ By using the `rounded-pill` class you can make a rounded variant. The rounded va
 
 {{<example>}}
 <span class="label rounded-pill">default label</span>
-<span class="label label-filled rounded-pill">default label</span>
+<span class="label label-plated rounded-pill">plated label</span>
+<span class="label label-solid rounded-pill">solid label</span>
 {{</example>}}
 
 ## Colors
@@ -45,24 +43,44 @@ Like other components, the color of a label can be changed with ease:
 <span class="label grey">Grey</span>
 {{</example>}}
 
-### Filled variant
+### Plated variant
 {{<example>}}
-<span class="label label-filled red">Red</span>
-<span class="label label-filled orange">Orange</span>
-<span class="label label-filled amber">Amber</span>
-<span class="label label-filled yellow">Yellow</span>
-<span class="label label-filled lime">Lime</span>
-<span class="label label-filled green">Green</span>
-<span class="label label-filled teal">Teal</span>
-<span class="label label-filled cyan">Cyan</span>
-<span class="label label-filled blue">Blue</span>
-<span class="label label-filled indigo">Indigo</span>
-<span class="label label-filled violet">Violet</span>
-<span class="label label-filled purple">Purple</span>
-<span class="label label-filled pink">Pink</span>
-<span class="label label-filled rose">Rose</span>
-<span class="label label-filled brown">Brown</span>
-<span class="label label-filled grey">Grey</span>
+<span class="label label-plated red">Red</span>
+<span class="label label-plated orange">Orange</span>
+<span class="label label-plated amber">Amber</span>
+<span class="label label-plated yellow">Yellow</span>
+<span class="label label-plated lime">Lime</span>
+<span class="label label-plated green">Green</span>
+<span class="label label-plated teal">Teal</span>
+<span class="label label-plated cyan">Cyan</span>
+<span class="label label-plated blue">Blue</span>
+<span class="label label-plated indigo">Indigo</span>
+<span class="label label-plated violet">Violet</span>
+<span class="label label-plated purple">Purple</span>
+<span class="label label-plated pink">Pink</span>
+<span class="label label-plated rose">Rose</span>
+<span class="label label-plated brown">Brown</span>
+<span class="label label-plated grey">Grey</span>
+{{</example>}}
+
+### Solid variant
+{{<example>}}
+<span class="label label-solid red">Red</span>
+<span class="label label-solid orange">Orange</span>
+<span class="label label-solid amber">Amber</span>
+<span class="label label-solid yellow">Yellow</span>
+<span class="label label-solid lime">Lime</span>
+<span class="label label-solid green">Green</span>
+<span class="label label-solid teal">Teal</span>
+<span class="label label-solid cyan">Cyan</span>
+<span class="label label-solid blue">Blue</span>
+<span class="label label-solid indigo">Indigo</span>
+<span class="label label-solid violet">Violet</span>
+<span class="label label-solid purple">Purple</span>
+<span class="label label-solid pink">Pink</span>
+<span class="label label-solid rose">Rose</span>
+<span class="label label-solid brown">Brown</span>
+<span class="label label-solid grey">Grey</span>
 {{</example>}}
 
 ## Sizing
@@ -90,7 +108,7 @@ Badges scale with the text of their parent.
 ### Buttons
 {{<example>}}
 <button type="button" class="btn btn-primary">
-  Registrations <span class="label label-filled red">4</span>
+  Registrations <span class="label label-solid red">4</span>
 </button>
 {{</example>}}
 
@@ -98,7 +116,7 @@ Badges scale with the text of their parent.
 {{<example>}}
 <button type="button" class="btn btn-primary position-relative">
   Mails
-  <span class="position-absolute top-0 start-100 translate-center label label-filled red rounded-pill">
+  <span class="position-absolute top-0 start-100 translate-center label label-solid red rounded-pill">
     4
   </span>
 </button>
@@ -106,18 +124,19 @@ Badges scale with the text of their parent.
 
 ### List
 When using a label in a list, you can set it in any of the available locations, but we recommend using the `list-item-icon-[s|e]` class.
+
 {{<example>}}
 <div class="list list-dividers-full border">
   <a href="#" class="list-item list-item-action">
     <span class="list-item-icon-s">
-      <span class="label label-filled blue">4</span>
+      <span class="label label-solid blue">4</span>
     </span>
     <span class="list-item-label">This is a list item</span>
   </a>
   <a href="#" class="list-item list-item-action">
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-icon-e">
-      <span class="label blue">4</span>
+      <span class="label label-plated blue">4</span>
     </span>
   </a>
   <a href="#" class="list-item list-item-action">
@@ -126,7 +145,7 @@ When using a label in a list, you can set it in any of the available locations, 
     </span>
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-icon-e">
-      <span class="label label-filled blue">4</span>
+      <span class="label label-solid blue">4</span>
     </span>
   </a>
 </div>
