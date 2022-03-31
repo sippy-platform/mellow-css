@@ -1,0 +1,19 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item {
+  & + & {
+    padding-left: $spacer * .5;
+
+    &::before {
+      padding-right: $spacer * .5;
+      height: 16px;
+      content: "/";
+    }
+  }
+}
