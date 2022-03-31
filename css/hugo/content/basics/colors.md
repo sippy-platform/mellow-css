@@ -5,7 +5,7 @@ section: basics
 ---
 
 ## Main colors
-The main color set has `text-*` and `bg-*` classes available in our [text color](/utilities/color) and [background](/utilities/background) utilities, as well as variants for other components (like [alerts](/components/alert)) and urilities (like [borders](/utilities/borders)).
+The main color set has `text-*` and `bg-*` classes available in our [text color](/utilities/color) and [background](/utilities/background) utilities, as well as variants for other components (like [alerts](/components/alert) and [progress](/components/progress)) and urilities (like [borders](/utilities/borders)).
 
 {{<example class="docs-colors-preview" show_code="false">}}
 <div class="grid grid-2 grid-sm-4">
