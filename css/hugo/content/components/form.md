@@ -4,7 +4,6 @@ description: Forms are an extensive part of Mellow with various controls, layout
 section: components
 ---
 
-
 ## Inputs
 ### Text
 Make your input fields look nice with the `input` class.
