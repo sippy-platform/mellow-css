@@ -1,9 +1,40 @@
+.dropdown {
+  display: inline-block;
+  position: relative;
+
+  summary {
+    cursor: pointer;
+  }
+
+  &[open] summary::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    cursor: default;
+  }
+}
+
 .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
   min-width: 240px;
   padding: .25rem;
   border: $border-width solid $border-color;
   border-radius: $border-radius;
   list-style: none;
+  display: block;
+  background: rgba(#fff, .95);
+  box-shadow: map-get($box-shadows, 1);
+
+  @supports (backdrop-filter: blur(15px) saturate(350%)) {
+    background: rgba(#fff, .85);
+    backdrop-filter: blur(15px) saturate(250%);
+  }
 }
 
 .dropdown-item {
