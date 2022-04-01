@@ -21,7 +21,8 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 100;
+  margin-top: .375rem;
+  z-index: 1080;
   min-width: 240px;
   padding: .25rem;
   border: $border-width solid $border-color;
@@ -35,6 +36,31 @@
     background: rgba(#fff, .85);
     backdrop-filter: blur(15px) saturate(250%);
   }
+}
+
+.dropdown-menu-t {
+  top: auto;
+  bottom: 100%;
+  left: 0;
+  margin-top: 0;
+  margin-bottom: .375rem;
+}
+
+.dropdown-menu-e {
+  top: 0;
+  left: 100%;
+  width: auto;
+  margin-top: 0;
+  margin-left: .375rem;
+}
+
+.dropdown-menu-s {
+  top: 0;
+  left: auto;
+  right: 100%;
+  width: auto;
+  margin-top: 0;
+  margin-right: .375rem;
 }
 
 .dropdown-item {

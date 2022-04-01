@@ -38,3 +38,42 @@ Using the `btn` class is entirely optional. You can also just leave the styling 
 {{</example>}}
 
 If you want, you can style the summary element, or anything within it, however you want.
+
+## Position
+You can make the dropdown menu appear above, left, or right of the toggle with the `dropdown-menu-[t|e|s]` classes.
+
+{{<example>}}
+<details class="dropdown">
+  <summary class="btn btn-color red">
+    Right <i class="vi vi-angle-right"></i>
+  </summary>
+  
+  <div class="dropdown-menu dropdown-menu-e">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+<details class="dropdown">
+  <summary class="btn btn-color orange">
+    Top <i class="vi vi-angle-up"></i>
+  </summary>
+  
+  <div class="dropdown-menu dropdown-menu-t">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+<details class="dropdown">
+  <summary class="btn btn-color amber">
+    Left <i class="vi vi-angle-left"></i>
+  </summary>
+  
+  <div class="dropdown-menu dropdown-menu-s">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+{{</example>}}
