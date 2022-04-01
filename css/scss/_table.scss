@@ -33,21 +33,21 @@
   &.table-sm > :not(caption) > * > * {
     padding: $spacer * .25 $spacer * .5;
   }
-}
 
-.light {
-  --color-200: var(--grey-100);
-  --color-300: var(--grey-200);
-  --color-500: var(--grey-700);
-}
+  &.light {
+    --color-200: var(--grey-100);
+    --color-300: var(--grey-200);
+    --color-500: var(--grey-700);
+  }
 
-.dark {
-  --color-200: var(--grey-700);
-  --color-300: var(--grey-800);
-  --color-400: var(--grey-900);
-  --color-500: var(--grey-600);
+  &.dark {
+    --color-200: var(--grey-700);
+    --color-300: var(--grey-800);
+    --color-400: var(--grey-900);
+    --color-500: var(--grey-600);
 
-  color: #fff;
+    color: #fff;
+  }
 }
 
 .table-striped {
