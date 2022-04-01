@@ -4,6 +4,11 @@
 
   summary {
     cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
   }
 
   &[open] summary::before {

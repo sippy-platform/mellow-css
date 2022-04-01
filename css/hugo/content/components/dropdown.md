@@ -8,8 +8,8 @@ section: components
 The dropdown in Mellow is based on the `details` element. As a result, it uses no Javascript and provides extensive customization options.
 
 {{<example>}}
-<details class="dropdown">
-  <summary class="btn btn-default">
+<details class="dropdown btn btn-default">
+  <summary>
     Profile <i class="vi vi-angle-down"></i>
   </summary>
   
@@ -43,8 +43,8 @@ If you want, you can style the summary element, or anything within it, however y
 You can make the dropdown menu appear above, left, or right of the toggle with the `dropdown-menu-[t|e|s]` classes.
 
 {{<example>}}
-<details class="dropdown">
-  <summary class="btn btn-color red">
+<details class="dropdown btn btn-color red">
+  <summary>
     Right <i class="vi vi-angle-right"></i>
   </summary>
   
@@ -54,8 +54,8 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown">
-  <summary class="btn btn-color orange">
+<details class="dropdown btn btn-color orange">
+  <summary>
     Top <i class="vi vi-angle-up"></i>
   </summary>
   
@@ -65,8 +65,8 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown">
-  <summary class="btn btn-color amber">
+<details class="dropdown btn btn-color amber">
+  <summary>
     Left <i class="vi vi-angle-left"></i>
   </summary>
   
@@ -76,4 +76,24 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
+{{</example>}}
+
+## Groups
+The dropdown in Mellow is based on the `details` element. As a result, it uses no Javascript and provides extensive customization options.
+
+{{<example>}}
+<div class="btn-group">
+  <button type="button" class="btn btn-default">Default</button>
+  <details class="dropdown btn btn-default">
+    <summary>
+      <i class="vi vi-angle-down"></i>
+    </summary>
+    
+    <div class="dropdown-menu">
+      <a class="dropdown-item active" href="#">Profile</a>
+      <a class="dropdown-item" href="#">Settings</a>
+      <a class="dropdown-item" href="#">Sign out</a>
+    </div>
+  </details>
+</div>
 {{</example>}}
