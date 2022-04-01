@@ -1,7 +1,32 @@
 .dropdown-menu {
-  position: absolute;
   min-width: 240px;
-  padding: 0;
-  border: $border-size solid $border-color;
+  padding: .25rem;
+  border: $border-width solid $border-color;
   border-radius: $border-radius;
+  list-style: none;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  padding: .375rem .5rem;
+  transition: $base-transition;
+  display: block;
+  border-radius: $border-radius-sm;
+  outline: none;
+
+  &:not(:first-child) {
+    margin-top: .125rem;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: var(--accent-700);
+    color: var(--accent-text);
+  }
+
+  &:focus {
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--accent-550);
+  }
 }
