@@ -45,6 +45,28 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
 {{<example>}}
 <details class="dropdown btn btn-color red">
   <summary>
+    Bottom left <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+<details class="dropdown btn btn-color orange">
+  <summary>
+    Bottom right <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu dropdown-menu-right">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+<details class="dropdown btn btn-color amber">
+  <summary>
     Right <i class="vi vi-angle-right"></i>
   </summary>
   
@@ -54,9 +76,9 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color orange">
+<details class="dropdown btn btn-color yellow">
   <summary>
-    Top <i class="vi vi-angle-up"></i>
+    Top left <i class="vi vi-angle-up"></i>
   </summary>
   
   <div class="dropdown-menu dropdown-menu-t">
@@ -65,7 +87,18 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color amber">
+<details class="dropdown btn btn-color lime">
+  <summary>
+    Top right <i class="vi vi-angle-up"></i>
+  </summary>
+  
+  <div class="dropdown-menu dropdown-menu-t dropdown-menu-right">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+<details class="dropdown btn btn-color green">
   <summary>
     Left <i class="vi vi-angle-left"></i>
   </summary>
