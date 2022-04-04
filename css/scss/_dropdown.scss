@@ -1,0 +1,121 @@
+.dropdown {
+  display: inline-block;
+  position: relative;
+
+  summary {
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &[open] > summary::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    cursor: default;
+    z-index: 20;
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  margin-top: .375rem;
+  z-index: 1040;
+  min-width: 240px;
+  padding: .25rem;
+  border-radius: $border-radius;
+  font-weight: initial;
+  list-style: none;
+  background: rgba(#fff, .95);
+  box-shadow: map-get($box-shadows, 1), map-get($box-shadows, 3);
+
+  @supports (backdrop-filter: blur(15px) saturate(350%)) {
+    background: rgba(#fff, .85);
+    backdrop-filter: blur(15px) saturate(250%);
+  }
+}
+
+.dropdown-menu-t {
+  top: auto;
+  bottom: 100%;
+  left: 0;
+  margin-top: 0;
+  margin-bottom: .375rem;
+}
+
+.dropdown-menu-e {
+  top: 0;
+  left: 100%;
+  width: auto;
+  margin-top: 0;
+  margin-left: .375rem;
+}
+
+.dropdown-menu-s {
+  top: 0;
+  left: auto;
+  right: 100%;
+  width: auto;
+  margin-top: 0;
+  margin-right: .375rem;
+}
+
+.dropdown-menu-align-e {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  padding: .25rem .5rem;
+  transition: $fast-transition;
+  display: block;
+  border-radius: $border-radius-sm;
+  outline: none;
+  color: $body-text;
+
+  &:not(:first-child) {
+    margin-top: .125rem;
+  }
+
+  &[open],
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: var(--accent-700);
+    color: var(--accent-text);
+  }
+
+  &:focus {
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--accent-550);
+  }
+}
+
+.dropdown-header {
+  padding: .25rem .5rem;
+  font-size: .875em;
+  font-weight: 600;
+  color: $muted;
+}
+
+.dropdown-divider {
+  border-top: $border-width solid $border-color;
+
+  &:not(:first-child) {
+    margin-top: .25rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: .25rem;
+  }
+}

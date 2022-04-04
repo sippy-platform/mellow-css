@@ -30,6 +30,8 @@ $light:               tint($grey, 92%);
 $muted:               $grey;
 $dark:                shade($grey, 70%);
 
+$body-text:           #000;
+
 $colors: (
   red: $red,
   orange: $orange,
@@ -451,6 +453,7 @@ $btn-semantic-color: (
 $form-box-shadow-inset: inset 0 1px 0 rgba(0, 0, 0, .075) !default;
 
 // Transitions
+$fast-transition: all .1s ease-in-out;
 $base-transition: all .2s ease-in-out;
 
 // Navigation
