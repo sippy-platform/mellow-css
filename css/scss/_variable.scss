@@ -60,6 +60,7 @@ $colors: (
   --grey-500: #{tint($grey, 70%)};
   --grey-550: #{tint($grey, 57%)};
   --grey-600: #{tint($grey, 28%)};
+  --grey-600a: #{rgba($grey, .3)};
   --grey-700: #{$grey};
   --grey-750: #{shade($grey, 7%)};
   --grey-800: #{shade($grey, 22%)};
@@ -73,6 +74,7 @@ $colors: (
   --red-500: #{tint($red, 70%)};
   --red-550: #{tint($red, 57%)};
   --red-600: #{tint($red, 28%)};
+  --red-600a: #{rgba($red, .3)};
   --red-700: #{$red};
   --red-750: #{shade($red, 7%)};
   --red-800: #{shade($red, 22%)};
@@ -86,6 +88,7 @@ $colors: (
   --accent-500: #{tint($accent, 70%)};
   --accent-550: #{tint($accent, 57%)};
   --accent-600: #{tint($accent, 28%)};
+  --accent-600a: #{rgba($accent, .3)};
   --accent-700: #{$accent};
   --accent-750: #{shade($accent, 7%)};
   --accent-800: #{shade($accent, 22%)};
@@ -102,6 +105,7 @@ $colors: (
   --color-500: #{tint($accent, 70%)};
   --color-550: #{tint($accent, 57%)};
   --color-600: #{tint($accent, 28%)};
+  --color-600a: #{rgba($accent, .3)};
   --color-700: #{$accent};
   --color-750: #{shade($accent, 7%)};
   --color-800: #{shade($accent, 22%)};
@@ -119,6 +123,7 @@ $colors: (
     --color-500: #{tint($color, 70%)};
     --color-550: #{tint($color, 57%)};
     --color-600: #{tint($color, 28%)};
+    --color-600a: #{rgba($color, .3)};
     --color-700: #{$color};
     --color-750: #{shade($color, 7%)};
     --color-800: #{shade($color, 22%)};
