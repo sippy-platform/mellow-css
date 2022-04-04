@@ -129,14 +129,25 @@ When adding the `active` class, Mellow will show an active indicator and backgro
 </div>
 {{</example>}}
 
-### Danger
-If an action requires more attention from the user because it is destructive (or any other reason) you can add the `list-item-danger` class to it.
+## Color
+Like many other controls, lists support the color classes. By default, a color class will only affect the active marker.
+
+{{<example>}}
+<div class="list green">
+  <a href="#" class="list-item list-item-action active"><span class="list-item-label">Inherit the green list color</span></a>
+  <a href="#" class="list-item list-item-action active"><span class="list-item-label">Also inherits the green list color</span></a>
+  <a href="#" class="list-item list-item-action active orange"><span class="list-item-label">Overwrites with orange</span></a>
+</div>
+{{</example>}}
+
+### `list-item-colored`
+If an action requires more attention from the user then the `list-item-colored` class can be used. This will color the text, but also changes the background color on hover and active state.
 
 {{<example>}}
 <div class="list">
   <a href="#" class="list-item list-item-action"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action list-item-danger"><span class="list-item-label">Delete everything</span></a>
+  <a href="#" class="list-item list-item-action list-item-colored green active"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item list-item-action list-item-colored red"><span class="list-item-label">Delete everything</span></a>
 </div>
 {{</example>}}
 
