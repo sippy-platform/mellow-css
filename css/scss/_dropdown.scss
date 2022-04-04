@@ -19,6 +19,7 @@
     left: 0;
     content: "";
     cursor: default;
+    z-index: 20;
   }
 }
 
@@ -28,7 +29,7 @@
   top: 100%;
   left: 0;
   margin-top: .375rem;
-  z-index: 1080;
+  z-index: 1040;
   min-width: 240px;
   padding: .25rem;
   border-radius: $border-radius;
@@ -68,7 +69,7 @@
   margin-right: .375rem;
 }
 
-.dropdown-menu-right {
+.dropdown-menu-align-e {
   left: auto;
   right: 0;
 }

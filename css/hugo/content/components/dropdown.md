@@ -45,7 +45,7 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
 {{<example>}}
 <details class="dropdown btn btn-color red">
   <summary>
-    Bottom left <i class="vi vi-angle-down"></i>
+    Bottom <i class="vi vi-angle-down"></i>
   </summary>
   
   <div class="dropdown-menu">
@@ -56,17 +56,6 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
 </details>
 <details class="dropdown btn btn-color orange">
   <summary>
-    Bottom right <i class="vi vi-angle-down"></i>
-  </summary>
-  
-  <div class="dropdown-menu dropdown-menu-right">
-    <a class="dropdown-item" href="#">Profile</a>
-    <a class="dropdown-item" href="#">Settings</a>
-    <a class="dropdown-item" href="#">Sign out</a>
-  </div>
-</details>
-<details class="dropdown btn btn-color amber">
-  <summary>
     Right <i class="vi vi-angle-right"></i>
   </summary>
   
@@ -76,9 +65,9 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color yellow">
+<details class="dropdown btn btn-color amber">
   <summary>
-    Top left <i class="vi vi-angle-up"></i>
+    Top <i class="vi vi-angle-up"></i>
   </summary>
   
   <div class="dropdown-menu dropdown-menu-t">
@@ -87,18 +76,7 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color lime">
-  <summary>
-    Top right <i class="vi vi-angle-up"></i>
-  </summary>
-  
-  <div class="dropdown-menu dropdown-menu-t dropdown-menu-right">
-    <a class="dropdown-item" href="#">Profile</a>
-    <a class="dropdown-item" href="#">Settings</a>
-    <a class="dropdown-item" href="#">Sign out</a>
-  </div>
-</details>
-<details class="dropdown btn btn-color green">
+<details class="dropdown btn btn-color yellow">
   <summary>
     Left <i class="vi vi-angle-left"></i>
   </summary>
@@ -111,8 +89,58 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
 </details>
 {{</example>}}
 
+## Alignment
+You can align the dropdown menu to the left or right of the toggle with the `dropdown-menu-align-e` class.
+
+{{<example>}}
+<details class="dropdown btn btn-color lime">
+  <summary>
+    Bottom default <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+<details class="dropdown btn btn-color green">
+  <summary>
+    Bottom end <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu dropdown-menu-align-e">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+<details class="dropdown btn btn-color teal">
+  <summary>
+    Top default <i class="vi vi-angle-up"></i>
+  </summary>
+  
+  <div class="dropdown-menu dropdown-menu-t">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+<details class="dropdown btn btn-color cyan">
+  <summary>
+    Top end <i class="vi vi-angle-up"></i>
+  </summary>
+  
+  <div class="dropdown-menu dropdown-menu-t dropdown-menu-align-e">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+{{</example>}}
+
 ## Groups
-The dropdown in Mellow is based on the `details` element. As a result, it uses no Javascript and provides extensive customization options.
+As a result of how the dropdown can be customized, adding it to a `btn-group` is as simple as simply putting it inside of one:
 
 {{<example>}}
 <div class="btn-group">
