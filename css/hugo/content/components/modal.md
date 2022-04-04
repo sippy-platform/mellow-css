@@ -17,9 +17,9 @@ Mellow's modal uses the `dialog` element, this native HTML element is supported 
     <p>Hello world!</p>
     <p>This modal can be closed with the <kb>esc</kb> button.</p>
   </div>
-  <div class="modal-footer">
+  <form method="dialog" class="modal-footer">
     <button value="cancel" class="btn btn-danger"><i class="vi vi-xmark"></i> Close</button>
-  </div>
+  </form>
 </dialog>
 <button class="btn btn-default" onclick="window.exampleDialog.showModal();">Open modal</button>
 {{</example>}}
