@@ -11,7 +11,7 @@
     }
   }
 
-  &[open] summary::before {
+  &[open] > summary::before {
     position: fixed;
     top: 0;
     right: 0;
@@ -87,6 +87,7 @@
     margin-top: .125rem;
   }
 
+  &[open],
   &:hover,
   &:focus,
   &:active,

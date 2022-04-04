@@ -131,6 +131,33 @@ The dropdown in Mellow is based on the `details` element. As a result, it uses n
 </div>
 {{</example>}}
 
+## Submenus
+Due to how the dropdown menu is implemented in Mellow, as a side effect, it is easy to create a submenu.
+
+{{<example>}}
+<details class="dropdown btn btn-color blue">
+  <summary>
+    Main menu <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#"><i class="vi vi-circle-user"></i> Profile</a>
+    <details class="dropdown dropdown-item">
+      <summary class="d-flex justify-content-between align-items-center">
+        <span><i class="vi vi-gear"></i> Settings</span> <i class="vi vi-angle-right"></i>
+      </summary>
+      
+      <div class="dropdown-menu dropdown-menu-e mt-n1">
+        <a class="dropdown-item" href="#"><i class="vi vi-swatchbook"></i> Theme</a>
+        <a class="dropdown-item" href="#"><i class="vi vi-shield-keyhole"></i> Privacy</a>
+        <a class="dropdown-item" href="#"><i class="vi vi-arrow-right-to-bracket"></i> Account sessions</a>
+      </div>
+    </details>
+    <a class="dropdown-item" href="#"><i class="vi vi-arrow-right-from-bracket"></i> Sign out</a>
+  </div>
+</details>
+{{</example>}}
+
 ## Menu items
 ### Headers
 Add headers with the `dropdown-header` class to label sections in the menu.
