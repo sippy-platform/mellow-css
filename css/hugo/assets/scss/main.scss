@@ -379,6 +379,14 @@
         transform: translate(0);
       }
     }
+
+    &.docs-preview-dropdown-menu {
+      .dropdown-menu {
+        position: relative;
+        margin-top: 0;
+        z-index: initial;
+      }
+    }
   }
 
   .highlight {

@@ -130,3 +130,28 @@ The dropdown in Mellow is based on the `details` element. As a result, it uses n
   </details>
 </div>
 {{</example>}}
+
+## Menu items
+### Headers
+Add headers with the `dropdown-header` class to label sections in the menu.
+
+{{<example class="docs-preview-dropdown-menu">}}
+<div class="dropdown-menu">
+  <div class="dropdown-header">Dropdown header</div>
+  <a class="dropdown-item" href="#">Profile</a>
+  <a class="dropdown-item" href="#">Settings</a>
+  <a class="dropdown-item" href="#">Sign out</a>
+</div>
+{{</example>}}
+
+### Divider
+Split groups in the dropdown menu with the `dropdown-divider` class.
+
+{{<example class="docs-preview-dropdown-menu">}}
+<div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Profile</a>
+  <a class="dropdown-item" href="#">Settings</a>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">Sign out</a>
+</div>
+{{</example>}}
