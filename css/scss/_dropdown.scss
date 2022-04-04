@@ -31,12 +31,11 @@
   z-index: 1080;
   min-width: 240px;
   padding: .25rem;
-  border: $border-width solid $border-color;
   border-radius: $border-radius;
   font-weight: initial;
   list-style: none;
   background: rgba(#fff, .95);
-  box-shadow: map-get($box-shadows, 1);
+  box-shadow: map-get($box-shadows, 1), map-get($box-shadows, 3);
 
   @supports (backdrop-filter: blur(15px) saturate(350%)) {
     background: rgba(#fff, .85);
