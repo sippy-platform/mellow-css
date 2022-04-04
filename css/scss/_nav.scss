@@ -68,12 +68,12 @@
   border: none;
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--accent-600a);
+    box-shadow: 0 0 0 3px var(--accent-500a);
   }
 
   &:hover {
     background-color: rgba($dark, .1);
-    border-color: var(--accent-700);
+    border-color: var(--accent-600);
   }
 }
 
@@ -83,7 +83,7 @@
   display: inline-block;
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--accent-600a);
+    box-shadow: 0 0 0 3px var(--accent-500a);
     outline: none;
   }
 
@@ -180,7 +180,7 @@
         width: 360px;
         max-width: 100%;
         border-right: $border-width solid $border-color;
-        transform: translateX(-100%);
+        transform: translateX(-50%);
       }
 
       &.nav-collapse-end {

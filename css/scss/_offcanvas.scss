@@ -36,7 +36,7 @@
         width: 360px;
         max-width: 100%;
         border-right: $border-width solid $border-color;
-        transform: translateX(-100%);
+        transform: translateX(-50%);
       }
 
       &.offcanvas-end {
@@ -99,7 +99,7 @@
   border: none;
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--accent-600a);
+    box-shadow: 0 0 0 3px var(--accent-500a);
   }
 
   &:hover {

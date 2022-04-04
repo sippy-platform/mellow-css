@@ -63,10 +63,8 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
     --color-300: #{tint($color, 87%)};
     --color-400: #{tint($color, 80%)};
     --color-500: #{tint($color, 70%)};
-    --color-550: #{tint($color, 57%)};
     --color-600: #{tint($color, 28%)};
     --color-700: #{$color};
-    --color-750: #{shade($color, 7%)};
     --color-800: #{shade($color, 22%)};
     --color-900: #{shade($color, 70%)};
     --color-text: #{color-contrast($color)};
@@ -98,243 +96,226 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
     </div>
   </div>
   <div class="grid grid-1 gap-1">
-    <div class="grid grid-12 gap-1">
+    <div class="grid grid-11 gap-1">
       <span class="text-center">50</span>
       <span class="text-center">100</span>
       <span class="text-center">200</span>
       <span class="text-center">300</span>
       <span class="text-center">400</span>
       <span class="text-center">500</span>
-      <span class="text-center">550</span>
       <span class="text-center">600</span>
       <span class="text-center">700</span>
-      <span class="text-center">750</span>
       <span class="text-center">800</span>
       <span class="text-center">900</span>
+      <span class="text-center">600a</span>
     </div>
-    <div class="grid grid-12 gap-1 red">
+    <div class="grid grid-11 gap-1 red">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 orange">
+    <div class="grid grid-11 gap-1 orange">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 amber">
+    <div class="grid grid-11 gap-1 amber">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 yellow">
+    <div class="grid grid-11 gap-1 yellow">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 lime">
+    <div class="grid grid-11 gap-1 lime">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 green">
+    <div class="grid grid-11 gap-1 green">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 teal">
+    <div class="grid grid-11 gap-1 teal">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 cyan">
+    <div class="grid grid-11 gap-1 cyan">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 blue">
+    <div class="grid grid-11 gap-1 blue">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 indigo">
+    <div class="grid grid-11 gap-1 indigo">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 violet">
+    <div class="grid grid-11 gap-1 violet">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 purple">
+    <div class="grid grid-11 gap-1 purple">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 pink">
+    <div class="grid grid-11 gap-1 pink">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 rose">
+    <div class="grid grid-11 gap-1 rose">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 brown">
+    <div class="grid grid-11 gap-1 brown">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
-    <div class="grid grid-12 gap-1 grey">
+    <div class="grid grid-11 gap-1 grey">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-550)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
-      <div class="py-4 rounded-sm" style="background: var(--color-750)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
     </div>
   </div>
 </div>
@@ -351,19 +332,19 @@ Each color palette consists out of 12 colors with incremental steps of 50 or 100
   </thead>
   <tbody>
     <tr>
-      <td>50, 100</td>
+      <td>50</td>
       <td>Use as background.</td>
     </tr>
     <tr>
-      <td>200, 300, 400</td>
+      <td>100, 200, 300</td>
       <td>Use as component backgrounds  (default, hover, active).</td>
     </tr>
     <tr>
-      <td>500, 550, 600</td>
+      <td>400, 500</td>
       <td>Use as borders and seperators.</td>
     </tr>
     <tr>
-      <td>700, 750</td>
+      <td>600, 700</td>
       <td>Use as solid backgrounds.</td>
     </tr>
     <tr>
@@ -372,7 +353,11 @@ Each color palette consists out of 12 colors with incremental steps of 50 or 100
     </tr>
     <tr>
       <td>text</td>
-      <td>Use for text on 700 and 750.</td>
+      <td>Use for text on 600 and 700.</td>
+    </tr>
+    <tr>
+      <td>600a</td>
+      <td>Use focus rings.</td>
     </tr>
   </tbody>
 </table>

@@ -1,7 +1,7 @@
 .label {
   border-radius: $border-radius;
   font-size: .85em;
-  border: $border-width solid var(--color-600, $border-color);
+  border: $border-width solid var(--color-500, $border-color);
   font-weight: 600;
   padding: 0 $spacer * .375;
   color: var(--color-800, color-contrast($border-color));
@@ -12,13 +12,13 @@
 }
 
 .label-solid {
-  border-color: var(--color-700, $border-color);
-  background-color: var(--color-700, $border-color);
+  border-color: var(--color-600, $border-color);
+  background-color: var(--color-600, $border-color);
   color: var(--color-text, color-contrast($border-color));
 }
 
 .label-plated {
-  border-color: var(--color-300, var(--grey-300));
-  background-color: var(--color-300, var(--grey-300));
+  border-color: var(--color-200, var(--grey-200));
+  background-color: var(--color-200, var(--grey-200));
   color: var(--color-800, var(--grey-800));
 }

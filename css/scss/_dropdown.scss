@@ -92,12 +92,12 @@
   &:focus,
   &:active,
   &.active {
-    background-color: var(--accent-700);
+    background-color: var(--accent-600);
     color: var(--accent-text);
   }
 
   &:focus {
-    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--accent-600a);
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--accent-500a);
   }
 }
 
