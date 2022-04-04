@@ -140,7 +140,7 @@ Like many other controls, lists support the color classes. By default, a color c
 </div>
 {{</example>}}
 
-### `list-item-colored`
+### Full color
 If an action requires more attention from the user then the `list-item-colored` class can be used. This will color the text, but also changes the background color on hover and active state.
 
 {{<example>}}
@@ -158,12 +158,12 @@ Use the `list-sm` and `list-lg` classes to change the size of the list. These cl
 <div class="list list-sm list-dividers mb-3">
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
   <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
-  <div class="list-item list-item-danger"><span class="list-item-label">Delete everything</span></div>
+  <div class="list-item list-item-colored red"><span class="list-item-label">Delete everything</span></div>
 </div>
 <div class="list list-lg list-dividers">
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
   <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
-  <div class="list-item list-item-danger"><span class="list-item-label">Delete everything</span></div>
+  <div class="list-item list-item-colored red"><span class="list-item-label">Delete everything</span></div>
 </div>
 {{</example>}}
 
