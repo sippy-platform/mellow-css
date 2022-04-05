@@ -217,14 +217,14 @@ List items can have actions like checkboxes. These can be positioned either at t
 <div class="list">
   <div class="list-item">
     <span class="list-item-action-s">
-      <input type="checkbox" value="1" id="listItemTarget1">
+      <input type="checkbox" class="input-check" value="1" id="listItemTarget1">
     </span>
     <label class="list-item-label" for="listItemTarget1">This is a list item</label>
   </div>
   <div class="list-item">
     <label class="list-item-label" for="listItemTarget2">This is a list item</label>
     <span class="list-item-action-e">
-      <input type="checkbox" value="1" id="listItemTarget2">
+      <input type="checkbox" class="input-check" value="1" id="listItemTarget2">
     </span>
   </div>
 </div>
@@ -237,14 +237,14 @@ You can increase the size of the click target by making the entire `list-item` t
 <div class="list">
   <label class="list-item list-item-action">
     <span class="list-item-action-s">
-      <input type="checkbox" value="1">
+      <input type="checkbox" class="input-check" value="1">
     </span>
     <span class="list-item-label">This is a list item</span>
   </label>
   <label class="list-item list-item-action">
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-action-e">
-      <input type="checkbox" value="1">
+      <input type="checkbox" class="input-check" value="1">
     </span>
   </label>
 </div>
@@ -256,10 +256,10 @@ Note that, since this is a grid, the order of the contents of a `list-item` does
 Of course, all of these various options can be combined into more complex layouts.
 
 {{<example>}}
-<div class="list list-lg border list-dividers">
+<div class="list list-lg border list-dividers cyan">
   <label class="list-item list-item-action">
     <span class="list-item-action-s">
-      <input type="radio" name="listItemRadio" value="1">
+      <input type="radio" class="input-check" name="listItemRadio" value="1">
     </span>
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
@@ -272,7 +272,7 @@ Of course, all of these various options can be combined into more complex layout
   </label>
   <label class="list-item list-item-action active">
     <span class="list-item-action-s">
-      <input type="radio" name="listItemRadio" value="1" checked>
+      <input type="radio" class="input-check" name="listItemRadio" value="1" checked>
     </span>
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
@@ -285,10 +285,9 @@ Of course, all of these various options can be combined into more complex layout
       <i class="vi vi-house"></i>
     </span>
   </label>
-  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
   <label class="list-item list-item-action disabled">
     <span class="list-item-action-s">
-      <input type="radio" name="listItemRadio" value="1" disabled>
+      <input type="radio" class="input-check" name="listItemRadio" value="1" disabled>
     </span>
     <span class="list-item-icon-s">
       <i class="vi vi-lock"></i>
@@ -301,5 +300,12 @@ Of course, all of these various options can be combined into more complex layout
       <i class="vi vi-house"></i>
     </span>
   </label>
+  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
+  <a class="list-item list-item-action list-item-colored red" href="#">
+    <span class="list-item-icon-s">
+      <i class="vi vi-trash-can"></i>
+    </span>
+    <span class="list-item-label">Remove all</span>
+  </a>
 </div>
 {{</example>}}
