@@ -210,3 +210,37 @@ Split groups in the dropdown menu with the `dropdown-divider` class.
   <a class="dropdown-item" href="#">Sign out</a>
 </div>
 {{</example>}}
+
+## Colors
+Like many other Mellow components, the dropdown menu responds to the color classes but defaults to your accent color.
+
+{{<example>}}
+<details class="dropdown btn btn-default">
+  <summary>
+    Profile <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu violet">
+    <a class="dropdown-item active" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+{{</example>}}
+
+You can also color only a single item:
+
+{{<example>}}
+<details class="dropdown btn btn-default">
+  <summary>
+    Profile <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu indigo">
+    <a class="dropdown-item active" href="#"><i class="vi vi-circle-user"></i> Profile</a>
+    <a class="dropdown-item" href="#"><i class="vi vi-gear"></i> Settings</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item rose" href="#"><i class="vi vi-arrow-right-from-bracket"></i> Sign out</a>
+  </div>
+</details>
+{{</example>}}
