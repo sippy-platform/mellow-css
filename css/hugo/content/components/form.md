@@ -281,3 +281,51 @@ Buttons can also be put into an `input-group` in any position you can imagen.
   <a href="#" class="btn btn-success">Button</a>
 </div>
 {{</example>}}
+
+## Color
+Like many other components, forms respond to color classes.
+
+{{<example>}}
+<form class="grid gap-3 pink">
+  <input type="text" class="input" placeholder="Name" />
+  <textarea class="input" placeholder="Message"></textarea>
+  <select class="input" aria-label="Name">
+    <option>Choose an option</option>
+    <option>Mellow</option>
+    <option>Sippy</option>
+    <option>Optimise</option>
+  </select>
+  <div>
+    <div class="input-form">
+      <input class="input-check" type="checkbox" value="1" id="firstColorCheckbox">
+      <label class="input-label" for="firstColorCheckbox">
+        First checkbox
+      </label>
+    </div>
+    <div class="input-form">
+      <input class="input-check" type="checkbox" value="2" id="secondColorCheckbox" checked>
+      <label class="input-label" for="secondColorCheckbox">
+        Second checkbox
+      </label>
+      <span class="input-text">Help with the checkbox if it isn't clear enough.</span>
+    </div>
+  </div>
+  <div>
+    <div class="input-form">
+      <input class="input-check" type="radio" value="1" id="firstColorRadio" name="radioInput">
+      <label class="input-label" for="firstColorRadio">
+        First radio
+      </label>
+    </div>
+    <div class="input-form">
+      <input class="input-check" type="radio" value="2" id="secondColorRadio" name="radioInput" checked>
+      <label class="input-label" for="secondColorRadio">
+        Second radio
+      </label>
+      <span class="input-text">Help with the radio if it isn't clear enough.</span>
+    </div>
+  </div>
+  <input class="input" type="file">
+  <label for="rangeInput" class="input-label">Range example</label>
+  <input type="range" class="input-range" id="rangeInput">
+</form>
