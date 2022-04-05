@@ -61,6 +61,55 @@ Note that we're using the anchor-based navigation here for demo purposes, but we
 </nav>
 {{</example>}}
 
+## Color
+As various other components, the pivot control supports the color classes to change its colors.
+
+### Global
+{{<example>}}
+<nav class="pivot red mb-3" aria-label="Navigation">
+  <a class="pivot-link active" href="#" aria-current="page">Active</a>
+  <a class="pivot-link" href="#">Link</a>
+  <a class="pivot-link" href="#">Link</a>
+  <a class="pivot-link disabled">Disabled</a>
+</nav>
+<nav class="pivot pivot-underline green mb-3" aria-label="Navigation">
+  <a class="pivot-link active" href="#" aria-current="page">Active</a>
+  <a class="pivot-link" href="#">Link</a>
+  <a class="pivot-link" href="#">Link</a>
+  <a class="pivot-link disabled">Disabled</a>
+</nav>
+<nav class="pivot pivot-pills brown" aria-label="Navigation">
+  <a class="pivot-link active" href="#" aria-current="page">Active</a>
+  <a class="pivot-link" href="#">Link</a>
+  <a class="pivot-link" href="#">Link</a>
+  <a class="pivot-link disabled">Disabled</a>
+</nav>
+{{</example>}}
+
+### Links
+You can also alter the color of only 1 pivot item.
+
+{{<example>}}
+<nav class="pivot mb-3" aria-label="Navigation">
+  <a class="pivot-link active" href="#" aria-current="page">Active</a>
+  <a class="pivot-link" href="#">Link</a>
+  <a class="pivot-link rose" href="#">Link</a>
+  <a class="pivot-link disabled">Disabled</a>
+</nav>
+<nav class="pivot pivot-underline green mb-3" aria-label="Navigation">
+  <a class="pivot-link active" href="#" aria-current="page">Active</a>
+  <a class="pivot-link" href="#">Link</a>
+  <a class="pivot-link accent" href="#">Link</a>
+  <a class="pivot-link disabled">Disabled</a>
+</nav>
+<nav class="pivot pivot-pills brown" aria-label="Navigation">
+  <a class="pivot-link active" href="#" aria-current="page">Active</a>
+  <a class="pivot-link" href="#">Link</a>
+  <a class="pivot-link rose" href="#">Link</a>
+  <a class="pivot-link disabled">Disabled</a>
+</nav>
+{{</example>}}
+
 ## Tabs
 {{<example>}}
 <nav class="pivot pivot-underline" id="myTab" role="tablist">
