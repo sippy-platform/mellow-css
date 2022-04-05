@@ -246,7 +246,7 @@ The `accent` color scale is a special exception to the color scale, it isn't its
 {{<color class="grey" name="Grey">}}
 
 ## Using the color system
-Each color palette consists out of 12 colors with incremental steps of 50 or 100. These colors all have a functional use.
+Each color palette consists out of 10 colors with incremental steps of 100, and an alpha variant. These colors all have a functional use.
 
 <table class="table">
   <thead>
