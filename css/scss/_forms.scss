@@ -11,7 +11,7 @@
   &:focus {
     outline: 0;
     border-color: var(--accent-600);
-    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--accent-500a);
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--accent-600a);
   }
 
   &:disabled,
@@ -70,7 +70,7 @@
   &:focus {
     outline: 0;
     border-color: var(--accent-600);
-    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--accent-500a);
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--accent-600a);
   }
 
   &:checked {
@@ -150,11 +150,11 @@
     outline: 0;
 
     &::-webkit-slider-thumb {
-      box-shadow: 0 0 0 3px var(--accent-500a);
+      box-shadow: 0 0 0 3px var(--accent-600a);
     }
 
     &::-moz-range-thumb {
-      box-shadow: 0 0 0 3px var(--accent-500a);
+      box-shadow: 0 0 0 3px var(--accent-600a);
     }
   }
 
