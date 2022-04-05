@@ -414,3 +414,19 @@ Each color palette consists out of 12 colors with incremental steps of 50 or 100
     </tr>
   </tbody>
 </table>
+
+### CSS variable
+All colors in the palette are available as CSS variable. The colors are written as `--[color]-[weight]`. Every color class has a matching set of variables, including the `accent` color class.
+
+{{<example class="docs-colors-preview">}}
+<div class="grid grid-2 grid-sm-4">
+  <div class="rounded p-3" style="background-color: var(--red-300); color: var(--red-900);">Red 900 on 300</div>
+  <div class="rounded p-3" style="background-color: var(--accent-900); color: var(--accent-200);">Accent 200 on 900</div>
+  <div class="rounded p-3" style="background-color: var(--brown-400); color: var(--brown-800);">Brown 800 on 400</div>
+  <div class="rounded p-3" style="background-color: var(--green-700); color: var(--green-100);">Green 100 on 700</div>
+  <div class="rounded p-3" style="background-color: var(--yellow-700); color: var(--yellow-text);">Yellow text on 700</div>
+  <div class="rounded p-3" style="background-color: var(--violet-700); color: var(--violet-text);">Violet text on 700</div>
+  <div class="rounded p-3" style="background-color: var(--rose-600a); color: var(--rose-600);">Rose 600 on 600a</div>
+  <div class="rounded p-3" style="background-color: var(--cyan-50); color: var(--cyan-500);">Cyan 500 on 50</div>
+</div>
+{{</example>}}
