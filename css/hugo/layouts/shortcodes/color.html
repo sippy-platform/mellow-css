@@ -1,12 +1,13 @@
-{{- $color_class := .Get "color_class" | default "accent" -}}
-{{- $color_name := .Get "color_name" | default "Accent" -}}
+{{- $class := .Get "class" | default "accent" -}}
+{{- $name := .Get "name" | default "Accent" -}}
 
+<h3 class="h5">{{ $name }}</h3>
 <div class="d-flex mb-3">
   <div class="w-4 flex-shrink-0">
     <div class="grid grid-1 gap-1">
       <span style="height: 21px"></span>
-      <span style="height: 32px" class="fw-bold d-flex align-items-center">Light</span>
-      <span style="height: 32px" class="fw-bold d-flex align-items-center">Dark</span>
+      <span style="height: 32px" class="d-flex align-items-center text-muted text-lowercase">Light</span>
+      <span style="height: 32px" class="d-flex align-items-center text-muted text-lowercase">Dark</span>
     </div>
   </div>
   <div class="grid grid-1 gap-1">
@@ -24,7 +25,7 @@
       <span class="text-center">600a</span>
       <span class="text-center">text</span>
     </div>
-    <div class="grid grid-12 gap-1 {{ $color_class }}">
+    <div class="grid grid-12 gap-1 {{ $class }}">
       <div class="py-3 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-3 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-3 rounded-sm" style="background: var(--color-200)"></div>
@@ -38,7 +39,7 @@
       <div class="py-3 rounded-sm" style="background: var(--color-600a)"></div>
       <div class="py-3 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-12 gap-1 {{ $color_class }} dark">
+    <div class="grid grid-12 gap-1 {{ $class }} dark">
       <div class="py-3 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-3 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-3 rounded-sm" style="background: var(--color-200)"></div>

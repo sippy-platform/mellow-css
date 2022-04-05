@@ -227,53 +227,23 @@ The `accent` color scale is a special exception to the color scale, it isn't its
 
 {{<color>}}
 
-### Red
-{{<color color_class="red">}}
-
-### Orange
-{{<color color_class="orange">}}
-
-### Amber
-{{<color color_class="amber">}}
-
-### Yellow
-{{<color color_class="yellow">}}
-
-### Lime
-{{<color color_class="lime">}}
-
-### Green
-{{<color color_class="green">}}
-
-### Teal
-{{<color color_class="teal">}}
-
-### Cyan
-{{<color color_class="cyan">}}
-
-### Blue
-{{<color color_class="blue">}}
-
-### Indigo
-{{<color color_class="indigo">}}
-
-### Violet
-{{<color color_class="violet">}}
-
-### Purple
-{{<color color_class="purple">}}
-
-### Pink
-{{<color color_class="pink">}}
-
-### Rose
-{{<color color_class="rose">}}
-
-### Brown
-{{<color color_class="brown">}}
-
-### Grey
-{{<color color_class="grey">}}
+### Palette
+{{<color class="red" name="Red">}}
+{{<color class="orange" name="Orange">}}
+{{<color class="amber" name="Amber">}}
+{{<color class="yellow" name="Yellow">}}
+{{<color class="lime" name="Lime">}}
+{{<color class="green" name="Green">}}
+{{<color class="teal" name="Teal">}}
+{{<color class="cyan" name="Cyan">}}
+{{<color class="blue" name="Blue">}}
+{{<color class="indigo" name="Indigo">}}
+{{<color class="violet" name="Violet">}}
+{{<color class="purple" name="Purple">}}
+{{<color class="pink" name="Pink">}}
+{{<color class="rose" name="Rose">}}
+{{<color class="brown" name="Brown">}}
+{{<color class="grey" name="Grey">}}
 
 ## Using the color system
 Each color palette consists out of 12 colors with incremental steps of 50 or 100. These colors all have a functional use.
