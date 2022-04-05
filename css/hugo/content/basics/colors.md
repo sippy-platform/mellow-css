@@ -1,11 +1,13 @@
 ---
 title: Colors
-description: Mellow has a built-in extensive color palette.
+description: Mellow has a extensive built-in color palette with a focus on providing colors with a purpose.
 section: basics
 ---
 
 ## Main colors
-The main color set has `text-*` and `bg-*` classes available in our [text color](/utilities/color) and [background](/utilities/background) utilities, as well as variants for other components (like [alerts](/components/alert) and [progress](/components/progress)) and urilities (like [borders](/utilities/borders)).
+Mellow comes with a color palette consisting out of 16 colors. These colors all have their own color class, and also have counterparts in the color-related utility classes (like the `text-*` and `bg-*` classes available in the [text color](/utilities/color) and [background](/utilities/background) utilities).
+
+Many of the components that use color will support the usage of color classes to change the color of one or more parts of the component.
 
 {{<example class="docs-colors-preview" show_code="false">}}
 <div class="grid grid-2 grid-sm-4">
@@ -28,7 +30,21 @@ The main color set has `text-*` and `bg-*` classes available in our [text color]
 </div>
 {{</example>}}
 
-These values are directly available and are defined in the `$colors` scss variable as shown below. Every variable that is directly used in the `$colors` map is equal to the `500` color in its palette. Additionally, there is also the `$variant-colors` map, which includes all colors from the `$colors` map with an additional `light` and `dark` color. The colors in the `$variant-colors` map don't correspond with palettes and are used to generate variants for components that don't need more than the base color.
+### Accent color
+There is also the `accent` color class. This is a special color class that will behave as any other. By default, all components will use the color that is set as the `$accent` variable in the SCSS. You'd probably only need this class to overwrite another color class to get the default look.
+
+By default, `accent` will behave the same as `blue`.
+
+{{<example class="docs-colors-preview" show_code="false">}}
+<div class="grid grid-2 grid-sm-4">
+  <div class="color accent">Accent</div>
+</div>
+{{</example>}}
+
+### Extend the color palette
+The color values are directly available and are defined in the `$colors` scss variable as shown below. Every variable that is directly used in the `$colors` map is equal to the `600` color in its palette.
+
+Changing the `$colors` variable in SCSS will result in a different color palette, full palettes are automatically generated based on the colors given.
 
 {{<example show_preview="false" lang="scss">}}
 $colors: (
@@ -52,31 +68,37 @@ $colors: (
 {{</example>}}
 
 ## Palettes
-A color map is made out of a color palette from 50 to 900. Every color has its tints and shades defined by the same percentages as blue except for grey.
+A color map is made out of a color palette from `50` to `900`, with `600a` and `text`.
 
 {{<example show_preview="false" lang="scss">}}
 @each $name, $color in $colors {
   .#{$name} {
-    --color-50: #{tint($color, 98%)};
-    --color-100: #{tint($color, 96%)};
-    --color-200: #{tint($color, 92%)};
-    --color-300: #{tint($color, 87%)};
-    --color-400: #{tint($color, 80%)};
-    --color-500: #{tint($color, 70%)};
-    --color-600: #{tint($color, 28%)};
-    --color-700: #{$color};
+    --color-50: #{tint($color, 96%)};
+    --color-100: #{tint($color, 92%)};
+    --color-200: #{tint($color, 87%)};
+    --color-300: #{tint($color, 80%)};
+    --color-400: #{tint($color, 70%)};
+    --color-500: #{tint($color, 28%)};
+    --color-600: #{$color};
+    --color-700: #{shade($color, 7%)};
     --color-800: #{shade($color, 22%)};
     --color-900: #{shade($color, 70%)};
+    --color-600a: #{rgba($color, .3)};
     --color-text: #{color-contrast($color)};
   }
 }
 {{</example>}}
+
+{{<note>}}
+On a white background, the resulting color from using `600a` will rougly correspond with using `400`.
+{{</note>}}
 
 ### Colors
 <div class="d-flex mb-3">
   <div class="w-4 flex-shrink-0">
     <div class="grid grid-1 gap-1">
       <span style="height: 21px"></span>
+      <span style="height: 48px" class="fw-bold d-flex align-items-center">Accent</span>
       <span style="height: 48px" class="fw-bold d-flex align-items-center text-red">Red</span>
       <span style="height: 48px" class="fw-bold d-flex align-items-center text-orange">Orange</span>
       <span style="height: 48px" class="fw-bold d-flex align-items-center text-amber">Amber</span>
@@ -96,7 +118,7 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
     </div>
   </div>
   <div class="grid grid-1 gap-1">
-    <div class="grid grid-11 gap-1">
+    <div class="grid grid-12 gap-1">
       <span class="text-center">50</span>
       <span class="text-center">100</span>
       <span class="text-center">200</span>
@@ -108,8 +130,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <span class="text-center">800</span>
       <span class="text-center">900</span>
       <span class="text-center">600a</span>
+      <span class="text-center">text</span>
     </div>
-    <div class="grid grid-11 gap-1 red">
+    <div class="grid grid-12 gap-1 accent">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -121,8 +144,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 orange">
+    <div class="grid grid-12 gap-1 red">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -134,8 +158,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 amber">
+    <div class="grid grid-12 gap-1 orange">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -147,8 +172,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 yellow">
+    <div class="grid grid-12 gap-1 amber">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -160,8 +186,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 lime">
+    <div class="grid grid-12 gap-1 yellow">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -173,8 +200,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 green">
+    <div class="grid grid-12 gap-1 lime">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -186,8 +214,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 teal">
+    <div class="grid grid-12 gap-1 green">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -199,8 +228,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 cyan">
+    <div class="grid grid-12 gap-1 teal">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -212,8 +242,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 blue">
+    <div class="grid grid-12 gap-1 cyan">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -225,8 +256,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 indigo">
+    <div class="grid grid-12 gap-1 blue">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -238,8 +270,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 violet">
+    <div class="grid grid-12 gap-1 indigo">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -251,8 +284,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 purple">
+    <div class="grid grid-12 gap-1 violet">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -264,8 +298,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 pink">
+    <div class="grid grid-12 gap-1 purple">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -277,8 +312,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 rose">
+    <div class="grid grid-12 gap-1 pink">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -290,8 +326,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 brown">
+    <div class="grid grid-12 gap-1 rose">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -303,8 +340,9 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
-    <div class="grid grid-11 gap-1 grey">
+    <div class="grid grid-12 gap-1 brown">
       <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
@@ -316,6 +354,21 @@ A color map is made out of a color palette from 50 to 900. Every color has its t
       <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
       <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
+    </div>
+    <div class="grid grid-12 gap-1 grey">
+      <div class="py-4 rounded-sm" style="background: var(--color-50)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-100)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-200)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-300)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-400)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-500)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-700)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-800)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-900)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-600a)"></div>
+      <div class="py-4 rounded-sm" style="background: var(--color-text)"></div>
     </div>
   </div>
 </div>
@@ -353,11 +406,11 @@ Each color palette consists out of 12 colors with incremental steps of 50 or 100
     </tr>
     <tr>
       <td>text</td>
-      <td>Use for text on 600 and 700.</td>
+      <td>Recommended text color on 600 and 700.</td>
     </tr>
     <tr>
       <td>600a</td>
-      <td>Use focus rings.</td>
+      <td>Use focus rings and other context-sensitive colors.</td>
     </tr>
   </tbody>
 </table>
