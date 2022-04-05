@@ -11,22 +11,118 @@ Many of the components that use color will support the usage of color classes to
 
 {{<example class="docs-colors-preview" show_code="false">}}
 <div class="grid grid-2 grid-sm-4">
-  <div class="color red">Red</div>
-  <div class="color orange">Orange</div>
-  <div class="color amber">Amber</div>
-  <div class="color yellow">Yellow</div>
-  <div class="color lime">Lime</div>
-  <div class="color green">Green</div>
-  <div class="color teal">Teal</div>
-  <div class="color cyan">Cyan</div>
-  <div class="color blue">Blue</div>
-  <div class="color indigo">Indigo</div>
-  <div class="color violet">Violet</div>
-  <div class="color purple">Purple</div>
-  <div class="color pink">Pink</div>
-  <div class="color rose">Rose</div>
-  <div class="color brown">Brown</div>
-  <div class="color grey">Grey</div>
+  <div class="color red">
+    <h5>Red</h5>
+    <div class="label label-plated">#eb0000</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color orange">
+    <h5>Orange</h5>
+    <div class="label label-plated">#f57600</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color amber">
+    <h5>Amber</h5>
+    <div class="label label-plated">#f5b400</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color yellow">
+    <h5>Yellow</h5>
+    <div class="label label-plated">#f5d000</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color lime">
+    <h5>Lime</h5>
+    <div class="label label-plated">#7acc00</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color green">
+    <h5>Green</h5>
+    <div class="label label-plated">#1ea835</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color teal">
+    <h5>Teal</h5>
+    <div class="label label-plated">#00d3b0</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color cyan">
+    <h5>Cyan</h5>
+    <div class="label label-plated">#00b3d3</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color blue">
+    <h5>Blue</h5>
+    <div class="label label-plated">#0068d8</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color indigo">
+    <h5>Indigo</h5>
+    <div class="label label-plated">#5560f7</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color violet">
+    <h5>Violet</h5>
+    <div class="label label-plated">#8055f7</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color purple">
+    <h5>Purple</h5>
+    <div class="label label-plated">#c455f7</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color pink">
+    <h5>Pink</h5>
+    <div class="label label-plated">#ec4899</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color rose">
+    <h5>Rose</h5>
+    <div class="label label-plated">#fd194b</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color brown">
+    <h5>Brown</h5>
+    <div class="label label-plated">#a57041</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
+  <div class="color grey">
+    <h5>Grey</h5>
+    <div class="label label-plated">#6b707a</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
 </div>
 {{</example>}}
 
@@ -37,7 +133,13 @@ By default, `accent` will behave the same as `blue`.
 
 {{<example class="docs-colors-preview" show_code="false">}}
 <div class="grid grid-2 grid-sm-4">
-  <div class="color accent">Accent</div>
+  <div class="color accent">
+    <h5>Accent</h5>
+    <div class="label label-plated">#0068d8</div>
+    <div class="color-swatch">
+      <div class="dark"></div>
+    </div>
+  </div>
 </div>
 {{</example>}}
 
@@ -67,12 +169,14 @@ $colors: (
 ) !default;
 {{</example>}}
 
-## Palettes
 A color map is made out of a color palette from `50` to `900`, with `600a` and `text`.
 
 {{<example show_preview="false" lang="scss">}}
 @each $name, $color in $colors {
-  .#{$name} {
+  .#{$name},
+  .light.#{$name},
+  .light .#{$name},
+  .#{$name} .light {
     --color-50: #{tint($color, 96%)};
     --color-100: #{tint($color, 92%)};
     --color-200: #{tint($color, 87%)};
@@ -86,6 +190,23 @@ A color map is made out of a color palette from `50` to `900`, with `600a` and `
     --color-600a: #{rgba($color, .3)};
     --color-text: #{color-contrast($color)};
   }
+
+  .dark.#{$name},
+  .dark .#{$name},
+  .#{$name} .dark {
+    --color-50: #{shade($color, 80%)};
+    --color-100: #{shade($color, 74%)};
+    --color-200: #{shade($color, 67%)};
+    --color-300: #{shade($color, 63%)};
+    --color-400: #{shade($color, 52%)};
+    --color-500: #{shade($color, 26%)};
+    --color-600: #{$color};
+    --color-700: #{tint($color, 7%)};
+    --color-800: #{tint($color, 20%)};
+    --color-900: #{tint($color, 87%)};
+    --color-600a: #{rgba($color, .3)};
+    --color-text: #{color-contrast($color)};
+  }
 }
 {{</example>}}
 
@@ -93,65 +214,66 @@ A color map is made out of a color palette from `50` to `900`, with `600a` and `
 On a white background, the resulting color from using `600a` will rougly correspond with using `400`.
 {{</note>}}
 
-### Colors
-#### Accent
-{{<color>}}
-
-#### Red
-{{<color color_class="red">}}
-
-#### Orange
-{{<color color_class="orange">}}
-
-#### Amber
-{{<color color_class="amber">}}
-
-#### Yellow
-{{<color color_class="yellow">}}
-
-#### Lime
-{{<color color_class="lime">}}
-
-#### Green
-{{<color color_class="green">}}
-
-#### Teal
-{{<color color_class="teal">}}
-
-#### Cyan
-{{<color color_class="cyan">}}
-
-#### Blue
-{{<color color_class="blue">}}
-
-#### Indigo
-{{<color color_class="indigo">}}
-
-#### Violet
-{{<color color_class="violet">}}
-
-#### Purple
-{{<color color_class="purple">}}
-
-#### Pink
-{{<color color_class="pink">}}
-
-#### Rose
-{{<color color_class="rose">}}
-
-#### Brown
-{{<color color_class="brown">}}
-
-#### Grey
-{{<color color_class="grey">}}
-
-### Themes
-
-#### Light
+## Themes
+### Light
 The light theme is the default theme in Mellow. You can enable it with the `light` class. The element and any of its children will be set to light.
 
-#### Dark
+### Dark
 The dark theme flips the color system to fit with dark designs. You can enable it with the `dark` class. The element and any of its children will be set to dark.
+
+## Colors
+### Accent
+The `accent` color scale is a special exception to the color scale, it isn't its own unique color but rather - at least by default - acts as an alias for `blue`. You can change the `accent` color scale by setting the `$accent` variable in your SCSS.
+
+{{<color>}}
+
+### Red
+{{<color color_class="red">}}
+
+### Orange
+{{<color color_class="orange">}}
+
+### Amber
+{{<color color_class="amber">}}
+
+### Yellow
+{{<color color_class="yellow">}}
+
+### Lime
+{{<color color_class="lime">}}
+
+### Green
+{{<color color_class="green">}}
+
+### Teal
+{{<color color_class="teal">}}
+
+### Cyan
+{{<color color_class="cyan">}}
+
+### Blue
+{{<color color_class="blue">}}
+
+### Indigo
+{{<color color_class="indigo">}}
+
+### Violet
+{{<color color_class="violet">}}
+
+### Purple
+{{<color color_class="purple">}}
+
+### Pink
+{{<color color_class="pink">}}
+
+### Rose
+{{<color color_class="rose">}}
+
+### Brown
+{{<color color_class="brown">}}
+
+### Grey
+{{<color color_class="grey">}}
 
 ## Using the color system
 Each color palette consists out of 12 colors with incremental steps of 50 or 100. These colors all have a functional use.
@@ -229,6 +351,9 @@ In the example below, we'll first create a class that sets color weight 300 as b
     Accent dark<br />900 on 300
     <div class="rounded-sm p-3 mt-3 light color-example">
       Accent<br />900 on 300
+      <div class="rounded-sm p-3 mt-3 light dark color-example">
+        Accent dark (and light)<br />900 on 300
+      </div>
     </div>
   </div>
 </div>
