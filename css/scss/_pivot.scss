@@ -37,6 +37,12 @@
 }
 
 .pivot-pills {
+  .pivot-link {
+    &:hover {
+      background-color: var(--color-600a, var(--accent-600a));
+    }
+  }
+
   .pivot-link.active,
   .show > .pivot-link {
     color: #fff;
