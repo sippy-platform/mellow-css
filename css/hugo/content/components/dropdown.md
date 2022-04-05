@@ -228,7 +228,7 @@ Like many other Mellow components, the dropdown menu responds to the color class
 </details>
 {{</example>}}
 
-You can also color only a single item:
+You can also color one item with another color. This example again shows the indigo menu, but now overwrites the "Sign out" option with rose.
 
 {{<example>}}
 <details class="dropdown btn btn-default">
