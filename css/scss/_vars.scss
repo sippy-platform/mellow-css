@@ -1,131 +1,91 @@
-:root {
-  @each $name, $color in $colors {
-    --#{$name}-50: #{tint($color, 96%)};
-    --#{$name}-100: #{tint($color, 92%)};
-    --#{$name}-200: #{tint($color, 87%)};
-    --#{$name}-300: #{tint($color, 80%)};
-    --#{$name}-400: #{tint($color, 70%)};
-    --#{$name}-500: #{tint($color, 28%)};
-    --#{$name}-600: #{$color};
-    --#{$name}-700: #{shade($color, 7%)};
-    --#{$name}-800: #{shade($color, 22%)};
-    --#{$name}-900: #{shade($color, 70%)};
-    --#{$name}-600a: #{rgba($color, .3)};
-    --#{$name}-text: #{color-contrast($color)};
-  }
+/* stylelint-disable declaration-colon-space-after */
+/* stylelint-disable declaration-block-semicolon-space-before */
 
-  --accent-50: #{tint($accent, 96%)};
-  --accent-100: #{tint($accent, 92%)};
-  --accent-200: #{tint($accent, 87%)};
-  --accent-300: #{tint($accent, 80%)};
-  --accent-400: #{tint($accent, 70%)};
-  --accent-500: #{tint($accent, 28%)};
-  --accent-600: #{$accent};
-  --accent-700: #{shade($accent, 7%)};
-  --accent-800: #{shade($accent, 22%)};
-  --accent-900: #{shade($accent, 70%)};
-  --accent-600a: #{rgba($accent, .3)};
-  --accent-text: #{color-contrast($accent)};
+// Dark mode
+@function light-dark($light, $dark) {
+  @return var(--light, #{ $light }) var(--dark, #{ $dark });
+}
+
+.system,
+.light {
+  --light: initial;
+  --dark: ;
 }
 
 .dark {
+  --light: ;
+  --dark: initial;
+}
+
+@media (prefers-color-scheme: dark) {
+  .system {
+    --light: ;
+    --dark: initial;
+  }
+}
+
+// Palette
+:root {
+  --light: initial;
+  --dark: ;
+
   @each $name, $color in $colors {
-    --#{$name}-50: #{shade($color, 80%)};
-    --#{$name}-100: #{shade($color, 74%)};
-    --#{$name}-200: #{shade($color, 67%)};
-    --#{$name}-300: #{shade($color, 63%)};
-    --#{$name}-400: #{shade($color, 52%)};
-    --#{$name}-500: #{shade($color, 26%)};
-    --#{$name}-600: #{$color};
-    --#{$name}-700: #{tint($color, 7%)};
-    --#{$name}-800: #{tint($color, 20%)};
-    --#{$name}-900: #{tint($color, 87%)};
-    --#{$name}-600a: #{rgba($color, .3)};
-    --#{$name}-text: #{color-contrast($color)};
+    --#{$name}-50: #{ light-dark(tint($color, 96%), shade($color, 80%)) };
+    --#{$name}-100: #{ light-dark(tint($color, 92%), shade($color, 74%)) };
+    --#{$name}-200: #{ light-dark(tint($color, 87%), shade($color, 67%)) };
+    --#{$name}-300: #{ light-dark(tint($color, 80%), shade($color, 63%)) };
+    --#{$name}-400: #{ light-dark(tint($color, 70%), shade($color, 52%)) };
+    --#{$name}-500: #{ light-dark(tint($color, 28%), shade($color, 26%)) };
+    --#{$name}-600: #{ $color };
+    --#{$name}-700: #{ light-dark(shade($color, 7%), tint($color, 7%)) };
+    --#{$name}-800: #{ light-dark(shade($color, 22%), tint($color, 20%)) };
+    --#{$name}-900: #{ light-dark(shade($color, 70%), tint($color, 87%)) };
+    --#{$name}-600a: #{ light-dark(rgba($color, .3), rgba($color, .3)) };
+    --#{$name}-text: #{ color-contrast($color) };
   }
 
-  --accent-50: #{shade($accent, 80%)};
-  --accent-100: #{shade($accent, 74%)};
-  --accent-200: #{shade($accent, 67%)};
-  --accent-300: #{shade($accent, 63%)};
-  --accent-400: #{shade($accent, 52%)};
-  --accent-500: #{shade($accent, 26%)};
-  --accent-600: #{$accent};
-  --accent-700: #{tint($accent, 7%)};
-  --accent-800: #{tint($accent, 20%)};
-  --accent-900: #{tint($accent, 87%)};
-  --accent-600a: #{rgba($accent, .3)};
-  --accent-text: #{color-contrast($accent)};
+  --accent-50: #{ light-dark(tint($accent, 96%), shade($accent, 80%)) };
+  --accent-100: #{ light-dark(tint($accent, 92%), shade($accent, 74%)) };
+  --accent-200: #{ light-dark(tint($accent, 87%), shade($accent, 67%)) };
+  --accent-300: #{ light-dark(tint($accent, 80%), shade($accent, 63%)) };
+  --accent-400: #{ light-dark(tint($accent, 70%), shade($accent, 52%)) };
+  --accent-500: #{ light-dark(tint($accent, 28%), shade($accent, 26%)) };
+  --accent-600: #{ $accent };
+  --accent-700: #{ light-dark(shade($accent, 7%), tint($accent, 7%)) };
+  --accent-800: #{ light-dark(shade($accent, 22%), tint($accent, 20%)) };
+  --accent-900: #{ light-dark(shade($accent, 70%), tint($accent, 87%)) };
+  --accent-600a: #{ light-dark(rgba($accent, .3), rgba($accent, .3)) };
+  --accent-text: #{ color-contrast($accent) };
 }
 
 @each $name, $color in $colors {
-  .#{$name},
-  .light.#{$name},
-  .light .#{$name},
-  .#{$name} .light {
-    --color-50: #{tint($color, 96%)};
-    --color-100: #{tint($color, 92%)};
-    --color-200: #{tint($color, 87%)};
-    --color-300: #{tint($color, 80%)};
-    --color-400: #{tint($color, 70%)};
-    --color-500: #{tint($color, 28%)};
-    --color-600: #{$color};
-    --color-700: #{shade($color, 7%)};
-    --color-800: #{shade($color, 22%)};
-    --color-900: #{shade($color, 70%)};
-    --color-600a: #{rgba($color, .3)};
-    --color-text: #{color-contrast($color)};
-  }
-
-  .dark.#{$name},
-  .dark .#{$name},
-  .#{$name} .dark {
-    --color-50: #{shade($color, 80%)};
-    --color-100: #{shade($color, 74%)};
-    --color-200: #{shade($color, 67%)};
-    --color-300: #{shade($color, 63%)};
-    --color-400: #{shade($color, 52%)};
-    --color-500: #{shade($color, 26%)};
-    --color-600: #{$color};
-    --color-700: #{tint($color, 7%)};
-    --color-800: #{tint($color, 20%)};
-    --color-900: #{tint($color, 87%)};
-    --color-600a: #{rgba($color, .3)};
-    --color-text: #{color-contrast($color)};
+  .#{$name} {
+    --color-50: #{ light-dark(tint($color, 96%), shade($color, 80%)) };
+    --color-100: #{ light-dark(tint($color, 92%), shade($color, 74%)) };
+    --color-200: #{ light-dark(tint($color, 87%), shade($color, 67%)) };
+    --color-300: #{ light-dark(tint($color, 80%), shade($color, 63%)) };
+    --color-400: #{ light-dark(tint($color, 70%), shade($color, 52%)) };
+    --color-500: #{ light-dark(tint($color, 28%), shade($color, 26%)) };
+    --color-600: #{ $color };
+    --color-700: #{ light-dark(shade($color, 7%), tint($color, 7%)) };
+    --color-800: #{ light-dark(shade($color, 22%), tint($color, 20%)) };
+    --color-900: #{ light-dark(shade($color, 70%), tint($color, 87%)) };
+    --color-600a: #{ light-dark(rgba($color, .3), rgba($color, .3)) };
+    --color-text: #{ color-contrast($color) };
   }
 }
 
-.accent,
-.light.accent,
-.light .accent,
-.accent .light {
-  --color-50: #{tint($accent, 96%)};
-  --color-100: #{tint($accent, 92%)};
-  --color-200: #{tint($accent, 87%)};
-  --color-300: #{tint($accent, 80%)};
-  --color-400: #{tint($accent, 70%)};
-  --color-500: #{tint($accent, 28%)};
-  --color-600: #{$accent};
-  --color-700: #{shade($accent, 7%)};
-  --color-800: #{shade($accent, 22%)};
-  --color-900: #{shade($accent, 70%)};
-  --color-600a: #{rgba($accent, .3)};
-  --color-text: #{color-contrast($accent)};
-}
-
-.dark.accent,
-.dark .accent,
-.accent .dark {
-  --color-50: #{shade($accent, 80%)};
-  --color-100: #{shade($accent, 74%)};
-  --color-200: #{shade($accent, 67%)};
-  --color-300: #{shade($accent, 63%)};
-  --color-400: #{shade($accent, 52%)};
-  --color-500: #{shade($accent, 26%)};
-  --color-600: #{$accent};
-  --color-700: #{tint($accent, 7%)};
-  --color-800: #{tint($accent, 20%)};
-  --color-900: #{tint($accent, 87%)};
-  --color-600a: #{rgba($accent, .3)};
-  --color-text: #{color-contrast($accent)};
+.accent {
+  --color-50: #{ light-dark(tint($accent, 96%), shade($accent, 80%)) };
+  --color-100: #{ light-dark(tint($accent, 92%), shade($accent, 74%)) };
+  --color-200: #{ light-dark(tint($accent, 87%), shade($accent, 67%)) };
+  --color-300: #{ light-dark(tint($accent, 80%), shade($accent, 63%)) };
+  --color-400: #{ light-dark(tint($accent, 70%), shade($accent, 52%)) };
+  --color-500: #{ light-dark(tint($accent, 28%), shade($accent, 26%)) };
+  --color-600: #{ $accent };
+  --color-700: #{ light-dark(shade($accent, 7%), tint($accent, 7%)) };
+  --color-800: #{ light-dark(shade($accent, 22%), tint($accent, 20%)) };
+  --color-900: #{ light-dark(shade($accent, 70%), tint($accent, 87%)) };
+  --color-600a: #{ light-dark(rgba($accent, .3), rgba($accent, .3)) };
+  --color-text: #{ color-contrast($accent) };
 }
