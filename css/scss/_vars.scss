@@ -6,7 +6,7 @@
   @return var(--light, #{ $light }) var(--dark, #{ $dark });
 }
 
-.default,
+.system,
 .light {
   --light: initial;
   --dark: ;
@@ -18,7 +18,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .default {
+  .system {
     --light: ;
     --dark: initial;
   }

@@ -223,14 +223,9 @@
         }
 
         .color-swatch {
-          display: flex;
           width: 100%;
-
-          & > div {
-            background: var(--color-400);
-            padding: 1rem;
-            flex-grow: 1;
-          }
+          background: var(--color-800);
+          padding: 1rem;
         }
       }
     }

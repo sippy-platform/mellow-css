@@ -15,114 +15,82 @@ Many of the components that use color will support the usage of color classes to
   <div class="color red">
     <h5>Red</h5>
     <div class="label label-plated">#eb0000</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color orange">
     <h5>Orange</h5>
     <div class="label label-plated">#f57600</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color amber">
     <h5>Amber</h5>
     <div class="label label-plated">#f5b400</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color yellow">
     <h5>Yellow</h5>
     <div class="label label-plated">#f5d000</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color lime">
     <h5>Lime</h5>
     <div class="label label-plated">#7acc00</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color green">
     <h5>Green</h5>
     <div class="label label-plated">#1ea835</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color teal">
     <h5>Teal</h5>
     <div class="label label-plated">#00d3b0</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color cyan">
     <h5>Cyan</h5>
     <div class="label label-plated">#00b3d3</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color blue">
     <h5>Blue</h5>
     <div class="label label-plated">#0068d8</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color indigo">
     <h5>Indigo</h5>
     <div class="label label-plated">#5560f7</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color violet">
     <h5>Violet</h5>
     <div class="label label-plated">#8055f7</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color purple">
     <h5>Purple</h5>
     <div class="label label-plated">#c455f7</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color pink">
     <h5>Pink</h5>
     <div class="label label-plated">#ec4899</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color rose">
     <h5>Rose</h5>
     <div class="label label-plated">#fd194b</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color brown">
     <h5>Brown</h5>
     <div class="label label-plated">#a57041</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
   <div class="color grey">
     <h5>Grey</h5>
     <div class="label label-plated">#6b707a</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
 </div>
 {{</example>}}
@@ -137,9 +105,7 @@ By default, `accent` will behave the same as `blue`.
   <div class="color accent">
     <h5>Accent</h5>
     <div class="label label-plated">#0068d8</div>
-    <div class="color-swatch">
-      <div class="dark"></div>
-    </div>
+    <div class="color-swatch"></div>
   </div>
 </div>
 {{</example>}}
@@ -219,8 +185,47 @@ On a white background, the resulting color from using `600a` will rougly corresp
 ### Light
 The light theme is the default theme in Mellow. You can enable it with the `light` class. The element and any of its children will be set to light.
 
+{{<example class="docs-colors-preview">}}
+<style>
+.color-example {
+  background-color: var(--color-300);
+  color: var(--color-900);
+}
+</style>
+<div class="rounded-lg p-3 light accent color-example">
+  This will always be the light Accent swatch, no matter what<br />900 on 300
+</div>
+{{</example>}}
+
+### System
+The system theme follows the color theme dictated by the browser (or OS). When `prefers-color-scheme: dark` can be evaluated to `true` the dark theme will be used, otherwise the light theme is used.
+
+{{<example class="docs-colors-preview">}}
+<style>
+.color-example {
+  background-color: var(--color-300);
+  color: var(--color-900);
+}
+</style>
+<div class="rounded-lg p-3 system accent color-example">
+  Change your system's theme color, and this will follow<br />900 on 300
+</div>
+{{</example>}}
+
 ### Dark
 The dark theme flips the color system to fit with dark designs. You can enable it with the `dark` class. The element and any of its children will be set to dark.
+
+{{<example class="docs-colors-preview">}}
+<style>
+.color-example {
+  background-color: var(--color-300);
+  color: var(--color-900);
+}
+</style>
+<div class="rounded-lg p-3 dark accent color-example">
+  This will always be the dark Accent swatch, no matter what<br />900 on 300
+</div>
+{{</example>}}
 
 ## Swatchbook
 ### Accent
@@ -305,10 +310,10 @@ All colors in the palette are available as CSS variable. The colors are written 
 </div>
 {{</example>}}
 
-### Switching between light and dark
-To control which color palette is being used, the "theme mode" classes `light` and `dark` can be used. When using a color class without a theme class, Mellow will always use the light theme.
+### Switching between themes
+To control which color palette is being used, the "theme mode" classes `system`, `light` and `dark` can be used. When using a color class without a theme class, Mellow will always use the light theme.
 
-In the example below, we'll first create a class that sets color weight 300 as background and color weight 900 as foreground, then show how the theme color is inherited.
+Because of how CSS works, when switching between themes you must redefine the color as well. Declaring a different theme won't make the CSS re-evaluate the colors assigned to each value unless that color is being declared on the same level.
 
 {{<example class="docs-colors-preview">}}
 <style>
@@ -319,12 +324,35 @@ In the example below, we'll first create a class that sets color weight 300 as b
 </style>
 <div class="rounded-lg p-3 accent color-example">
   Accent<br />900 on 300
-  <div class="rounded p-3 mt-3 dark color-example">
+  <div class="rounded p-3 mt-3 accent dark color-example">
     Accent dark<br />900 on 300
     <div class="rounded-sm p-3 mt-3 light color-example">
-      Accent<br />900 on 300
-      <div class="rounded-sm p-3 mt-3 light dark color-example">
-        Accent dark (and light)<br />900 on 300
+      Still accent dark<br />900 on 300
+      <div class="rounded-sm p-3 mt-3 accent light color-example">
+        Accent light<br />900 on 300
+      </div>
+    </div>
+  </div>
+</div>
+{{</example>}}
+
+The reverse does not apply for colors, however. Declaring a different color within a theme will just inherit the theme.
+
+{{<example class="docs-colors-preview">}}
+<style>
+.color-example {
+  background-color: var(--color-300);
+  color: var(--color-900);
+}
+</style>
+<div class="rounded-lg p-3 red dark color-example">
+  Red dark<br />900 on 300
+  <div class="rounded p-3 mt-3 orange color-example">
+    Orange dark<br />900 on 300
+    <div class="rounded-sm p-3 mt-3 lime light color-example">
+      Lime light<br />900 on 300
+      <div class="rounded-sm p-3 mt-3 cyan color-example">
+        Cyan light<br />900 on 300
       </div>
     </div>
   </div>
