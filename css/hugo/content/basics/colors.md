@@ -212,7 +212,7 @@ A color map is made out of a color palette from `50` to `900`, with `600a` and `
 {{</example>}}
 
 {{<note>}}
-On a white background, the resulting color from using `600a` will rougly correspond with using `400`.
+On a white background, the resulting color from using `600a` will roughly correspond with using `400`.
 {{</note>}}
 
 ## Themes
