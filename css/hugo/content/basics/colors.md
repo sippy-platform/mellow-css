@@ -4,11 +4,12 @@ description: Mellow has a extensive built-in color palette with a focus on provi
 section: basics
 ---
 
-## Main colors
+## Colors
 Mellow comes with a color palette consisting out of 16 colors. These colors all have their own color class, and also have counterparts in the color-related utility classes (like the `text-*` and `bg-*` classes available in the [text color](/utilities/color) and [background](/utilities/background) utilities).
 
 Many of the components that use color will support the usage of color classes to change the color of one or more parts of the component.
 
+### Main
 {{<example class="docs-colors-preview" show_code="false">}}
 <div class="grid grid-2 grid-sm-4">
   <div class="color red">
@@ -126,7 +127,7 @@ Many of the components that use color will support the usage of color classes to
 </div>
 {{</example>}}
 
-### Accent color
+### Accent
 There is also the `accent` color class. This is a special color class that will behave as any other. By default, all components will use the color that is set as the `$accent` variable in the SCSS. You'd probably only need this class to overwrite another color class to get the default look.
 
 By default, `accent` will behave the same as `blue`.
@@ -221,7 +222,7 @@ The light theme is the default theme in Mellow. You can enable it with the `ligh
 ### Dark
 The dark theme flips the color system to fit with dark designs. You can enable it with the `dark` class. The element and any of its children will be set to dark.
 
-## Colors
+## Swatchbook
 ### Accent
 The `accent` color scale is a special exception to the color scale, it isn't its own unique color but rather - at least by default - acts as an alias for `blue`. You can change the `accent` color scale by setting the `$accent` variable in your SCSS.
 
@@ -246,6 +247,7 @@ The `accent` color scale is a special exception to the color scale, it isn't its
 {{<color class="grey" name="Grey">}}
 
 ## Using the color system
+### Weight usage
 Each color palette consists out of 10 colors with incremental steps of 100, and an alpha variant. These colors all have a functional use.
 
 <table class="table">
@@ -287,7 +289,7 @@ Each color palette consists out of 10 colors with incremental steps of 100, and 
   </tbody>
 </table>
 
-### CSS variable
+### CSS variables
 All colors in the palette are available as CSS variable. The colors are written as `--[color]-[weight]`. Every color class has a matching set of variables, including the `accent` color class.
 
 {{<example class="docs-colors-preview">}}
