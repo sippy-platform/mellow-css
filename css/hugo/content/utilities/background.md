@@ -9,7 +9,7 @@ The background colors all map to the 600 weight of their color scheme. there are
 
 `bg-light` is the equivalent of `bg-grey` at weight 100 in the light theme, while `bg-dark` is the equivalent of `bg-grey` at weight 900 in the ligth theme. You can also use the `bg-system` and `bg-system-inverse` classes; these map to both `bg-light` or `bg-dark` depending on the theme class you have used as its parent or equal.
 
-`bg-transparent` will give you a transparent surface, `bg-white` will give you a white background.
+`bg-transparent` will give you a transparent surface, `bg-white` will give you a white background. `bg-accent` will follow your accent color.
 
 {{<example class="docs-bg-colors-preview grid grid-2 grid-sm-4">}}
 <div class="bg-red text-white">.bg-red</div>
@@ -34,4 +34,5 @@ The background colors all map to the 600 weight of their color scheme. there are
 <div class="bg-dark text-white">.bg-dark</div>
 <div class="bg-system text-system-inverse">.bg-system</div>
 <div class="bg-system-inverse text-system">.bg-system-inverse</div>
+<div class="bg-accent text-white">.bg-accent</div>
 {{</example>}}

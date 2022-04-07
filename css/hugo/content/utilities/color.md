@@ -9,7 +9,7 @@ The colors all map to the 600 weight of their color scheme. there are however al
 
 `text-light` is the equivalent of `text-grey` at weight 100 in the light theme, while `text-dark` is the equivalent of `text-grey` at weight 900 in the ligth theme. You can also use the `text-system` and `text-system-inverse` classes; these map to both `text-light` or `text-dark` depending on the theme class you have used as its parent or equal.
 
-`text-white` will give you white text.
+`text-white` will give you white text. `text-accent` will follow your accent color.
 
 {{<example class="grid grid-2 grid-sm-4">}}
 <p class="m-0 text-red">.text-red</p>
@@ -33,6 +33,7 @@ The colors all map to the 600 weight of their color scheme. there are however al
 <p class="m-0 text-system bg-system-inverse">.text-system</p>
 <p class="m-0 text-system-inverse bg-system">.text-system-inverse</p>
 <p class="m-0 text-white bg-dark">.text-white</p>
+<p class="m-0 text-accent">.text-white</p>
 <p class="m-0 text-muted">.text-muted</p>
 <p class="m-0 text-reset">.text-reset</p>
 {{</example>}}

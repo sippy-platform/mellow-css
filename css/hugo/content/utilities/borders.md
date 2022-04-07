@@ -30,7 +30,7 @@ The colors all map to the 600 weight of their color scheme. there are however al
 
 `border-light` is the equivalent of `border-grey` at weight 100 in the light theme, while `border-dark` is the equivalent of `border-grey` at weight 900 in the ligth theme. You can also use the `border-system` and `border-system-inverse` classes; these map to both `border-light` or `border-dark` depending on the theme class you have used as its parent or equal.
 
-`border-white` will give you white borders. `border-reset` resets the border colors to the browsers default.
+`border-white` will give you white borders. `border-reset` resets the border colors to the browsers default. `border-accent` will follow your accent color.
 
 {{<example class="grid grid-2 grid-sm-3">}}
 <div class="border border-2 border-red p-3">.border-red</div>
@@ -53,6 +53,7 @@ The colors all map to the 600 weight of their color scheme. there are however al
 <div class="border border-2 border-dark p-3">.border-dark</div>
 <div class="border border-2 border-system p-3">.border-system</div>
 <div class="border border-2 border-system-inverse p-3">.border-system-inverse</div>
+<div class="border border-2 border-accent p-3">.border-accent</div>
 <div class="border border-2 border-white p-3">.border-white</div>
 <div class="border border-2 border-reset p-3">.border-reset</div>
 {{</example>}}
