@@ -35,11 +35,11 @@
   border-radius: $border-radius;
   font-weight: initial;
   list-style: none;
-  background: rgba(#fff, .95);
+  background-color: var(--acrylic-fallback-background);
   box-shadow: map-get($box-shadows, 1), map-get($box-shadows, 3);
 
   @supports (backdrop-filter: blur(15px) saturate(350%)) {
-    background: rgba(#fff, .85);
+    background-color: var(--acrylic-background);
     backdrop-filter: blur(15px) saturate(250%);
   }
 }
@@ -92,12 +92,12 @@
   &:focus,
   &:active,
   &.active {
-    background-color: var(--accent-700);
-    color: var(--accent-text);
+    background-color: var(--color-600, var(--accent-600));
+    color: var(--color-text, var(--accent-text));
   }
 
   &:focus {
-    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--accent-550);
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--color-600a, var(--accent-600a));
   }
 }
 

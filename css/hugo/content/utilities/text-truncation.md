@@ -29,7 +29,7 @@ Sometimes, there is a string in a flex layout that must be truncated but is loca
     <p class="fw-bold d-block text-truncate mw-0 m-0">Taylor Alison Swift</p>
     <p class="text-muted text-small m-0">Lover</p>
   </div>
-  <div class="bg-light rounded-pill ms-3 flex-shrink-0 d-flex justify-content-center align-items-center" style="width: 32px; height: 32px;">
+  <div class="bg-system rounded-pill ms-3 flex-shrink-0 d-flex justify-content-center align-items-center" style="width: 32px; height: 32px;">
     <i class="vi vi-plus"></i>
   </div>
 </div>

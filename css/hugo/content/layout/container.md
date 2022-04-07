@@ -7,7 +7,7 @@ section: layout
 ## Function
 A container provides a maximum width for your content to take at any given breakpoint.
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <td></td>

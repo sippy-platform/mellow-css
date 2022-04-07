@@ -1,5 +1,9 @@
 code {
-  background-color: var(--accent-200);
+  background-color: var(--accent-100);
   border-radius: $border-radius-sm;
   padding: 0 $spacer * .25;
+}
+
+pre code {
+  padding: 0;
 }

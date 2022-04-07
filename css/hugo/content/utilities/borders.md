@@ -26,26 +26,34 @@ Every `border-*` class has also an inverse version that removes the border. All 
 {{</example>}}
 
 ## Color
-{{<example>}}
-<div class="border border-2 border-red p-3 mb-2">.border-red</div>
-<div class="border border-2 border-orange p-3 mb-2">.border-orange</div>
-<div class="border border-2 border-amber p-3 mb-2">.border-amber</div>
-<div class="border border-2 border-yellow p-3 mb-2">.border-yellow</div>
-<div class="border border-2 border-lime p-3 mb-2">.border-lime</div>
-<div class="border border-2 border-green p-3 mb-2">.border-green</div>
-<div class="border border-2 border-teal p-3 mb-2">.border-teal</div>
-<div class="border border-2 border-cyan p-3 mb-2">.border-cyan</div>
-<div class="border border-2 border-blue p-3 mb-2">.border-blue</div>
-<div class="border border-2 border-indigo p-3 mb-2">.border-indigo</div>
-<div class="border border-2 border-violet p-3 mb-2">.border-violet</div>
-<div class="border border-2 border-purple p-3 mb-2">.border-purple</div>
-<div class="border border-2 border-pink p-3 mb-2">.border-pink</div>
-<div class="border border-2 border-rose p-3 mb-2">.border-rose</div>
-<div class="border border-2 border-brown p-3 mb-2">.border-brown</div>
-<div class="border border-2 border-light p-3 mb-2">.border-light</div>
-<div class="border border-2 border-grey p-3 mb-2">.border-grey</div>
-<div class="border border-2 border-dark p-3 mb-2">.border-dark</div>
-<div class="border border-2 border-white p-3 mb-2">.border-white</div>
+The colors all map to the 600 weight of their color scheme. there are however also a number of exceptional colors.
+
+`border-light` is the equivalent of `border-grey` at weight 100 in the light theme, while `border-dark` is the equivalent of `border-grey` at weight 900 in the ligth theme. You can also use the `border-system` and `border-system-inverse` classes; these map to both `border-light` or `border-dark` depending on the theme class you have used as its parent or equal.
+
+`border-white` will give you white borders. `border-reset` resets the border colors to the browsers default.
+
+{{<example class="grid grid-2 grid-sm-3">}}
+<div class="border border-2 border-red p-3">.border-red</div>
+<div class="border border-2 border-orange p-3">.border-orange</div>
+<div class="border border-2 border-amber p-3">.border-amber</div>
+<div class="border border-2 border-yellow p-3">.border-yellow</div>
+<div class="border border-2 border-lime p-3">.border-lime</div>
+<div class="border border-2 border-green p-3">.border-green</div>
+<div class="border border-2 border-teal p-3">.border-teal</div>
+<div class="border border-2 border-cyan p-3">.border-cyan</div>
+<div class="border border-2 border-blue p-3">.border-blue</div>
+<div class="border border-2 border-indigo p-3">.border-indigo</div>
+<div class="border border-2 border-violet p-3">.border-violet</div>
+<div class="border border-2 border-purple p-3">.border-purple</div>
+<div class="border border-2 border-pink p-3">.border-pink</div>
+<div class="border border-2 border-rose p-3">.border-rose</div>
+<div class="border border-2 border-brown p-3">.border-brown</div>
+<div class="border border-2 border-light p-3">.border-light</div>
+<div class="border border-2 border-grey p-3">.border-grey</div>
+<div class="border border-2 border-dark p-3">.border-dark</div>
+<div class="border border-2 border-system p-3">.border-system</div>
+<div class="border border-2 border-system-inverse p-3">.border-system-inverse</div>
+<div class="border border-2 border-white p-3">.border-white</div>
 <div class="border border-2 border-reset p-3">.border-reset</div>
 {{</example>}}
 

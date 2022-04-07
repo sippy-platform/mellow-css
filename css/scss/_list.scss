@@ -13,27 +13,31 @@
     padding: $spacer * .5 $spacer;
     border-radius: $border-radius;
 
-    &.list-item-danger {
-      color: var(--red-700) !important;
-    }
-
     &.list-item-action {
       text-decoration: none;
       color: inherit;
 
       &:hover:not(.disabled) {
-        background-color: var(--grey-200);
+        background-color: var(--grey-100);
+      }
+    }
+
+    &.list-item-colored {
+      color: var(--color-800, var(--accent-800));
+
+      &.list-item-action {
+        &:hover:not(.disabled) {
+          background-color: var(--color-100, var(--accent-100));
+        }
       }
 
-      &.list-item-danger {
-        &:hover:not(.disabled) {
-          background-color: var(--red-200);
-        }
+      &.active {
+        background-color: var(--color-100, var(--accent-100));
       }
     }
 
     &.disabled {
-      color: var(--grey-700);
+      color: var(--grey-600);
       pointer-events: none;
     }
 
@@ -69,10 +73,6 @@
         background-color: var(--grey-200);
       }
 
-      &.list-item-danger {
-        background-color: var(--red-100);
-      }
-
       &::after {
         position: absolute;
         top: 8px;
@@ -81,7 +81,7 @@
         width: 4px;
         border-radius: $border-radius;
         content: "";
-        background-color: var(--accent-700);
+        background-color: var(--color-600, var(--accent-600));
       }
     }
   }

@@ -3,13 +3,13 @@
 .table {
   width: 100%;
   vertical-align: top;
-  border-color: var(--accent-700);
+  border-color: var(--accent-600);
 
   > :not(caption) > * > * {
     padding: $spacer * .5;
-    background-color: var(--color-200);
+    background-color: var(--color-100);
     border-bottom-width: $border-width;
-    border-color: var(--color-500, $border-color);
+    border-color: var(--color-400, $border-color);
   }
 
   > tbody:last-child > *:last-child > * {
@@ -26,7 +26,7 @@
     > * > * {
       font-weight: 600;
       border-bottom-width: 2px !important;
-      border-bottom-color: var(--color-550, var(--grey-700)) !important;
+      border-bottom-color: var(--color-500, var(--grey-600)) !important;
     }
   }
 
@@ -35,16 +35,16 @@
   }
 
   &.light {
+    --color-100: var(--grey-50);
     --color-200: var(--grey-100);
-    --color-300: var(--grey-200);
-    --color-500: var(--grey-700);
+    --color-400: var(--grey-600);
   }
 
   &.dark {
-    --color-200: var(--grey-700);
-    --color-300: var(--grey-800);
-    --color-400: var(--grey-900);
-    --color-500: var(--grey-600);
+    --color-100: var(--grey-600);
+    --color-200: var(--grey-800);
+    --color-300: var(--grey-900);
+    --color-400: var(--grey-500);
 
     color: #fff;
   }
@@ -52,23 +52,23 @@
 
 .table-striped {
   > tbody > tr:nth-of-type(odd) > * {
-    background-color: var(--color-300, var(--grey-100));
+    background-color: var(--color-200, var(--grey-50));
   }
 }
 
 .table-hover {
   > tbody > tr:hover > * {
-    background-color: var(--color-400, var(--grey-200));
+    background-color: var(--color-300, var(--grey-100));
   }
 }
 
 .table-bordered {
   > :not(caption) > * {
-    border-color: var(--color-500, $border-color);
+    border-color: var(--color-400, $border-color);
     border-width: $border-width 0;
 
     > * {
-      border-color: var(--color-500, $border-color);
+      border-color: var(--color-400, $border-color);
       border-width: 0 $border-width;
     }
   }

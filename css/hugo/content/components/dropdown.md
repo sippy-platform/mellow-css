@@ -43,7 +43,7 @@ If you want, you can style the summary element, or anything within it, however y
 You can make the dropdown menu appear above, left, or right of the toggle with the `dropdown-menu-[t|e|s]` classes.
 
 {{<example>}}
-<details class="dropdown btn btn-color red">
+<details class="dropdown btn btn-default">
   <summary>
     Bottom <i class="vi vi-angle-down"></i>
   </summary>
@@ -54,7 +54,7 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color orange">
+<details class="dropdown btn btn-default">
   <summary>
     Right <i class="vi vi-angle-right"></i>
   </summary>
@@ -65,7 +65,7 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color amber">
+<details class="dropdown btn btn-default">
   <summary>
     Top <i class="vi vi-angle-up"></i>
   </summary>
@@ -76,7 +76,7 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color yellow">
+<details class="dropdown btn btn-default">
   <summary>
     Left <i class="vi vi-angle-left"></i>
   </summary>
@@ -93,7 +93,7 @@ You can make the dropdown menu appear above, left, or right of the toggle with t
 You can align the dropdown menu to the left or right of the toggle with the `dropdown-menu-align-e` class.
 
 {{<example>}}
-<details class="dropdown btn btn-color lime">
+<details class="dropdown btn btn-default">
   <summary>
     Bottom default <i class="vi vi-angle-down"></i>
   </summary>
@@ -104,7 +104,7 @@ You can align the dropdown menu to the left or right of the toggle with the `dro
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color green">
+<details class="dropdown btn btn-default">
   <summary>
     Bottom end <i class="vi vi-angle-down"></i>
   </summary>
@@ -115,7 +115,7 @@ You can align the dropdown menu to the left or right of the toggle with the `dro
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color teal">
+<details class="dropdown btn btn-default">
   <summary>
     Top default <i class="vi vi-angle-up"></i>
   </summary>
@@ -126,7 +126,7 @@ You can align the dropdown menu to the left or right of the toggle with the `dro
     <a class="dropdown-item" href="#">Sign out</a>
   </div>
 </details>
-<details class="dropdown btn btn-color cyan">
+<details class="dropdown btn btn-default">
   <summary>
     Top end <i class="vi vi-angle-up"></i>
   </summary>
@@ -163,7 +163,7 @@ As a result of how the dropdown can be customized, adding it to a `btn-group` is
 Due to how the dropdown menu is implemented in Mellow, as a side effect, it is easy to create a submenu.
 
 {{<example>}}
-<details class="dropdown btn btn-color blue">
+<details class="dropdown btn btn-default">
   <summary>
     Main menu <i class="vi vi-angle-down"></i>
   </summary>
@@ -209,4 +209,64 @@ Split groups in the dropdown menu with the `dropdown-divider` class.
   <div class="dropdown-divider"></div>
   <a class="dropdown-item" href="#">Sign out</a>
 </div>
+{{</example>}}
+
+## Colors
+Like many other Mellow components, the dropdown menu responds to the color classes but defaults to your accent color.
+
+{{<example>}}
+<details class="dropdown btn btn-default">
+  <summary>
+    Profile <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu violet">
+    <a class="dropdown-item active" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Sign out</a>
+  </div>
+</details>
+{{</example>}}
+
+You can also color one item with another color. This example again shows the indigo menu, but now overwrites the "Sign out" option with rose.
+
+{{<example>}}
+<details class="dropdown btn btn-default">
+  <summary>
+    Profile <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu indigo">
+    <a class="dropdown-item active" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item rose" href="#">Sign out</a>
+  </div>
+</details>
+{{</example>}}
+
+Note that any parent color class will affect the menu. If you use the `btn-color` class with a color class, the menu will follow the buttons color unless you overwrite it again.
+
+To revert to the default look, add the `accent` color class to the `dropdown-menu` or pick any color you want.
+
+{{<example>}}
+<details class="dropdown btn btn-color red">
+  <summary>
+    Profile <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu">
+    <a class="dropdown-item active" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+  </div>
+</details>
+<details class="dropdown btn btn-color red">
+  <summary>
+    Accented <i class="vi vi-angle-down"></i>
+  </summary>
+  
+  <div class="dropdown-menu accent">
+    <a class="dropdown-item active" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+  </div>
+</details>
 {{</example>}}

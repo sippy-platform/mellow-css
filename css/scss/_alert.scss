@@ -6,12 +6,12 @@
   border: 1px solid $border-color;
   border-left-width: 3px;
   border-radius: $border-radius;
-  border-left-color: var(--color-700, $border-color);
+  border-left-color: var(--color-600, $border-color);
   align-items: center;
   justify-content: flex-start;
 
   a {
-    color: var(--color-750);
+    color: var(--color-700);
 
     &:hover {
       color: var(--color-800);
@@ -38,13 +38,13 @@
   display: inline-flex;
   padding: .75rem 1rem;
   box-shadow: map-get($box-shadows, 1);
-  background-color: rgba(#fff, .95);
+  background-color: var(--acrylic-fallback-background);
   border-top: none;
   border-right: none;
   border-bottom: none;
 
   @supports (backdrop-filter: blur(15px) saturate(350%)) {
-    background-color: rgba(#fff, .9);
+    background-color: var(--acrylic-background);
     backdrop-filter: blur(10px) saturate(250%);
   }
 }

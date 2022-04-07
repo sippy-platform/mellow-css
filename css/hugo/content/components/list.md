@@ -129,14 +129,25 @@ When adding the `active` class, Mellow will show an active indicator and backgro
 </div>
 {{</example>}}
 
-### Danger
-If an action requires more attention from the user because it is destructive (or any other reason) you can add the `list-item-danger` class to it.
+## Color
+Like many other controls, lists support the color classes. By default, a color class will only affect the active marker.
+
+{{<example>}}
+<div class="list green">
+  <a href="#" class="list-item list-item-action active"><span class="list-item-label">Inherit the green list color</span></a>
+  <a href="#" class="list-item list-item-action active"><span class="list-item-label">Also inherits the green list color</span></a>
+  <a href="#" class="list-item list-item-action active orange"><span class="list-item-label">Overwrites with orange</span></a>
+</div>
+{{</example>}}
+
+### Full color
+If an action requires more attention from the user then the `list-item-colored` class can be used. This will color the text, but also changes the background color on hover and active state.
 
 {{<example>}}
 <div class="list">
   <a href="#" class="list-item list-item-action"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action list-item-danger"><span class="list-item-label">Delete everything</span></a>
+  <a href="#" class="list-item list-item-action list-item-colored green active"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item list-item-action list-item-colored red"><span class="list-item-label">Delete everything</span></a>
 </div>
 {{</example>}}
 
@@ -147,12 +158,12 @@ Use the `list-sm` and `list-lg` classes to change the size of the list. These cl
 <div class="list list-sm list-dividers mb-3">
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
   <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
-  <div class="list-item list-item-danger"><span class="list-item-label">Delete everything</span></div>
+  <div class="list-item list-item-colored red"><span class="list-item-label">Delete everything</span></div>
 </div>
 <div class="list list-lg list-dividers">
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
   <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
-  <div class="list-item list-item-danger"><span class="list-item-label">Delete everything</span></div>
+  <div class="list-item list-item-colored red"><span class="list-item-label">Delete everything</span></div>
 </div>
 {{</example>}}
 
@@ -206,14 +217,14 @@ List items can have actions like checkboxes. These can be positioned either at t
 <div class="list">
   <div class="list-item">
     <span class="list-item-action-s">
-      <input type="checkbox" value="1" id="listItemTarget1">
+      <input type="checkbox" class="input-check" value="1" id="listItemTarget1">
     </span>
     <label class="list-item-label" for="listItemTarget1">This is a list item</label>
   </div>
   <div class="list-item">
     <label class="list-item-label" for="listItemTarget2">This is a list item</label>
     <span class="list-item-action-e">
-      <input type="checkbox" value="1" id="listItemTarget2">
+      <input type="checkbox" class="input-check" value="1" id="listItemTarget2">
     </span>
   </div>
 </div>
@@ -226,14 +237,14 @@ You can increase the size of the click target by making the entire `list-item` t
 <div class="list">
   <label class="list-item list-item-action">
     <span class="list-item-action-s">
-      <input type="checkbox" value="1">
+      <input type="checkbox" class="input-check" value="1">
     </span>
     <span class="list-item-label">This is a list item</span>
   </label>
   <label class="list-item list-item-action">
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-action-e">
-      <input type="checkbox" value="1">
+      <input type="checkbox" class="input-check" value="1">
     </span>
   </label>
 </div>
@@ -245,10 +256,10 @@ Note that, since this is a grid, the order of the contents of a `list-item` does
 Of course, all of these various options can be combined into more complex layouts.
 
 {{<example>}}
-<div class="list list-lg border list-dividers">
+<div class="list list-lg border list-dividers cyan">
   <label class="list-item list-item-action">
     <span class="list-item-action-s">
-      <input type="radio" name="listItemRadio" value="1">
+      <input type="radio" class="input-check" name="listItemRadio" value="1">
     </span>
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
@@ -261,7 +272,7 @@ Of course, all of these various options can be combined into more complex layout
   </label>
   <label class="list-item list-item-action active">
     <span class="list-item-action-s">
-      <input type="radio" name="listItemRadio" value="1" checked>
+      <input type="radio" class="input-check" name="listItemRadio" value="1" checked>
     </span>
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
@@ -274,10 +285,9 @@ Of course, all of these various options can be combined into more complex layout
       <i class="vi vi-house"></i>
     </span>
   </label>
-  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
   <label class="list-item list-item-action disabled">
     <span class="list-item-action-s">
-      <input type="radio" name="listItemRadio" value="1" disabled>
+      <input type="radio" class="input-check" name="listItemRadio" value="1" disabled>
     </span>
     <span class="list-item-icon-s">
       <i class="vi vi-lock"></i>
@@ -290,5 +300,12 @@ Of course, all of these various options can be combined into more complex layout
       <i class="vi vi-house"></i>
     </span>
   </label>
+  <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
+  <a class="list-item list-item-action list-item-colored red" href="#">
+    <span class="list-item-icon-s">
+      <i class="vi vi-trash-can"></i>
+    </span>
+    <span class="list-item-label">Remove all</span>
+  </a>
 </div>
 {{</example>}}

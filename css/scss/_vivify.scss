@@ -37,6 +37,8 @@
 body {
   margin: 0;
   font-family: $font-family-sans;
+  background-color: $body-bg;
+  color: $body-text;
 }
 
 // Typography reset
