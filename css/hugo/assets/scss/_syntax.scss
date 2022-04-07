@@ -1,7 +1,3 @@
-@function light-dark($light, $dark) {
-  @return var(--light, #{$light}) var(--dark, #{$dark});
-}
-
 .chroma {
   --sh-background-background: #{light-dark(#fafafa, #101010)};
   --sh-background-color: #{light-dark(#101010, #fafafa)};

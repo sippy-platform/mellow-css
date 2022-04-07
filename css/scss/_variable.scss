@@ -362,7 +362,7 @@ $overflows: (
 ) !default;
 
 // Buttons
-$btn-box-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, .15) !default;
+$btn-box-shadow-inset: light-dark(inset 0 1px 0 rgba(255, 255, 255, .15), initial) !default;
 
 $btn-semantic-color-hover: (
   secondary: "accent",

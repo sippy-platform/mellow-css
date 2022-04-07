@@ -2,10 +2,6 @@
 /* stylelint-disable declaration-block-semicolon-space-before */
 
 // Dark mode
-@function light-dark($light, $dark) {
-  @return var(--light, #{ $light }) var(--dark, #{ $dark });
-}
-
 .system,
 .light {
   --light: initial;
