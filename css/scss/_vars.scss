@@ -58,8 +58,12 @@ body {
   --accent-text: #{ color-contrast($accent) };
 
   // Components
+  --body-background: #{ light-dark(#fff, #000) };
+  --body-text: #{ light-dark(#000, #fff) };
   --acrylic-background: #{ light-dark(rgba(#fff, .9), rgba($dark, .8)) };
   --acrylic-fallback-background: #{ light-dark(rgba(#fff, .95), rgba($dark, .85)) };
+  --form-background: #{ light-dark(#fff, #000) };
+  --form-text: #{ light-dark(#000, #fff) };
 }
 
 @each $name, $color in $colors {

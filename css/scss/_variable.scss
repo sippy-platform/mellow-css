@@ -30,8 +30,8 @@ $light:               tint($grey, 92%);
 $muted:               $grey;
 $dark:                shade($grey, 70%);
 
-$body-text:           var(--light, #000) var(--dark, #fff);
-$body-bg:             var(--light, #fff) var(--dark, #000);
+$body-text:           var(--body-text);
+$body-bg:             var(--body-background);
 
 $colors: (
   red: $red,
