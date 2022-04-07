@@ -1,0 +1,63 @@
+.modal {
+  color: inherit;
+  padding: 0;
+  border: none;
+  border-radius: $border-radius;
+  background-color: var(--acrylic-solid-background);
+  box-shadow: map-get($box-shadows, 1), map-get($box-shadows, 3);
+  width: 100%;
+  max-width: $modal-md;
+
+  @supports (backdrop-filter: blur(15px) saturate(350%)) {
+    background-color: var(--acrylic-background);
+    backdrop-filter: blur(15px) saturate(250%);
+  }
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, .3);
+
+    @supports (backdrop-filter: blur(15px) saturate(350%)) {
+      backdrop-filter: blur(10px) saturate(250%);
+    }
+  }
+
+  &.modal-sm {
+    max-width: $modal-sm;
+  }
+
+  &.modal-lg {
+    max-width: $modal-lg;
+  }
+
+  &.modal-xl {
+    max-width: $modal-xl;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacer * .75;
+  border-bottom: $border-width solid $border-color;
+
+  .h5 {
+    margin: 0;
+  }
+}
+
+.modal-body {
+  padding: $spacer * .75;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacer * .75;
+  border-top: $border-width solid $border-color;
+}

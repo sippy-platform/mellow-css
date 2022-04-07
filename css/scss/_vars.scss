@@ -58,8 +58,10 @@ body {
   --body-text: #{ light-dark(#000, #fff) };
   --acrylic-background: #{ light-dark(rgba(#fff, .9), rgba($dark, .8)) };
   --acrylic-fallback-background: #{ light-dark(rgba(#fff, .95), rgba($dark, .85)) };
+  --acrylic-solid-background: #{ light-dark(#fff, $dark) };
   --form-background: #{ light-dark(#fff, #000) };
   --form-text: #{ light-dark(#000, #fff) };
+  --backdrop-background: #{ light-dark(rgba(#000, .2), rgba(#fff, .5)) };
 }
 
 @each $name, $color in $colors {
