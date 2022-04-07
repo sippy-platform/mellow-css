@@ -260,7 +260,8 @@ $utilities: (
   ),
   "text-decoration": (
     property: text-decoration,
-    values: $text-decorations
+    values: $text-decorations,
+    class: text
   ),
   "lh": (
     property: line-height,
