@@ -43,3 +43,42 @@ The `showModal()` method does everything the `show()` method does, but also resp
 <button class="btn btn-default" onclick="window.showDialog.showModal();">Use show()</button>
 <button class="btn btn-default" onclick="window.showDialog.showModal();">Use showModal()</button>
 {{</example>}}
+
+## Sizes
+{{<example>}}
+<button class="btn btn-default" onclick="window.smallDialog.showModal();">Open Small</button>
+<button class="btn btn-default" onclick="window.largeDialog.showModal();">Open Large</button>
+<button class="btn btn-default" onclick="window.extraLargeDialog.showModal();">Open Extra Large</button>
+
+<dialog class="modal modal-sm" id="smallDialog">
+  <form method="dialog" class="modal-header">
+    <h3 class="h5">This is a modal</h3>
+    <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
+  </form>
+  <div class="modal-body">
+    <p>Tiny modal says "hi".</p>
+  </div>
+</dialog>
+
+<dialog class="modal modal-lg" id="largeDialog">
+  <form method="dialog" class="modal-header">
+    <h3 class="h5">This is a modal</h3>
+    <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
+  </form>
+  <div class="modal-body">
+    <p>This is big.</p>
+  </div>
+</dialog>
+
+<dialog class="modal modal-xl" id="extraLargeDialog">
+  <form method="dialog" class="modal-header">
+    <h3 class="h5">This is a modal</h3>
+    <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
+  </form>
+  <div class="modal-body">
+    <p>There is so much space in here! (echo)</p>
+  </div>
+</dialog>
+
+<p class="mt-3">Pick a dialog to open</p>
+{{</example>}}

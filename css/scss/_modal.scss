@@ -5,7 +5,8 @@
   border-radius: $border-radius;
   background-color: var(--acrylic-solid-background);
   box-shadow: map-get($box-shadows, 1), map-get($box-shadows, 3);
-  min-width: map-get($container-max-widths, "sm");
+  width: 100%;
+  max-width: $modal-md;
 
   @supports (backdrop-filter: blur(15px) saturate(350%)) {
     background-color: var(--acrylic-background);
@@ -18,6 +19,18 @@
     @supports (backdrop-filter: blur(15px) saturate(350%)) {
       backdrop-filter: blur(10px) saturate(250%);
     }
+  }
+
+  &.modal-sm {
+    max-width: $modal-sm;
+  }
+
+  &.modal-lg {
+    max-width: $modal-lg;
+  }
+
+  &.modal-xl {
+    max-width: $modal-xl;
   }
 }
 
