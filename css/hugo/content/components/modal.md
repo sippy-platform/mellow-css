@@ -41,5 +41,5 @@ The `showModal()` method does everything the `show()` method does, but also resp
   </div>
 </dialog>
 <button class="btn btn-default" onclick="window.showDialog.showModal();">Use show()</button>
-<button class="btn btn-default" onclick="window.showDialog.showModal();">Ise showModal()</button>
+<button class="btn btn-default" onclick="window.showDialog.showModal();">Use showModal()</button>
 {{</example>}}
