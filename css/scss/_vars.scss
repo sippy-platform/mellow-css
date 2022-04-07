@@ -25,7 +25,7 @@
 }
 
 // Palette
-:root {
+body {
   --light: initial;
   --dark: ;
 
@@ -56,6 +56,10 @@
   --accent-900: #{ light-dark(shade($accent, 70%), tint($accent, 87%)) };
   --accent-600a: #{ light-dark(rgba($accent, .3), rgba($accent, .3)) };
   --accent-text: #{ color-contrast($accent) };
+
+  // Components
+  --acrylic-background: #{ light-dark(rgba(#fff, .9), rgba($dark, .8)) };
+  --acrylic-fallback-background: #{ light-dark(rgba(#fff, .95), rgba($dark, .85)) };
 }
 
 @each $name, $color in $colors {

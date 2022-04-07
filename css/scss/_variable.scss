@@ -30,7 +30,8 @@ $light:               tint($grey, 92%);
 $muted:               $grey;
 $dark:                shade($grey, 70%);
 
-$body-text:           #000;
+$body-text:           var(--light, #000) var(--dark, #fff);
+$body-bg:             var(--light, #fff) var(--dark, #000);
 
 $colors: (
   red: $red,
@@ -163,7 +164,7 @@ $box-shadows: (
 ) !default;
 
 // Borders
-$border-color:        tint($grey, 70%) !default;
+$border-color:        var(--grey-400) !default;
 $border-width:        1px !default;
 $border-widths: (
   1: 1px,

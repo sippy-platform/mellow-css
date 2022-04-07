@@ -38,13 +38,13 @@
   display: inline-flex;
   padding: .75rem 1rem;
   box-shadow: map-get($box-shadows, 1);
-  background-color: rgba(#fff, .95);
+  background-color: var(--acrylic-fallback-background);
   border-top: none;
   border-right: none;
   border-bottom: none;
 
   @supports (backdrop-filter: blur(15px) saturate(350%)) {
-    background-color: rgba(#fff, .9);
+    background-color: var(--acrylic-background);
     backdrop-filter: blur(10px) saturate(250%);
   }
 }

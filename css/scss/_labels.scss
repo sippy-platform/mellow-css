@@ -4,7 +4,7 @@
   border: $border-width solid var(--color-500, $border-color);
   font-weight: 600;
   padding: 0 $spacer * .375;
-  color: var(--color-800, color-contrast($border-color));
+  color: var(--color-800, color-contrast($grey));
 
   &.rounded-pill {
     padding: 0 $spacer * .5;
@@ -14,7 +14,7 @@
 .label-solid {
   border-color: var(--color-600, $border-color);
   background-color: var(--color-600, $border-color);
-  color: var(--color-text, color-contrast($border-color));
+  color: var(--color-text, color-contrast($grey));
 }
 
 .label-plated {
