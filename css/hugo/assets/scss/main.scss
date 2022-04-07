@@ -6,7 +6,7 @@
 
 @import "../../../scss/variable";
 
-@import 'syntax';
+@import "syntax";
 
 // Docs grid
 .docs-grid {
@@ -419,6 +419,10 @@
       line-height: 1.5;
       font-family: $font-family-mono;
       white-space: pre-wrap;
+    }
+
+    &:first-child > pre {
+      border-radius: .5rem;
     }
   }
 }
