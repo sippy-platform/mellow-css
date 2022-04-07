@@ -33,7 +33,7 @@ The colors all map to the 600 weight of their color scheme. there are however al
 <p class="m-0 text-system bg-system-inverse">.text-system</p>
 <p class="m-0 text-system-inverse bg-system">.text-system-inverse</p>
 <p class="m-0 text-white bg-dark">.text-white</p>
-<p class="m-0 text-accent">.text-white</p>
+<p class="m-0 text-accent">.text-accent</p>
 <p class="m-0 text-muted">.text-muted</p>
 <p class="m-0 text-reset">.text-reset</p>
 {{</example>}}
