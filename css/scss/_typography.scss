@@ -48,7 +48,7 @@
 
 @each $heading, $font-size in $font-sizes-heading {
   .fs-#{$heading} {
-    font-size: calc(map-get($font-size, "max") * 1rem);
+    font-size: calc(#{ map-get($font-size, "max") } * 1rem);
   }
 }
 

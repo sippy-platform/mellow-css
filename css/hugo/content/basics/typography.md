@@ -51,6 +51,10 @@ The `fs-h[1-6]` classes give you the font size of the heading classes and nothin
 <p class="fs-h6">Heading 6</p>
 {{</example>}}
 
+{{<note class="orange">}}
+Unlike their heading counterparts, the `fs-h` classes don't use Responsive Font Sizes and instead will always remain at their default maximum size.
+{{</note>}}
+
 ## Marketing
 The `marketing-*`-heading classes are designed as an extension of the default headings. These are great for when you need a more obvious heading. Note that beyond the `font-size`-scaling from the headings, all other custom styling is lost.
 
