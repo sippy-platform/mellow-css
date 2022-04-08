@@ -136,23 +136,28 @@ $gaps: (
 $font-size-base: 1rem !default;
 $font-size-small: .875em !default; // Relative to its parent
 
+$font-size-lead: (min: 1.25, max: 1.5);
+
 $font-sizes-heading: (
-  h1: $font-size-base * 2.5,
-  h2: $font-size-base * 2,
-  h3: $font-size-base * 1.75,
-  h4: $font-size-base * 1.5,
-  h5: $font-size-base * 1.25,
-  h6: $font-size-base
+  h1: (min: 1.75, max: 2.5),
+  h2: (min: 1.5, max: 2),
+  h3: (min: 1.375, max: 1.75),
+  h4: (min: 1.25, max: 1.5),
+  h5: (min: 1.125, max: 1.25),
+  h6: (min: 1, max: 1)
 ) !default;
 
 $font-sizes-marketing: (
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem
+  1: (min: 3, max: 5),
+  2: (min: 2.75, max: 4.5),
+  3: (min: 2.5, max: 4),
+  4: (min: 2.25, max: 3.5),
+  5: (min: 2, max: 3),
+  6: (min: 1.75, max: 2.5)
 ) !default;
+
+$rfs-min-vw:      576 !default;
+$rfs-max-vw:      992 !default;
 
 // Shadows
 $box-shadows: (
