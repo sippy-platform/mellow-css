@@ -22,9 +22,11 @@
 
 // Palette
 body {
+  // Themes
   --light: initial;
   --dark: ;
 
+  // Colors
   @each $name, $color in $colors {
     --#{$name}-50: #{ light-dark(tint($color, 96%), shade($color, 80%)) };
     --#{$name}-100: #{ light-dark(tint($color, 92%), shade($color, 74%)) };
