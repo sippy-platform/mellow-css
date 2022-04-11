@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import '../mellow.css';
 
 import clsx from 'clsx';
@@ -23,15 +23,19 @@ export interface ButtonProps {
   /**
    * Button activation state
    */
-  active: boolean;
+  active?: boolean;
   /**
    * Button disabled state
    */
-  disabled: boolean;
+  disabled?: boolean;
   /**
    * Show button as a block
    */
-  block: boolean;
+  block?: boolean;
+  /**
+   * If we have a href, it's an anchor
+   */
+  href?: string;
   /**
    * Optional click handler
    */
@@ -46,28 +50,32 @@ export const Button = ({
   size = 'md',
   color,
   label,
-  active,
-  disabled,
-  block,
+  active = false,
+  disabled = false,
+  block = false,
+  href,
   ...props
 }: ButtonProps) => {
+  const Component = useMemo(() => (href ? 'a' : 'button'), [href]);
+
   return (
-    <button
+    <Component
       type="button"
       className={clsx(
         'btn',
         `btn-${variant}`,
-        color,
         {
           [`btn-${size}`]: size !== 'md',
-          'active': active
+          'active': active,
+          [`${color}`]: variant === 'color' || variant === 'hover'
         }
       )}
+      href={href}
       aria-disabled={disabled}
       {...props}
     >
       {label}
-    </button>
+    </Component>
   );
 };
 

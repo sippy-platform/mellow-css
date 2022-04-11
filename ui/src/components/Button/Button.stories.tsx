@@ -15,6 +15,12 @@ Default.args = {
   label: 'Button',
 };
 
+export const Href = Template.bind({});
+Href.args = {
+  href: 'https://sippy.cloud',
+  label: 'Button',
+};
+
 export const Color = Template.bind({});
 Color.args = {
   variant: 'color',
