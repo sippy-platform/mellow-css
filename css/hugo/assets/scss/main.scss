@@ -433,5 +433,7 @@
   display: inline-block;
   background-image: linear-gradient(-45deg, var(--pink-600), var(--amber-600));
   background-clip: text;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
