@@ -1,0 +1,200 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Button } from './Button';
+
+<Meta
+  title="Components/Button"
+  component={Button}
+/>
+
+export const Template = (args) => <Button {...args} />;
+
+# Button
+The button is one of our simplest components.
+
+## Example
+A basic button can be created with only a label.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      label: 'Default'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Links
+If you want your button to be an anchor, simply include a `href` tag and Mellow UI takes care of the rest.
+
+<Canvas>
+  <Story
+    name="Link"
+    args={{
+      label: 'Link',
+      href: 'https://sippy.cloud'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Colored
+Buttons can take on any of our main palette colors. Apply the `color` variant to use them.
+
+<Canvas>
+  <Story
+    name="Color"
+    args={{
+      label: 'Red',
+      variant: 'color',
+      color: 'red'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Color on hover
+Need a colored button that draws less attention? The colored-on-hover button is perfect for this purpose.
+
+<Canvas>
+  <Story
+    name="Color on hover"
+    args={{
+      label: 'Red',
+      variant: 'hover',
+      color: 'red'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Semantic buttons
+For your ease and conviniance, Mellow maps a number of variants to a special semantically named type. Note that the `color` option has no effect on any of the semantic button variants.
+
+<Canvas>
+  <Story
+    name="Semantic/Default"
+    args={{
+      label: 'Default',
+      variant: 'default'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Semantic/Primary"
+    args={{
+      label: 'Primary',
+      variant: 'primary'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Semantic/Secondary"
+    args={{
+      label: 'Secondary',
+      variant: 'secondary'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Semantic/Danger"
+    args={{
+      label: 'Danger',
+      variant: 'danger'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Semantic/Success"
+    args={{
+      label: 'Success',
+      variant: 'success'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Sizes
+Button support multiple sizes.
+
+<Canvas>
+  <Story
+    name="Small"
+    args={{
+      label: 'Small',
+      size: 'sm'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Medium"
+    args={{
+      label: 'Medium',
+      size: 'md'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Large"
+    args={{
+      label: 'Large',
+      size: 'lg'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Block
+Button support multiple sizes.
+
+<Canvas>
+  <Story
+    name="Block"
+    args={{
+      label: 'Block',
+      block
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## States
+Button support multiple sizes.
+
+<Canvas>
+  <Story
+    name="Active"
+    args={{
+      label: 'Active',
+      active
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Disabled"
+    args={{
+      label: 'Disabled',
+      disabled: true
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+<ArgsTable of={Button} />
