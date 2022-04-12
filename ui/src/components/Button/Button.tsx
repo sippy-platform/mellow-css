@@ -5,39 +5,39 @@ import clsx from 'clsx';
 
 export interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?
+   * The variant of the button.
    */
   variant?: 'default' | 'color' | 'hover' | 'primary' | 'secondary' | 'danger' | 'success';
   /**
-   * What background color to use
+   * The color of the button, only works when the variant is `color` or `hover`
    */
-  color?: 'red' | 'oragne' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
   /**
-   * How large should the button be?
+   * The button size.
    */
   size?: 'sm' | 'md' | 'lg';
   /**
-   * Button contents
+   * Button contents.
    */
   label: string;
   /**
-   * Button activation state
+   * Button activation state.
    */
   active?: boolean;
   /**
-   * Button disabled state
+   * Button disabled state.
    */
   disabled?: boolean;
   /**
-   * Show button as a block
+   * Show button as a block.
    */
   block?: boolean;
   /**
-   * If we have a href, it's an anchor
+   * If we have a href, it's an anchor.
    */
   href?: string;
   /**
-   * Optional click handler
+   * Optional click handler.
    */
   onClick?: () => void;
 }
@@ -67,7 +67,8 @@ export const Button = ({
         {
           [`btn-${size}`]: size !== 'md',
           'active': active,
-          [`${color}`]: variant === 'color' || variant === 'hover'
+          [`${color}`]: variant === 'color' || variant === 'hover',
+          'btn-block': block
         }
       )}
       href={href}
