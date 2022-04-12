@@ -1,0 +1,30 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Grid } from './Grid';
+
+<Meta
+  title="Components/Grid"
+  component={Grid}
+/>
+
+export const Template = (args) => <Grid {...args} />;
+
+# Grid
+The button is one of our simplest components.
+
+## Example
+A basic button can be created with only a label.
+
+<Canvas>
+  <Story
+    name="Example"
+    args={{
+      children: <>Hello world</>
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+<ArgsTable of={Grid} />
