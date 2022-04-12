@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
-import '../mellow.css';
+import React, { useMemo } from "react";
+import "../mellow.css";
 
-import clsx from 'clsx';
+import clsx from "clsx";
 
 export interface ButtonProps {
   /**
