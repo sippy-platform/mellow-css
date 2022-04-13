@@ -75,13 +75,17 @@ export const Grid = ({
         grid = breakpointConfig;
       }
 
+      if (!grid && breakpoint === 'xs') {
+        grid = 12;
+      }
+
       const infix = breakpoint === 'xs' ? '' : `-${breakpoint}`;
 
       if (grid) {
         grids.push(`grid${infix}-${grid}`);
       }
 
-      if (gap) {
+      if (gap !== undefined) {
         gaps.push(`gap${infix}-${gap}`);
       }
     });

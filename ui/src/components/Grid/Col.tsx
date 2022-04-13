@@ -88,7 +88,7 @@ export const Col = ({
         starts.push(`col-start${infix}-${start}`);
       }
 
-      if (order) {
+      if (order !== undefined) {
         orders.push(`order${infix}-${order}`);
       }
     });

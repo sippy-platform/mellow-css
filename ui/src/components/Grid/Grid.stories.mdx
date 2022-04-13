@@ -46,7 +46,7 @@ By setting the column count you can change the default grid.
   <Story
     name="Column count"
     args={{
-      cols: 5,
+      xs: 5,
       children: ([
         <Col className="bg-accent p-2 rounded text-light">1/5</Col>,
         <Col className="bg-accent p-2 rounded text-light">1/5</Col>,
@@ -67,7 +67,8 @@ You can also make the column count respond to breakpoints.
   <Story
     name="Responsive column count"
     args={{
-      cols: { xs: 3, md: 5 },
+      xs: 3,
+      md: 5,
       children: ([
         <Col className="bg-accent p-2 rounded text-light">1/3, md:1/5</Col>
       ])
@@ -120,7 +121,12 @@ You can make columns take on the full width of the grid regardless of its size.
   <Story
     name="Full width"
     args={{
-      cols: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5, ul: 6 },
+      xs: 1,
+      sm: 2,
+      md: 3,
+      lg: 4,
+      xl: 5,
+      ul: 6,
       children: ([
         <Col className="bg-accent p-2 rounded text-light">Unit</Col>,
         <Col className="bg-accent p-2 rounded text-light">Unit</Col>,
@@ -155,9 +161,9 @@ Set the start position of a colum with the `start` property.
     name="Start position"
     args={{
       children: ([
-        <Col xs={3} start={4} className="bg-accent p-2 rounded text-light">start 4</Col>,
-        <Col xs={2} start={9} className="bg-accent p-2 rounded text-light">start 9</Col>,
-        <Col xs={2} start={8} className="bg-accent p-2 rounded text-light">start 8</Col>,
+        <Col xs={{ span: 3, start: 4 }} className="bg-accent p-2 rounded text-light">start 4</Col>,
+        <Col xs={{ span: 2, start: 9 }} className="bg-accent p-2 rounded text-light">start 9</Col>,
+        <Col xs={{ span: 2, start: 8 }} className="bg-accent p-2 rounded text-light">start 8</Col>,
         <Col start={12} className="bg-accent p-2 rounded text-light">start 12</Col>
       ])
     }}
@@ -173,7 +179,7 @@ Like other properties, the start prop is also responsive.
     name="Responsive start position"
     args={{
       children: ([
-        <Col xs={3} start={{ xs: 4, md: 8 }} className="bg-accent p-2 rounded text-light">start 4, md:8</Col>
+        <Col xs={{ span: 3, start: 4 }} md={{ start: 8 }} className="bg-accent p-2 rounded text-light">start 4, md:8</Col>
       ])
     }}
   >
@@ -209,7 +215,7 @@ Change the gap by using the `gap` property.
   <Story
     name="Gap"
     args={{
-      gap: 0,
+      xs: { gap: 0 },
       children: ([
         <Col xs={4} className="bg-accent p-2 rounded text-light">1/3</Col>,
         <Col xs={4} className="bg-accent p-2 rounded text-light">1/3</Col>,
@@ -228,7 +234,9 @@ The gap can also be responsive.
   <Story
     name="Responsive gap"
     args={{
-      gap: { xs: 0, md: 3, ul: 5 },
+      xs: { gap: 0 },
+      md: { gap: 3 },
+      ul: { gap: 5 },
       children: ([
         <Col xs={4} className="bg-accent p-2 rounded text-light">1/3</Col>,
         <Col xs={4} className="bg-accent p-2 rounded text-light">1/3</Col>,
@@ -247,13 +255,13 @@ Change the order of the columns with the order prop.
   <Story
     name="Order"
     args={{
-      cols: 5,
+      xs: 5,
       children: ([
-        <Col order={0} className="bg-blue p-2 rounded text-light">1</Col>,
-        <Col order={1} className="bg-cyan p-2 rounded text-light">2</Col>,
-        <Col order={3} className="bg-teal p-2 rounded text-light">3</Col>,
-        <Col order={2} className="bg-green p-2 rounded text-light">4</Col>,
-        <Col order={4} className="bg-lime p-2 rounded text-light">5</Col>
+        <Col xs={{ order: 0 }} className="bg-blue p-2 rounded text-light">1</Col>,
+        <Col xs={{ order: 1 }} className="bg-cyan p-2 rounded text-light">2</Col>,
+        <Col xs={{ order: 3 }} className="bg-teal p-2 rounded text-light">3</Col>,
+        <Col xs={{ order: 2 }} className="bg-green p-2 rounded text-light">4</Col>,
+        <Col xs={{ order: 4 }} className="bg-lime p-2 rounded text-light">5</Col>
       ])
     }}
   >
@@ -268,13 +276,13 @@ Aside from a range between 0 and 5, you can also use `first` and `last`.
   <Story
     name="First and last"
     args={{
-      cols: 5,
+      xs: 5,
       children: ([
-        <Col order={0} className="bg-blue p-2 rounded text-light">1</Col>,
-        <Col order="last" className="bg-cyan p-2 rounded text-light">2</Col>,
-        <Col order="first" className="bg-teal p-2 rounded text-light">3</Col>,
-        <Col order={2} className="bg-green p-2 rounded text-light">4</Col>,
-        <Col order={4} className="bg-lime p-2 rounded text-light">5</Col>
+        <Col xs={{ order: 0 }} className="bg-blue p-2 rounded text-light">1</Col>,
+        <Col xs={{ order: "last" }} className="bg-cyan p-2 rounded text-light">2</Col>,
+        <Col xs={{ order: "first" }} className="bg-teal p-2 rounded text-light">3</Col>,
+        <Col xs={{ order: 2 }} className="bg-green p-2 rounded text-light">4</Col>,
+        <Col xs={{ order: 4 }} className="bg-lime p-2 rounded text-light">5</Col>
       ])
     }}
   >
@@ -289,11 +297,11 @@ Aside from a range between 0 and 5, you can also use `first` and `last`.
   <Story
     name="Order default"
     args={{
-      cols: 5,
+      xs: 5,
       children: ([
         <Col className="bg-blue p-2 rounded text-light">1</Col>,
         <Col className="bg-cyan p-2 rounded text-light">2</Col>,
-        <Col order={2} className="bg-teal p-2 rounded text-light">3</Col>,
+        <Col xs={{ order: 2 }} className="bg-teal p-2 rounded text-light">3</Col>,
         <Col className="bg-green p-2 rounded text-light">4</Col>,
         <Col className="bg-lime p-2 rounded text-light">5</Col>
       ])
