@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback } from "react";
+import React, { ReactNode, useMemo } from "react";
 import "../mellow.css";
 
 import clsx from "clsx";
@@ -59,13 +59,13 @@ export const Col = ({
   className,
   ...props
 }: ColProps) => {
-  const classes = useCallback(() => {
+  const gridClasses = useMemo(() => {
     const spans: string[] = [];
     const starts: string[] = [];
     const orders: string[] = [];
 
     ['xs', 'sm', 'md', 'lg', 'xl', 'ul'].forEach((breakpoint) => {
-      const breakpointConfigs: { [key: string]: ColDefinition | undefined } = { xs, sm, md, lg, xl, ul  };
+      const breakpointConfigs: BreakpointConfig = { xs, sm, md, lg, xl, ul  };
       const breakpointConfig: ColDefinition | undefined = breakpointConfigs[breakpoint];
 
       let span: ColSize | undefined;
@@ -99,33 +99,8 @@ export const Col = ({
   return (
     <div
       className={clsx(
-        className,
-        {
-          [`col-${xs}`]: !!xs,
-          [`col-sm-${sm}`]: !!sm,
-          [`col-md-${md}`]: !!md,
-          [`col-lg-${lg}`]: !!lg,
-          [`col-xl-${xl}`]: !!xl,
-          [`col-ul-${ul}`]: !!ul,
-          [`col-start-${start}`]: typeof start === 'number',
-          [`order-${order}`]: typeof order === 'number' || order === 'first' || order === 'last'
-        },
-        {
-          [`col-start-${xs?.start}`]: xs?.start,
-          [`col-start-sm-${sm?.start}`]: sm?.start,
-          [`col-start-md-${md?.start}`]: md?.start,
-          [`col-start-lg-${lg?.start}`]: lg?.start,
-          [`col-start-xl-${xl?.start}`]: xl?.start,
-          [`col-start-ul-${ul?.start}`]: ul?.start
-        },
-        {
-          [`order-${xs?.order}`]: xs?.order,
-          [`order-sm-${sm?.order}`]: sm?.order,
-          [`order-md-${md?.order}`]: md?.order,
-          [`order-lg-${lg?.order}`]: lg?.order,
-          [`order-xl-${xl?.order}`]: xl?.order,
-          [`order-ul-${ul?.order}`]: ul?.order
-        }
+        gridClasses,
+        className
       )}
       {...props}
     >
