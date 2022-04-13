@@ -1,62 +1,41 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useCallback } from "react";
 import "../mellow.css";
 
 import clsx from "clsx";
 
+type ColOrder = number | 'first' | 'last';
+type ColSize = number | 'full';
+type ColDefinition = ColSize | { span?: ColSize, start?: number, order?: ColOrder }
+
 interface BreakpointConfig {
-  xs?: number,
-  sm?: number,
-  md?: number,
-  lg?: number,
-  xl?: number,
-  ul?: number
+  [key: string]: ColDefinition | undefined
 }
-
-interface BreakpointConfigOrder {
-  xs?: number | 'first' | 'last',
-  sm?: number | 'first' | 'last',
-  md?: number | 'first' | 'last',
-  lg?: number | 'first' | 'last',
-  xl?: number | 'first' | 'last',
-  ul?: number | 'first' | 'last'
-}
-
-type BreakpointValue = BreakpointConfig | number;
-type BreakpointOrderValue = BreakpointConfigOrder | number | 'first' | 'last';
 
 export interface ColProps {
   /**
-   * Number of columns
+   * Column definition on the xs breakpoint
    */
-  xs?: number | 'full';
+  xs?: ColDefinition;
   /**
-   * Number of columns
+   * Column definition on the sm breakpoint
    */
-  sm?: number | 'full';
+  sm?: ColDefinition;
   /**
-   * Number of columns
+   * Column definition on the md breakpoint
    */
-  md?: number | 'full';
+  md?: ColDefinition;
   /**
-   * Number of columns
+   * Column definition on the lg breakpoint
    */
-  lg?: number | 'full';
+  lg?: ColDefinition;
   /**
-   * Number of columns
+   * Column definition on the xl breakpoint
    */
-  xl?: number | 'full';
+  xl?: ColDefinition;
   /**
-   * Number of columns
+   * Column definition on the ul breakpoint
    */
-  ul?: number | 'full';
-  /**
-   * The start point of the column
-   */
-  start?: BreakpointValue;
-  /**
-   * Change the order of the column
-   */
-  order?: BreakpointOrderValue;
+  ul?: ColDefinition;
   /**
    * Custom classes for the col box
    */
@@ -77,11 +56,46 @@ export const Col = ({
   lg,
   xl,
   ul,
-  start,
-  order,
   className,
   ...props
 }: ColProps) => {
+  const classes = useCallback(() => {
+    const spans: string[] = [];
+    const starts: string[] = [];
+    const orders: string[] = [];
+
+    ['xs', 'sm', 'md', 'lg', 'xl', 'ul'].forEach((breakpoint) => {
+      const breakpointConfigs: { [key: string]: ColDefinition | undefined } = { xs, sm, md, lg, xl, ul  };
+      const breakpointConfig: ColDefinition | undefined = breakpointConfigs[breakpoint];
+
+      let span: ColSize | undefined;
+      let start: number | undefined;
+      let order: ColOrder | undefined;
+
+      if (typeof breakpointConfig === 'object' && breakpointConfig !== null) {
+        ({ span, start, order } = breakpointConfig);
+      } else {
+        span = breakpointConfig;
+      }
+
+      const infix = breakpoint === 'xs' ? '' : `-${breakpoint}`;
+
+      if (span) {
+        spans.push(`col${infix}-${span}`);
+      }
+
+      if (start) {
+        starts.push(`col-start${infix}-${start}`);
+      }
+
+      if (order) {
+        orders.push(`order${infix}-${order}`);
+      }
+    });
+
+    return clsx(...spans, ...starts, ...orders);
+  }, []);
+
   return (
     <div
       className={clsx(
@@ -96,21 +110,21 @@ export const Col = ({
           [`col-start-${start}`]: typeof start === 'number',
           [`order-${order}`]: typeof order === 'number' || order === 'first' || order === 'last'
         },
-        typeof start !== 'number' && {
-          [`col-start-${start?.xs}`]: start?.xs,
-          [`col-start-sm-${start?.sm}`]: start?.sm,
-          [`col-start-md-${start?.md}`]: start?.md,
-          [`col-start-lg-${start?.lg}`]: start?.lg,
-          [`col-start-xl-${start?.xl}`]: start?.xl,
-          [`col-start-ul-${start?.ul}`]: start?.ul
+        {
+          [`col-start-${xs?.start}`]: xs?.start,
+          [`col-start-sm-${sm?.start}`]: sm?.start,
+          [`col-start-md-${md?.start}`]: md?.start,
+          [`col-start-lg-${lg?.start}`]: lg?.start,
+          [`col-start-xl-${xl?.start}`]: xl?.start,
+          [`col-start-ul-${ul?.start}`]: ul?.start
         },
-        typeof order !== 'number' && order !== 'first' && order !== 'last' && {
-          [`order-${order?.xs}`]: order?.xs,
-          [`order-sm-${order?.sm}`]: order?.sm,
-          [`order-md-${order?.md}`]: order?.md,
-          [`order-lg-${order?.lg}`]: order?.lg,
-          [`order-xl-${order?.xl}`]: order?.xl,
-          [`order-ul-${order?.ul}`]: order?.ul
+        {
+          [`order-${xs?.order}`]: xs?.order,
+          [`order-sm-${sm?.order}`]: sm?.order,
+          [`order-md-${md?.order}`]: md?.order,
+          [`order-lg-${lg?.order}`]: lg?.order,
+          [`order-xl-${xl?.order}`]: xl?.order,
+          [`order-ul-${ul?.order}`]: ul?.order
         }
       )}
       {...props}
