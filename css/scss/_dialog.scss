@@ -1,4 +1,4 @@
-.modal {
+.dialog {
   color: inherit;
   padding: 0;
   border: none;
@@ -6,7 +6,7 @@
   background-color: var(--acrylic-solid-background);
   box-shadow: map-get($box-shadows, 1), map-get($box-shadows, 3);
   width: 100%;
-  max-width: $modal-md;
+  max-width: $dialog-md;
 
   @supports (backdrop-filter: blur(15px) saturate(350%)) {
     background-color: var(--acrylic-background);
@@ -21,20 +21,20 @@
     }
   }
 
-  &.modal-sm {
-    max-width: $modal-sm;
+  &.dialog-sm {
+    max-width: $dialog-sm;
   }
 
-  &.modal-lg {
-    max-width: $modal-lg;
+  &.dialog-lg {
+    max-width: $dialog-lg;
   }
 
-  &.modal-xl {
-    max-width: $modal-xl;
+  &.dialog-xl {
+    max-width: $dialog-xl;
   }
 }
 
-.modal-header {
+.dialog-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +46,7 @@
   }
 }
 
-.modal-body {
+.dialog-body {
   padding: $spacer * .75;
 
   :last-child {
@@ -54,7 +54,7 @@
   }
 }
 
-.modal-footer {
+.dialog-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
