@@ -16,9 +16,9 @@ Use the `Container` component to position your layout.
   <Story
     name="Container"
     args={{
-      children: ([
+      children: (
         <div className="bg-accent p-2 rounded text-light">This is the container's child component.</div>
-      ])
+      )
     }}
   >
     {Template.bind({})}
@@ -33,9 +33,9 @@ Use the `fluid` prop to make the container fluid.
     name="Fluid container"
     args={{
       fluid: true,
-      children: ([
+      children: (
         <div className="bg-accent p-2 rounded text-light">This container is fluid.</div>
-      ])
+      )
     }}
   >
     {Template.bind({})}
@@ -50,9 +50,9 @@ Use the `fluid` prop to make the container fluid at any given breakpoint.
     name="Responsive container"
     args={{
       fluid: 'md',
-      children: ([
-        <div className="bg-accent p-2 rounded text-light">TThis container is fluid until the medium breakpoint.</div>
-      ])
+      children: (
+        <div className="bg-accent p-2 rounded text-light">This container is fluid until the medium breakpoint.</div>
+      )
     }}
   >
     {Template.bind({})}
