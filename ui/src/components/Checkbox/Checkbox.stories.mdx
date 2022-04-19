@@ -17,6 +17,7 @@ The Checkbox component provides an easy to use checkbox.
     name="Basic checkbox"
     args={{
       label: 'Basic checkbox',
+      id: 'basic',
       checked: true
     }}
   >
@@ -32,6 +33,7 @@ Add a helper property to add a hleper text underneath.
     name="Helper checkbox"
     args={{
       label: 'Helper checkbox',
+      id: 'helper',
       helper: 'This extra info helps you pick the right thing',
       checked: true
     }}
@@ -47,6 +49,7 @@ Make the checkbox indeterminate by setting `indeterminate` as the value of the `
     name="Indeterminated checkbox"
     args={{
       label: 'Indeterminated checkbox',
+      id: 'indeterminate',
       checked: 'indeterminate'
     }}
   >
@@ -61,6 +64,7 @@ Leave out the label to get just a checkbox.
   <Story
     name="No label"
     args={{
+      id: 'none',
       checked: true
     }}
   >

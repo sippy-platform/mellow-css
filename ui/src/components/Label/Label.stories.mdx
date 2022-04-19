@@ -1,0 +1,25 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Label } from "./Label";
+
+<Meta
+  title="Forms/Label"
+  component={Label}
+/>
+
+export const Template = (args) => <Label {...args} />;
+
+# Label
+The Label component provides an easy to use label.
+
+<Canvas>
+  <Story
+    name="Basic label"
+    args={{
+      label: 'Basic label',
+      checked: true
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
