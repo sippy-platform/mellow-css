@@ -16,6 +16,7 @@
   white-space: nowrap;
   background-color: var(--color-600, var(--accent-600));
   line-height: 1;
+  transition: $base-transition;
 
   & + & {
     margin-left: 2px;
