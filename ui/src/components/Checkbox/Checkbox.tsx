@@ -1,11 +1,17 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import * as CheckboxPrimitives from '@radix-ui/react-checkbox';
+
+import Label from '../Label';
 
 import "../mellow.css";
 
 import clsx from "clsx";
 
 export interface CheckboxProps {
+  /**
+   * The id attached of the checkbox
+   */
+  id?: string;
   /**
    * The label attached to the checkbox
    */
@@ -32,19 +38,21 @@ export interface CheckboxProps {
  * Primary UI component for user interaction
  */
 export const Checkbox = ({
+  id,
   className,
   checked,
   label,
   helper
 }: CheckboxProps) => {
+  const [checkedState, setChecked] = useState(checked);
 
   if (label || helper) {
     return (
       <div className={clsx('input-form', className)}>
-        <CheckboxPrimitives.Root className="input-check" checked={checked} id="firstCheckbox" />
-        <label className="input-label" htmlFor="firstCheckbox">
+        <CheckboxPrimitives.Root className="input-check" checked={checkedState} onCheckedChange={setChecked} id={id} />
+        <Label id={id}>
           {label}
-        </label>
+        </Label>
         {helper && <span className="input-text">{helper}</span>}
       </div>
     );
