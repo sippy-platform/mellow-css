@@ -94,7 +94,7 @@
     }
   }
 
-  &[role="checkbox"]:indeterminate,
+  &[role="checkbox"][data-state="indeterminate"],
   &[type="checkbox"]:indeterminate {
     background-color: var(--color-600, var(--accent-600));
     border-color: var(--color-600, var(--accent-600));

@@ -10,11 +10,56 @@ import { Checkbox } from "./Checkbox";
 export const Template = (args) => <Checkbox {...args} />;
 
 # Checkbox
-The checkbox.
+The Checkbox component provides an easy to use checkbox.
 
 <Canvas>
   <Story
     name="Basic checkbox"
+    args={{
+      label: 'Basic checkbox',
+      checked: true
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Helper checkbox
+Add a helper property to add a hleper text underneath.
+
+<Canvas>
+  <Story
+    name="Helper checkbox"
+    args={{
+      label: 'Helper checkbox',
+      helper: 'This extra info helps you pick the right thing',
+      checked: true
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Indeterminated
+Make the checkbox indeterminate by setting `indeterminate` as the value of the `checked` prop.
+<Canvas>
+  <Story
+    name="Indeterminated checkbox"
+    args={{
+      label: 'Indeterminated checkbox',
+      checked: 'indeterminate'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# No label
+Leave out the label to get just a checkbox.
+
+<Canvas>
+  <Story
+    name="No label"
     args={{
       checked: true
     }}
