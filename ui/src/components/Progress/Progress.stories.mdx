@@ -10,15 +10,43 @@ import { Progress } from "./Progress";
 export const Template = (args) => <Progress {...args} />;
 
 # Progress
-
+The progress component can be used to incidate the progress of a process that takes a longer time to process.
 
 <Canvas>
   <Story
     name="Basic progress"
     args={{
-      min: 0,
-      max: 100,
       value: 35
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Value
+By default, the progress bar will asume a `max` value of `100`. This can be overwritten with the `max` prop. The progress bar below has a mximum value of 3 and a progress of 1.
+
+<Canvas>
+  <Story
+    name="Custom maximum"
+    args={{
+      value: 1,
+      max: 3
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Colors
+By default, the progress bar will use the accent color, but alternative colors can be used as well:
+
+<Canvas>
+  <Story
+    name="Colored progress"
+    args={{
+      value: 35,
+      color: 'lime'
     }}
   >
     {Template.bind({})}

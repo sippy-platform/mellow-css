@@ -17,6 +17,10 @@ export interface ProgressProps {
   /**
    * Custom classes for the progress bar
    */
+  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  /**
+   * Custom classes for the progress bar
+   */
   className?: string;
   /**
    * Children
@@ -30,11 +34,12 @@ export interface ProgressProps {
 export const Progress = ({
   max = 100,
   value = 0,
+  color = 'accent',
   className
 }: ProgressProps) => {
   return (
     <ProgressPrimitives.Root value={value} max={max} className={clsx('progress', className)}>
-      <ProgressPrimitives.Indicator className="progress-bar" style={{ width: `${value / max * 100}%` }} />
+      <ProgressPrimitives.Indicator className={clsx('progress-bar', color)} style={{ width: `${value / max * 100}%` }} />
     </ProgressPrimitives.Root>
   );
 };
