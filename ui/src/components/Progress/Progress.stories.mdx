@@ -1,0 +1,26 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Progress } from "./Progress";
+
+<Meta
+  title="Components/Progress"
+  component={Progress}
+/>
+
+export const Template = (args) => <Progress {...args} />;
+
+# Progress
+
+
+<Canvas>
+  <Story
+    name="Basic progress"
+    args={{
+      min: 0,
+      max: 100,
+      value: 35
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
