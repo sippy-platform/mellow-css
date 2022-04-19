@@ -27,6 +27,10 @@ export interface ProgressProps {
    */
   className?: string;
   /**
+   * Show the label
+   */
+  label?: boolean;
+  /**
    * Children
    */
   children?: ReactNode;
@@ -40,6 +44,7 @@ export const Progress = ({
   value = 0,
   color = 'accent',
   size = 'md',
+  label = false,
   className
 }: ProgressProps) => {
   return (
@@ -64,7 +69,9 @@ export const Progress = ({
           )
         }
         style={{ width: `${value / max * 100}%` }}
-      />
+      >
+        {label && `${value / max * 100}%`}
+      </ProgressPrimitives.Indicator>
     </ProgressPrimitives.Root>
   );
 };

@@ -99,3 +99,20 @@ Change the size of the progress bar with the `size` prop.
     {Template.bind({})}
   </Story>
 </Canvas>
+
+## Label
+Add the label parameter to show a progress label. Note that this works best with a large progress bar.
+
+<Canvas>
+  <Story
+    name="Labeled progress"
+    args={{
+      label: true,
+      value: 36,
+      color: 'green',
+      size: 'lg'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
