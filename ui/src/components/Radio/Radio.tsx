@@ -57,7 +57,7 @@ export const Radio = ({
   }
 
   return (
-    <RadioGroupPrimitives.Root className="input-check" value={value} id={id} />
+    <RadioGroupPrimitives.Item className={clsx('input-check', className)} value={value} id={id} />
   );
 };
 
