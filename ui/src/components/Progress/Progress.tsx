@@ -1,13 +1,11 @@
 import React, { ReactNode } from "react";
+import * as ProgressPrimitives from '@radix-ui/react-progress';
+
 import "../mellow.css";
 
 import clsx from "clsx";
 
 export interface ProgressProps {
-  /**
-   * The lowest value on the progress bar
-   */
-  min?: number;
   /**
    * The highest value on the progress bar
    */
@@ -30,31 +28,14 @@ export interface ProgressProps {
  * Primary UI component for user interaction
  */
 export const Progress = ({
-  min = 0,
   max = 100,
   value = 0,
-  className,
-  ...props
+  className
 }: ProgressProps) => {
   return (
-    <div
-      className={clsx(
-        'progress',
-        className
-      )}
-      {...props}
-    >
-      <div
-        className="progress-bar"
-        role="progressbar"
-        aria-valuenow={value}
-        aria-valuemin={min}
-        aria-valuemax={max}
-        style={{
-          width: `${value}%`
-        }}
-      />
-    </div>
+    <ProgressPrimitives.Root value={value} max={max} className={clsx('progress', className)}>
+      <ProgressPrimitives.Indicator className="progress-bar" style={{ width: `${value / max * 100}%` }} />
+    </ProgressPrimitives.Root>
   );
 };
 
