@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import * as CheckboxPrimitives from '@radix-ui/react-checkbox';
 
 import Label from '../Label';
@@ -44,11 +44,12 @@ export const Checkbox = ({
   label,
   helper
 }: CheckboxProps) => {
+  const [checkedState, setChecked] = useState(checked);
 
   if (label || helper) {
     return (
       <div className={clsx('input-form', className)}>
-        <CheckboxPrimitives.Root className="input-check" checked={checked} id={id} />
+        <CheckboxPrimitives.Root className="input-check" checked={checkedState} onCheckedChange={setChecked} id={id} />
         <Label id={id}>
           {label}
         </Label>
