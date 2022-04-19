@@ -60,7 +60,6 @@ export const Grid = ({
   const gridClasses = useMemo(() => {
     const grids: string[] = [];
     const gaps: string[] = [];
-    const orders: string[] = [];
 
     ['xs', 'sm', 'md', 'lg', 'xl', 'ul'].forEach((breakpoint) => {
       const breakpointConfigs: BreakpointConfig = { xs, sm, md, lg, xl, ul  };

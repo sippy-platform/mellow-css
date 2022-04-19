@@ -1,0 +1,118 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Progress } from "./Progress";
+
+<Meta
+  title="Components/Progress"
+  component={Progress}
+/>
+
+export const Template = (args) => <Progress {...args} />;
+
+# Progress
+The progress component can be used to incidate the progress of a process that takes a longer time to process.
+
+<Canvas>
+  <Story
+    name="Basic progress"
+    args={{
+      value: 35
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Value
+By default, the progress bar will asume a `max` value of `100`. This can be overwritten with the `max` prop. The progress bar below has a mximum value of 3 and a progress of 1.
+
+<Canvas>
+  <Story
+    name="Custom maximum"
+    args={{
+      value: 1,
+      max: 3
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Colors
+By default, the progress bar will use the accent color, but alternative colors can be used as well:
+
+<Canvas>
+  <Story
+    name="Colored progress"
+    args={{
+      value: 40,
+      color: 'lime'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Size
+Change the size of the progress bar with the `size` prop.
+
+### 1
+<Canvas>
+  <Story
+    name="1 progress"
+    args={{
+      value: 58,
+      size: 1,
+      color: 'amber'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+
+### Small
+<Canvas>
+  <Story
+    name="Small progress"
+    args={{
+      value: 24,
+      size: 'sm',
+      color: 'cyan'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+
+### Large
+<Canvas>
+  <Story
+    name="Large progress"
+    args={{
+      value: 76,
+      size: 'lg',
+      color: 'rose'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Label
+Add the label parameter to show a progress label. Note that this works best with a large progress bar.
+
+<Canvas>
+  <Story
+    name="Labeled progress"
+    args={{
+      label: true,
+      value: 36,
+      color: 'green',
+      size: 'lg'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
