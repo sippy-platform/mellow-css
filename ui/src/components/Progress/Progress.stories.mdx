@@ -45,8 +45,55 @@ By default, the progress bar will use the accent color, but alternative colors c
   <Story
     name="Colored progress"
     args={{
-      value: 35,
+      value: 40,
       color: 'lime'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Size
+Change the size of the progress bar with the `size` prop.
+
+### 1
+<Canvas>
+  <Story
+    name="1 progress"
+    args={{
+      value: 58,
+      size: 1,
+      color: 'amber'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+
+### Small
+<Canvas>
+  <Story
+    name="Small progress"
+    args={{
+      value: 24,
+      size: 'sm',
+      color: 'cyan'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+
+### Large
+<Canvas>
+  <Story
+    name="Large progress"
+    args={{
+      value: 76,
+      size: 'lg',
+      color: 'rose'
     }}
   >
     {Template.bind({})}

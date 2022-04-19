@@ -15,9 +15,13 @@ export interface ProgressProps {
    */
   value?: number;
   /**
-   * Custom classes for the progress bar
+   * Color of the progress bar
    */
   color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  /**
+   * Size of the progress bar
+   */
+  size?: 1 | 'sm' | 'md' | 'lg';
   /**
    * Custom classes for the progress bar
    */
@@ -35,11 +39,32 @@ export const Progress = ({
   max = 100,
   value = 0,
   color = 'accent',
+  size = 'md',
   className
 }: ProgressProps) => {
   return (
-    <ProgressPrimitives.Root value={value} max={max} className={clsx('progress', className)}>
-      <ProgressPrimitives.Indicator className={clsx('progress-bar', color)} style={{ width: `${value / max * 100}%` }} />
+    <ProgressPrimitives.Root
+      value={value}
+      max={max}
+      className={
+        clsx(
+          'progress',
+          className,
+          {
+            [`progress-${size}`]: size !== 'md'
+          }
+        )
+      }
+    >
+      <ProgressPrimitives.Indicator
+        className={
+          clsx(
+            'progress-bar',
+            color
+          )
+        }
+        style={{ width: `${value / max * 100}%` }}
+      />
     </ProgressPrimitives.Root>
   );
 };
