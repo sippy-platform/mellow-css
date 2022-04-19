@@ -1,27 +1,27 @@
 ---
-title: Modals
-description: Show modals to users.
+title: Dialogs
+description: Show dialogs to users.
 section: components
 ---
 
 ## Example
-Mellow's modal uses the `dialog` element, this native HTML element is supported in all modern browsers.
+Mellow's dialog uses the `dialog` element, this native HTML element is supported in all modern browsers.
 
 {{<example>}}
-<dialog class="modal" id="exampleDialog">
-  <form method="dialog" class="modal-header">
-    <h3 class="h5">This is a modal</h3>
+<dialog class="dialog" id="exampleDialog">
+  <form method="dialog" class="dialog-header">
+    <h3 class="h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
-  <div class="modal-body">
+  <div class="dialog-body">
     <p>Hello world!</p>
-    <p>This modal can be closed with the <kb>esc</kb> button.</p>
+    <p>This dialog can be closed with the <kb>esc</kb> button.</p>
   </div>
-  <form method="dialog" class="modal-footer">
+  <form method="dialog" class="dialog-footer">
     <button value="cancel" class="btn btn-danger"><i class="vi vi-xmark"></i> Close</button>
   </form>
 </dialog>
-<button class="btn btn-default" onclick="window.exampleDialog.showModal();">Open modal</button>
+<button class="btn btn-default" onclick="window.exampleDialog.showModal();">Open dialog</button>
 {{</example>}}
 
 ### `show()` and `showModal()`
@@ -30,14 +30,14 @@ There are 2 methods to open a model: `show()` and `showModal()`. We'll refer to 
 The `showModal()` method does everything the `show()` method does, but also respects the `autofocus` property, and makes sure the dialog is displayed on top of the stack.
 
 {{<example>}}
-<dialog class="modal" id="showDialog">
-  <form method="dialog" class="modal-header">
-    <h3 class="h5">This is a modal</h3>
+<dialog class="dialog" id="showDialog">
+  <form method="dialog" class="dialog-header">
+    <h3 class="h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
-  <div class="modal-body">
+  <div class="dialog-body">
     <p>Hello world!</p>
-    <p>This modal can be closed with the <kb>esc</kb> button.</p>
+    <p>This dialog can be closed with the <kb>esc</kb> button.</p>
   </div>
 </dialog>
 <button class="btn btn-default" onclick="window.showDialog.showModal();">Use show()</button>
@@ -50,32 +50,32 @@ The `showModal()` method does everything the `show()` method does, but also resp
 <button class="btn btn-default" onclick="window.largeDialog.showModal();">Open Large</button>
 <button class="btn btn-default" onclick="window.extraLargeDialog.showModal();">Open Extra Large</button>
 
-<dialog class="modal modal-sm" id="smallDialog">
-  <form method="dialog" class="modal-header">
-    <h3 class="h5">This is a modal</h3>
+<dialog class="dialog dialog-sm" id="smallDialog">
+  <form method="dialog" class="dialog-header">
+    <h3 class="h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
-  <div class="modal-body">
-    <p>Tiny modal says "hi".</p>
+  <div class="dialog-body">
+    <p>Tiny dialog says "hi".</p>
   </div>
 </dialog>
 
-<dialog class="modal modal-lg" id="largeDialog">
-  <form method="dialog" class="modal-header">
-    <h3 class="h5">This is a modal</h3>
+<dialog class="dialog dialog-lg" id="largeDialog">
+  <form method="dialog" class="dialog-header">
+    <h3 class="h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
-  <div class="modal-body">
+  <div class="dialog-body">
     <p>This is big.</p>
   </div>
 </dialog>
 
-<dialog class="modal modal-xl" id="extraLargeDialog">
-  <form method="dialog" class="modal-header">
-    <h3 class="h5">This is a modal</h3>
+<dialog class="dialog dialog-xl" id="extraLargeDialog">
+  <form method="dialog" class="dialog-header">
+    <h3 class="h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
-  <div class="modal-body">
+  <div class="dialog-body">
     <p>There is so much space in here! (echo)</p>
   </div>
 </dialog>
