@@ -10,14 +10,13 @@ import { Label } from "./Label";
 export const Template = (args) => <Label {...args} />;
 
 # Label
-The Label component provides an easy to use label.
+The Label component provides an easy to use label. You probably want to use this in combination with other form components and not on its own.
 
 <Canvas>
   <Story
     name="Basic label"
     args={{
-      label: 'Basic label',
-      checked: true
+      children: ('Basic label')
     }}
   >
     {Template.bind({})}
