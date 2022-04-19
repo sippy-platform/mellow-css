@@ -1,0 +1,33 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Radio } from "../Radio/Radio";
+import { RadioGroup } from "./RadioGroup";
+
+<Meta
+  title="Forms/RadioGroup"
+  component={RadioGroup}
+/>
+
+export const Template = (args) => <RadioGroup {...args} />;
+
+# RadioGroup
+The Radio component provides an easy to use radio.
+
+<Canvas>
+  <Story
+    name="Basic radio"
+    args={{
+      label: 'Basic radio',
+      name: 'basic',
+      value: 'hello',
+      loop: true,
+      required: false,
+      children: ([
+        <Radio value="hello" label="Hello" helper="Hello" id="hello" />,
+        <Radio value="bonjour" label="Bonjour" helper="Bonjour" id="bonjour" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

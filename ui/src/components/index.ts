@@ -5,3 +5,5 @@ export { default as Container } from "./Container";
 export { default as Grid } from "./Grid";
 export { default as Label } from "./Label";
 export { default as Progress } from "./Progress";
+export { default as Radio } from "./Radio";
+export { default as RadioGroup } from "./RadioGroup";

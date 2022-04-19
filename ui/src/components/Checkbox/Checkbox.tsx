@@ -28,10 +28,6 @@ export interface CheckboxProps {
    * Custom classes for the checkbox
    */
   className?: string;
-  /**
-   * Children
-   */
-  children?: ReactNode;
 }
 
 /**
@@ -59,7 +55,7 @@ export const Checkbox = ({
   }
 
   return (
-    <CheckboxPrimitives.Root className="input-check" checked={checked} id="firstCheckbox" />
+    <CheckboxPrimitives.Root className="input-check" checked={checkedState} onCheckedChange={setChecked} id={id} />
   );
 };
 
