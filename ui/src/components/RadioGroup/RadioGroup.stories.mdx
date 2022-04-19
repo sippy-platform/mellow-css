@@ -1,0 +1,74 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Radio } from "../Radio/Radio";
+import { RadioGroup } from "./RadioGroup";
+
+<Meta
+  title="Forms/RadioGroup"
+  component={RadioGroup}
+/>
+
+export const Template = (args) => <RadioGroup {...args} />;
+
+# Radio group
+When using the Radio component, it must be used within a RadioGroup component. The RadioGroup component controls the state for the other components.
+
+<Canvas>
+  <Story
+    name="Basic radio"
+    args={{
+      name: 'basic',
+      value: 'hello',
+      loop: true,
+      required: false,
+      children: ([
+        <Radio value="hello" label="Hello" id="hello" />,
+        <Radio value="bonjour" label="Bonjour" id="bonjour" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## With helper
+Add a helper prop to add extra information.
+
+<Canvas>
+  <Story
+    name="Helper radio"
+    args={{
+      name: 'basic',
+      value: 'hello',
+      loop: true,
+      required: false,
+      children: ([
+        <Radio value="hello" label="Hello" helper="Hello" id="hello" />,
+        <Radio value="bonjour" label="Bonjour" helper="Bonjour" id="bonjour" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## No label
+If, for any reason, you ever find yourself in a situation where a radio button doesn't need a label, you can leave it out.
+
+<Canvas>
+  <Story
+    name="No label radio"
+    args={{
+      name: 'basic',
+      value: 'hello',
+      loop: true,
+      required: false,
+      children: ([
+        <Radio value="hello" id="hello" className="me-2" />,
+        <Radio value="bonjour" id="bonjour" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
