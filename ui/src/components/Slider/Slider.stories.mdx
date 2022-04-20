@@ -10,15 +10,59 @@ import { Slider } from "./Slider";
 export const Template = (args) => <Slider {...args} />;
 
 # Slider
-The button is one of our simplest components.
+The slider is a great input type for when your values lie on a scale.
 
-## Types
-A basic button can be created with only a label.
-
+## Orientations
+### Basic slider
 <Canvas>
   <Story
     name="Basic slider"
     args={{
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Vertical slider
+You can tell the slider to appear vertically too. By default, the slider will take on a a height of 100 pixels.
+<Canvas>
+  <Story
+    name="Vertical slider"
+    args={{
+      orientation: 'vertical'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Values
+A default slider component will provide a range between 0 and 100 with steps of 1. This cal all be changed. The following example has a minimum value of 10, a maximum value of 20, and takes steps of 2.
+
+<Canvas>
+  <Story
+    name="Custom size"
+    args={{
+      min: 10,
+      max: 20,
+      steps: 2,
+      value: [12]
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Range
+Give an array of 2 values to create a range slider. You can then enfore the distance between the two with the `minStepsBetweenThumbs` prop.
+
+<Canvas>
+  <Story
+    name="Range slider"
+    args={{
+      value: [25, 75],
+      minStepsBetweenThumbs: 5
     }}
   >
     {Template.bind({})}

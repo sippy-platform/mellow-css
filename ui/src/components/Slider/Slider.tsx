@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../mellow.css";
 
 import * as SliderPrimitives from '@radix-ui/react-slider';
@@ -9,7 +9,27 @@ export interface SliderProps {
   /**
    * Value of the input
    */
-  value?: string;
+  orientation?: 'horizontal' | 'vertical';
+  /**
+   * Minimum value of the input
+   */
+  min?: number;
+  /**
+   * Maximum value of the input
+   */
+  max?: number;
+  /**
+   * Steps between values on the range
+   */
+  step?: number;
+  /**
+   * The minimum permitted steps between thumbs
+   */
+  minStepsBetweenThumbs?: number;
+  /**
+   * Value of the input
+   */
+  value?: number[];
   /**
    * Custom classes for the label
    */
@@ -21,15 +41,30 @@ export interface SliderProps {
  */
 export const Slider = ({
   className,
-  value,
+  orientation = 'horizontal',
+  min = 0,
+  max = 100,
+  step = 1,
+  value = [0],
+  minStepsBetweenThumbs = 0,
   ...props
 }: SliderProps) => {
+  const [curValue, setValue] = useState(value);
+
   return (
     <SliderPrimitives.Root
+      orientation={orientation}
+      min={min}
+      max={max}
+      step={step}
+      minStepsBetweenThumbs={minStepsBetweenThumbs}
+      value={curValue}
+      onValueChange={setValue}
       className={clsx(
         'input-slider',
         className
       )}
+      {...props}
     >
       <SliderPrimitives.Track className="track">
         <SliderPrimitives.Range className="range" />
