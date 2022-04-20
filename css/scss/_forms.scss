@@ -285,6 +285,12 @@ select.input {
   user-select: none;
   touch-action: none;
 
+  .range {
+    position: absolute;
+    background-color: var(--color-600, var(--accent-600));
+    border-radius: 9999px;
+  }
+
   &[data-orientation="horizontal"] {
     height: 15px;
     width: 100%;
@@ -317,12 +323,6 @@ select.input {
     &[data-orientation="vertical"] {
       width: 6px;
     }
-  }
-
-  .range {
-    position: absolute;
-    background-color: var(--color-600, var(--accent-600));
-    border-radius: 9999px;
   }
 
   .thumb {
