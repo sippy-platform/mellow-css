@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../mellow.css";
+import "@sippy/mellow-css/dist/css/mellow.css";
 
 import * as SliderPrimitives from '@radix-ui/react-slider';
 
