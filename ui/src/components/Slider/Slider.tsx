@@ -29,7 +29,7 @@ export interface SliderProps {
   /**
    * Value of the input
    */
-  value?: number[];
+  value?: number[] | number;
   /**
    * Custom classes for the label
    */
@@ -58,7 +58,7 @@ export const Slider = ({
       max={max}
       step={step}
       minStepsBetweenThumbs={minStepsBetweenThumbs}
-      value={curValue}
+      value={Array.isArray(curValue) ? curValue : [curValue]}
       onValueChange={setValue}
       className={clsx(
         'input-slider',
@@ -70,6 +70,7 @@ export const Slider = ({
         <SliderPrimitives.Range className="range" />
       </SliderPrimitives.Track>
       <SliderPrimitives.Thumb className="thumb" />
+      {(Array.isArray(curValue) && curValue.length === 2) && <SliderPrimitives.Thumb className="thumb" />}
     </SliderPrimitives.Root>
   );
 };
