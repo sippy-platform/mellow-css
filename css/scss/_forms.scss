@@ -277,3 +277,64 @@ select.input {
     border-bottom-right-radius: 0;
   }
 }
+
+.input-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+  width: 100%;
+
+  &[data-orientation="horizontal"] {
+    height: 20px;
+  }
+
+  &[data-orientation="vertical"] {
+    flex-direction: column;
+    width: 20px;
+    height: 100px;
+  }
+
+  .track {
+    background-color: var(--grey-400);
+    position: relative;
+    flex-grow: 1;
+    border-radius: 9999px;
+
+    &[data-orientation="horizontal"] {
+      height: 6px;
+    }
+
+    &[data-orientation="vertical"] {
+      width: 3px;
+    }
+  }
+
+  .range {
+    position: absolute;
+    background-color: var(--color-600, var(--accent-600));
+    border-radius: 9999px;
+    height: 100%;
+  }
+
+  .thumb {
+    all: unset;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: var(--color-600, var(--accent-600));
+    border-radius: 10px;
+    transition: $base-transition;
+
+    &:hover {
+      background-color: var(--color-700, var(--accent-700));
+      width: 15px;
+      height: 15px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-600a, var(--accent-600a));
+    }
+  }
+}

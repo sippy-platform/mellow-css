@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Slider } from "./Slider";
+
+<Meta
+  title="Forms/Slider"
+  component={Slider}
+/>
+
+export const Template = (args) => <Slider {...args} />;
+
+# Slider
+The button is one of our simplest components.
+
+## Types
+A basic button can be created with only a label.
+
+<Canvas>
+  <Story
+    name="Basic slider"
+    args={{
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+<ArgsTable of={Slider} />
