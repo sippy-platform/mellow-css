@@ -1,0 +1,70 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Input } from "./Input";
+
+<Meta
+  title="Forms/Input"
+  component={Input}
+/>
+
+export const Template = (args) => <Input {...args} />;
+
+# Input
+The button is one of our simplest components.
+
+## Types
+A basic button can be created with only a label.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      type: 'text',
+      placeholder: 'Default input'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Email
+<Canvas>
+  <Story
+    name="Email"
+    args={{
+      type: 'email',
+      placeholder: 'Email input'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Password
+<Canvas>
+  <Story
+    name="Password"
+    args={{
+      type: 'password',
+      placeholder: 'Password input'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Textarea
+<Canvas>
+  <Story
+    name="Textarea"
+    args={{
+      type: 'textarea',
+      placeholder: 'Textarea'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+<ArgsTable of={Input} />
