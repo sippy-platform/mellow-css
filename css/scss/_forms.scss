@@ -277,3 +277,69 @@ select.input {
     border-bottom-right-radius: 0;
   }
 }
+
+.input-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+
+  .range {
+    position: absolute;
+    background-color: var(--color-600, var(--accent-600));
+    border-radius: 9999px;
+  }
+
+  &[data-orientation="horizontal"] {
+    height: 15px;
+    width: 100%;
+
+    .range {
+      height: 100%;
+    }
+  }
+
+  &[data-orientation="vertical"] {
+    flex-direction: column;
+    width: 15px;
+    height: 100px;
+
+    .range {
+      width: 100%;
+    }
+  }
+
+  .track {
+    background-color: var(--grey-400);
+    position: relative;
+    flex-grow: 1;
+    border-radius: 9999px;
+
+    &[data-orientation="horizontal"] {
+      height: 6px;
+    }
+
+    &[data-orientation="vertical"] {
+      width: 6px;
+    }
+  }
+
+  .thumb {
+    all: unset;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: var(--color-600, var(--accent-600));
+    border-radius: 10px;
+    transition: $base-transition;
+
+    &:hover {
+      background-color: var(--color-700, var(--accent-700));
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-600a, var(--accent-600a));
+    }
+  }
+}
