@@ -1,0 +1,31 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Select } from "./Select";
+
+<Meta
+  title="Forms/Select"
+  component={Select}
+/>
+
+export const Template = (args) => <Select {...args} />;
+
+# Select
+The button is one of our simplest components.
+
+## Types
+A basic button can be created with only a label.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      type: 'text',
+      placeholder: 'Default input'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+<ArgsTable of={Select} />
