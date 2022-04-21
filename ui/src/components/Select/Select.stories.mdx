@@ -1,0 +1,71 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Select } from './Select';
+import { SelectItem } from '../SelectItem/SelectItem';
+import { SelectLabel } from '../SelectLabel/SelectLabel';
+import { SelectGroup } from '../SelectGroup/SelectGroup';
+import { SelectDivider } from '../SelectDivider/SelectDivider';
+
+<Meta
+  title="Forms/Select"
+  component={Select}
+/>
+
+export const Template = (args) => <Select {...args} />;
+
+# Select
+The select is a useful control for picking an option from a long list of items.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      value: 2,
+      placeholder: 'Default select',
+      children: ([
+        <SelectItem value={1}>Option 1</SelectItem>,
+        <SelectItem value={2}>Option 2</SelectItem>,
+        <SelectDivider />,
+        <SelectGroup>
+          <SelectLabel>Three is a crowd</SelectLabel>
+          <SelectItem value={3}>Option 3</SelectItem>
+          <SelectItem value={4}>Option 4</SelectItem>
+          <SelectDivider />
+          <SelectItem value={5}>Option 5+</SelectItem>
+          <SelectItem value={10}>Option 10+</SelectItem>
+          <SelectItem value={15}>Option 15+</SelectItem>
+          <SelectItem value={20}>Option 20+</SelectItem>
+          <SelectItem value={25}>Option 25+</SelectItem>
+          <SelectItem value={30}>Option 30+</SelectItem>
+          <SelectItem value={35}>Option 35+</SelectItem>
+          <SelectItem value={40}>Option 40+</SelectItem>
+          <SelectItem value={45}>Option 45+</SelectItem>
+          <SelectItem value={50}>Option 50+</SelectItem>
+          <SelectItem value={60}>Option 60+</SelectItem>
+          <SelectItem value={70}>Option 70+</SelectItem>
+          <SelectItem value={80}>Option 80+</SelectItem>
+          <SelectItem value={90}>Option 90+</SelectItem>
+          <SelectItem value={100}>Option 100+</SelectItem>
+        </SelectGroup>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+## Select
+<ArgsTable of={Select} />
+
+## SelectItem
+<ArgsTable of={SelectItem} />
+
+## SelectLabel
+<ArgsTable of={SelectLabel} />
+
+## SelectGroup
+<ArgsTable of={SelectGroup} />
+
+## SelectDivider
+<ArgsTable of={SelectDivider} />
