@@ -14,18 +14,14 @@ import { SelectDivider } from '../SelectDivider/SelectDivider';
 export const Template = (args) => <Select {...args} />;
 
 # Select
-The button is one of our simplest components.
-
-## Types
-A basic button can be created with only a label.
+The select is a useful control for picking an option from a long list of items.
 
 <Canvas>
   <Story
     name="Default"
     args={{
-      type: 'text',
       value: 2,
-      placeholder: 'Default input',
+      placeholder: 'Default select',
       children: ([
         <SelectItem value={1}>Option 1</SelectItem>,
         <SelectItem value={2}>Option 2</SelectItem>,
@@ -59,5 +55,17 @@ A basic button can be created with only a label.
 </Canvas>
 
 # API
+## Select
 <ArgsTable of={Select} />
+
+## SelectItem
 <ArgsTable of={SelectItem} />
+
+## SelectLabel
+<ArgsTable of={SelectLabel} />
+
+## SelectGroup
+<ArgsTable of={SelectGroup} />
+
+## SelectDivider
+<ArgsTable of={SelectDivider} />

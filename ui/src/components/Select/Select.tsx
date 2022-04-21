@@ -7,13 +7,9 @@ import clsx from 'clsx';
 
 export interface SelectProps {
   /**
-   * Value of the input
+   * Value of the select
    */
   value?: string;
-  /**
-   * Type of the input
-   */
-  type?: string;
   /**
    * Custom classes for the label
    */
@@ -30,7 +26,6 @@ export interface SelectProps {
 export const Select = ({
   className,
   value,
-  type = 'text',
   children,
   ...props
 }: SelectProps) => {
