@@ -345,29 +345,29 @@ select.input {
 }
 
 .input-select {
-  all: unset;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: $border-radius;
   padding: 0 15px;
   font-size: 1rem;
   line-height: 1;
   height: 36px;
-  gap: 4px;
   background-color: #fff;
   color: var(--form-text);
   border: $border-color 1px solid;
-
-  &:hover {
-    border-color: var(--color-700, var(--accent-700));
-  }
+  box-shadow: $form-box-shadow-inset;
+  width: 100%;
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--color-600a, var(--accent-600a));
+    outline: 0;
+    border-color: var(--color-600, var(--accent-600));
+    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--color-600a, var(--accent-600a));
   }
 
   .icon {
+    margin-left: 4px;
+
     svg {
       width: 16px;
       height: 16px;
@@ -388,17 +388,16 @@ select.input {
   }
 
   .item {
-    all: unset;
     font-size: 1rem;
-    line-height: 1;
     color: var(--form-text);
-    border-radius: $border-radius;
+    border-radius: $border-radius-sm;
     display: flex;
     align-items: center;
     height: 32px;
-    padding: .25rem .5rem;
+    padding: .125rem .5rem .125rem 1.5rem;
     position: relative;
     user-select: none;
+    outline: 0;
 
     &[data-disabled] {
       color: var(--grey-500);
@@ -412,14 +411,14 @@ select.input {
   }
 
   .group-title {
-    padding: .25rem .5rem;
+    padding: .125rem .5rem .125rem 1.5rem;
     font-size: .875rem;
     color: var(--grey-500);
   }
 
   .separator {
     height: 1px;
-    background-color: var(--color-700, var(--accent-700));
+    background-color: var(--grey-400);
     margin: 4px;
   }
 
@@ -430,6 +429,11 @@ select.input {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   .navigation-button {
