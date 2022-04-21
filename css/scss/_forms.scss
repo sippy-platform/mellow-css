@@ -456,5 +456,10 @@ select.input {
     background-color: #fff;
     color: var(--color-700, var(--accent-700));
     cursor: default;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   }
 }
