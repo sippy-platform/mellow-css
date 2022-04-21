@@ -1,6 +1,10 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
-import { Select } from "./Select";
+import { Select } from './Select';
+import { SelectItem } from '../SelectItem/SelectItem';
+import { SelectLabel } from '../SelectLabel/SelectLabel';
+import { SelectGroup } from '../SelectGroup/SelectGroup';
+import { SelectDivider } from '../SelectDivider/SelectDivider';
 
 <Meta
   title="Forms/Select"
@@ -20,7 +24,20 @@ A basic button can be created with only a label.
     name="Default"
     args={{
       type: 'text',
-      placeholder: 'Default input'
+      value: 2,
+      placeholder: 'Default input',
+      children: ([
+        <SelectItem value={1}>Option one</SelectItem>,
+        <SelectItem value={2}>Option two</SelectItem>,
+        <SelectGroup>
+          <SelectLabel>Three is a crowd</SelectLabel>
+          <SelectItem value={3}>Option three</SelectItem>
+          <SelectItem value={4}>Option four</SelectItem>
+          <SelectDivider />
+          <SelectItem value={5}>Option five +</SelectItem>
+          <SelectItem value={10}>Option ten +</SelectItem>
+        </SelectGroup>
+      ])
     }}
   >
     {Template.bind({})}
@@ -29,3 +46,4 @@ A basic button can be created with only a label.
 
 # API
 <ArgsTable of={Select} />
+<ArgsTable of={SelectItem} />

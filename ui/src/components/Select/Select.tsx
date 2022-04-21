@@ -1,9 +1,9 @@
-import React from "react";
-import "@sippy/mellow-css/dist/css/mellow.css";
+import React, { ReactNode } from 'react';
+import '@sippy/mellow-css/dist/css/mellow.css';
 
 import * as SelectPrimitives from '@radix-ui/react-select';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export interface SelectProps {
   /**
@@ -18,6 +18,10 @@ export interface SelectProps {
    * Custom classes for the label
    */
   className?: string;
+  /**
+   * The label attached to the label
+   */
+  children?: ReactNode;
 }
 
 /**
@@ -27,11 +31,12 @@ export const Select = ({
   className,
   value,
   type = 'text',
+  children,
   ...props
 }: SelectProps) => {
   return (
     <SelectPrimitives.Root
-      defaultValue="1"
+      defaultValue={value}
       {...props}
     >
       <SelectPrimitives.Trigger
@@ -49,31 +54,7 @@ export const Select = ({
       <SelectPrimitives.Content className="select-menu content">
         <SelectPrimitives.ScrollUpButton className="navigation-button" />
         <SelectPrimitives.Viewport className="viewport">
-          <SelectPrimitives.Item className="item" value="1">
-            <SelectPrimitives.ItemText>Test value</SelectPrimitives.ItemText>
-            <SelectPrimitives.ItemIndicator className="item-indicator">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M11.96 5.3a1 1 0 0 1 0 1.4L7.8 10.86a1.5 1.5 0 0 1-2.12 0l-2.4-2.4a1 1 0 0 1 1.42-1.4L6.74 9.1l3.8-3.8a1 1 0 0 1 1.4 0Z"/></svg>
-            </SelectPrimitives.ItemIndicator>
-          </SelectPrimitives.Item>
-
-          <SelectPrimitives.Group>
-            <SelectPrimitives.Label className="group-title">Label</SelectPrimitives.Label>
-            <SelectPrimitives.Item className="item" value="2">
-              <SelectPrimitives.ItemText>Preview value</SelectPrimitives.ItemText>
-              <SelectPrimitives.ItemIndicator className="item-indicator">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M11.96 5.3a1 1 0 0 1 0 1.4L7.8 10.86a1.5 1.5 0 0 1-2.12 0l-2.4-2.4a1 1 0 0 1 1.42-1.4L6.74 9.1l3.8-3.8a1 1 0 0 1 1.4 0Z"/></svg>
-              </SelectPrimitives.ItemIndicator>
-            </SelectPrimitives.Item>
-
-            <SelectPrimitives.Separator className="separator" />
-
-            <SelectPrimitives.Item className="item" value="3">
-              <SelectPrimitives.ItemText>Beta value</SelectPrimitives.ItemText>
-              <SelectPrimitives.ItemIndicator className="item-indicator">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M11.96 5.3a1 1 0 0 1 0 1.4L7.8 10.86a1.5 1.5 0 0 1-2.12 0l-2.4-2.4a1 1 0 0 1 1.42-1.4L6.74 9.1l3.8-3.8a1 1 0 0 1 1.4 0Z"/></svg>
-              </SelectPrimitives.ItemIndicator>
-            </SelectPrimitives.Item>
-          </SelectPrimitives.Group>
+          {children}
         </SelectPrimitives.Viewport>
         <SelectPrimitives.ScrollDownButton className="navigation-button" />
       </SelectPrimitives.Content>
