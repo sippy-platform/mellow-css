@@ -7,6 +7,10 @@ import clsx from 'clsx';
 
 export interface DialogProps {
   /**
+   * Disable the modal behavior en allow for external interaction
+   */
+  disableModal?: boolean;
+  /**
    * Custom classes for the label
    */
   className?: string;
@@ -27,10 +31,12 @@ export const Dialog = ({
   className,
   trigger,
   children,
+  disableModal = false,
   ...props
 }: DialogProps) => {
   return (
     <DialogPrimitives.Root
+      modal={!disableModal}
       {...props}
     >
       <DialogPrimitives.Trigger asChild>
