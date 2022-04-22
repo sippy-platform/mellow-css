@@ -58,6 +58,45 @@ This will render no backdrop and allow you to scroll the page content.
   </Story>
 </Canvas>
 
+## Description
+The `DialogDescription` component provides a component that will be announced when the dialog is opened for screenreaders. This component can be hidden with the `visuallyHidden` property. It is strongly recommneded to always have a `DialgDescription` component in your dialog.
+
+<Canvas>
+  <Story
+    name="Visually hidden description"
+    args={{
+      trigger: (<Button label="Open dialog" variant="color" color="blue" />),
+      children: ([
+        <DialogHeader>Dialog</DialogHeader>,
+        <DialogDescription visuallyHidden>This is a dialog description.</DialogDescription>,
+        <DialogContent>
+          <p>This is a dialog content box. Place anything you want in here.</p>
+        </DialogContent>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="No description"
+    args={{
+      trigger: (<Button label="Open dialog" variant="color" color="blue" />),
+      children: ([
+        <DialogHeader>Dialog</DialogHeader>,
+        <DialogDescription visuallyHidden>This is a dialog description.</DialogDescription>,
+        <DialogContent>
+          <p>This is a dialog content box. Place anything you want in here.</p>
+        </DialogContent>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
 # API
 ## Dialog
 <ArgsTable of={Dialog} />

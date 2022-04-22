@@ -45,7 +45,7 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+export function Button({
   variant = 'default',
   size = 'md',
   color,
@@ -55,7 +55,7 @@ export const Button = ({
   block = false,
   href,
   ...props
-}: ButtonProps) => {
+}: ButtonProps) {
   const Component = useMemo(() => (href ? 'a' : 'button'), [href]);
 
   return (
