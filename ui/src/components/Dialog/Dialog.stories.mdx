@@ -1,0 +1,48 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Dialog } from './Dialog';
+import Button from '../Button';
+import DialogHeader from '../DialogHeader';
+import DialogDescription from '../DialogDescription';
+import DialogContent from '../DialogContent';
+
+<Meta
+  title="Components/Dialog"
+  component={Dialog}
+/>
+
+export const Template = (args) => <Dialog {...args} />;
+
+# Dialog
+The select is a useful control for picking an option from a long list of items.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      trigger: (<Button label="Open dialog" variant="color" color="blue" />),
+      children: ([
+        <DialogHeader>Dialog</DialogHeader>,
+        <DialogDescription>This is a dialog description.</DialogDescription>,
+        <DialogContent>
+          <p>This is a dialog content box. Place anything you want in here.</p>
+        </DialogContent>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+## Dialog
+<ArgsTable of={Dialog} />
+
+## DialogHeader
+<ArgsTable of={DialogHeader} />
+
+## DialogDescription
+<ArgsTable of={DialogDescription} />
+
+## DialogContent
+<ArgsTable of={DialogContent} />
