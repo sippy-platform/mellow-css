@@ -20,7 +20,7 @@ The select is a useful control for picking an option from a long list of items.
   <Story
     name="Default"
     args={{
-      trigger: (<Button label="Open dialog" variant="color" color="blue" />),
+      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
       children: ([
         <DialogHeader>Dialog</DialogHeader>,
         <DialogDescription>This is a dialog description.</DialogDescription>,
@@ -44,7 +44,7 @@ This will render no backdrop and allow you to scroll the page content.
     name="None-modal dialog"
     args={{
       disableModal: true,
-      trigger: (<Button label="Open dialog" variant="color" color="blue" />),
+      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
       children: ([
         <DialogHeader>Dialog</DialogHeader>,
         <DialogDescription>This is a dialog description.</DialogDescription>,
@@ -65,7 +65,7 @@ The `DialogDescription` component provides a component that will be announced wh
   <Story
     name="Visually hidden description"
     args={{
-      trigger: (<Button label="Open dialog" variant="color" color="blue" />),
+      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
       children: ([
         <DialogHeader>Dialog</DialogHeader>,
         <DialogDescription visuallyHidden>This is a dialog description.</DialogDescription>,
@@ -83,7 +83,7 @@ The `DialogDescription` component provides a component that will be announced wh
   <Story
     name="No description"
     args={{
-      trigger: (<Button label="Open dialog" variant="color" color="blue" />),
+      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
       children: ([
         <DialogHeader>Dialog</DialogHeader>,
         <DialogDescription visuallyHidden>This is a dialog description.</DialogDescription>,

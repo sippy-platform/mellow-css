@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
-import "@sippy/mellow-css/dist/css/mellow.css";
+import React, { ReactNode, useMemo } from 'react';
+import '@sippy/mellow-css/dist/css/mellow.css';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export interface ButtonProps {
   /**
@@ -16,10 +16,6 @@ export interface ButtonProps {
    * The button size.
    */
   size?: 'sm' | 'md' | 'lg';
-  /**
-   * Button contents.
-   */
-  label: string;
   /**
    * Button activation state.
    */
@@ -37,6 +33,10 @@ export interface ButtonProps {
    */
   href?: string;
   /**
+   * Button contents.
+   */
+  children: ReactNode;
+  /**
    * Optional click handler.
    */
   onClick?: () => void;
@@ -49,7 +49,7 @@ export function Button({
   variant = 'default',
   size = 'md',
   color,
-  label,
+  children,
   active = false,
   disabled = false,
   block = false,
@@ -75,7 +75,7 @@ export function Button({
       aria-disabled={disabled}
       {...props}
     >
-      {label}
+      {children}
     </Component>
   );
 };

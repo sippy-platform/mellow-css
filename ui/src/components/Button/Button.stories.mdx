@@ -1,6 +1,6 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
-import { Button } from "./Button";
+import { Button } from './Button';
 
 <Meta
   title="Components/Button"
@@ -19,7 +19,7 @@ A basic button can be created with only a label.
   <Story
     name="Default"
     args={{
-      label: 'Default'
+      children: 'Default'
     }}
   >
     {Template.bind({})}
@@ -33,7 +33,7 @@ If you want your button to be an anchor, simply include a `href` tag and Mellow 
   <Story
     name="Link"
     args={{
-      label: 'Link',
+      children: 'Link',
       href: 'https://sippy.cloud'
     }}
   >
@@ -48,7 +48,7 @@ Buttons can take on any of our main palette colors. Apply the `color` variant to
   <Story
     name="Color"
     args={{
-      label: 'Red',
+      children: 'Red',
       variant: 'color',
       color: 'red'
     }}
@@ -64,7 +64,7 @@ Need a colored button that draws less attention? The colored-on-hover button is 
   <Story
     name="Color on hover"
     args={{
-      label: 'Red',
+      children: 'Red',
       variant: 'hover',
       color: 'red'
     }}
@@ -80,7 +80,7 @@ For your ease and conviniance, Mellow maps a number of variants to a special sem
   <Story
     name="Semantic/Default"
     args={{
-      label: 'Default',
+      children: 'Default',
       variant: 'default'
     }}
   >
@@ -89,7 +89,7 @@ For your ease and conviniance, Mellow maps a number of variants to a special sem
   <Story
     name="Semantic/Primary"
     args={{
-      label: 'Primary',
+      children: 'Primary',
       variant: 'primary'
     }}
   >
@@ -98,7 +98,7 @@ For your ease and conviniance, Mellow maps a number of variants to a special sem
   <Story
     name="Semantic/Secondary"
     args={{
-      label: 'Secondary',
+      children: 'Secondary',
       variant: 'secondary'
     }}
   >
@@ -107,7 +107,7 @@ For your ease and conviniance, Mellow maps a number of variants to a special sem
   <Story
     name="Semantic/Danger"
     args={{
-      label: 'Danger',
+      children: 'Danger',
       variant: 'danger'
     }}
   >
@@ -116,7 +116,7 @@ For your ease and conviniance, Mellow maps a number of variants to a special sem
   <Story
     name="Semantic/Success"
     args={{
-      label: 'Success',
+      children: 'Success',
       variant: 'success'
     }}
   >
@@ -131,7 +131,7 @@ Button support multiple sizes.
   <Story
     name="Small"
     args={{
-      label: 'Small',
+      children: 'Small',
       size: 'sm'
     }}
   >
@@ -140,7 +140,7 @@ Button support multiple sizes.
   <Story
     name="Medium"
     args={{
-      label: 'Medium',
+      children: 'Medium',
       size: 'md'
     }}
   >
@@ -149,7 +149,7 @@ Button support multiple sizes.
   <Story
     name="Large"
     args={{
-      label: 'Large',
+      children: 'Large',
       size: 'lg'
     }}
   >
@@ -164,7 +164,7 @@ Button support multiple sizes.
   <Story
     name="Block"
     args={{
-      label: 'Block',
+      children: 'Block',
       block
     }}
   >
@@ -179,7 +179,7 @@ Button support multiple sizes.
   <Story
     name="Active"
     args={{
-      label: 'Active',
+      children: 'Active',
       active
     }}
   >
@@ -188,7 +188,7 @@ Button support multiple sizes.
   <Story
     name="Disabled"
     args={{
-      label: 'Disabled',
+      children: 'Disabled',
       disabled: true
     }}
   >
