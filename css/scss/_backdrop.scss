@@ -5,8 +5,12 @@
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, .3);
   transition: $base-transition;
+
+  @supports (backdrop-filter: blur(15px) saturate(350%)) {
+    backdrop-filter: blur(10px) saturate(250%);
+  }
 
   // Fade for backdrop
   &.fade {
