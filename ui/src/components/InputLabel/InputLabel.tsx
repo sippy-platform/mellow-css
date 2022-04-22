@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
-import * as LabelPrimitives from '@radix-ui/react-label';
+import * as InputLabelPrimitives from '@radix-ui/react-label';
 
 import '@sippy/mellow-css/dist/css/mellow.css';
 
 import clsx from 'clsx';
 
-export interface LabelProps {
+export interface InputLabelProps {
   /**
    * The id of the element this label is attached to
    */
@@ -23,16 +23,16 @@ export interface LabelProps {
 /**
  * Primary UI component for user interaction
  */
-export const Label = ({
+export const InputLabel = ({
   className,
   children,
   id
-}: LabelProps) => {
+}: InputLabelProps) => {
   return (
-    <LabelPrimitives.Root className={clsx('input-label', className)} htmlFor={id}>
+    <InputLabelPrimitives.Root className={clsx('input-label', className)} htmlFor={id}>
       {children}
-    </LabelPrimitives.Root>
+    </InputLabelPrimitives.Root>
   );
 };
 
-export default Label;
+export default InputLabel;

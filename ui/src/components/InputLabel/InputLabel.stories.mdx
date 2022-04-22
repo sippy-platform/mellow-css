@@ -1,0 +1,24 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { InputLabel } from './InputLabel';
+
+<Meta
+  title='Forms/InputLabel'
+  component={InputLabel}
+/>
+
+export const Template = (args) => <InputLabel {...args} />;
+
+# Input label
+The `InputLabel` component provides an easy to use label. You probably want to use this in combination with other form components and not on its own.
+
+<Canvas>
+  <Story
+    name="Basic label"
+    args={{
+      children: ('Basic label')
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
