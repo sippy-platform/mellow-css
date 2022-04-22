@@ -7,11 +7,11 @@ import clsx from 'clsx';
 
 export interface DialogProps {
   /**
-   * Custom classes for the label
+   * Custom classes for the dialog header
    */
   className?: string;
   /**
-   * The label attached to the label
+   * Contents of the dialog header
    */
   children?: ReactNode;
 }

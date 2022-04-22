@@ -11,15 +11,15 @@ export interface DialogProps {
    */
   disableModal?: boolean;
   /**
-   * Custom classes for the label
+   * Custom classes for the dialog
    */
   className?: string;
   /**
-   * The label attached to the label
+   * The react node that will open the dialog
    */
   trigger: ReactNode;
   /**
-   * The label attached to the label
+   * The contents of the dialog
    */
   children?: ReactNode;
 }

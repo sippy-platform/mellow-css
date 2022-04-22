@@ -3,7 +3,7 @@ import '@sippy/mellow-css/dist/css/mellow.css';
 
 export interface DialogContentProps {
   /**
-   * The label attached to the label
+   * Contents of the dialog
    */
   children?: ReactNode;
 }

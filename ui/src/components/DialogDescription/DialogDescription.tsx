@@ -10,7 +10,7 @@ export interface DialogDescriptionProps {
    */
   visuallyHidden?: boolean;
   /**
-   * The label attached to the label
+   * Content of the dialog description
    */
   children?: ReactNode;
 }
