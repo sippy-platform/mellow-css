@@ -1,7 +1,7 @@
-import React from "react";
-import "@sippy/mellow-css/dist/css/mellow.css";
+import React from 'react';
+import '@sippy/mellow-css/dist/css/mellow.css';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export interface InputProps {
   /**

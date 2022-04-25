@@ -1,1 +1,1 @@
-export { default } from "./SelectDivider";
+export { default } from './SelectDivider';

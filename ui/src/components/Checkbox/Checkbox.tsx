@@ -1,11 +1,11 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState } from 'react';
 import * as CheckboxPrimitives from '@radix-ui/react-checkbox';
 
 import Label from '../InputLabel';
 
-import "@sippy/mellow-css/dist/css/mellow.css";
+import '@sippy/mellow-css/dist/css/mellow.css';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export interface CheckboxProps {
   /**
