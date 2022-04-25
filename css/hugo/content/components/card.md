@@ -272,7 +272,7 @@ Additionally, you can alter the behavior of the content. Prefer the text to trun
 
 {{<example>}}
 <div class="card">
-  <div class="card-body d-flex align-items-center border-top">
+  <div class="card-body d-flex align-items-center">
     <div class="flex-auto min-w-0">
       <strong class="d-block text-truncate">Hello very long truncated setting title</strong>
       <p class="m-0 text-small text-muted text-truncate">Small description that should overflow at some point</p>
