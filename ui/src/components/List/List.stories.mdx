@@ -1,6 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
 import { List } from './List';
+import { ListDivider } from '../ListDivider/ListDivider';
 import { ListItem } from '../ListItem/ListItem';
 import { ListItemDivider } from '../ListItemDivider/ListItemDivider';
 import { Checkbox } from '../Checkbox/Checkbox';
@@ -81,6 +82,30 @@ The full dividers can be enabled by setting `dividers` to `full`.
       border: true,
       dividers: 'full',
       children: ([
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Individual
+Use the `ListDivider` to add dividers for individual objects.
+
+<Canvas>
+  <Story
+    name="Individual dividers"
+    args={{
+      border: true,
+      children: ([
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />,
+        <ListDivider />,
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />,
+        <ListDivider full />,
         <ListItem primary="This is a list item" />,
         <ListItem primary="This is also list item" />
       ])

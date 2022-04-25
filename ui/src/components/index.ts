@@ -9,6 +9,7 @@ export { default as DialogHeader } from './DialogHeader';
 export { default as Grid } from './Grid';
 export { default as InputLabel } from './InputLabel';
 export { default as List } from './List';
+export { default as ListDivider } from './ListDivider';
 export { default as ListItem } from './ListItem';
 export { default as ListItemDivider } from './ListItemDivider';
 export { default as Progress } from './Progress';

@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo } from 'react';
+import React from 'react';
 import '@sippy/mellow-css/dist/css/mellow.css';
 import '@optimisegroup/valkyrie/dist/valkyrie.css';
 
@@ -17,10 +17,6 @@ export interface ListItemDividerProps {
    * Custom classes for the container box
    */
   className?: string;
-  /**
-   * Children
-   */
-  children?: ReactNode;
 }
 
 /**

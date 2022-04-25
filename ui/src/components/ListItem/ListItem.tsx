@@ -53,10 +53,6 @@ export interface ListItemProps {
    * Custom classes for the container box
    */
   className?: string;
-  /**
-   * Children
-   */
-  children?: ReactNode;
 }
 
 /**
