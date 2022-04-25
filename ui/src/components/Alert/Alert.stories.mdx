@@ -1,0 +1,51 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Alert } from './Alert';
+import { AlertTitle } from '../AlertTitle/AlertTitle';
+
+<Meta
+  title="Components/Alert"
+  component={Alert}
+/>
+
+export const Template = (args) => <Alert {...args} />;
+
+# Alert
+## Example
+A basic alert can be created with only a string as child.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: (<>This is a basic alert message. <a href="#">Link</a> is color-matched.</>)
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Alert Title
+Set `plated` as the `variant` to get a plated label.
+
+<Canvas>
+  <Story
+    name="Alert title"
+    args={{
+      color: 'red',
+      children: ([
+        <AlertTitle>Alert title</AlertTitle>,
+        <>This is a basic alert message. <a href="#">Link</a> is color-matched.</>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+## Alert
+<ArgsTable of={Alert} />
+
+## AlertTitle
+<ArgsTable of={AlertTitle} />
