@@ -1,37 +1,46 @@
 import React, { ReactNode } from 'react';
-import * as LabelPrimitives from '@radix-ui/react-label';
-
 import '@sippy/mellow-css/dist/css/mellow.css';
 
 import clsx from 'clsx';
 
 export interface LabelProps {
   /**
-   * The id of the element this label is attached to
+   * The variant of the button.
    */
-  id?: string;
+  variant?: 'default' | 'plated' | 'solid';
   /**
-   * The label attached to the label
+   * The color of the button, only works when the variant is `color` or `hover`
    */
-  children?: ReactNode;
+  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
   /**
-   * Custom classes for the label
+   * Label contents.
    */
-  className?: string;
+  children: ReactNode;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Label = ({
-  className,
+export function Label({
+  variant = 'default',
+  color,
   children,
-  id
-}: LabelProps) => {
+  ...props
+}: LabelProps) {
   return (
-    <LabelPrimitives.Root className={clsx('input-label', className)} htmlFor={id}>
+    <div
+      className={clsx(
+        'd-inline',
+        'label',
+        color,
+        {
+          [`label-${variant}`]: variant !== 'default'
+        }
+      )}
+      {...props}
+    >
       {children}
-    </LabelPrimitives.Root>
+    </div>
   );
 };
 

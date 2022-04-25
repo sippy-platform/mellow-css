@@ -1,24 +1,63 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
-import { Label } from "./Label";
+import { Label } from './Label';
 
 <Meta
-  title="Forms/Label"
+  title="Components/Label"
   component={Label}
 />
 
 export const Template = (args) => <Label {...args} />;
 
 # Label
-The Label component provides an easy to use label. You probably want to use this in combination with other form components and not on its own.
+The button is one of our simplest components.
+
+## Example
+A basic button can be created with only a label.
 
 <Canvas>
   <Story
-    name="Basic label"
+    name="Default"
     args={{
-      children: ('Basic label')
+      children: 'Default',
+      color: 'red'
     }}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
+
+## Plated
+Set `plated` as the `variant` to get a plated label.
+
+<Canvas>
+  <Story
+    name="Plated variant"
+    args={{
+      children: 'Red',
+      variant: 'plated',
+      color: 'red'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Solid
+Set `solid` as the `variant` to get a solid label.
+
+<Canvas>
+  <Story
+    name="Solid variant"
+    args={{
+      children: 'Red',
+      variant: 'solid',
+      color: 'red'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+<ArgsTable of={Label} />

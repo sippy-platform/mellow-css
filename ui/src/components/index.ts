@@ -7,7 +7,7 @@ export { default as DialogContent } from './DialogContent';
 export { default as DialogDescription } from './DialogDescription';
 export { default as DialogHeader } from './DialogHeader';
 export { default as Grid } from './Grid';
-export { default as Label } from './Label';
+export { default as InputLabel } from './InputLabel';
 export { default as Progress } from './Progress';
 export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';
