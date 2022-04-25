@@ -2,6 +2,7 @@ import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
 import { List } from './List';
 import { ListItem } from '../ListItem/ListItem';
+import { ListItemDivider } from '../ListItemDivider/ListItemDivider';
 import { Checkbox } from '../Checkbox/Checkbox';
 
 import ValkyrieIcon, { viHouse } from '@optimisegroup/valkyrie';
@@ -89,6 +90,29 @@ The full dividers can be enabled by setting `dividers` to `full`.
   </Story>
 </Canvas>
 
+### Section dividers
+With the `ListItemDivider` component you can split up your list into sections.
+
+<Canvas>
+  <Story
+    name="Section dividers"
+    args={{
+      border: true,
+      dividers: true,
+      children: ([
+        <ListItemDivider primary="Section divider" />,
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />,
+        <ListItemDivider primary="Section divider" secondary="Section description" />,
+        <ListItem primary="This is also list item" />,
+        <ListItem primary="This is also list item" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
 ## Active
 Highlight an item by setting its `active` prop.
 
@@ -106,7 +130,7 @@ Highlight an item by setting its `active` prop.
   </Story>
 </Canvas>
 
-## Action
+## Anchors and buttons
 You can add a link or function to the list to make it an action.
 
 ### Anchor
@@ -280,3 +304,6 @@ Add start and end action to list items.
 
 ## ListItem
 <ArgsTable of={ListItem} />
+
+## ListItemDivider
+<ArgsTable of={ListItemDivider} />

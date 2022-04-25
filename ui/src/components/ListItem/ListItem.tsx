@@ -34,10 +34,6 @@ export interface ListItemProps {
    */
   disabled?: boolean;
   /**
-   * Custom classes for the container box
-   */
-  className?: string;
-  /**
    * Start icon
    */
   startIcon?: ReactNode;
@@ -53,6 +49,10 @@ export interface ListItemProps {
    * End action
    */
   endAction?: ReactNode;
+  /**
+   * Custom classes for the container box
+   */
+  className?: string;
   /**
    * Children
    */
