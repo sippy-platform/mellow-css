@@ -1,0 +1,41 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Card } from './Card';
+import { CardBody } from '../CardBody/CardBody';
+import { CardTitle } from '../CardTitle/CardTitle';
+
+<Meta
+  title="Components/Card"
+  component={Card}
+/>
+
+export const Template = (args) => <Card {...args} />;
+
+# Card
+The button is one of our simplest components.
+
+## Example
+A basic button can be created with only a label.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: (
+        <CardBody>
+          <CardTitle>Heading</CardTitle>
+          <p>Hello world, this is a short text to show what a card can do in Mellow.</p>
+        </CardBody>
+      )
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+## Card
+<ArgsTable of={Card} />
+
+## CardBody
+<ArgsTable of={CardBody} />
