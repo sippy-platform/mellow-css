@@ -1,9 +1,9 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 import * as ProgressPrimitives from '@radix-ui/react-progress';
 
-import "@sippy/mellow-css/dist/css/mellow.css";
+import '@sippy/mellow-css/dist/css/mellow.css';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export interface ProgressProps {
   /**

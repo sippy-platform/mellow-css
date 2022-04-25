@@ -1,7 +1,7 @@
-import React, { ReactNode, useMemo } from "react";
-import "@sippy/mellow-css/dist/css/mellow.css";
+import React, { ReactNode, useMemo } from 'react';
+import '@sippy/mellow-css/dist/css/mellow.css';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
 type ColOrder = number | 'first' | 'last';
 type ColSize = number | 'full';
