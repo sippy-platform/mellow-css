@@ -14,6 +14,13 @@
     border-radius: $border-radius;
 
     &.list-item-action {
+      background: inherit;
+      display: grid;
+      text-align: inherit;
+      cursor: pointer;
+      font-size: 1rem;
+      border: none;
+      width: 100%;
       text-decoration: none;
       color: inherit;
 
@@ -69,7 +76,7 @@
     &.active {
       background-color: var(--grey-100);
 
-      &:hover:not(.disabled) {
+      &.list-item-action:hover:not(.disabled) {
         background-color: var(--grey-200);
       }
 

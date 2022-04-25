@@ -1,0 +1,282 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { List } from './List';
+import { ListItem } from '../ListItem/ListItem';
+import { Checkbox } from '../Checkbox/Checkbox';
+
+import ValkyrieIcon, { viHouse } from '@optimisegroup/valkyrie';
+
+<Meta
+  title="Components/List"
+  component={List}
+/>
+
+export const Template = (args) => <List {...args} />;
+
+# List
+A basic list is a simple setupt.
+
+<Canvas>
+  <Story
+    name="List"
+    args={{
+      children: ([
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Border
+At the `border` prop to add a border around the list.
+
+<Canvas>
+  <Story
+    name="List with border"
+    args={{
+      border: true,
+      children: ([
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Dividers
+There are 2 variants of dividers: `full` and `default`.
+
+### Default
+You can enable the default dividers by simply adding the `dividers` prop.
+
+<Canvas>
+  <Story
+    name="Default dividers"
+    args={{
+      border: true,
+      dividers: true,
+      children: ([
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Full
+The full dividers can be enabled by setting `dividers` to `full`.
+
+<Canvas>
+  <Story
+    name="Full dividers"
+    args={{
+      border: true,
+      dividers: 'full',
+      children: ([
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Active
+Highlight an item by setting its `active` prop.
+
+<Canvas>
+  <Story
+    name="Active item"
+    args={{
+      children: ([
+        <ListItem primary="This is a list item" active />,
+        <ListItem primary="This is also list item" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Action
+You can add a link or function to the list to make it an action.
+
+### Anchor
+<Canvas>
+  <Story
+    name="Anchor action"
+    args={{
+      children: ([
+        <ListItem primary="This is a list item" href="https://sippy.cloud" />,
+        <ListItem primary="This is also list item" href="https://sippy.cloud" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Button
+<Canvas>
+  <Story
+    name="Button action"
+    args={{
+      children: ([
+        <ListItem primary="This is a list item" onClick={() => alert('Hello')} />,
+        <ListItem primary="This is also list item" onClick={() => alert('Hello')} />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Color
+You can set the color of the list globally or for each item.
+
+<Canvas>
+  <Story
+    name="Colored list"
+    args={{
+      color: 'green',
+      children: ([
+        <ListItem primary="This list item inherits green" active />,
+        <ListItem primary="This list item inherits green too" active />,
+        <ListItem primary="This one wants to be edgy" color="red" active />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Full color
+By adding the `fullColor` prop, the list item will theme the entire item.
+
+<Canvas>
+  <Story
+    name="Full colored list"
+    args={{
+      color: 'green',
+      children: ([
+        <ListItem primary="This is the default look" onClick={() => alert('You clicked')} />,
+        <ListItem primary="This list is fullColor and active" active onClick={() => alert('You clicked')} />,
+        <ListItem primary="This one wants to be edgy" color="red" onClick={() => alert('You clicked')} fullColor />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Sizes
+Change the size of the list.
+
+### Small
+<Canvas>
+  <Story
+    name="Small list"
+    args={{
+      border: true,
+      dividers: true,
+      size: 'sm',
+      children: ([
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Large
+<Canvas>
+  <Story
+    name="Large list"
+    args={{
+      border: true,
+      dividers: true,
+      size: 'lg',
+      children: ([
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is a list item" />,
+        <ListItem primary="This is also list item" />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+Disable an action to mute it.
+
+<Canvas>
+  <Story
+    name="Disabled action"
+    args={{
+      children: ([
+        <ListItem primary="This is a list item" onClick={() => alert('Hello')} disabled />,
+        <ListItem primary="This is also list item" onClick={() => alert('Hello')} />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Icons
+Add start and end icons to list items.
+
+<Canvas>
+  <Story
+    name="Icons"
+    args={{
+      border: true,
+      dividers: 'full',
+      children: ([
+        <ListItem primary="Start icon" startIcon={<ValkyrieIcon icon={viHouse} />} />,
+        <ListItem primary="End icon" endIcon={<ValkyrieIcon icon={viHouse} />} />,
+        <ListItem primary="Both" startIcon={<ValkyrieIcon icon={viHouse} />} endIcon={<ValkyrieIcon icon={viHouse} />} />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Actions
+Add start and end action to list items.
+
+<Canvas>
+  <Story
+    name="Actions"
+    args={{
+      border: true,
+      dividers: 'full',
+      children: ([
+        <ListItem primary="Start action" startAction={<Checkbox />} />,
+        <ListItem primary="End action" endAction={<Checkbox />} />
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+## List
+<ArgsTable of={List} />
+
+## ListItem
+<ArgsTable of={ListItem} />
