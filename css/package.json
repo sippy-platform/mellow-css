@@ -1,6 +1,6 @@
 {
   "name": "@sippy-platform/mellow-css",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "The Mellow Design System.",
   "main": "dist/js/mellow.js",
   "style": "dist/css/mellow.css",
@@ -32,10 +32,7 @@
     "watch:scss:core": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss\"",
     "watch:scss:docs": "nodemon --watch hugo/assets/scss/ --ext scss --exec \"npm run scss:lint\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sippy-platform/mellow.git"
-  },
+  "repository": "git://github.com/sippy-platform/mellow.git",
   "files": [
     "/dist"
   ],
@@ -48,7 +45,7 @@
     "url": "https://github.com/sippy-platform/mellow/issues"
   },
   "homepage": "https://sippy-platform.github.io/mellow",
-  "dependencies": {
+  "peerDependencies": {
     "@optimisegroup/valkyrie": "0.14.2"
   },
   "devDependencies": {
@@ -56,12 +53,12 @@
     "@babel/core": "7.17.9",
     "@babel/preset-env": "7.16.11",
     "@rollup/plugin-babel": "5.3.1",
-    "autoprefixer": "10.4.4",
+    "autoprefixer": "10.4.5",
     "bundle-scss": "1.5.1",
     "bundlewatch": "0.3.3",
     "clsx": "1.1.1",
     "copyfiles": "2.4.1",
-    "eslint": "8.13.0",
+    "eslint": "8.14.0",
     "find-unused-sass-variables": "4.0.4",
     "hugo-bin": "0.85.3",
     "node-sass": "7.0.1",
@@ -70,7 +67,7 @@
     "postcss": "8.4.12",
     "postcss-cli": "9.1.0",
     "rimraf": "3.0.2",
-    "sass": "1.50.1",
+    "sass": "1.51.0",
     "stylelint": "14.7.1",
     "stylelint-config-standard-scss": "3.0.0",
     "terser": "5.12.1"
