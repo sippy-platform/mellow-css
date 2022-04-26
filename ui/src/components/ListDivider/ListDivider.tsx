@@ -1,6 +1,4 @@
 import React from 'react';
-import '@sippy-platform/mellow-css/dist/css/mellow.css';
-import '@optimisegroup/valkyrie/dist/valkyrie.css';
 
 import clsx from 'clsx';
 

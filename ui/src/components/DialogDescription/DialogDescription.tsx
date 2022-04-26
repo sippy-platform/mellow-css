@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import '@sippy-platform/mellow-css/dist/css/mellow.css';
 
 import * as DialogPrimitives from '@radix-ui/react-dialog';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';

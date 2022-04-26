@@ -3,7 +3,6 @@ import * as CheckboxPrimitives from '@radix-ui/react-checkbox';
 
 import Label from '../InputLabel';
 
-import '@sippy-platform/mellow-css/dist/css/mellow.css';
 
 import clsx from 'clsx';
 

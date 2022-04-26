@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import * as RadioGroupPrimitives from '@radix-ui/react-radio-group';
 
-import '@sippy-platform/mellow-css/dist/css/mellow.css';
 
 export interface RadioGroupProps {
   /**

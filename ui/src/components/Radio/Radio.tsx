@@ -3,7 +3,6 @@ import * as RadioGroupPrimitives from '@radix-ui/react-radio-group';
 
 import Label from '../InputLabel';
 
-import '@sippy-platform/mellow-css/dist/css/mellow.css';
 
 import clsx from 'clsx';
 
