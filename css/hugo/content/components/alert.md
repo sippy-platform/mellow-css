@@ -264,7 +264,7 @@ Add the `alert-float` class to get an alert that's optimized for floating over c
 The `alert-stack` class is a simple utility class that creates a 1 column wide grid for alerts to be stacked in.
 
 {{<example class="docs-preview-img" style="height: 250px">}}
-<div class="alert-stack position-absolute bottom-0 end-0 me-3 mb-3">
+<div class="alert-stack alert-stack-bottom-end">
   <div class="alert red alert-float" role="alert">
     <div class="alert-icon">
       <i class="vi vi-circle-xmark"></i>
