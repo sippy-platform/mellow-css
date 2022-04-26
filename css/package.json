@@ -1,6 +1,6 @@
 {
   "name": "@sippy-platform/mellow-css",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "The Mellow Design System.",
   "main": "dist/js/mellow.js",
   "style": "dist/css/mellow.css",
@@ -19,7 +19,7 @@
     "prod": "npm-run-all -s clean scss js",
     "scss": "npm-run-all --continue-on-error scss:lint scss:compile scss:prefix scss:copy",
     "scss:compile": "node-sass scss/mellow.scss -o dist/css --output-style compressed",
-    "scss:copy": "bundle-scss --mask \"scss/mellow.scss\" --dest \"dist/mellow.scss\"",
+    "scss:copy": "bundle-scss --mask \"scss/mellow.scss\" --dest \"dist/mellow.scss\" --sort mixin",
     "scss:lint": "npm-run-all --continue-on-error scss:lint:*",
     "scss:lint:style": "stylelint \"**/*.scss\"",
     "scss:lint:vars": "fusv scss/ hugo/assets/scss/",
