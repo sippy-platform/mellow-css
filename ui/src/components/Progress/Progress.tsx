@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import * as ProgressPrimitives from '@radix-ui/react-progress';
 
-import '@sippy/mellow-css/dist/css/mellow.css';
+import '@sippy-platform/mellow-css/dist/css/mellow.css';
 
 import clsx from 'clsx';
 

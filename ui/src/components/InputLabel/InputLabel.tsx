@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import * as InputLabelPrimitives from '@radix-ui/react-label';
 
-import '@sippy/mellow-css/dist/css/mellow.css';
+import '@sippy-platform/mellow-css/dist/css/mellow.css';
 
 import clsx from 'clsx';
 
