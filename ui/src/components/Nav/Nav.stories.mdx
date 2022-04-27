@@ -1,0 +1,49 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Nav } from './Nav';
+import { NavItem } from '../NavItem/NavItem';
+import { NavBrand } from '../NavBrand/NavBrand';
+import { NavGroup } from '../NavGroup/NavGroup';
+import { Container } from '../Container/Container';
+
+<Meta
+  title="Components/Nav"
+  component={Nav}
+/>
+
+export const Template = (args) => <Nav {...args} />;
+
+# Nav
+A basic list is a simple setupt.
+
+<Canvas>
+  <Story
+    name="Nav"
+    args={{
+      children: (
+        <Container>
+          <NavBrand href="https://sippy.cloud">Mellow</NavBrand>
+          <NavGroup>
+            <NavItem href="https://sippy.cloud">Home</NavItem>
+            <NavItem href="https://sippy.cloud">About</NavItem>
+          </NavGroup>
+        </Container>
+      )
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+## Nav
+<ArgsTable of={Nav} />
+
+## NavItem
+<ArgsTable of={NavItem} />
+
+## NavGroup
+<ArgsTable of={NavGroup} />
+
+## NavBrand
+<ArgsTable of={NavBrand} />
