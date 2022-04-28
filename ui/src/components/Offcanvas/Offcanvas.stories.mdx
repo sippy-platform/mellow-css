@@ -1,0 +1,104 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Offcanvas } from './Offcanvas';
+import Button from '../Button';
+import OffcanvasHeader from '../OffcanvasHeader';
+import DialogDescription from '../DialogDescription';
+import OffcanvasContent from '../OffcanvasContent';
+
+<Meta
+  title="Components/Offcanvas"
+  component={Offcanvas}
+/>
+
+export const Template = (args) => <Offcanvas {...args} />;
+
+# Offcanvas
+The select is a useful control for picking an option from a long list of items.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      trigger: (<Button variant="color" color="blue">Open canvas</Button>),
+      children: ([
+        <OffcanvasHeader>Canvas</OffcanvasHeader>,
+        <OffcanvasContent>
+          <p>This is a dialog content box. Place anything you want in here.</p>
+        </OffcanvasContent>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## No modal
+If you want users to be able to interact with other elements while te dialog is open then you can disabled the modal behavior with `disableModal`.
+
+This will render no backdrop and allow you to scroll the page content.
+
+<Canvas>
+  <Story
+    name="None-modal dialog"
+    args={{
+      disableModal: true,
+      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
+      children: ([
+        <OffcanvasHeader>Dialog</OffcanvasHeader>,
+        <OffcanvasContent>
+          <p>This is a dialog content box. Place anything you want in here.</p>
+        </OffcanvasContent>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Description
+The `DialogDescription` component provides a component that will be announced when the dialog is opened for screenreaders. This component can be hidden with the `visuallyHidden` property. It is strongly recommneded to always have a `DialgDescription` component in your dialog.
+
+<Canvas>
+  <Story
+    name="Visually hidden description"
+    args={{
+      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
+      children: ([
+        <OffcanvasHeader>Dialog</OffcanvasHeader>,
+        <OffcanvasContent>
+          <p>This is a dialog content box. Place anything you want in here.</p>
+        </OffcanvasContent>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="No description"
+    args={{
+      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
+      children: ([
+        <OffcanvasHeader>Dialog</OffcanvasHeader>,
+        <OffcanvasContent>
+          <p>This is a dialog content box. Place anything you want in here.</p>
+        </OffcanvasContent>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+## Offcanvas
+<ArgsTable of={Offcanvas} />
+
+## OffcanvasHeader
+<ArgsTable of={OffcanvasHeader} />
+
+## OffcanvasContent
+<ArgsTable of={OffcanvasContent} />
