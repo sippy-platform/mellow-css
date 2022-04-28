@@ -1,24 +1,8 @@
-import React, { ReactNode, useMemo } from 'react';
+import React, { ReactNode } from 'react';
 
 import clsx from 'clsx';
 
-export interface NavItemProps {
-  /**
-   * If we have a href, it's an anchor.
-   */
-  href?: string;
-  /**
-   * Optional click handler.
-   */
-  onClick?: () => void;
-  /**
-   * Show dividers in the list
-   */
-  active?: boolean;
-  /**
-   * Button disabled state.
-   */
-  disabled?: boolean;
+export interface NavGroupProps {
   /**
    * Custom classes for the container box
    */
@@ -32,33 +16,16 @@ export interface NavItemProps {
 /**
  * Primary UI component for user interaction
  */
-export const NavItem = ({
-  active = false,
-  disabled = false,
+export const NavGroup = ({
   className,
   children,
-  href,
   ...props
-}: NavItemProps) => {
-  const Component = useMemo(() => (href ? 'a' : 'button'), [href]);
-
+}: NavGroupProps) => {
   return (
-    <li className={clsx('nav-item', className)} {...props}>
-      <a
-        className={clsx(
-          'nav-link',
-          {
-            'active': active
-          }
-        )}
-        href={href}
-        aria-disabled={disabled}
-        {...props}
-      >
-        {children}
-      </a>
-    </li>
+    <ul className={clsx('nav-bar', className)} {...props}>
+      {children}
+    </ul>
   );
 };
 
-export default NavItem;
+export default NavGroup;

@@ -53,7 +53,6 @@ export const NavItem = ({
         )}
         href={href}
         aria-disabled={disabled}
-        {...props}
       >
         {children}
       </Component>

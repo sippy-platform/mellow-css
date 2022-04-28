@@ -49,9 +49,7 @@ export const Nav = ({
       )}
       {...props}
     >
-      <div className="nav-bar me-auto">
-        {children}
-      </div>
+      {children}
     </nav>
   );
 };

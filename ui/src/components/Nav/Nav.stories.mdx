@@ -22,10 +22,13 @@ A basic list is a simple setupt.
     args={{
       children: (
         <Container>
-          <NavBrand href="https://sippy.cloud">Mellow</NavBrand>
+          <NavBrand href="#">Mellow</NavBrand>
+          <NavGroup className="me-auto">
+            <NavItem href="#">Home</NavItem>
+            <NavItem href="#">About</NavItem>
+          </NavGroup>
           <NavGroup>
-            <NavItem href="https://sippy.cloud">Home</NavItem>
-            <NavItem href="https://sippy.cloud">About</NavItem>
+            <NavItem href="#">Settings</NavItem>
           </NavGroup>
         </Container>
       )
