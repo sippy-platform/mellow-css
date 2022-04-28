@@ -50,7 +50,7 @@ export const Offcanvas = ({
         <DialogPrimitives.Overlay className="backdrop" />
         <DialogPrimitives.Content
           className={clsx(
-            'offcanvas show',
+            'offcanvas offcanvas-animate',
             `offcanvas-${position}`,
             className
           )}

@@ -14,7 +14,7 @@ import OffcanvasContent from '../OffcanvasContent';
 export const Template = (args) => <Offcanvas {...args} />;
 
 # Offcanvas
-The select is a useful control for picking an option from a long list of items.
+The Offcanvas component is similar to the Dialog component in its behavior and API.
 
 <Canvas>
   <Story
@@ -34,57 +34,20 @@ The select is a useful control for picking an option from a long list of items.
 </Canvas>
 
 ## No modal
-If you want users to be able to interact with other elements while te dialog is open then you can disabled the modal behavior with `disableModal`.
+If you want users to be able to interact with other elements while te offcanvas is open then you can disabled the modal behavior with `disableModal`.
 
 This will render no backdrop and allow you to scroll the page content.
 
 <Canvas>
   <Story
-    name="None-modal dialog"
+    name="None-modal offcanvas"
     args={{
       disableModal: true,
-      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
+      trigger: (<Button variant="color" color="blue">Open canvas</Button>),
       children: ([
-        <OffcanvasHeader>Dialog</OffcanvasHeader>,
+        <OffcanvasHeader>Offcanvas</OffcanvasHeader>,
         <OffcanvasContent>
-          <p>This is a dialog content box. Place anything you want in here.</p>
-        </OffcanvasContent>
-      ])
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-## Description
-The `DialogDescription` component provides a component that will be announced when the dialog is opened for screenreaders. This component can be hidden with the `visuallyHidden` property. It is strongly recommneded to always have a `DialgDescription` component in your dialog.
-
-<Canvas>
-  <Story
-    name="Visually hidden description"
-    args={{
-      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
-      children: ([
-        <OffcanvasHeader>Dialog</OffcanvasHeader>,
-        <OffcanvasContent>
-          <p>This is a dialog content box. Place anything you want in here.</p>
-        </OffcanvasContent>
-      ])
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="No description"
-    args={{
-      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
-      children: ([
-        <OffcanvasHeader>Dialog</OffcanvasHeader>,
-        <OffcanvasContent>
-          <p>This is a dialog content box. Place anything you want in here.</p>
+          <p>This is a canvas content box. Place anything you want in here.</p>
         </OffcanvasContent>
       ])
     }}

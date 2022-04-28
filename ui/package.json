@@ -34,7 +34,7 @@
     "@rollup/plugin-commonjs": "22.0.0",
     "@rollup/plugin-node-resolve": "13.2.1",
     "@rollup/plugin-typescript": "8.3.2",
-    "@sippy-platform/mellow-css": "0.1.0",
+    "@sippy-platform/mellow-css": "file:../css",
     "@storybook/addon-actions": "6.4.22",
     "@storybook/addon-essentials": "6.4.22",
     "@storybook/addon-interactions": "6.4.22",
@@ -63,7 +63,6 @@
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
-    "@optimisegroup/valkyrie": "^0.14.2",
-    "@sippy-platform/mellow-css": "^0.1.0"
+    "@optimisegroup/valkyrie": "^0.14.2"
   }
 }

@@ -1,3 +1,43 @@
+@keyframes transition-start {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes transition-end {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes transition-start-out {
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes transition-end-out {
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
 @each $breakpoint in map-keys($grid-breakpoints) {
   $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
@@ -37,6 +77,18 @@
         max-width: 100%;
         border-right: $border-width solid $border-color;
         transform: translateX(-100%);
+
+        &.offcanvas-animate {
+          visibility: visible;
+
+          &[data-state="open"] {
+            animation: transition-start .2s ease-in-out forwards;
+          }
+
+          &[data-state="closed"] {
+            animation: transition-start-out .2s ease-in-out forwards;
+          }
+        }
       }
 
       &.offcanvas-end {
@@ -47,6 +99,18 @@
         max-width: 100%;
         border-left: $border-width solid $border-color;
         transform: translateX(100%);
+
+        &.offcanvas-animate {
+          visibility: visible;
+
+          &[data-state="open"] {
+            animation: transition-end .2s ease-in-out forwards;
+          }
+
+          &[data-state="closed"] {
+            animation: transition-end-out .2s ease-in-out forwards;
+          }
+        }
       }
 
       .offcanvas-header {
