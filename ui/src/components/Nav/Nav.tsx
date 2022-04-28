@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import clsx from 'clsx';
+import { Container, ContainerProps } from '../Container/Container';
 
 export interface NavProps {
   /**
@@ -15,6 +16,10 @@ export interface NavProps {
    * The button size.
    */
   size?: 'sm' | 'md' | 'lg';
+  /**
+   * The button size.
+   */
+  containerProps?: ContainerProps;
   /**
    * Custom classes for the container box
    */
@@ -34,6 +39,7 @@ export const Nav = ({
   size = 'md',
   className,
   children,
+  containerProps,
   ...props
 }: NavProps) => {
   return (
@@ -49,7 +55,9 @@ export const Nav = ({
       )}
       {...props}
     >
-      {children}
+      <Container {...containerProps}>
+        {children}
+      </Container>
     </nav>
   );
 };

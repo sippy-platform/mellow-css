@@ -4,7 +4,6 @@ import { Nav } from './Nav';
 import { NavItem } from '../NavItem/NavItem';
 import { NavBrand } from '../NavBrand/NavBrand';
 import { NavGroup } from '../NavGroup/NavGroup';
-import { Container } from '../Container/Container';
 
 <Meta
   title="Components/Nav"
@@ -14,24 +13,87 @@ import { Container } from '../Container/Container';
 export const Template = (args) => <Nav {...args} />;
 
 # Nav
-A basic list is a simple setupt.
+A basic navigation menu consists out of the `Nav` component with nested `NavGroup` components and `NavItem` components within these groups.
 
 <Canvas>
   <Story
     name="Nav"
     args={{
-      children: (
-        <Container>
-          <NavBrand href="#">Mellow</NavBrand>
-          <NavGroup className="me-auto">
-            <NavItem href="#">Home</NavItem>
-            <NavItem href="#">About</NavItem>
-          </NavGroup>
-          <NavGroup>
-            <NavItem href="#">Settings</NavItem>
-          </NavGroup>
-        </Container>
-      )
+      children: ([
+        <NavGroup className="me-auto">
+          <NavItem href="#">Home</NavItem>
+          <NavItem href="#">About</NavItem>
+        </NavGroup>,
+        <NavGroup>
+          <NavItem href="#">Settings</NavItem>
+        </NavGroup>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## NavBrand
+Use the `NavBrand` component to add branding to your navigation menu.
+
+<Canvas>
+  <Story
+    name="Brand"
+    args={{
+      children: ([
+        <NavBrand href="#">Mellow</NavBrand>,
+        <NavGroup className="me-auto">
+          <NavItem href="#">Home</NavItem>
+          <NavItem href="#">About</NavItem>
+        </NavGroup>,
+        <NavGroup>
+          <NavItem href="#">Settings</NavItem>
+        </NavGroup>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Sizes
+Use the `size` prop to change the size of the navigation menu.
+
+<Canvas>
+  <Story
+    name="Small"
+    args={{
+      size: 'sm',
+      children: ([
+        <NavGroup className="me-auto">
+          <NavItem href="#">Home</NavItem>
+          <NavItem href="#">About</NavItem>
+        </NavGroup>,
+        <NavGroup>
+          <NavItem href="#">Settings</NavItem>
+        </NavGroup>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Large"
+    args={{
+      size: 'lg',
+      children: ([
+        <NavGroup className="me-auto">
+          <NavItem href="#">Home</NavItem>
+          <NavItem href="#">About</NavItem>
+        </NavGroup>,
+        <NavGroup>
+          <NavItem href="#">Settings</NavItem>
+        </NavGroup>
+      ])
     }}
   >
     {Template.bind({})}
