@@ -1,10 +1,6 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
 import { Offcanvas } from './Offcanvas';
-import Button from '../Button';
-import OffcanvasHeader from '../OffcanvasHeader';
-import DialogDescription from '../DialogDescription';
-import OffcanvasContent from '../OffcanvasContent';
 
 <Meta
   title="Components/Offcanvas"
@@ -20,48 +16,8 @@ The Offcanvas component is similar to the Dialog component in its behavior and A
   <Story
     name="Default"
     args={{
-      trigger: (<Button variant="color" color="blue">Open canvas</Button>),
-      children: ([
-        <OffcanvasHeader>Canvas</OffcanvasHeader>,
-        <OffcanvasContent>
-          <p>This is a dialog content box. Place anything you want in here.</p>
-        </OffcanvasContent>
-      ])
     }}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
-
-## No modal
-If you want users to be able to interact with other elements while te offcanvas is open then you can disabled the modal behavior with `disableModal`.
-
-This will render no backdrop and allow you to scroll the page content.
-
-<Canvas>
-  <Story
-    name="None-modal offcanvas"
-    args={{
-      disableModal: true,
-      trigger: (<Button variant="color" color="blue">Open canvas</Button>),
-      children: ([
-        <OffcanvasHeader>Offcanvas</OffcanvasHeader>,
-        <OffcanvasContent>
-          <p>This is a canvas content box. Place anything you want in here.</p>
-        </OffcanvasContent>
-      ])
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-# API
-## Offcanvas
-<ArgsTable of={Offcanvas} />
-
-## OffcanvasHeader
-<ArgsTable of={OffcanvasHeader} />
-
-## OffcanvasContent
-<ArgsTable of={OffcanvasContent} />
