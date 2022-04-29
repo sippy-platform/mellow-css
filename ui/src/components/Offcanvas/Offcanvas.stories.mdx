@@ -37,6 +37,56 @@ The Offcanvas component is similar to the Dialog component in its behavior and A
   </Story>
 </Canvas>
 
+## Position
+You can cahnge the position of the canvas with the `position` prop.
+
+<Canvas>
+  <Story name="End canvas">
+    {() => {
+      const [open, setOpen] = useState(false);
+      return (
+        <>
+          <Button onClick={() => setOpen(true)}>Open canvas right</Button>
+          <Offcanvas open={open} setOpen={setOpen} position="end">
+            <OffcanvasHeader action={<CloseButton setOpen={setOpen} />}>Offcanvas example</OffcanvasHeader>
+            <OffcanvasBody>
+              <p>
+                Are you sure you want to deactivate your account? All of your data
+                will be permanently removed. This action cannot be undone.
+              </p>
+            </OffcanvasBody>
+          </Offcanvas>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
+## Disable backdrop
+If you don't want a backdrop to be rendered, that's possible too.
+
+<Canvas>
+  <Story name="Backdropless canvas">
+    {() => {
+      const [open, setOpen] = useState(false);
+      return (
+        <>
+          <Button onClick={() => setOpen(true)}>Open canvas without Backdrop</Button>
+          <Offcanvas open={open} setOpen={setOpen} disableBackdrop>
+            <OffcanvasHeader action={<CloseButton setOpen={setOpen} />}>Offcanvas example</OffcanvasHeader>
+            <OffcanvasBody>
+              <p>
+                Are you sure you want to deactivate your account? All of your data
+                will be permanently removed. This action cannot be undone.
+              </p>
+            </OffcanvasBody>
+          </Offcanvas>
+        </>
+      );
+    }}
+  </Story>
+</Canvas>
+
 # API
 ## Offcanvas
 <ArgsTable of={Offcanvas} />

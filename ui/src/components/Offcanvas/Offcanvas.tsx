@@ -28,6 +28,10 @@ export interface OffcanvasProps {
    * The contents of the dialog
    */
   children?: ReactNode;
+  /**
+   * Disable the backdrop
+   */
+  disableBackdrop?: boolean;
 }
 
 /**
@@ -39,22 +43,25 @@ export const Offcanvas = ({
   className,
   children,
   position = 'start',
+  disableBackdrop,
   ...props
 }: OffcanvasProps) => {
   return (
     <Transition appear show={open} as={Fragment}>
       <Dialog onClose={() => setOpen(false)} className="position-relative">
-        <Transition.Child
-          as={Fragment}
-          enter="transition-all duration-200 ease-inout"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-all duration-200 ease-inout"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="backdrop" aria-hidden="true" />
-        </Transition.Child>
+        {!disableBackdrop &&
+          <Transition.Child
+            as={Fragment}
+            enter="transition-all duration-200 ease-inout"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-all duration-200 ease-inout"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="backdrop" aria-hidden="true" />
+          </Transition.Child>
+        }
         <Transition.Child
           as={Fragment}
           enter="transition-transform duration-200 ease-inout"
