@@ -9,6 +9,7 @@ With the `transition-*` classes you can control wich property has to perform a t
 
 * `transition-none`
 * `transition-all`
+* `transition-transform`
 
 ## Duration
 With the `duration-*` classes you can control the duration of a transition. The values are in milliseconds.
