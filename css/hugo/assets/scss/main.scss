@@ -390,6 +390,14 @@
       }
     }
 
+    &.docs-preview-scale {
+      .blocks {
+        width: 32px;
+        height: 32px;
+        border-radius: $border-radius;
+      }
+    }
+
     &.docs-preview-offcanvas {
       padding: 0;
 
