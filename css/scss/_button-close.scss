@@ -1,0 +1,33 @@
+.btn-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--body-text);
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  padding: 0;
+  border-radius: $border-radius;
+  line-height: 1;
+  transition: all .2s ease-in-out, box-shadow .2s ease-in-out;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+
+  & > svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px var(--accent-600a);
+  }
+
+  &:hover {
+    background-color: rgba($dark, .1);
+    border-color: var(--accent-800);
+  }
+}
