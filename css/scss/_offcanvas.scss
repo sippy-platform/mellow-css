@@ -17,6 +17,29 @@
         backdrop-filter: blur(15px) saturate(250%);
       }
 
+      &.offcanvas-animate {
+        visibility: hidden;
+
+        &.showing,
+        &.hiding,
+        &.show {
+          visibility: visible;
+        }
+
+        &.showing,
+        &.show:not(.hiding) {
+          transform: none;
+        }
+
+        &.offcanvas-start {
+          transform: translateX(-100%);
+        }
+
+        &.offcanvas-end {
+          transform: translateX(100%);
+        }
+      }
+
       &.offcanvas-start {
         top: 0;
         left: 0;
