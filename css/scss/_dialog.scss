@@ -1,4 +1,6 @@
 .dialog {
+  position: fixed;
+  z-index: 1050;
   color: inherit;
   padding: 0;
   border: none;
@@ -40,12 +42,7 @@
   align-items: center;
   padding: $spacer * .75 $spacer * .75 0;
 
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6 {
+  .dialog-title {
     margin: 0;
   }
 }
