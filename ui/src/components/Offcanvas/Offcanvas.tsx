@@ -3,9 +3,6 @@ import React, { Fragment, ReactNode } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 
 import clsx from 'clsx';
-import Button from '../Button/Button';
-
-import ValkyrieIcon, { viXmark } from '@optimisegroup/valkyrie';
 
 export interface OffcanvasProps {
   /**
