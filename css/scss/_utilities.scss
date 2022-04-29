@@ -317,7 +317,45 @@ $utilities: (
   "overflow": (
     property: overflow,
     values: $overflows
-  )
+  ),
+  // Transition
+  "transition": (
+    property: transition-property,
+    values: (
+      all: all,
+      none: none,
+      transform: transform
+    )
+  ),
+  "duration": (
+    property: transition-duration,
+    values: (
+      50: 50ms,
+      100: 100ms,
+      200: 200ms,
+      300: 300ms,
+      500: 500ms,
+      1000: 1000ms
+    )
+  ),
+  "ease": (
+    property: transition-timing-function,
+    values: (
+      linear: linear,
+      in: ease-in,
+      out: ease-out,
+      inout: ease-in-out
+    )
+  ),
+  // Transform
+  "transform": (
+    property: transform,
+    values: (
+      x-100: translateX(100%),
+      x-n100: translateX(-100%),
+      none: none
+    )
+  ),
 );
 
 @each $breakpoint in map-keys($grid-breakpoints) {
