@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-export interface DialogContentProps {
+export interface DialogBodyProps {
   /**
    * Contents of the dialog
    */
@@ -10,14 +10,14 @@ export interface DialogContentProps {
 /**
  * Primary UI component for user interaction
  */
-export const DialogContent = ({
+export const DialogBody = ({
   children
-}: DialogContentProps) => {
+}: DialogBodyProps) => {
   return (
-    <div className="dialog-content">
+    <div className="dialog-body">
       {children}
     </div>
   );
 };
 
-export default DialogContent;
+export default DialogBody;
