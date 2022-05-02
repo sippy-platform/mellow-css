@@ -52,7 +52,6 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.6.0",
-    "@radix-ui/react-checkbox": "^0.1.6-rc.3",
     "@radix-ui/react-label": "^0.1.6-rc.3",
     "@radix-ui/react-progress": "^0.1.5-rc.3",
     "@radix-ui/react-radio-group": "^0.1.6-rc.6",
