@@ -1,4 +1,4 @@
-import React, { FormEventHandler, ReactNode, useState } from 'react';
+import React, { FormEventHandler, ReactNode } from 'react';
 
 import { RadioGroup as RadioGroupPrimitives } from '@headlessui/react'
 
@@ -37,7 +37,6 @@ export interface RadioGroupProps {
  * Primary UI component for user interaction
  */
 export const RadioGroup = ({
-  name,
   label,
   className,
   value = '',
