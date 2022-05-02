@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
 import { Radio } from '../Radio/Radio';
@@ -16,18 +17,20 @@ When using the Radio component, it must be used within a RadioGroup component. T
 <Canvas>
   <Story
     name="Basic radio"
-    args={{
-      name: 'basic',
-      value: 'hello',
-      loop: true,
-      required: false,
-      children: ([
-        <Radio value="hello" label="Hello" id="hello" />,
-        <Radio value="bonjour" label="Bonjour" id="bonjour" />
-      ])
-    }}
   >
-    {Template.bind({})}
+    {() => {
+      const [value, setValue] = useState("hello");
+      return (
+        <RadioGroup
+          onChange={setValue}
+          value={value}
+          label="Value checker"
+        >
+          <Radio value="hello" label="Hello" />
+          <Radio value="bonjour" label="Bonjour" />
+        </RadioGroup>
+      );
+    }}
   </Story>
 </Canvas>
 
@@ -37,18 +40,20 @@ Add a helper prop to add extra information.
 <Canvas>
   <Story
     name="Helper radio"
-    args={{
-      name: 'basic',
-      value: 'hello',
-      loop: true,
-      required: false,
-      children: ([
-        <Radio value="hello" label="Hello" helper="Hello" id="hello" />,
-        <Radio value="bonjour" label="Bonjour" helper="Bonjour" id="bonjour" />
-      ])
-    }}
   >
-    {Template.bind({})}
+    {() => {
+      const [value, setValue] = useState("hello");
+      return (
+        <RadioGroup
+          onChange={setValue}
+          value={value}
+          label="Helper options"
+        >
+          <Radio value="hello" label="Hello" helper="Hello" />
+          <Radio value="bonjour" label="Bonjour" helper="Bonjour" />
+        </RadioGroup>
+      );
+    }}
   </Story>
 </Canvas>
 
@@ -58,17 +63,18 @@ If, for any reason, you ever find yourself in a situation where a radio button d
 <Canvas>
   <Story
     name="No label radio"
-    args={{
-      name: 'basic',
-      value: 'hello',
-      loop: true,
-      required: false,
-      children: ([
-        <Radio value="hello" id="hello" className="me-2" />,
-        <Radio value="bonjour" id="bonjour" />
-      ])
-    }}
   >
-    {Template.bind({})}
+    {() => {
+      const [value, setValue] = useState("hello");
+      return (
+        <RadioGroup
+          onChange={setValue}
+          value={value}
+        >
+          <Radio value="hello" />
+          <Radio value="bonjour" />
+        </RadioGroup>
+      );
+    }}
   </Story>
 </Canvas>

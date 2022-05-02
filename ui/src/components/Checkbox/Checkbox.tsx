@@ -6,9 +6,9 @@ import clsx from 'clsx';
 
 export interface CheckboxProps {
   /**
-   * The id attached of the checkbox
+   * The name attached of the radio item
    */
-  id?: string;
+  name?: string;
   /**
    * The label attached to the checkbox
    */
@@ -31,7 +31,7 @@ export interface CheckboxProps {
  * Primary UI component for user interaction
  */
 export const Checkbox = ({
-  id,
+  name,
   className,
   checked,
   label,
@@ -43,7 +43,7 @@ export const Checkbox = ({
     return (
       <Switch.Group>
         <div className={clsx('input-form', className)}>
-          <Switch className="input-check" checked={checkedState} onChange={setChecked} id={id} />
+          <Switch className="input-check" checked={checkedState} onChange={setChecked} name={name} />
           <Switch.Label>
             {label}
           </Switch.Label>
@@ -54,7 +54,7 @@ export const Checkbox = ({
   }
 
   return (
-    <Switch className="input-check" checked={checkedState} onChange={setChecked} id={id} />
+    <Switch className="input-check" checked={checkedState} onChange={setChecked} />
   );
 };
 
