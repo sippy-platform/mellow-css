@@ -54,7 +54,6 @@
     "@headlessui/react": "^1.6.0",
     "@radix-ui/react-label": "^0.1.6-rc.3",
     "@radix-ui/react-progress": "^0.1.5-rc.3",
-    "@radix-ui/react-radio-group": "^0.1.6-rc.6",
     "@radix-ui/react-select": "^0.1.2-rc.12",
     "@radix-ui/react-slider": "^0.1.5-rc.6",
     "@radix-ui/react-visually-hidden": "^0.1.5-rc.3"
