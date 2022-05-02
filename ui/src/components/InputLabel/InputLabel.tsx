@@ -1,6 +1,4 @@
 import React, { ReactNode } from 'react';
-import * as InputLabelPrimitives from '@radix-ui/react-label';
-
 
 import clsx from 'clsx';
 
@@ -28,9 +26,9 @@ export const InputLabel = ({
   id
 }: InputLabelProps) => {
   return (
-    <InputLabelPrimitives.Root className={clsx('input-label', className)} htmlFor={id}>
+    <label className={clsx('input-label', className)} htmlFor={id}>
       {children}
-    </InputLabelPrimitives.Root>
+    </label>
   );
 };
 
