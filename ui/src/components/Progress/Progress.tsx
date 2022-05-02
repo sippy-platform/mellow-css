@@ -64,6 +64,7 @@ export const Progress = ({
           )
         }
         style={{ width: `${value / max * 100}%` }}
+        role="progressbar"
         aria-valuenow={value}
         aria-valuemin={0}
         aria-valuemax={max}
