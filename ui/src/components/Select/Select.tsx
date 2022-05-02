@@ -1,14 +1,40 @@
-import React, { ReactNode } from 'react';
+import React, { FormEventHandler, ReactNode, Fragment, useState, useMemo } from 'react';
 
-import * as SelectPrimitives from '@radix-ui/react-select';
+import { Listbox, Transition } from '@headlessui/react';
 
 import clsx from 'clsx';
+import ValkyrieIcon, { viAngleDown } from '@optimisegroup/valkyrie';
+import SelectItem from '../SelectItem';
 
 export interface SelectProps {
+  /**
+   * The name attached of the radio item
+   */
+  name?: string;
   /**
    * Value of the select
    */
   value?: string;
+  /**
+   * The array of options
+   */
+  options: any[];
+  /**
+   * The callback for changing values
+   */
+  onChange: ((value: string) => void) | (FormEventHandler<HTMLDivElement> & ((value: string) => void));
+  /**
+   * The callback for getting the option label
+   */
+  getLabel: (value: any) => string;
+  /**
+   * The callback for getting the option label
+   */
+  getValue: (value: any) => string;
+  /**
+   * Whether the radio group is disabled
+   */
+  disabled?: boolean;
   /**
    * Custom classes for the label
    */
@@ -23,40 +49,44 @@ export interface SelectProps {
  * Primary UI component for user interaction
  */
 export const Select = ({
+  name,
   className,
+  options,
   value,
-  children,
-  ...props
+  onChange,
+  getLabel = (x) => x.label,
+  getValue = (x) => x.value,
+  disabled
 }: SelectProps) => {
+  const currentValue = useMemo(() => {
+    return options.find((option) => getValue(option) === value);
+  }, [options, value]);
   return (
-    <SelectPrimitives.Root
-      defaultValue={value}
-      {...props}
-    >
-      <SelectPrimitives.Trigger
-        className={clsx(
-          'input-select',
-          className
-        )}
-      >
-        <SelectPrimitives.Value />
-        <SelectPrimitives.Icon className="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path fillRule="evenodd" d="M3.3 5.3a1 1 0 0 1 1.4 0L8 8.58l3.3-3.3a1 1 0 1 1 1.4 1.42l-3.64 3.64a1.5 1.5 0 0 1-2.12 0L3.29 6.71a1 1 0 0 1 0-1.42Z"/></svg>
-        </SelectPrimitives.Icon>
-      </SelectPrimitives.Trigger>
-
-      <SelectPrimitives.Content className="select-menu content">
-        <SelectPrimitives.ScrollUpButton className="navigation-button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M12.7 10.7a1 1 0 0 1-1.4 0L8 7.42l-3.3 3.3A1 1 0 0 1 3.3 9.3l3.64-3.64a1.5 1.5 0 0 1 2.12 0l3.65 3.64a1 1 0 0 1 0 1.42Z"/></svg>
-        </SelectPrimitives.ScrollUpButton>
-        <SelectPrimitives.Viewport className="viewport">
-          {children}
-        </SelectPrimitives.Viewport>
-        <SelectPrimitives.ScrollDownButton className="navigation-button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.3 5.3a1 1 0 0 1 1.4 0L8 8.58l3.3-3.3a1 1 0 1 1 1.4 1.42l-3.64 3.64a1.5 1.5 0 0 1-2.12 0L3.29 6.71a1 1 0 0 1 0-1.42Z"/></svg>
-        </SelectPrimitives.ScrollDownButton>
-      </SelectPrimitives.Content>
-    </SelectPrimitives.Root>
+    <div className="position-relative">
+      <Listbox value={value} onChange={onChange} disabled={disabled} name={name}>
+        <Listbox.Button className={clsx('input-select', className)}>
+          <span className="text-truncate">{getLabel(currentValue)}</span>
+          <span className="d-flex align-items-center">
+            <ValkyrieIcon icon={viAngleDown} />
+          </span>
+        </Listbox.Button>
+        <Transition
+          as={Fragment}
+          enter="transition ease-in duration-50"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <Listbox.Options className="position-absolute top-100 end-auto bottom-auto start-0 overflow-auto w-100 rounded bg-white p-1 mt-1 shadow-2 list-none">
+            {options.map((option, key) => (
+              <SelectItem option={option} getValue={getValue} getLabel={getLabel} key={key} />
+            ))}
+          </Listbox.Options>
+        </Transition>
+      </Listbox>
+    </div>
   );
 };
 

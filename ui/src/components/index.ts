@@ -26,6 +26,5 @@ export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';
 export { default as Select } from './Select';
 export { default as SelectDivider } from './SelectDivider';
-export { default as SelectGroup } from './SelectGroup';
 export { default as SelectItem } from './SelectItem';
 export { default as SelectLabel } from './SelectLabel';
