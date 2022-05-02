@@ -1,6 +1,4 @@
 import React, { ReactNode } from 'react';
-import * as ProgressPrimitives from '@radix-ui/react-progress';
-
 
 import clsx from 'clsx';
 
@@ -47,9 +45,7 @@ export const Progress = ({
   className
 }: ProgressProps) => {
   return (
-    <ProgressPrimitives.Root
-      value={value}
-      max={max}
+    <div
       className={
         clsx(
           'progress',
@@ -60,7 +56,7 @@ export const Progress = ({
         )
       }
     >
-      <ProgressPrimitives.Indicator
+      <div
         className={
           clsx(
             'progress-bar',
@@ -68,10 +64,13 @@ export const Progress = ({
           )
         }
         style={{ width: `${value / max * 100}%` }}
+        aria-valuenow={value}
+        aria-valuemin={0}
+        aria-valuemax={max}
       >
         {label && `${value / max * 100}%`}
-      </ProgressPrimitives.Indicator>
-    </ProgressPrimitives.Root>
+      </div>
+    </div>
   );
 };
 
