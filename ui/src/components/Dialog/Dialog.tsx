@@ -57,10 +57,10 @@ export const Dialog = ({
         <div className="position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center p-3" style={{ zIndex: 1040 }}>
           <Transition.Child
             as={Fragment}
-            enter="transition-transform duration-200 ease-inout"
+            enter="transition-all duration-200 ease-inout"
             enterFrom="opacity-0 scale-95"
             enterTo="opacity-100 scale-100"
-            leave="transition-transform duration-200 ease-inout"
+            leave="transition-all duration-200 ease-inout"
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
