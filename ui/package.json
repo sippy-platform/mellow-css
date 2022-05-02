@@ -52,8 +52,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.6.0",
-    "@radix-ui/react-select": "^0.1.2-rc.12",
-    "@radix-ui/react-slider": "^0.1.5-rc.6"
+    "@radix-ui/react-slider": "^0.1.5-rc.10"
   },
   "peerDependencies": {
     "@optimisegroup/valkyrie": "^0.14.2",
