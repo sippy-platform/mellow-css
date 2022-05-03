@@ -1,1 +1,1 @@
-export { default } from './ListDivider';
+export { default, ListDividerProps } from './ListDivider';

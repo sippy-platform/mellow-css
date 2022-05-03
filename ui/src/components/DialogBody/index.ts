@@ -1,1 +1,1 @@
-export { default } from './DialogBody';
+export { default, DialogBodyProps } from './DialogBody';

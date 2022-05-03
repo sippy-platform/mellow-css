@@ -1,1 +1,1 @@
-export { default } from './CardBody';
+export { default, CardBodyProps } from './CardBody';

@@ -1,1 +1,1 @@
-export { default } from './InputLabel';
+export { default, InputLabelProps } from './InputLabel';

@@ -1,1 +1,1 @@
-export { default } from './SelectLabel';
+export { default, SelectLabelProps } from './SelectLabel';

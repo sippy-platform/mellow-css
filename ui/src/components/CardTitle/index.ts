@@ -1,1 +1,1 @@
-export { default } from './CardTitle';
+export { default, CardTitleProps } from './CardTitle';
