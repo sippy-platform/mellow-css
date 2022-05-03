@@ -2,7 +2,7 @@ import React, { ChangeEventHandler } from 'react';
 
 import clsx from 'clsx';
 
-export interface SliderProps {
+export interface RangeProps {
   /**
    * Minimum value of the input
    */
@@ -32,7 +32,7 @@ export interface SliderProps {
 /**
  * Primary UI component for user interaction
  */
-export const Slider = ({
+export const Range = ({
   className,
   min = 0,
   max = 100,
@@ -40,7 +40,7 @@ export const Slider = ({
   value = 0,
   onChange,
   ...props
-}: SliderProps) => {
+}: RangeProps) => {
   return (
     <input
       type="range"
@@ -58,4 +58,4 @@ export const Slider = ({
   );
 };
 
-export default Slider;
+export default Range;

@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
-import { Slider } from './Slider';
+import { Range } from './Range';
 
 <Meta
-  title="Forms/Slider"
-  component={Slider}
+  title="Forms/Range"
+  component={Range}
 />
 
-export const Template = (args) => <Slider {...args} />;
+export const Template = (args) => <Range {...args} />;
 
-# Slider
+# Range
 The slider is a great input type for when your values lie on a scale.
 
 ## Orientations
@@ -22,7 +22,7 @@ The slider is a great input type for when your values lie on a scale.
     {() => {
       const [value, setValue] = useState(50);
       return (
-        <Slider
+        <Range
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
@@ -41,7 +41,7 @@ A default slider component will provide a range between 0 and 100 with steps of 
     {() => {
       const [value, setValue] = useState(50);
       return (
-        <Slider
+        <Range
           value={value}
           onChange={(e) => setValue(e.target.value)}
           min={10}
@@ -54,4 +54,4 @@ A default slider component will provide a range between 0 and 100 with steps of 
 </Canvas>
 
 # API
-<ArgsTable of={Slider} />
+<ArgsTable of={Range} />

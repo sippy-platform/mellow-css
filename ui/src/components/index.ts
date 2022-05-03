@@ -24,6 +24,7 @@ export { default as OffcanvasHeader } from './OffcanvasHeader';
 export { default as Progress } from './Progress';
 export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';
+export { default as Range } from './Range';
 export { default as Select } from './Select';
 export { default as SelectDivider } from './SelectDivider';
 export { default as SelectItem } from './SelectItem';
