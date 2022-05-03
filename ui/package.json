@@ -51,8 +51,7 @@
     "typescript": "4.6.4"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.0",
-    "@radix-ui/react-slider": "^0.1.5-rc.10"
+    "@headlessui/react": "^1.6.0"
   },
   "peerDependencies": {
     "@optimisegroup/valkyrie": "^0.14.2",

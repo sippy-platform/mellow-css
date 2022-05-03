@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
-
-import * as SliderPrimitives from '@radix-ui/react-slider';
+import React, { ChangeEventHandler } from 'react';
 
 import clsx from 'clsx';
 
 export interface SliderProps {
-  /**
-   * Value of the input
-   */
-  orientation?: 'horizontal' | 'vertical';
   /**
    * Minimum value of the input
    */
@@ -22,13 +16,13 @@ export interface SliderProps {
    */
   step?: number;
   /**
-   * The minimum permitted steps between thumbs
+   * Value of the input
    */
-  minStepsBetweenThumbs?: number;
+  value: number;
   /**
    * Value of the input
    */
-  value?: number[] | number;
+  onChange: ChangeEventHandler<HTMLInputElement>;
   /**
    * Custom classes for the label
    */
@@ -40,37 +34,27 @@ export interface SliderProps {
  */
 export const Slider = ({
   className,
-  orientation = 'horizontal',
   min = 0,
   max = 100,
   step = 1,
-  value = [0],
-  minStepsBetweenThumbs = 0,
+  value = 0,
+  onChange,
   ...props
 }: SliderProps) => {
-  const [curValue, setValue] = useState(value);
-
   return (
-    <SliderPrimitives.Root
-      orientation={orientation}
+    <input
+      type="range"
       min={min}
       max={max}
       step={step}
-      minStepsBetweenThumbs={minStepsBetweenThumbs}
-      value={Array.isArray(curValue) ? curValue : [curValue]}
-      onValueChange={setValue}
+      value={value}
+      onChange={onChange}
       className={clsx(
-        'input-slider',
+        'input-range',
         className
       )}
       {...props}
-    >
-      <SliderPrimitives.Track className="track">
-        <SliderPrimitives.Range className="range" />
-      </SliderPrimitives.Track>
-      <SliderPrimitives.Thumb className="thumb" />
-      {(Array.isArray(curValue) && curValue.length === 2) && <SliderPrimitives.Thumb className="thumb" />}
-    </SliderPrimitives.Root>
+    />
   );
 };
 
