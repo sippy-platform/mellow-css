@@ -1,99 +1,64 @@
+import { useState } from 'react';
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
 import { Dialog } from './Dialog';
-import Button from '../Button';
-import DialogHeader from '../DialogHeader';
-import DialogDescription from '../DialogDescription';
-import DialogContent from '../DialogContent';
+import Button from '../Button/Button';
+import CloseButton from '../CloseButton/CloseButton';
+import DialogHeader from '../DialogHeader/DialogHeader';
+import DialogBody from '../DialogBody/DialogBody';
 
 <Meta
   title="Components/Dialog"
   component={Dialog}
 />
 
-export const Template = (args) => <Dialog {...args} />;
-
 # Dialog
-The select is a useful control for picking an option from a long list of items.
+The Dialog component is similar to the Dialog component in its behavior and API.
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
-      children: ([
-        <DialogHeader>Dialog</DialogHeader>,
-        <DialogDescription>This is a dialog description.</DialogDescription>,
-        <DialogContent>
-          <p>This is a dialog content box. Place anything you want in here.</p>
-        </DialogContent>
-      ])
+  <Story name="Dialog">
+    {() => {
+      const [open, setOpen] = useState(false);
+      return (
+        <>
+          <Button onClick={() => setOpen(true)}>Open dialog</Button>
+          <Dialog open={open} setOpen={setOpen}>
+            <DialogHeader action={<CloseButton setOpen={setOpen} />}>Dialog example</DialogHeader>
+            <DialogBody>
+              <p>
+                Are you sure you want to deactivate your account? All of your data
+                will be permanently removed. This action cannot be undone.
+              </p>
+            </DialogBody>
+          </Dialog>
+        </>
+      );
     }}
-  >
-    {Template.bind({})}
   </Story>
 </Canvas>
 
-## No modal
-If you want users to be able to interact with other elements while te dialog is open then you can disabled the modal behavior with `disableModal`.
-
-This will render no backdrop and allow you to scroll the page content.
+## Disable backdrop
+If you don't want a backdrop to be rendered, that's possible too.
 
 <Canvas>
-  <Story
-    name="None-modal dialog"
-    args={{
-      disableModal: true,
-      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
-      children: ([
-        <DialogHeader>Dialog</DialogHeader>,
-        <DialogDescription>This is a dialog description.</DialogDescription>,
-        <DialogContent>
-          <p>This is a dialog content box. Place anything you want in here.</p>
-        </DialogContent>
-      ])
+  <Story name="Backdropless dialog">
+    {() => {
+      const [open, setOpen] = useState(false);
+      return (
+        <>
+          <Button onClick={() => setOpen(true)}>Open dialog without Backdrop</Button>
+          <Dialog open={open} setOpen={setOpen} disableBackdrop>
+            <DialogHeader action={<CloseButton setOpen={setOpen} />}>Dialog example</DialogHeader>
+            <DialogBody>
+              <p>
+                Are you sure you want to deactivate your account? All of your data
+                will be permanently removed. This action cannot be undone.
+              </p>
+            </DialogBody>
+          </Dialog>
+        </>
+      );
     }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-## Description
-The `DialogDescription` component provides a component that will be announced when the dialog is opened for screenreaders. This component can be hidden with the `visuallyHidden` property. It is strongly recommneded to always have a `DialgDescription` component in your dialog.
-
-<Canvas>
-  <Story
-    name="Visually hidden description"
-    args={{
-      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
-      children: ([
-        <DialogHeader>Dialog</DialogHeader>,
-        <DialogDescription visuallyHidden>This is a dialog description.</DialogDescription>,
-        <DialogContent>
-          <p>This is a dialog content box. Place anything you want in here.</p>
-        </DialogContent>
-      ])
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="No description"
-    args={{
-      trigger: (<Button variant="color" color="blue">Open dialog</Button>),
-      children: ([
-        <DialogHeader>Dialog</DialogHeader>,
-        <DialogDescription visuallyHidden>This is a dialog description.</DialogDescription>,
-        <DialogContent>
-          <p>This is a dialog content box. Place anything you want in here.</p>
-        </DialogContent>
-      ])
-    }}
-  >
-    {Template.bind({})}
   </Story>
 </Canvas>
 
@@ -104,8 +69,8 @@ The `DialogDescription` component provides a component that will be announced wh
 ## DialogHeader
 <ArgsTable of={DialogHeader} />
 
-## DialogDescription
-<ArgsTable of={DialogDescription} />
+## DialogBody
+<ArgsTable of={DialogBody} />
 
-## DialogContent
-<ArgsTable of={DialogContent} />
+## CloseButton
+<ArgsTable of={CloseButton} />

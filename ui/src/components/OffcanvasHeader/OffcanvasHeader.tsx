@@ -4,7 +4,7 @@ import { Dialog } from '@headlessui/react';
 
 import clsx from 'clsx';
 
-export interface DialogHeaderProps {
+export interface OffcanvasHeaderProps {
   /**
    * Custom classes for the dialog header
    */
@@ -22,22 +22,22 @@ export interface DialogHeaderProps {
 /**
  * Primary UI component for user interaction
  */
-export const DialogHeader = ({
+export const OffcanvasHeader = ({
   action,
   className,
   children
-}: DialogHeaderProps) => {
+}: OffcanvasHeaderProps) => {
   return (
     <div
       className={clsx(
-        'dialog-header',
+        'offcanvas-header',
         className
       )}
     >
-      <Dialog.Title className="dialog-title" as="h5">{children}</Dialog.Title>
+      <Dialog.Title className="offcanvas-title" as="h5">{children}</Dialog.Title>
       {action}
     </div>
   );
 };
 
-export default DialogHeader;
+export default OffcanvasHeader;

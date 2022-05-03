@@ -1,7 +1,5 @@
 import React, { ReactNode } from 'react';
 
-import * as SelectPrimitives from '@radix-ui/react-select';
-
 export interface SelectLabelProps {
   /**
    * Label of the input, will default to the value if none is given
@@ -16,7 +14,7 @@ export const SelectLabel = ({
   children
 }: SelectLabelProps) => {
   return (
-    <SelectPrimitives.Label className="group-title">{children}</SelectPrimitives.Label>
+    <p className="group-title input-text m-0 ps-2">{children}</p>
   );
 };
 

@@ -10,7 +10,7 @@ Mellow's dialog uses the `dialog` element, this native HTML element is supported
 {{<example>}}
 <dialog class="dialog" id="exampleDialog">
   <form method="dialog" class="dialog-header">
-    <h3 class="h5">This is a dialog</h3>
+    <h3 class="dialog-title h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
   <div class="dialog-body">
@@ -32,7 +32,7 @@ The `showModal()` method does everything the `show()` method does, but also resp
 {{<example>}}
 <dialog class="dialog" id="showDialog">
   <form method="dialog" class="dialog-header">
-    <h3 class="h5">This is a dialog</h3>
+    <h3 class="dialog-title h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
   <div class="dialog-body">
@@ -52,7 +52,7 @@ The `showModal()` method does everything the `show()` method does, but also resp
 
 <dialog class="dialog dialog-sm" id="smallDialog">
   <form method="dialog" class="dialog-header">
-    <h3 class="h5">This is a dialog</h3>
+    <h3 class="dialog-title h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
   <div class="dialog-body">
@@ -62,7 +62,7 @@ The `showModal()` method does everything the `show()` method does, but also resp
 
 <dialog class="dialog dialog-lg" id="largeDialog">
   <form method="dialog" class="dialog-header">
-    <h3 class="h5">This is a dialog</h3>
+    <h3 class="dialog-title h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
   <div class="dialog-body">
@@ -72,7 +72,7 @@ The `showModal()` method does everything the `show()` method does, but also resp
 
 <dialog class="dialog dialog-xl" id="extraLargeDialog">
   <form method="dialog" class="dialog-header">
-    <h3 class="h5">This is a dialog</h3>
+    <h3 class="dialog-title h5">This is a dialog</h3>
     <button value="cancel" class="btn-close"><i class="vi vi-xmark"></i></button>
   </form>
   <div class="dialog-body">

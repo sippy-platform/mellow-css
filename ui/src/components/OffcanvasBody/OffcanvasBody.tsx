@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-export interface DialogContentProps {
+export interface OffcanvasBodyProps {
   /**
    * Contents of the dialog
    */
@@ -10,14 +10,14 @@ export interface DialogContentProps {
 /**
  * Primary UI component for user interaction
  */
-export const DialogContent = ({
+export const OffcanvasBody = ({
   children
-}: DialogContentProps) => {
+}: OffcanvasBodyProps) => {
   return (
-    <div className="dialog-content">
+    <div className="offcanvas-body">
       {children}
     </div>
   );
 };
 
-export default DialogContent;
+export default OffcanvasBody;

@@ -1,4 +1,6 @@
 .dialog {
+  position: fixed;
+  z-index: 1050;
   color: inherit;
   padding: 0;
   border: none;
@@ -40,7 +42,7 @@
   align-items: center;
   padding: $spacer * .75 $spacer * .75 0;
 
-  .h5 {
+  .dialog-title {
     margin: 0;
   }
 }
@@ -59,38 +61,4 @@
   align-items: center;
   padding: $spacer * .75;
   border-top: $border-width solid $border-color;
-}
-
-.dialog-dialog {
-  color: inherit;
-  padding: 0;
-  border: none;
-  border-radius: $border-radius;
-  background-color: var(--acrylic-solid-background);
-  box-shadow: map-get($box-shadows, 1), map-get($box-shadows, 3);
-  width: 100%;
-  max-width: $dialog-md;
-  z-index: 1050;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  &:focus {
-    outline: none;
-  }
-}
-
-.dialog-description {
-  color: $muted;
-  padding: 0 $spacer * .75 $spacer * .75;
-  margin-bottom: 0;
-}
-
-.dialog-content {
-  padding: $spacer * .75;
-
-  & > :last-child {
-    margin-bottom: 0;
-  }
 }

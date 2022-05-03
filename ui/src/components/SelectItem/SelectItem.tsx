@@ -1,41 +1,39 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
-import * as SelectPrimitives from '@radix-ui/react-select';
+import { Listbox } from '@headlessui/react';
+
+import clsx from 'clsx';
 
 export interface SelectItemProps {
   /**
    * Value of the input
    */
-  value: string;
+  option: { [key: string]: any };
   /**
-   * Label of the input, will default to the value if none is given
+   * The callback for getting the option label
    */
-  children: ReactNode;
+  getLabel: (value: any) => string;
   /**
-   * If the value is disabled or not
+   * The callback for getting the option label
    */
-  disabled?: boolean;
+  getValue: (value: any) => string;
 }
 
 /**
  * Primary UI component for user interaction
  */
 export const SelectItem = ({
-  value,
-  children,
-  disabled
+  option,
+  getLabel = (x) => x.label,
+  getValue = (x) => x.value
 }: SelectItemProps) => {
   return (
-    <SelectPrimitives.Item
-      className="item"
-      value={value}
-      disabled={disabled}
+    <Listbox.Option
+      className={({ selected }) => clsx('dropdown-item', { 'active': selected })}
+      value={getValue(option)}
     >
-      <SelectPrimitives.ItemText>{children || value}</SelectPrimitives.ItemText>
-      <SelectPrimitives.ItemIndicator className="item-indicator">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M11.96 5.3a1 1 0 0 1 0 1.4L7.8 10.86a1.5 1.5 0 0 1-2.12 0l-2.4-2.4a1 1 0 0 1 1.42-1.4L6.74 9.1l3.8-3.8a1 1 0 0 1 1.4 0Z"/></svg>
-      </SelectPrimitives.ItemIndicator>
-    </SelectPrimitives.Item>
+      {getLabel(option)}
+    </Listbox.Option>
   );
 };
 

@@ -1,10 +1,10 @@
 import React, { Fragment, ReactNode } from 'react';
 
-import { Dialog as DialogUI, Transition } from '@headlessui/react';
+import { Dialog, Transition } from '@headlessui/react';
 
 import clsx from 'clsx';
 
-export interface DialogProps {
+export interface OffcanvasProps {
   /**
    * The open state
    */
@@ -13,6 +13,10 @@ export interface DialogProps {
    * The function to change the open state
    */
   setOpen: (state: boolean) => void;
+  /**
+   * Position
+   */
+  position?: 'start' | 'end';
   /**
    * Custom classes for the dialog
    */
@@ -30,17 +34,18 @@ export interface DialogProps {
 /**
  * Primary UI component for user interaction
  */
-export const Dialog = ({
+export const Offcanvas = ({
   open,
   setOpen,
   className,
   children,
+  position = 'start',
   disableBackdrop,
   ...props
-}: DialogProps) => {
+}: OffcanvasProps) => {
   return (
     <Transition appear show={open} as={Fragment}>
-      <DialogUI onClose={() => setOpen(false)} className="position-relative">
+      <Dialog onClose={() => setOpen(false)} className="position-relative">
         {!disableBackdrop &&
           <Transition.Child
             as={Fragment}
@@ -54,32 +59,31 @@ export const Dialog = ({
             <div className="backdrop" aria-hidden="true" />
           </Transition.Child>
         }
-        <div className="position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center p-3" style={{ zIndex: 1040 }}>
-          <Transition.Child
-            as={Fragment}
-            enter="transition-all duration-200 ease-inout"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="transition-all duration-200 ease-inout"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
+        <Transition.Child
+          as={Fragment}
+          enter="transition-transform duration-200 ease-inout"
+          enterFrom={position === 'start' ? 'transform-x-n100' : 'transform-x-100'}
+          enterTo="transform-none"
+          leave="transition-transform duration-200 ease-inout"
+          leaveFrom="transform-none"
+          leaveTo={position === 'start' ? 'transform-x-n100' : 'transform-x-100'}
+        >
+          <Dialog.Panel
+            className={
+              clsx(
+                'offcanvas',
+                `offcanvas-${position}`,
+                className
+              )
+            }
+            {...props}
           >
-            <DialogUI.Panel
-              className={
-                clsx(
-                  'dialog',
-                  className
-                )
-              }
-              {...props}
-            >
-              {children}
-            </DialogUI.Panel>
-          </Transition.Child>
-        </div>
-      </DialogUI>
+            {children}
+          </Dialog.Panel>
+        </Transition.Child>
+      </Dialog>
     </Transition>
   );
 };
 
-export default Dialog;
+export default Offcanvas;

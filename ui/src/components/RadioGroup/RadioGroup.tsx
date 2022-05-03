@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react';
-import * as RadioGroupPrimitives from '@radix-ui/react-radio-group';
+import React, { FormEventHandler, ReactNode } from 'react';
 
+import { RadioGroup as RadioGroupPrimitives } from '@headlessui/react'
 
 export interface RadioGroupProps {
   /**
@@ -8,17 +8,21 @@ export interface RadioGroupProps {
    */
   name?: string;
   /**
-   * Require checking an option in the radio group
+   * The label attached to the checkbox
    */
-  required?: boolean;
-  /**
-   * Loop when using keyboard navigation
-   */
-  loop?: boolean;
+  label?: string;
   /**
    * Value of the radio item
    */
   value?: string;
+  /**
+   * The callback for changing values
+   */
+  onChange: ((value: string) => void) | (FormEventHandler<HTMLDivElement> & ((value: string) => void));
+  /**
+   * Whether the radio group is disabled
+   */
+  disabled?: boolean;
   /**
    * Custom classes for the radio item
    */
@@ -33,23 +37,23 @@ export interface RadioGroupProps {
  * Primary UI component for user interaction
  */
 export const RadioGroup = ({
-  name,
+  label,
   className,
   value = '',
+  onChange,
   children,
-  required = false,
-  loop = true
+  disabled
 }: RadioGroupProps) => {
   return (
-    <RadioGroupPrimitives.Root
+    <RadioGroupPrimitives
+      value={value}
+      onChange={onChange}
       className={className}
-      defaultValue={value}
-      name={name}
-      required={required}
-      loop={loop}
+      disabled={disabled}
     >
+      {label && <RadioGroupPrimitives.Label className="mb-2">{label}</RadioGroupPrimitives.Label>}
       {children}
-    </RadioGroupPrimitives.Root>
+    </RadioGroupPrimitives>
   );
 };
 
