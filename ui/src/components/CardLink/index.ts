@@ -1,1 +1,1 @@
-export { default } from './CardLink';
+export { default, CardLinkProps } from './CardLink';

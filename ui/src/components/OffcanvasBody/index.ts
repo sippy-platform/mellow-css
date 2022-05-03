@@ -1,1 +1,1 @@
-export { default } from './OffcanvasBody';
+export { default, OffcanvasBodyProps } from './OffcanvasBody';

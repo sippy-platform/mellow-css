@@ -1,1 +1,1 @@
-export { default } from './OffcanvasHeader';
+export { default, OffcanvasHeaderProps } from './OffcanvasHeader';
