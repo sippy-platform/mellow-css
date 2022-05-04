@@ -31,3 +31,4 @@ export { default as Select, SelectProps } from './Select';
 export { default as SelectDivider } from './SelectDivider';
 export { default as SelectItem, SelectItemProps } from './SelectItem';
 export { default as SelectLabel, SelectLabelProps } from './SelectLabel';
+export { default as Pivot, PivotProps } from './Pivot';
