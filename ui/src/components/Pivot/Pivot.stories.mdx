@@ -1,31 +1,51 @@
-import { useState } from 'react';
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 
-import { Pivot } from '../';
+import { Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels } from '../';
 
 <Meta
   title="Components/Pivot"
   component={Pivot}
 />
 
+export const Template = (args) => <Pivot {...args} />;
+
 # Pivot
-The select is a useful control for picking an option from a long list of items.
+A basic pivot setup.
 
 <Canvas>
   <Story
-    name="Default"
-  >
-    {() => {
-      const [value, setValue] = useState(2);
-      return (
-        <Pivot
-          variant="underline"
-        />
-      );
+    name="Pivot"
+    args={{
+      children: ([
+        <PivotNav variant="underline">
+          <PivotItem>Tab 1</PivotItem>
+          <PivotItem>Tab 2</PivotItem>
+          <PivotItem>Tab 3</PivotItem>
+        </PivotNav>,
+        <PivotPanels>
+          <PivotPanel>Content 1</PivotPanel>
+          <PivotPanel>Content 2</PivotPanel>
+          <PivotPanel>Content 3</PivotPanel>
+        </PivotPanels>
+      ])
     }}
+  >
+    {Template.bind({})}
   </Story>
 </Canvas>
 
 # API
 ## Pivot
 <ArgsTable of={Pivot} />
+
+## PivotNav
+<ArgsTable of={PivotNav} />
+
+## PivotItem
+<ArgsTable of={PivotItem} />
+
+## PivotPanels
+<ArgsTable of={PivotPanels} />
+
+## PivotPanel
+<ArgsTable of={PivotPanel} />

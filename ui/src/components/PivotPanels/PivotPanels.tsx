@@ -1,8 +1,9 @@
 import React, { ReactNode } from 'react';
 
 import { Tab } from '@headlessui/react';
+import clsx from 'clsx';
 
-export interface PivotProps {
+export interface PivotPanelsProps {
   /**
    * Custom classes for the label
    */
@@ -16,15 +17,22 @@ export interface PivotProps {
 /**
  * Primary UI component for user interaction
  */
-export const Pivot = ({
+export const PivotPanels = ({
   className,
   children
-}: PivotProps) => {
+}: PivotPanelsProps) => {
   return (
-    <Tab.Group as="nav" aria-role="navigation" className={className}>
+    <Tab.Panels
+      className={
+        clsx(
+          'tab-box mt-3',
+          className
+        )
+      }
+    >
       {children}
-    </Tab.Group>
+    </Tab.Panels>
   );
 };
 
-export default Pivot;
+export default PivotPanels;

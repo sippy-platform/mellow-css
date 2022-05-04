@@ -23,6 +23,11 @@ export { default as ListItemDivider, ListItemDividerProps } from './ListItemDivi
 export { default as Offcanvas, OffcanvasProps } from './Offcanvas';
 export { default as OffcanvasBody, OffcanvasBodyProps } from './OffcanvasBody';
 export { default as OffcanvasHeader, OffcanvasHeaderProps } from './OffcanvasHeader';
+export { default as Pivot, PivotProps } from './Pivot';
+export { default as PivotItem, PivotItemProps } from './PivotItem';
+export { default as PivotNav, PivotNavProps } from './PivotNav';
+export { default as PivotPanel, PivotPanelProps } from './PivotPanel';
+export { default as PivotPanels, PivotPanelsProps } from './PivotPanels';
 export { default as Progress, ProgressProps } from './Progress';
 export { default as Radio, RadioProps } from './Radio';
 export { default as RadioGroup, RadioGroupProps } from './RadioGroup';
@@ -31,4 +36,3 @@ export { default as Select, SelectProps } from './Select';
 export { default as SelectDivider } from './SelectDivider';
 export { default as SelectItem, SelectItemProps } from './SelectItem';
 export { default as SelectLabel, SelectLabelProps } from './SelectLabel';
-export { default as Pivot, PivotProps } from './Pivot';
