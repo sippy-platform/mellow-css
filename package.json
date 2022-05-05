@@ -32,7 +32,7 @@
     "watch:scss:core": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss\"",
     "watch:scss:docs": "nodemon --watch hugo/assets/scss/ --ext scss --exec \"npm run scss:lint\""
   },
-  "repository": "git://github.com/sippy-platform/mellow.git",
+  "repository": "git://github.com/sippy-platform/mellow-css.git",
   "files": [
     "/dist"
   ],
@@ -42,9 +42,9 @@
   "author": "",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/sippy-platform/mellow/issues"
+    "url": "https://github.com/sippy-platform/mellow-css/issues"
   },
-  "homepage": "https://sippy-platform.github.io/mellow",
+  "homepage": "https://sippy-platform.github.io/mellow-css",
   "peerDependencies": {
     "@optimisegroup/valkyrie": "0.14.2"
   },

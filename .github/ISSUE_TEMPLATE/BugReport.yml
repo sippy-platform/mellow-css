@@ -38,20 +38,6 @@ body:
       description: Add any extra information you'd like to add.
 
   - type: checkboxes
-    id: implementations
-    attributes:
-      label: Which parts of Mellow are affected?
-      options:
-        - label: Web fonts and CSS
-          required: false
-        - label: TypeScript definitions
-          required: false
-        - label: SVG icons
-          required: false
-        - label: React component
-          required: false
-
-  - type: checkboxes
     id: checklist
     attributes:
       label: Bug report checklist
