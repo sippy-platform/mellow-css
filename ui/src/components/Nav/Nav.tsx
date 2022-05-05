@@ -1,0 +1,65 @@
+import React, { ReactNode } from 'react';
+
+import clsx from 'clsx';
+import { Container, ContainerProps } from '../Container/Container';
+
+export interface NavProps {
+  /**
+   * Show dividers in the list
+   */
+  variant?: 'light' | 'full';
+  /**
+   * The color of the list
+   */
+  color?: 'light' | 'dark' | 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  /**
+   * The button size.
+   */
+  size?: 'sm' | 'md' | 'lg';
+  /**
+   * The button size.
+   */
+  containerProps?: ContainerProps;
+  /**
+   * Custom classes for the container box
+   */
+  className?: string;
+  /**
+   * Children
+   */
+  children?: ReactNode;
+}
+
+/**
+ * Primary UI component for user interaction
+ */
+export const Nav = ({
+  variant = 'light',
+  color = 'light',
+  size = 'md',
+  className,
+  children,
+  containerProps,
+  ...props
+}: NavProps) => {
+  return (
+    <nav
+      className={clsx(
+        'nav',
+        `nav-${variant}`,
+        `bg-${color}`,
+        {
+          [`nav-${size}`]: size !== 'md'
+        },
+        className
+      )}
+      {...props}
+    >
+      <Container {...containerProps}>
+        {children}
+      </Container>
+    </nav>
+  );
+};
+
+export default Nav;

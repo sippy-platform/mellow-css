@@ -1,0 +1,114 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Nav } from './Nav';
+import { NavItem } from '../NavItem/NavItem';
+import { NavBrand } from '../NavBrand/NavBrand';
+import { NavGroup } from '../NavGroup/NavGroup';
+
+<Meta
+  title="Components/Nav"
+  component={Nav}
+/>
+
+export const Template = (args) => <Nav {...args} />;
+
+# Nav
+A basic navigation menu consists out of the `Nav` component with nested `NavGroup` components and `NavItem` components within these groups.
+
+<Canvas>
+  <Story
+    name="Nav"
+    args={{
+      children: ([
+        <NavGroup className="me-auto">
+          <NavItem href="#">Home</NavItem>
+          <NavItem href="#">About</NavItem>
+        </NavGroup>,
+        <NavGroup>
+          <NavItem href="#">Settings</NavItem>
+        </NavGroup>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## NavBrand
+Use the `NavBrand` component to add branding to your navigation menu.
+
+<Canvas>
+  <Story
+    name="Brand"
+    args={{
+      children: ([
+        <NavBrand href="#">Mellow</NavBrand>,
+        <NavGroup className="me-auto">
+          <NavItem href="#">Home</NavItem>
+          <NavItem href="#">About</NavItem>
+        </NavGroup>,
+        <NavGroup>
+          <NavItem href="#">Settings</NavItem>
+        </NavGroup>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Sizes
+Use the `size` prop to change the size of the navigation menu.
+
+<Canvas>
+  <Story
+    name="Small"
+    args={{
+      size: 'sm',
+      children: ([
+        <NavGroup className="me-auto">
+          <NavItem href="#">Home</NavItem>
+          <NavItem href="#">About</NavItem>
+        </NavGroup>,
+        <NavGroup>
+          <NavItem href="#">Settings</NavItem>
+        </NavGroup>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Large"
+    args={{
+      size: 'lg',
+      children: ([
+        <NavGroup className="me-auto">
+          <NavItem href="#">Home</NavItem>
+          <NavItem href="#">About</NavItem>
+        </NavGroup>,
+        <NavGroup>
+          <NavItem href="#">Settings</NavItem>
+        </NavGroup>
+      ])
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# API
+## Nav
+<ArgsTable of={Nav} />
+
+## NavItem
+<ArgsTable of={NavItem} />
+
+## NavGroup
+<ArgsTable of={NavGroup} />
+
+## NavBrand
+<ArgsTable of={NavBrand} />
