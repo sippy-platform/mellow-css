@@ -34,7 +34,7 @@
   },
   "repository": "git://github.com/sippy-platform/mellow-css.git",
   "files": [
-    "/dist"
+    "dist"
   ],
   "keywords": [
     "css-framework"
