@@ -3,60 +3,69 @@
   <head>
     {{ partialCached "head" . }}
   </head>
-  <body class="system">
+  <body class="docs-home system">
     {{ partial "navbar" . }}
 
-    <main class="container-lg pt-3">
-      <div class="grid grid-12">
-        <div class="col-12 bg-system rounded-lg">
-          <div class="text-center my-5">
-            <h1 class="marketing-3 text-marketing fw-bold mb-0">Mellow CSS</h1>
-            <p class="lead text-muted">The modern, responsive CSS framework from Sippy, for Sippy.</p>
-            <a href="/get-started/installation/" class="mt-5 btn btn-primary btn-lg">Documentation <i class="vi vi-arrow-right"></i></a>
+    <div class="docs-page">
+      <div class="container flex-grow-1 py-5">
+        <div class="grid grid-12">
+          <div class="col-12 bg-system rounded-lg">
+            <div class="text-center my-5">
+              <h1 class="marketing-3 text-marketing-css fw-bold mb-0">Mellow CSS</h1>
+              <p class="lead text-muted">The modern, responsive CSS framework from Sippy, for Sippy.</p>
+              <a href="/get-started/installation/" class="mt-5 btn btn-primary btn-lg">Documentation <i class="vi vi-arrow-right"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 bg-system rounded-lg">
-          <div class="m-5">
-            <h2>Get started</h2>
-            <p>Get started with Mellow CSS by installing the npm package.</p>
-            <pre class="p-2 bg-white text-blue rounded"><code class="bg-transparent">npm install @sippy-platform/mellow-css</code></pre>
-            <a href="/get-started/installation/" class="mt-3 btn btn-primary">Installation <i class="vi vi-arrow-right"></i></a>
+          <div class="col-12 col-md-4 bg-system rounded-lg">
+            <div class="m-5">
+              <h2>Get started</h2>
+              <p>Get started with Mellow CSS by installing the npm package.</p>
+              <pre class="p-2 bg-white text-blue rounded"><code class="bg-transparent">npm install @sippy-platform/mellow-css</code></pre>
+              <a href="/get-started/installation/" class="mt-3 btn btn-primary">Installation <i class="vi vi-arrow-right"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 bg-system rounded-lg">
-          <div class="m-5">
-            <h2>Valkyrie</h2>
-            <p>Meet the icon set designed for Mellow.</p>
-            <a href="https://sippy-platform.github.io/valkyrie/" class="mt-3 btn btn-primary">Valkyrie <i class="vi vi-arrow-right"></i></a>
+          <div class="col-12 col-md-4 bg-system rounded-lg">
+            <div class="m-5">
+              <h2 class="text-marketing-ui">Mellow UI</h2>
+              <p>The React component library for Mellow CSS.</p>
+              <a href="https://sippy-platform.github.io/valkyrie/" class="mt-3 btn btn-primary">Valkyrie <i class="vi vi-arrow-right"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="col-12 text-center">
-          <h2 class="my-3">Features</h2>
-        </div>
-        <div class="col-12 col-md-6 col-xl-4 bg-system rounded-lg">
-          <div class="m-5">
-            <h3>Built-in colors</h3>
-            <p>Changing the colors of components is as simple as changing a single class. No matter the component.</p>
-            <button type="button" class="btn btn-hover red">Red</button>
-            <button type="button" class="btn btn-hover orange">Orange</button>
-            <button type="button" class="btn btn-hover amber">Amber</button>
+          <div class="col-12 col-md-4 bg-system rounded-lg">
+            <div class="m-5">
+              <h2 class="text-marketing-icons">Valkyrie</h2>
+              <p>Meet the icon set designed for Mellow.</p>
+              <a href="https://sippy-platform.github.io/valkyrie/" class="mt-3 btn btn-primary">Valkyrie <i class="vi vi-arrow-right"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-4 bg-system rounded-lg">
-          <div class="m-5">
-            <h3>Extensive components</h3>
-            <p>Mellow comes with an extensive set of components, from buttons, to progress, to toatsts. Cards? Dropdowns? We've got them.</p>
+          <div class="col-12 text-center">
+            <h2 class="my-3">Features</h2>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-4 bg-system-inverse rounded-lg text-system">
-          <div class="m-5">
-            <h3>Built-in themes</h3>
-            <p>Mellow comes with built-in support for light and dark themes, and supports following the system theme too. Change the theme of your browser and OS, and see how Mellow changes this page.</p>
+          <div class="col-12 col-md-6 col-xl-4 bg-system rounded-lg">
+            <div class="m-5">
+              <h3>Built-in colors</h3>
+              <p>Changing the colors of components is as simple as changing a single class. No matter the component.</p>
+              <button type="button" class="btn btn-hover red">Red</button>
+              <button type="button" class="btn btn-hover orange">Orange</button>
+              <button type="button" class="btn btn-hover amber">Amber</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 bg-system rounded-lg">
+            <div class="m-5">
+              <h3>Extensive components</h3>
+              <p>Mellow comes with an extensive set of components, from buttons, to progress, to toatsts. Cards? Dropdowns? We've got them.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 bg-system-inverse rounded-lg text-system">
+            <div class="m-5">
+              <h3>Built-in themes</h3>
+              <p>Mellow comes with built-in support for light and dark themes, and supports following the system theme too. Change the theme of your browser and OS, and see how Mellow changes this page.</p>
+            </div>
           </div>
         </div>
       </div>
-    </main>
 
-    {{ partialCached "footer" . }}
+      {{ partialCached "footer" . }}
+    </div>
   </body>
 </html>

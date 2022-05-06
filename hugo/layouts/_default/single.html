@@ -18,22 +18,24 @@
       </div>
     </div>
 
-    <main class="docs-main">
-      <div class="docs-main-meta">
-        <h1>{{ .Title }}</h1>
-        <p class="lead">{{ .Description }}</p>
-      </div>
-      <side class="docs-main-toc">
-        <div class="docs-toc">
-          <p class="h6 ms-2">On this page</p>
-          {{ .TableOfContents }}
+    <div class="docs-page">
+      <main class="docs-main">
+        <div class="docs-main-meta">
+          <h1>{{ .Title }}</h1>
+          <p class="lead">{{ .Description }}</p>
         </div>
-      </side>
-      <article class="docs-main-content docs-content">
-        {{ .Content }}
-      </article>
-    </main>
+        <side class="docs-main-toc">
+          <div class="docs-toc">
+            <p class="h6 ms-2">On this page</p>
+            {{ .TableOfContents }}
+          </div>
+        </side>
+        <article class="docs-main-content docs-content">
+          {{ .Content }}
+        </article>
+      </main>
 
-    {{ partialCached "footer" . }}
+      {{ partialCached "footer" . }}
+    </div>
   </body>
 </html>
