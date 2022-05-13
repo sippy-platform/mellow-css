@@ -1,6 +1,6 @@
 {
   "name": "@sippy-platform/mellow-css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The Mellow Design System.",
   "main": "dist/js/mellow.js",
   "style": "dist/css/mellow.css",
@@ -46,7 +46,7 @@
   },
   "homepage": "https://sippy-platform.github.io/mellow-css",
   "peerDependencies": {
-    "@optimisegroup/valkyrie": "0.14.2"
+    "@sippy-platform/valkyrie": ">=0.15.0"
   },
   "devDependencies": {
     "@babel/cli": "7.17.10",

@@ -30,5 +30,5 @@ module:
       target:       static
     - source:       dist
       target:       static/dist
-    - source:       ./node_modules/@optimisegroup/valkyrie/dist/fonts
+    - source:       ./node_modules/@sippy-platform/valkyrie/dist/fonts
       target:       static/dist/fonts
