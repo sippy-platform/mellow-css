@@ -34,22 +34,22 @@ $body-text:           var(--body-text);
 $body-bg:             var(--body-background);
 
 $colors: (
-  red: $red,
-  orange: $orange,
-  amber: $amber,
+  "red": $red,
+  "orange": $orange,
+  "amber": $amber,
   "yellow": $yellow,
-  lime: $lime,
-  green: $green,
-  teal: $teal,
-  cyan: $cyan,
-  blue: $blue,
-  indigo: $indigo,
-  violet: $violet,
-  purple: $purple,
-  pink: $pink,
-  rose: $rose,
-  brown: $brown,
-  grey: $grey
+  "lime": $lime,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "blue": $blue,
+  "indigo": $indigo,
+  "violet": $violet,
+  "purple": $purple,
+  "pink": $pink,
+  "rose": $rose,
+  "brown": $brown,
+  "grey": $grey
 ) !default;
 
 // Anchors
