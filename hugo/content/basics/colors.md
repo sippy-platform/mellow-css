@@ -180,7 +180,7 @@ On a white background, the resulting color from using `600a` will roughly corres
 
 ## Themes
 ### Light
-The light theme is the default theme in Mellow. You can enable it with the `light` class. The element and any of its children will be set to light.
+The light theme is the default theme in Mellow. It doesn't need to be enabled, but when using other themes, you can overwrite them with the `light` class. The element and any of its children will be set to light.
 
 {{<example class="docs-colors-preview">}}
 <style>
@@ -285,6 +285,10 @@ Each color palette consists out of 10 colors with incremental steps of 100, and 
       <td>Recommended text color on 600 and 700.</td>
     </tr>
     <tr>
+      <td>300a</td>
+      <td>Hover color over tinted backgrounds.</td>
+    </tr>
+    <tr>
       <td>600a</td>
       <td>Use focus rings and other context-sensitive colors.</td>
     </tr>
@@ -296,14 +300,30 @@ All colors in the palette are available as CSS variable. The colors are written 
 
 {{<example class="docs-colors-preview">}}
 <div class="grid grid-2 grid-sm-4">
-  <div class="rounded p-3" style="background-color: var(--red-300); color: var(--red-900);">Red<br />900 on 300</div>
-  <div class="rounded p-3" style="background-color: var(--accent-900); color: var(--accent-200);">Accent<br />200 on 900</div>
-  <div class="rounded p-3" style="background-color: var(--brown-400); color: var(--brown-800);">Brown<br />800 on 400</div>
-  <div class="rounded p-3" style="background-color: var(--green-700); color: var(--green-100);">Green<br />100 on 700</div>
-  <div class="rounded p-3" style="background-color: var(--yellow-700); color: var(--yellow-text);">Yellow<br />text on 700</div>
-  <div class="rounded p-3" style="background-color: var(--violet-700); color: var(--violet-text);">Violet<br />text on 700</div>
-  <div class="rounded p-3" style="background-color: var(--rose-600a); color: var(--rose-600);">Rose<br />600 on 600a</div>
-  <div class="rounded p-3" style="background-color: var(--cyan-50); color: var(--cyan-500);">Cyan<br />500 on 50</div>
+  <div class="rounded p-3" style="background-color: var(--red-300); color: var(--red-900);">
+    Red<br />900 on 300
+  </div>
+  <div class="rounded p-3" style="background-color: var(--accent-900); color: var(--accent-200);">
+    Accent<br />200 on 900
+  </div>
+  <div class="rounded p-3" style="background-color: var(--brown-400); color: var(--brown-800);">
+    Brown<br />800 on 400
+  </div>
+  <div class="rounded p-3" style="background-color: var(--green-700); color: var(--green-100);">
+    Green<br />100 on 700
+  </div>
+  <div class="rounded p-3" style="background-color: var(--yellow-700); color: var(--yellow-text);">
+    Yellow<br />text on 700
+  </div>
+  <div class="rounded p-3" style="background-color: var(--violet-700); color: var(--violet-text);">
+    Violet<br />text on 700
+  </div>
+  <div class="rounded p-3" style="background-color: var(--rose-600a); color: var(--rose-600);">
+    Rose<br />600 on 600a
+  </div>
+  <div class="rounded p-3" style="background-color: var(--cyan-50); color: var(--cyan-500);">
+    Cyan<br />500 on 50
+  </div>
 </div>
 {{</example>}}
 
@@ -320,7 +340,7 @@ Because of how CSS works, when switching between themes you must redefine the co
 }
 </style>
 <div class="rounded-lg p-3 accent color-example">
-  Accent<br />900 on 300
+  Accent (docs theme; system)<br />900 on 300
   <div class="rounded p-3 mt-3 accent dark color-example">
     Accent dark<br />900 on 300
     <div class="rounded-sm p-3 mt-3 light color-example">
