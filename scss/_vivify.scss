@@ -86,8 +86,16 @@ code {
   color: var(--accent-800);
 }
 
-pre code {
-  color: inherit;
+pre {
+  padding: .5rem;
+  background-color: var(--grey-50);
+  border-radius: $border-radius;
+  overflow: auto;
+
+  code {
+    color: var(--grey-900);
+    background-color: transparent;
+  }
 }
 
 // Lists, description lists and items, normalizing padding and margins
