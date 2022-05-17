@@ -136,49 +136,46 @@ $colors: (
 ) !default;
 {{</example>}}
 
-A color map is made out of a color palette from `50` to `900`, with `600a` and `text`.
+A color map is made out of a color palette from `50` to `900`, with `300a`, `600a`, and `text`.
 
 {{<example show_preview="false" lang="scss">}}
 @each $name, $color in $colors {
-  .#{$name},
-  .light.#{$name},
-  .light .#{$name},
-  .#{$name} .light {
-    --color-50: #{tint($color, 96%)};
-    --color-100: #{tint($color, 92%)};
-    --color-200: #{tint($color, 87%)};
-    --color-300: #{tint($color, 80%)};
-    --color-400: #{tint($color, 70%)};
-    --color-500: #{tint($color, 28%)};
-    --color-600: #{$color};
-    --color-700: #{shade($color, 7%)};
-    --color-800: #{shade($color, 22%)};
-    --color-900: #{shade($color, 70%)};
-    --color-600a: #{rgba($color, .3)};
-    --color-text: #{color-contrast($color)};
+  .#{$name} {
+    --color-50: #{ light-dark(tint($color, 96%), shade($color, 80%)) };
+    --color-100: #{ light-dark(tint($color, 92%), shade($color, 74%)) };
+    --color-200: #{ light-dark(tint($color, 87%), shade($color, 67%)) };
+    --color-300: #{ light-dark(tint($color, 80%), shade($color, 63%)) };
+    --color-400: #{ light-dark(tint($color, 70%), shade($color, 52%)) };
+    --color-500: #{ light-dark(tint($color, 28%), shade($color, 26%)) };
+    --color-600: #{ $color };
+    --color-700: #{ light-dark(shade($color, 7%), tint($color, 7%)) };
+    --color-800: #{ light-dark(shade($color, 22%), tint($color, 20%)) };
+    --color-900: #{ light-dark(shade($color, 70%), tint($color, 87%)) };
+    --color-300a: #{ rgba($color, .1) };
+    --color-600a: #{ rgba($color, .3) };
+    --color-text: #{ color-contrast($color) };
   }
+}
 
-  .dark.#{$name},
-  .dark .#{$name},
-  .#{$name} .dark {
-    --color-50: #{shade($color, 80%)};
-    --color-100: #{shade($color, 74%)};
-    --color-200: #{shade($color, 67%)};
-    --color-300: #{shade($color, 63%)};
-    --color-400: #{shade($color, 52%)};
-    --color-500: #{shade($color, 26%)};
-    --color-600: #{$color};
-    --color-700: #{tint($color, 7%)};
-    --color-800: #{tint($color, 20%)};
-    --color-900: #{tint($color, 87%)};
-    --color-600a: #{rgba($color, .3)};
-    --color-text: #{color-contrast($color)};
-  }
+.accent {
+  --color-50: #{ light-dark(tint($accent, 96%), shade($accent, 80%)) };
+  --color-100: #{ light-dark(tint($accent, 92%), shade($accent, 74%)) };
+  --color-200: #{ light-dark(tint($accent, 87%), shade($accent, 67%)) };
+  --color-300: #{ light-dark(tint($accent, 80%), shade($accent, 63%)) };
+  --color-400: #{ light-dark(tint($accent, 70%), shade($accent, 52%)) };
+  --color-500: #{ light-dark(tint($accent, 28%), shade($accent, 26%)) };
+  --color-600: #{ $accent };
+  --color-700: #{ light-dark(shade($accent, 7%), tint($accent, 7%)) };
+  --color-800: #{ light-dark(shade($accent, 22%), tint($accent, 20%)) };
+  --color-900: #{ light-dark(shade($accent, 70%), tint($accent, 87%)) };
+  --color-300a: #{ rgba($accent, .1) };
+  --color-600a: #{ rgba($accent, .3) };
+  --color-text: #{ color-contrast($accent) };
 }
 {{</example>}}
 
 {{<note>}}
-On a white background, the resulting color from using `600a` will roughly correspond with using `400`.
+On a white background, the resulting color from using `600a` will roughly correspond with using `400`, while `300a` rougly corresponds with `200`.
 {{</note>}}
 
 ## Themes

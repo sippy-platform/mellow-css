@@ -458,6 +458,11 @@
   }
 }
 
+// Grid features
+.grid-13 {
+  grid-template-columns: repeat(13, minmax(0, 1fr)) !important;
+}
+
 // Text marketing
 .text-marketing-css {
   display: inline-block;
