@@ -10,7 +10,7 @@
   $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
   @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    @for $i from 2 through $grid-columns {
+    @for $i from 1 through $grid-columns {
       .grid#{$breakpoint-suffix}-#{$i} {
         --columns: #{ $i };
       }
