@@ -57,6 +57,8 @@ $anchor-color:          shade($accent, 7%) !default;
 $anchor-hover-color:    shade($accent, 22%) !default;
 
 // Grid breakpoints
+$grid-columns: 12 !default;
+$grid-utility-columns: $grid-columns !default;
 $grid-breakpoints: (
   xs: 0,
   sm: 600px,
@@ -161,11 +163,11 @@ $rfs-max-vw:      1100 !default;
 
 // Shadows
 $box-shadows: (
-  1: (.1px .1px .5px rgba(0, 0, 0, .032), .4px .4px 1.8px rgba(0, 0, 0, .048), 2px 2px 8px rgba(0, 0, 0, .08)),
-  2: (.1px .1px .7px rgba(0, 0, 0, .04), .4px .4px 2.2px rgba(0, 0, 0, .06), 2px 2px 10px rgba(0, 0, 0, .1)),
-  3: (.1px .1px .9px rgba(0, 0, 0, .048), .4px .4px 3.1px rgba(0, 0, 0, .072), 2px 2px 14px rgba(0, 0, 0, .12)),
-  4: (.2px .2px 1.2px rgba(0, 0, 0, .057), .7px .7px 4px rgba(0, 0, 0, .083), 3px 3px 18px rgba(0, 0, 0, .14)),
-  5: (.2px .2px 1.5px rgba(0, 0, 0, .069), .7px .7px 4.9px rgba(0, 0, 0, .101), 3px 3px 22px rgba(0, 0, 0, .17))
+  1: var(--shadow-1),
+  2: var(--shadow-2),
+  3: var(--shadow-3),
+  4: var(--shadow-4),
+  5: var(--shadow-5)
 ) !default;
 
 // Borders
@@ -368,7 +370,7 @@ $overflows: (
 ) !default;
 
 // Buttons
-$btn-box-shadow-inset: light-dark(inset 0 1px 0 rgba(255, 255, 255, .15), initial) !default;
+$btn-box-shadow-inset: var(--shadow-inset-btn) !default;
 
 $btn-semantic-color-hover: (
   secondary: "accent",
@@ -381,7 +383,7 @@ $btn-semantic-color: (
 ) !default;
 
 // Forms
-$form-box-shadow-inset: inset 0 1px 0 rgba(0, 0, 0, .075) !default;
+$form-box-shadow-inset: var(--shadow-inset-input) !default;
 
 // Transitions
 $fast-transition: all .1s ease-in-out;

@@ -36,6 +36,44 @@ By using the `grid-*` classes, you can tell the grid layout to change the number
 </div>
 {{</example>}}
 
+### Custom grid counts
+While the grid classes are limited to 12, you can create grids with as much columns as you'd like by simply setting the `--columns` variable.
+
+{{<example class="docs-preview-grid">}}
+<div class="grid" style="--columns: 13">
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+  <div>1/13</div>
+</div>
+{{</example>}}
+
+If you prefer classes, this will help you make additional classes without the need of deeper knowledge for how the grid is being defined.
+
+{{<example class="docs-preview-grid" show_preview="false" lang="scss">}}
+.grid-13 {
+  --columns: 13;
+}
+{{</example>}}
+
+Alternatively, you can also change the SCSS variables to make Mellow generate the full suit of classes. The grid columns and utilities can be configured separately from each other but the utility classes will follow the number of columns by default.
+
+{{<example class="docs-preview-grid" show_preview="false" lang="scss">}}
+$grid-columns: 13 !default;
+$grid-utility-columns: $grid-columns !default;
+{{</example>}}
+
+This will generate the `grid-[breakpoint]-13` classes (controlled by the `$grid-columns` variable), as well as the `col-[breakpoint]-13` and `col-start-[breakpoint]-13` (controlled by the `$grid-utility-columns` variable).
+
 ### Responsive classes
 Mellow also provides support for changing the number of columns based on the viewport with with breakpoings.
 
