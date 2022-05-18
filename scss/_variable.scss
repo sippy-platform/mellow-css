@@ -57,8 +57,8 @@ $anchor-color:          shade($accent, 7%) !default;
 $anchor-hover-color:    shade($accent, 22%) !default;
 
 // Grid breakpoints
-$grid-columns: 12;
-$grid-utility-columns: $grid-columns;
+$grid-columns: 12 !default;
+$grid-utility-columns: $grid-columns !default;
 $grid-breakpoints: (
   xs: 0,
   sm: 600px,

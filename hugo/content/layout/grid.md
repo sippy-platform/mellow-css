@@ -37,10 +37,10 @@ By using the `grid-*` classes, you can tell the grid layout to change the number
 {{</example>}}
 
 ### Custom grid counts
-While the grid classes are limited to 12, you can create grids with as much columns as you'd like by simply setting the `--grid-columns` variable.
+While the grid classes are limited to 12, you can create grids with as much columns as you'd like by simply setting the `--columns` variable.
 
 {{<example class="docs-preview-grid">}}
-<div class="grid" style="--grid-columns: 13">
+<div class="grid" style="--columns: 13">
   <div>1/13</div>
   <div>1/13</div>
   <div>1/13</div>
@@ -61,7 +61,7 @@ If you prefer classes, this will help you make additional classes without the ne
 
 {{<example class="docs-preview-grid" show_preview="false" lang="scss">}}
 .grid-13 {
-  --grid-columns: 13;
+  --columns: 13;
 }
 {{</example>}}
 
