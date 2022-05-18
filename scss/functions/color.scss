@@ -1,4 +1,5 @@
 // Based on https://css-tricks.com/snippets/sass/luminance-color-function/
+@use "sass:math";
 
 @function color-contrast($background, $color-contrast-dark: #000, $color-contrast-light: #fff, $min-contrast-ratio: 2.5) {
   $foregrounds: $color-contrast-light, $color-contrast-dark;
@@ -22,13 +23,13 @@
 @function contrast-ratio($background, $foreground: $color-contrast-light) {
   $luminance1: luminance($foreground) + .05;
   $luminance2: luminance($background) + .05;
-  $ratio: $luminance1 / $luminance2;
+  $ratio: math.div($luminance1, $luminance2);
 
   @if $luminance2 > $luminance1 {
-    $ratio: 1 / $ratio;
+    $ratio: math.div(1, $ratio);
   }
 
-  $ratio: round($ratio * 100) / 100;
+  $ratio: round($ratio * 100) * .01;
   @return $ratio;
 }
 
@@ -39,8 +40,8 @@
 
   @for $i from 1 through 3 {
     $rgb: nth($rgba, $i);
-    $rgb: $rgb / 255;
-    $rgb: if($rgb < .0393, $rgb / 12.92, pow(($rgb + .055) / 1.055, 2));
+    $rgb: math.div($rgb, 255);
+    $rgb: if($rgb < .0393, math.div($rgb, 12.92), pow(math.div(($rgb + .055), 1.055), 2));
     $rgba2: append($rgba2, $rgb);
   }
 
