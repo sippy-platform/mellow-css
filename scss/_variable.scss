@@ -370,7 +370,7 @@ $overflows: (
 ) !default;
 
 // Buttons
-$btn-box-shadow-inset: light-dark(inset 0 1px 0 rgba(255, 255, 255, .15), initial) !default;
+$btn-box-shadow-inset: var(--shadow-inset-btn) !default;
 
 $btn-semantic-color-hover: (
   secondary: "accent",
@@ -383,7 +383,7 @@ $btn-semantic-color: (
 ) !default;
 
 // Forms
-$form-box-shadow-inset: inset 0 1px 0 rgba(0, 0, 0, .075) !default;
+$form-box-shadow-inset: var(--shadow-inset-input) !default;
 
 // Transitions
 $fast-transition: all .1s ease-in-out;

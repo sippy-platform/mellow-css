@@ -8,6 +8,8 @@
   --shadow-3: .1px .1px .9px rgba(0, 0, 0, .048), .4px .4px 3.1px rgba(0, 0, 0, .072), 2px 2px 14px rgba(0, 0, 0, .12);
   --shadow-4: .2px .2px 1.2px rgba(0, 0, 0, .057), .7px .7px 4px rgba(0, 0, 0, .083), 3px 3px 18px rgba(0, 0, 0, .14);
   --shadow-5: .2px .2px 1.5px rgba(0, 0, 0, .069), .7px .7px 4.9px rgba(0, 0, 0, .101), 3px 3px 22px rgba(0, 0, 0, .17);
+  --shadow-inset-btn: #{ light-dark(inset 0 1px 0 rgba(255, 255, 255, .15), initial) };
+  --shadow-inset-input: inset 0 1px 0 rgba(0, 0, 0, .075);
 }
 
 // Dark mode
