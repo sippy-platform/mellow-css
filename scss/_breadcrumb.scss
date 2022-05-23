@@ -14,6 +14,7 @@
     text-decoration: none;
     padding: $spacer * .25 $spacer * .375;
     border-radius: $border-radius-sm;
+    transition: $base-transition;
 
     &:hover {
       background-color: var(--color-300a, var(--accent-300a));
@@ -23,17 +24,13 @@
   & > span {
     padding: $spacer * .25 $spacer * .375;
   }
-}
 
-.breadcrumb-divider {
-  .breadcrumb-item {
-    & + & {
-      &::before {
-        padding: 0 $spacer * .25;
-        height: 16px;
-        color: var(--grey-700);
-        content: "/";
-      }
+  & + & {
+    &::before {
+      padding: 0 $spacer * .25;
+      height: 16px;
+      color: var(--grey-700);
+      content: "/";
     }
   }
 }
