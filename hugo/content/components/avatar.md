@@ -20,7 +20,7 @@ You can change the size of avatars.
 <div class="avatar avatar-lg">LG</div>
 {{</example>}}
 
-### Colors
+## Colors
 You can pick different colors for your avatar with the color modifiers.
 {{<example class="docs-preview-avatar">}}
 <div class="avatar red">RD</div>
