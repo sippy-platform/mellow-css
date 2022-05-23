@@ -6,7 +6,7 @@
   border: none;
   border-radius: $border-radius;
   background-color: var(--acrylic-solid-background);
-  box-shadow: map-get($box-shadows, 1), map-get($box-shadows, 3);
+  box-shadow: var(--shadow-1), var(--shadow-3);
   width: 100%;
   max-width: $dialog-md;
 

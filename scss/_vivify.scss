@@ -36,7 +36,7 @@
 // Reset body margin
 body {
   margin: 0;
-  font-family: $font-family-sans;
+  font-family: var(--font-family-sans);
   background-color: $body-bg;
   color: $body-text;
 }
@@ -51,7 +51,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 700;
-  font-family: $font-family-sans-heading;
+  font-family: var(--font-family-sans-heading);
 }
 
 p {
@@ -79,7 +79,7 @@ a {
 code,
 kbd,
 pre {
-  font-family: $font-family-mono;
+  font-family: var(--font-family-mono);
 }
 
 code {

@@ -11,7 +11,7 @@
   font-size: calc(var(--avatar-size, 2rem) / var(--avatar-text-scale, 2.25));
   font-weight: 600;
   text-transform: uppercase;
-  font-family: $font-family-sans-heading;
+  font-family: var(--font-family-sans-heading);
   flex-shrink: 0;
 }
 

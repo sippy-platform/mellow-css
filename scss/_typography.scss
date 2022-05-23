@@ -1,18 +1,18 @@
 // Font families
 .font-sans {
-  font-family: $font-family-sans;
+  font-family: var(--font-family-sans);
 }
 
 .font-heading {
-  font-family: $font-family-sans-heading;
+  font-family: var(--font-family-sans-heading);
 }
 
 .font-serif {
-  font-family: $font-family-serif;
+  font-family: var(--font-family-serif);
 }
 
 .font-mono {
-  font-family: $font-family-mono;
+  font-family: var(--font-family-mono);
 }
 
 // Heading, and heading classes

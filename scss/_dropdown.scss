@@ -36,7 +36,7 @@
   font-weight: initial;
   list-style: none;
   background-color: var(--acrylic-fallback-background);
-  box-shadow: map-get($box-shadows, 1), map-get($box-shadows, 3);
+  box-shadow: var(--shadow-1), var(--shadow-3);
 
   @supports (backdrop-filter: blur(15px) saturate(350%)) {
     background-color: var(--acrylic-background);
