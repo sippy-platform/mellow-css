@@ -1,0 +1,16 @@
+.avatar {
+  background-color: var(--color-600, var(--accent-600));
+  color: var(--color-text, var(--accent-text));
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  line-height: 1;
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: $font-family-sans-heading;
+  flex-shrink: 0;
+}

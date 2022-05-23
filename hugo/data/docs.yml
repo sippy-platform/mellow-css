@@ -18,6 +18,7 @@
 - title: Components
   pages:
     - title: Alert
+    - title: Avatar
     - title: Breadcrumb
     - title: Button
     - title: Button group
