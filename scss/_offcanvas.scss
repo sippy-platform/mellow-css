@@ -1,8 +1,8 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+  $breakpoint-infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
   @include breakpoint-max-width($breakpoint, $grid-breakpoints) {
-    .offcanvas#{$breakpoint-suffix} {
+    .offcanvas#{$breakpoint-infix} {
       position: fixed;
       background-color: var(--acrylic-fallback-background);
       z-index: 1050;

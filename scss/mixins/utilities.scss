@@ -1,4 +1,4 @@
-@mixin upi($name, $definition, $breakpoint-suffix) {
+@mixin upi($name, $definition, $breakpoint-infix) {
   $values: map-get($definition, values);
   $properties: map-get($definition, property);
   $variant-dash: map-get($definition, variant-dash);
@@ -18,11 +18,11 @@
     // And add a possible variant modifier with or without a dash depending on "variant-dash"
     $property-class: if(map-has-key($definition, class), map-get($definition, class), $name) + if($variant, if($variant-dash, "-" + $variant, $variant), "");
 
-    @each $property-suffix, $value in $values {
-      // Use breakpoint suffix if present
-      $property-suffix: if($property-suffix, if($property-suffix == "", "", "-") + $property-suffix, "");
+    @each $property-infix, $value in $values {
+      // Use breakpoint infix if present
+      $property-infix: if($property-infix, if($property-infix == "", "", "-") + $property-infix, "");
 
-      .#{$property-class + $breakpoint-suffix + $property-suffix} {
+      .#{$property-class + $breakpoint-infix + $property-infix} {
         @each $property in $variant-properties {
           #{$property}: $value !important;
         }

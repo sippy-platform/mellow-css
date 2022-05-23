@@ -131,10 +131,10 @@
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+  $breakpoint-infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
   @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
-    .nav-collapse#{$breakpoint-suffix} {
+    .nav-collapse#{$breakpoint-infix} {
       flex-grow: 1;
 
       .nav-collapse-body {
@@ -146,7 +146,7 @@
   }
 
   @include breakpoint-max-width($breakpoint, $grid-breakpoints) {
-    .nav-collapse#{$breakpoint-suffix} {
+    .nav-collapse#{$breakpoint-infix} {
       position: fixed;
       background: rgba(#fff, .95);
       z-index: 1050;

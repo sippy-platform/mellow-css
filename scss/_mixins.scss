@@ -12,9 +12,9 @@
   @return if($max != 0, $max, null);
 }
 
-// Create the breakpoint suffix, when it matches the 0-breakpoint, return an empty
+// Create the breakpoint infix, when it matches the 0-breakpoint, return an empty
 // string instead.
-@function breakpoint-suffix($name, $breakpoints: $grid-breakpoints) {
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }
 
