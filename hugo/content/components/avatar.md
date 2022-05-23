@@ -11,6 +11,15 @@ A default avatar uses the accent as its background color.
 <div class="avatar">SD</div>
 {{</example>}}
 
+## Size
+You can change the size of avatars.
+
+{{<example class="docs-preview-avatar">}}
+<div class="avatar avatar-sm">SM</div>
+<div class="avatar">MD</div>
+<div class="avatar avatar-lg">LG</div>
+{{</example>}}
+
 ### Colors
 You can pick different colors for your avatar with the color modifiers.
 {{<example class="docs-preview-avatar">}}

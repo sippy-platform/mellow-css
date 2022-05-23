@@ -4,13 +4,22 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: var(--avatar-size, 2rem);
+  height: var(--avatar-size, 2rem);
   border-radius: 100%;
   line-height: 1;
-  font-size: .875rem;
-  font-weight: 700;
+  font-size: calc(var(--avatar-size, 2rem) / var(--avatar-text-scale, 2.25));
+  font-weight: 600;
   text-transform: uppercase;
   font-family: $font-family-sans-heading;
   flex-shrink: 0;
+}
+
+.avatar-sm {
+  --avatar-size: 1.5rem;
+  --avatar-text-scale: 2;
+}
+
+.avatar-lg {
+  --avatar-size: 3rem;
 }
