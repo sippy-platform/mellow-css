@@ -4,17 +4,36 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 2rem;
+  align-content: center;
 }
 
 .breadcrumb-item {
-  & + & {
-    padding-left: $spacer * .5;
+  & > a {
+    color: var(--color-600, var(--accent-600));
+    text-decoration: none;
+    padding: $spacer * .25 $spacer * .375;
+    border-radius: $border-radius-sm;
 
-    &::before {
-      padding-right: $spacer * .5;
-      height: 16px;
-      color: var(--grey-700);
-      content: "/";
+    &:hover {
+      background-color: var(--color-300a, var(--accent-300a));
+    }
+  }
+
+  & > span {
+    padding: $spacer * .25 $spacer * .375;
+  }
+}
+
+.breadcrumb-divider {
+  .breadcrumb-item {
+    & + & {
+      &::before {
+        padding: 0 $spacer * .25;
+        height: 16px;
+        color: var(--grey-700);
+        content: "/";
+      }
     }
   }
 }
