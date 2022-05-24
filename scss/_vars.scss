@@ -19,7 +19,7 @@
   --titlebar-left-safe-space: env(titlebar-area-x, 0);
   --titlebar-top-safe-space: env(titlebar-area-y, 0);
   --titlebar-height: env(titlebar-area-height, 33px);
-  --titlebar-width: env(titlebar-area-width, 33px);
+  --titlebar-width: env(titlebar-area-width, 100%);
 }
 
 // Dark mode

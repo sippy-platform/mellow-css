@@ -17,7 +17,7 @@ You can pick from any of these properties:
 * `m` - for `margin`
 * `p` - for `padding`
 
-All properties can be exted with a specifier to determine on which sides the property is applied. When no specifier is added, the utility will apply to all 4 sides.
+All properties can be extended with a specifier to determine on which sides the property is applied. When no specifier is added, the utility will apply to all 4 sides.
 
 * `t` - applies the utility to the top
 * `e` - applies the utility to the right (end)
