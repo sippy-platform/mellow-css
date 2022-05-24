@@ -19,6 +19,7 @@
   pages:
     - title: Alert
     - title: Avatar
+    - title: Bottom Bar
     - title: Breadcrumb
     - title: Button
     - title: Button group
