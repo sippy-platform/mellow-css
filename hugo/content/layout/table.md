@@ -1,7 +1,7 @@
 ---
 title: Table
 description: Show data in tables.
-section: basics
+section: layout
 ---
 
 ## Basic table

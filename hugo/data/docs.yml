@@ -3,17 +3,17 @@
     - title: Installation
     - title: Vivify
 
-- title: Basics
+- title: Atoms
   pages:
     - title: Colors
     - title: Typography
-    - title: Table
+    - title: Breakpoints
 
 - title: Layout
   pages:
-    - title: Breakpoints
     - title: Container
     - title: Grid
+    - title: Table
 
 - title: Components
   pages:
