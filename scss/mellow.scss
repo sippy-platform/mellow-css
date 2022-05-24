@@ -1,5 +1,5 @@
 /*
- * Mellow CSS v0.1.0
+ * Mellow CSS v0.4.0
  * Copyright 2022 - Sippy (https://sippy.cloud)
  * Licensed under AGPLv3 (https://github.com/sippy-platform/mellow/blob/main/LICENSE)
  */
@@ -22,7 +22,9 @@
 @import "grid";
 
 @import "alert";
+@import "avatar";
 @import "backdrop";
+@import "bottom-bar";
 @import "breadcrumb";
 @import "button-close";
 @import "button-groups";
@@ -38,5 +40,7 @@
 @import "pagination";
 @import "pivot";
 @import "progress";
+
+@import "pwa";
 
 @import "utilities";

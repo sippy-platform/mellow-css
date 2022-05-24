@@ -13,10 +13,10 @@ The former gives great out of the box accessibility and makes for simpeler marku
 The `progress` element in HTML provides all accessibility tools by default. There is no need to manually style the porgress width. Note that this variant cannot use stacked progress bars, and cannot show labels on top of itself.
 
 {{<example>}}
-<progress class="progress" value="0" max="100">0%</progress> 
-<progress class="progress" value="33" max="100">33%</progress> 
-<progress class="progress" value="67" max="100">67%</progress> 
-<progress class="progress" value="100" max="100">100%</progress> 
+<progress class="progress" value="0" max="100">0%</progress>
+<progress class="progress" value="33" max="100">33%</progress>
+<progress class="progress" value="67" max="100">67%</progress>
+<progress class="progress" value="100" max="100">100%</progress>
 {{</example>}}
 
 ### `progress` class
@@ -134,7 +134,7 @@ If you'd want to have multiple progress bars with the same color, you can also a
 {{</example>}}
 
 ## Sizes
-You can change the size of the progress bar with the `progress-[1|sm|md|lg]` classes. The `progress-md` sets the default height, applying it under normal circumstances has no effect.
+You can change the size of the progress bar with the `progress-[1|sm|lg]` classes.
 
 {{<example>}}
 <div class="progress progress-1">
@@ -143,7 +143,7 @@ You can change the size of the progress bar with the `progress-[1|sm|md|lg]` cla
 <div class="progress progress-sm">
   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<div class="progress progress-md">
+<div class="progress">
   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress progress-lg">
@@ -154,13 +154,11 @@ You can change the size of the progress bar with the `progress-[1|sm|md|lg]` cla
 {{<example>}}
 <progress class="progress progress-1" value="50" max="100">50%</progress>
 <progress class="progress progress-sm" value="50" max="100">50%</progress>
-<progress class="progress progress-md" value="50" max="100">50%</progress>
+<progress class="progress" value="50" max="100">50%</progress>
 <progress class="progress progress-lg" value="50" max="100">50%</progress>
 {{</example>}}
 
 ## Labels
-You can change the size of the progress bar with the `progress-[1|sm|md|lg]` classes. The `progress-md` sets the default height, applying it under normal circumstances has no effect.
-
 {{<example>}}
 <div class="progress progress-lg">
   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>

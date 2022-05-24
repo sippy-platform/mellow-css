@@ -3,13 +3,23 @@
 
 // Root
 :root {
-  --shadow-1: .1px .1px .5px rgba(0, 0, 0, .032), .4px .4px 1.8px rgba(0, 0, 0, .048), 2px 2px 8px rgba(0, 0, 0, .08);
-  --shadow-2: .1px .1px .7px rgba(0, 0, 0, .04), .4px .4px 2.2px rgba(0, 0, 0, .06), 2px 2px 10px rgba(0, 0, 0, .1);
-  --shadow-3: .1px .1px .9px rgba(0, 0, 0, .048), .4px .4px 3.1px rgba(0, 0, 0, .072), 2px 2px 14px rgba(0, 0, 0, .12);
-  --shadow-4: .2px .2px 1.2px rgba(0, 0, 0, .057), .7px .7px 4px rgba(0, 0, 0, .083), 3px 3px 18px rgba(0, 0, 0, .14);
-  --shadow-5: .2px .2px 1.5px rgba(0, 0, 0, .069), .7px .7px 4.9px rgba(0, 0, 0, .101), 3px 3px 22px rgba(0, 0, 0, .17);
+  --shadow-1: #{ map-get($box-shadows, 1) };
+  --shadow-2: #{ map-get($box-shadows, 2) };
+  --shadow-3: #{ map-get($box-shadows, 3) };
+  --shadow-4: #{ map-get($box-shadows, 4) };
+  --shadow-5: #{ map-get($box-shadows, 5) };
   --shadow-inset-btn: #{ light-dark(inset 0 1px 0 rgba(255, 255, 255, .15), initial) };
   --shadow-inset-input: inset 0 1px 0 rgba(0, 0, 0, .075);
+  --font-family-sans: #{ $font-family-sans };
+  --font-family-sans-heading: #{ $font-family-sans-heading };
+  --font-family-serif: #{ $font-family-serif };
+  --font-family-mono: #{ $font-family-mono };
+
+  // Progressive Web Apps
+  --titlebar-left-safe-space: env(titlebar-area-x, 0);
+  --titlebar-top-safe-space: env(titlebar-area-y, 0);
+  --titlebar-height: env(titlebar-area-height, 33px);
+  --titlebar-width: env(titlebar-area-width, 100%);
 }
 
 // Dark mode
@@ -49,8 +59,8 @@ body {
     --#{$name}-700: #{ light-dark(shade($color, 7%), tint($color, 7%)) };
     --#{$name}-800: #{ light-dark(shade($color, 22%), tint($color, 20%)) };
     --#{$name}-900: #{ light-dark(shade($color, 70%), tint($color, 87%)) };
-    --#{$name}-300a: #{ rgba($color, .15) };
-    --#{$name}-600a: #{ rgba($color, .3) };
+    --#{$name}-200a: #{ rgba($color, .15) };
+    --#{$name}-400a: #{ rgba($color, .3) };
     --#{$name}-text: #{ color-contrast($color) };
   }
 
@@ -64,8 +74,8 @@ body {
   --accent-700: #{ light-dark(shade($accent, 7%), tint($accent, 7%)) };
   --accent-800: #{ light-dark(shade($accent, 22%), tint($accent, 20%)) };
   --accent-900: #{ light-dark(shade($accent, 70%), tint($accent, 87%)) };
-  --accent-300a: #{ rgba($accent, .15) };
-  --accent-600a: #{ rgba($accent, .3) };
+  --accent-200a: #{ rgba($accent, .15) };
+  --accent-400a: #{ rgba($accent, .3) };
   --accent-text: #{ color-contrast($accent) };
 
   // Components
@@ -91,8 +101,8 @@ body {
     --color-700: #{ light-dark(shade($color, 7%), tint($color, 7%)) };
     --color-800: #{ light-dark(shade($color, 22%), tint($color, 20%)) };
     --color-900: #{ light-dark(shade($color, 70%), tint($color, 87%)) };
-    --color-300a: #{ rgba($color, .15) };
-    --color-600a: #{ rgba($color, .3) };
+    --color-200a: #{ rgba($color, .15) };
+    --color-400a: #{ rgba($color, .3) };
     --color-text: #{ color-contrast($color) };
   }
 }
@@ -108,7 +118,7 @@ body {
   --color-700: #{ light-dark(shade($accent, 7%), tint($accent, 7%)) };
   --color-800: #{ light-dark(shade($accent, 22%), tint($accent, 20%)) };
   --color-900: #{ light-dark(shade($accent, 70%), tint($accent, 87%)) };
-  --color-300a: #{ rgba($accent, .15) };
-  --color-600a: #{ rgba($accent, .3) };
+  --color-200a: #{ rgba($accent, .15) };
+  --color-400a: #{ rgba($accent, .3) };
   --color-text: #{ color-contrast($accent) };
 }

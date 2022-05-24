@@ -2,196 +2,192 @@
   list-style: none;
   padding: 0;
   border-radius: $border-radius;
+}
 
-  > .list-item {
-    position: relative;
+.list-item {
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: min-content min-content minmax(0, auto) min-content min-content;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  grid-template-areas: "item-action-s item-icon-s item-label item-icon-e item-action-e";
+  padding: var(--list-item-padding-y, $spacer * .5) $spacer;
+  border-radius: $border-radius;
+
+  &.list-item-action {
+    background: inherit;
     display: grid;
-    grid-template-rows: min-content;
-    grid-template-columns: min-content min-content minmax(0, auto) min-content min-content;
-    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
-    grid-template-areas: "item-action-s item-icon-s item-label item-icon-e item-action-e";
-    padding: $spacer * .5 $spacer;
-    border-radius: $border-radius;
+    text-align: inherit;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover:not(.disabled) {
+      background-color: var(--grey-100);
+    }
+  }
+
+  &.list-item-colored {
+    color: var(--color-800, var(--accent-800));
 
     &.list-item-action {
-      background: inherit;
-      display: grid;
-      text-align: inherit;
-      cursor: pointer;
-      font-size: 1rem;
-      border: none;
-      width: 100%;
-      text-decoration: none;
-      color: inherit;
-
       &:hover:not(.disabled) {
-        background-color: var(--grey-100);
-      }
-    }
-
-    &.list-item-colored {
-      color: var(--color-800, var(--accent-800));
-
-      &.list-item-action {
-        &:hover:not(.disabled) {
-          background-color: var(--color-100, var(--accent-100));
-        }
-      }
-
-      &.active {
         background-color: var(--color-100, var(--accent-100));
       }
     }
 
-    &.disabled {
-      color: var(--grey-600);
-      pointer-events: none;
-    }
-
-    .list-item-label {
-      grid-area: item-label;
-      position: relative;
-    }
-
-    .list-item-icon-s {
-      grid-area: item-icon-s;
-    }
-
-    .list-item-icon-e {
-      grid-area: item-icon-e;
-    }
-
-    .list-item-action-s {
-      grid-area: item-action-s;
-    }
-
-    .list-item-action-e {
-      grid-area: item-action-e;
-    }
-
-    & > :not(:last-child) {
-      margin-right: $spacer * .5;
-    }
-
     &.active {
-      background-color: var(--grey-100);
+      background-color: var(--color-100, var(--accent-100));
+    }
+  }
 
-      &.list-item-action:hover:not(.disabled) {
-        background-color: var(--grey-200);
-      }
+  &.disabled {
+    color: var(--grey-600);
+    pointer-events: none;
+  }
 
-      &::after {
-        position: absolute;
-        top: 8px;
-        left: 0;
-        height: calc(100% - 16px);
-        width: 4px;
-        border-radius: $border-radius;
-        content: "";
-        background-color: var(--color-600, var(--accent-600));
-      }
+  .list-item-label {
+    grid-area: item-label;
+    position: relative;
+  }
+
+  .list-item-icon-s {
+    grid-area: item-icon-s;
+  }
+
+  .list-item-icon-e {
+    grid-area: item-icon-e;
+  }
+
+  .list-item-action-s {
+    grid-area: item-action-s;
+  }
+
+  .list-item-action-e {
+    grid-area: item-action-e;
+  }
+
+  & > :not(:last-child) {
+    margin-right: $spacer * .5;
+  }
+
+  &.active {
+    background-color: var(--grey-100);
+
+    &.list-item-action:hover:not(.disabled) {
+      background-color: var(--grey-200);
+    }
+
+    &::after {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      height: calc(100% - 16px);
+      width: 4px;
+      border-radius: $border-radius;
+      content: "";
+      background-color: var(--color-600, var(--accent-600));
+    }
+  }
+}
+
+.list-sm {
+  --list-item-padding-y: $spacer * .25;
+}
+
+.list-lg {
+  --list-item-padding-y: $spacer * .75;
+}
+
+.border {
+  > .list-item {
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.list-dividers {
+  > .list-item:not(:first-child) .list-item-label {
+    &::before {
+      border-top: $border-color 1px solid;
+      position: absolute;
+      top: -$spacer * .5;
+      left: 0;
+      right: 0;
+      height: 1px;
+      content: "";
     }
   }
 
   &.list-sm {
-    > .list-item {
-      padding: $spacer * .25 $spacer;
+    > .list-item:not(:first-child) .list-item-label {
+      &::before {
+        top: -$spacer * .25;
+      }
     }
   }
 
   &.list-lg {
-    > .list-item {
-      padding: $spacer * .75 $spacer;
-    }
-  }
-
-  &.border {
-    > .list-item {
-      &:not(:first-child) {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
-
-      &:not(:last-child) {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-    }
-  }
-
-  &.list-dividers {
     > .list-item:not(:first-child) .list-item-label {
       &::before {
-        border-top: $border-color 1px solid;
-        position: absolute;
-        top: -$spacer * .5;
-        left: 0;
-        right: 0;
-        height: 1px;
-        content: "";
-      }
-    }
-
-    &.list-sm {
-      > .list-item:not(:first-child) .list-item-label {
-        &::before {
-          top: -$spacer * .25;
-        }
-      }
-    }
-
-    &.list-lg {
-      > .list-item:not(:first-child) .list-item-label {
-        &::before {
-          top: -$spacer * .75;
-        }
+        top: -$spacer * .75;
       }
     }
   }
+}
 
-  &.list-dividers-full {
-    > .list-item:not(:first-child) {
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        content: "";
-        background-color: $border-color;
-      }
+.list-dividers-full {
+  > .list-item:not(:first-child) {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      content: "";
+      background-color: $border-color;
     }
   }
+}
 
+.list-item-divider {
+  display: flex;
+  flex-direction: column;
+  padding: $spacer * .5 $spacer;
+  font-size: .75rem;
+  font-weight: 600;
+  color: $grey;
+}
+
+.list-item-divider-description {
+  font-weight: 400;
+}
+
+.list-dividers,
+.list-dividers-full {
   .list-item-divider {
-    display: flex;
-    flex-direction: column;
-    padding: $spacer * .5 $spacer;
-    font-size: .75rem;
-    font-weight: 600;
-    color: $grey;
-  }
-
-  .list-item-divider-description {
-    font-weight: 400;
-  }
-
-  &.list-dividers,
-  &.list-dividers-full {
-    .list-item-divider {
-      &:not(:first-child) {
-        border-top: $border-color 1px solid;
-      }
+    &:not(:first-child) {
+      border-top: $border-color 1px solid;
     }
   }
+}
 
-  .list-divider {
-    border-bottom: $border-color 1px solid;
-    margin: 0 12px;
-    width: calc(100% - 24px);
-  }
+.list-divider {
+  border-bottom: $border-color 1px solid;
+  margin: 0 12px;
+  width: calc(100% - 24px);
+}
 
-  .list-divider-full {
-    border-bottom: $border-color 1px solid;
-  }
+.list-divider-full {
+  border-bottom: $border-color 1px solid;
 }

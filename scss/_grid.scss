@@ -7,11 +7,11 @@
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+  $breakpoint-infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
   @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
     @for $i from 1 through $grid-columns {
-      .grid#{$breakpoint-suffix}-#{$i} {
+      .grid#{$breakpoint-infix}-#{$i} {
         --columns: #{ $i };
       }
     }
@@ -19,33 +19,33 @@
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  $breakpoint-suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+  $breakpoint-infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
   @include breakpoint-min-width($breakpoint, $grid-breakpoints) {
     @for $i from 1 through $grid-utility-columns {
-      .col#{$breakpoint-suffix}-#{$i} {
+      .col#{$breakpoint-infix}-#{$i} {
         grid-column: auto/ span $i;
       }
     }
 
-    .col#{$breakpoint-suffix}-full {
+    .col#{$breakpoint-infix}-full {
       grid-column: 1 / -1;
     }
 
     @for $i from 1 through $grid-utility-columns {
-      .col-start#{$breakpoint-suffix}-#{$i} {
+      .col-start#{$breakpoint-infix}-#{$i} {
         grid-column-start: $i;
       }
     }
 
     @each $key, $value in $gaps {
-      .gap#{$breakpoint-suffix}-#{$key} {
+      .gap#{$breakpoint-infix}-#{$key} {
         gap: #{$value};
       }
     }
 
     @each $key, $value in $orders {
-      .order#{$breakpoint-suffix}-#{$key} {
+      .order#{$breakpoint-infix}-#{$key} {
         order: #{$value};
       }
     }

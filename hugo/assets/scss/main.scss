@@ -439,6 +439,12 @@
         z-index: initial;
       }
     }
+
+    &.docs-preview-avatar {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(32px, 1fr));
+      gap: .5rem;
+    }
   }
 
   .highlight {
@@ -448,7 +454,7 @@
       border-radius: 0 0 .5rem .5rem;
       font-size: 14px;
       line-height: 1.5;
-      font-family: $font-family-mono;
+      font-family: var(--font-family-mono);
       white-space: pre-wrap;
     }
 

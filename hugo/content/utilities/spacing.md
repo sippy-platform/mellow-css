@@ -17,7 +17,7 @@ You can pick from any of these properties:
 * `m` - for `margin`
 * `p` - for `padding`
 
-All properties can be exted with a specifier to determine on which sides the property is applied. When no specifier is added, the utility will apply to all 4 sides.
+All properties can be extended with a specifier to determine on which sides the property is applied. When no specifier is added, the utility will apply to all 4 sides.
 
 * `t` - applies the utility to the top
 * `e` - applies the utility to the right (end)
@@ -26,7 +26,7 @@ All properties can be exted with a specifier to determine on which sides the pro
 * `x` - applies the utility on the x-axis (right and left)
 * `y` - applies the utility on the y-axis (top and bottom)
 
-Each class is available in all breakpoints ranging from `xs` to `ul`. When you are targetting the extra small breakpoint, the breakpoint-suffix is redundant and should not be included in the class (e.g.: use `m-1` instead of `m-xs-1`).
+Each class is available in all breakpoints ranging from `xs` to `ul`. When you are targetting the extra small breakpoint, the breakpoint-infix is redundant and should not be included in the class (e.g.: use `m-1` instead of `m-xs-1`).
 
 And apply the following size:
 

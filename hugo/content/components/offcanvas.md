@@ -74,14 +74,14 @@ The offcanvas component provides an `offcanvas-header` component to position the
 Offcanvas supports responsive behavior. The example below sets `offcanvas-sm` and will show the content in an offcanvas on the `sm`-breakpoint and lower.
 
 {{<example>}}
-<button class="btn btn-primary" type="button" data-mellow-toggle="offcanvas" data-mellow-target="#offCanvasDemo" aria-controls="offCanvasDemo">
+<button class="btn btn-primary d-sm-none" type="button" data-mellow-toggle="offcanvas" data-mellow-target="#offCanvasResponsiveDemo" aria-controls="offCanvasResponsiveDemo">
   Open offcanvas
 </button>
 
-<div class="offcanvas-sm offcanvas-start" tabindex="-1" id="offCanvasDemo" aria-labelledby="offCanvasDemoLabel">
+<div class="offcanvas-sm offcanvas-start" tabindex="-1" id="offCanvasResponsiveDemo" aria-labelledby="offCanvasResponsiveDemoLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offCanvasDemoLabel">Offcanvas</h5>
-    <button type="button" class="btn-close" data-mellow-dismiss="offcanvas" data-mellow-target="#offCanvasDemo" aria-label="Close">
+    <h5 class="offcanvas-title" id="offCanvasResponsiveDemoLabel">Offcanvas</h5>
+    <button type="button" class="btn-close" data-mellow-dismiss="offcanvas" data-mellow-target="#offCanvasResponsiveDemo" aria-label="Close">
       <i class="vi vi-xmark"></i>
     </button>
   </div>

@@ -25,7 +25,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--color-600a, var(--accent-600a));
+    box-shadow: 0 0 0 3px var(--color-400a, var(--accent-400a));
     outline: none;
   }
 
@@ -39,7 +39,7 @@
 .pivot-pills {
   .pivot-link {
     &:hover {
-      background-color: var(--color-600a, var(--accent-600a));
+      background-color: var(--color-400a, var(--accent-400a));
     }
   }
 
@@ -70,7 +70,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 3px var(--color-600a, var(--accent-600a));
+      box-shadow: 0 0 0 3px var(--color-400a, var(--accent-400a));
     }
   }
 }

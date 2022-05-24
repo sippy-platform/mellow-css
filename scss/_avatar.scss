@@ -1,0 +1,30 @@
+.avatar {
+  background-color: var(--color-600, var(--accent-600));
+  color: var(--color-text, var(--accent-text));
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--avatar-size, 2rem);
+  height: var(--avatar-size, 2rem);
+  border-radius: 100%;
+  line-height: 1;
+  font-size: calc(var(--avatar-size, 2rem) / var(--avatar-text-scale, 2.25));
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--font-family-sans-heading);
+  flex-shrink: 0;
+}
+
+.avatar-plated {
+  background-color: var(--color-300, var(--accent-300));
+  color: var(--color-800, var(--accent-800));
+}
+
+.avatar-sm {
+  --avatar-size: 1.5rem;
+  --avatar-text-scale: 2;
+}
+
+.avatar-lg {
+  --avatar-size: 3rem;
+}

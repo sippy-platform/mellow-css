@@ -22,7 +22,7 @@
 
     @each $breakpoint-name, $width in $grid-breakpoints {
       @if ($include-next) {
-        .container#{breakpoint-suffix($breakpoint-name, $grid-breakpoints)} {
+        .container#{breakpoint-infix($breakpoint-name, $grid-breakpoints)} {
           @extend %container-#{$breakpoint};
         }
 

@@ -1,0 +1,23 @@
+.ps-pwa {
+  padding-left: var(--titlebar-left-safe-space);
+}
+
+.pt-pwa {
+  padding-top: var(--titlebar-top-safe-space);
+}
+
+.h-pwa {
+  height: var(--titlebar-height);
+}
+
+.w-pwa {
+  width: var(--titlebar-width);
+}
+
+.app-drag {
+  app-region: drag;
+}
+
+.app-no-drag {
+  app-region: no-drag;
+}

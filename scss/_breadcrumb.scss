@@ -4,14 +4,30 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 2rem;
+  align-content: center;
 }
 
 .breadcrumb-item {
-  & + & {
-    padding-left: $spacer * .5;
+  & > a {
+    color: var(--color-600, var(--accent-600));
+    text-decoration: none;
+    padding: $spacer * .25 $spacer * .375;
+    border-radius: $border-radius-sm;
+    transition: $base-transition;
 
+    &:hover {
+      background-color: var(--color-200a, var(--accent-200a));
+    }
+  }
+
+  & > span {
+    padding: $spacer * .25 $spacer * .375;
+  }
+
+  & + & {
     &::before {
-      padding-right: $spacer * .5;
+      padding: 0 $spacer * .25;
       height: 16px;
       color: var(--grey-700);
       content: "/";
