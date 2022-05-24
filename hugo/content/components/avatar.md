@@ -11,10 +11,10 @@ A default avatar uses the accent as its background color.
 <div class="avatar">SD</div>
 {{</example>}}
 
-## Styles
+## Plated style
+If you'd prefer an alternative style for the avatar, you can use the `avatar-plated` class.
 
 {{<example>}}
-<div class="avatar">SD</div>
 <div class="avatar avatar-plated">SD</div>
 {{</example>}}
 
