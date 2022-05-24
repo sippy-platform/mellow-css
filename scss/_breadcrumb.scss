@@ -9,7 +9,10 @@
 }
 
 .breadcrumb-item {
-  & > a {
+  & > a,
+  & > button {
+    all: unset;
+    display: inline-block;
     color: var(--color-600, var(--accent-600));
     text-decoration: none;
     padding: $spacer * .25 $spacer * .375;
@@ -22,6 +25,7 @@
   }
 
   & > span {
+    display: inline-block;
     padding: $spacer * .25 $spacer * .375;
   }
 
