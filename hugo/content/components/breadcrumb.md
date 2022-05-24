@@ -15,6 +15,14 @@ Breadcrumbs are a simple component to show a visual hiarchy within your site.
 </nav>
 {{</example>}}
 
+{{<example>}}
+<nav aria-label="breadcrumb" class="breadcrumb">
+  <span class="breadcrumb-item"><button>Home</button></span>
+  <span class="breadcrumb-item"><button>Categories</button></span>
+  <span class="breadcrumb-item active" aria-current="page"><span>Tags</span></span>
+</nav>
+{{</example>}}
+
 ## Colors
 Like other components, the breadcrumb will follow your accent color or a custom color you can specify.
 
