@@ -29,7 +29,7 @@
   }
 
   &.btn-group-lg > .btn,
-  &.btn-group-lg > .dropdown >.btn {
+  &.btn-group-lg > .dropdown > .btn {
     @extend .btn-lg;
   }
 }
