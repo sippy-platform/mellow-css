@@ -117,22 +117,22 @@ Changing the `$colors` variable in SCSS will result in a different color palette
 
 {{<example show_preview="false" lang="scss">}}
 $colors: (
-  red: $red,
-  orange: $orange,
-  amber: $amber,
+  "red": $red,
+  "orange": $orange,
+  "amber": $amber,
   "yellow": $yellow,
-  lime: $lime,
-  green: $green,
-  teal: $teal,
-  cyan: $cyan,
-  blue: $blue,
-  indigo: $indigo,
-  violet: $violet,
-  purple: $purple,
-  pink: $pink,
-  rose: $rose,
-  brown: $brown,
-  grey: $grey
+  "lime": $lime,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "blue": $blue,
+  "indigo": $indigo,
+  "violet": $violet,
+  "purple": $purple,
+  "pink": $pink,
+  "rose": $rose,
+  "brown": $brown,
+  "grey": $grey
 ) !default;
 {{</example>}}
 
