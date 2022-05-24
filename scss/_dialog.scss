@@ -8,7 +8,7 @@
   background-color: var(--acrylic-solid-background);
   box-shadow: var(--shadow-1), var(--shadow-3);
   width: 100%;
-  max-width: $dialog-md;
+  max-width: var(--dialog-max-width, $dialog-md);
 
   @supports (backdrop-filter: blur(15px) saturate(350%)) {
     background-color: var(--acrylic-background);
@@ -24,15 +24,15 @@
   }
 
   &.dialog-sm {
-    max-width: $dialog-sm;
+    --dialog-max-width: $dialog-sm;
   }
 
   &.dialog-lg {
-    max-width: $dialog-lg;
+    --dialog-max-width: $dialog-lg;
   }
 
   &.dialog-xl {
-    max-width: $dialog-xl;
+    --dialog-max-width: $dialog-xl;
   }
 }
 
