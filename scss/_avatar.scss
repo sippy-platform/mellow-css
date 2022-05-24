@@ -15,6 +15,11 @@
   flex-shrink: 0;
 }
 
+.avatar-plated {
+  background-color: var(--color-300, var(--accent-300));
+  color: var(--color-800, var(--accent-800));
+}
+
 .avatar-sm {
   --avatar-size: 1.5rem;
   --avatar-text-scale: 2;

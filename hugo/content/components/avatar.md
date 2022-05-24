@@ -11,6 +11,13 @@ A default avatar uses the accent as its background color.
 <div class="avatar">SD</div>
 {{</example>}}
 
+## Styles
+
+{{<example>}}
+<div class="avatar">SD</div>
+<div class="avatar avatar-plated">SD</div>
+{{</example>}}
+
 ## Size
 You can change the size of avatars.
 
@@ -22,6 +29,7 @@ You can change the size of avatars.
 
 ## Colors
 You can pick different colors for your avatar with the color modifiers.
+
 {{<example class="docs-preview-avatar">}}
 <div class="avatar red">RD</div>
 <div class="avatar orange">OE</div>
@@ -39,4 +47,22 @@ You can pick different colors for your avatar with the color modifiers.
 <div class="avatar rose">RE</div>
 <div class="avatar brown">BN</div>
 <div class="avatar grey">GY</div>
+{{</example>}}
+{{<example class="docs-preview-avatar">}}
+<div class="avatar avatar-plated red">RD</div>
+<div class="avatar avatar-plated orange">OE</div>
+<div class="avatar avatar-plated amber">AR</div>
+<div class="avatar avatar-plated yellow">YW</div>
+<div class="avatar avatar-plated lime">LE</div>
+<div class="avatar avatar-plated green">GN</div>
+<div class="avatar avatar-plated teal">TL</div>
+<div class="avatar avatar-plated cyan">CN</div>
+<div class="avatar avatar-plated blue">BE</div>
+<div class="avatar avatar-plated indigo">IO</div>
+<div class="avatar avatar-plated violet">VT</div>
+<div class="avatar avatar-plated purple">PE</div>
+<div class="avatar avatar-plated pink">PK</div>
+<div class="avatar avatar-plated rose">RE</div>
+<div class="avatar avatar-plated brown">BN</div>
+<div class="avatar avatar-plated grey">GY</div>
 {{</example>}}
