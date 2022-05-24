@@ -14,6 +14,12 @@
   --font-family-sans-heading: #{ $font-family-sans-heading };
   --font-family-serif: #{ $font-family-serif };
   --font-family-mono: #{ $font-family-mono };
+
+  // Progressive Web Apps
+  --titlebar-left-safe-space: env(titlebar-area-x, 0);
+  --titlebar-top-safe-space: env(titlebar-area-y, 0);
+  --titlebar-height: env(titlebar-area-height, 33px);
+  --titlebar-width: env(titlebar-area-width, 33px);
 }
 
 // Dark mode

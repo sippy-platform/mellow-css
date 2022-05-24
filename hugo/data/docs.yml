@@ -35,6 +35,10 @@
     - title: Pivot
     - title: Progress
 
+- title: Advanced
+  pages:
+    - title: PWA
+
 - title: Utilities
   pages:
     - title: Background
