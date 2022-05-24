@@ -68,7 +68,7 @@
   border: none;
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--accent-600a);
+    box-shadow: 0 0 0 3px var(--accent-400a);
   }
 
   &:hover {
@@ -83,7 +83,7 @@
   display: inline-block;
 
   &:focus {
-    box-shadow: 0 0 0 3px var(--accent-600a);
+    box-shadow: 0 0 0 3px var(--accent-400a);
     outline: none;
   }
 

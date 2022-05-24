@@ -136,7 +136,7 @@ $colors: (
 ) !default;
 {{</example>}}
 
-A color map is made out of a color palette from `50` to `900`, with `300a`, `600a`, and `text`.
+A color map is made out of a color palette from `50` to `900`, with `200a`, `400a`, and `text`.
 
 {{<example show_preview="false" lang="scss">}}
 @each $name, $color in $colors {
@@ -151,8 +151,8 @@ A color map is made out of a color palette from `50` to `900`, with `300a`, `600
     --color-700: #{ light-dark(shade($color, 7%), tint($color, 7%)) };
     --color-800: #{ light-dark(shade($color, 22%), tint($color, 20%)) };
     --color-900: #{ light-dark(shade($color, 70%), tint($color, 87%)) };
-    --color-300a: #{ rgba($color, .1) };
-    --color-600a: #{ rgba($color, .3) };
+    --color-200a: #{ rgba($color, .1) };
+    --color-400a: #{ rgba($color, .3) };
     --color-text: #{ color-contrast($color) };
   }
 }
@@ -168,14 +168,14 @@ A color map is made out of a color palette from `50` to `900`, with `300a`, `600
   --color-700: #{ light-dark(shade($accent, 7%), tint($accent, 7%)) };
   --color-800: #{ light-dark(shade($accent, 22%), tint($accent, 20%)) };
   --color-900: #{ light-dark(shade($accent, 70%), tint($accent, 87%)) };
-  --color-300a: #{ rgba($accent, .1) };
-  --color-600a: #{ rgba($accent, .3) };
+  --color-200a: #{ rgba($accent, .1) };
+  --color-400a: #{ rgba($accent, .3) };
   --color-text: #{ color-contrast($accent) };
 }
 {{</example>}}
 
 {{<note>}}
-On a white background, the resulting color from using `600a` will roughly correspond with using `400`, while `300a` rougly corresponds with `200`.
+On a white background, the resulting color from using `400a` will roughly correspond with using `400`, while `200a` rougly corresponds with `200`.
 {{</note>}}
 
 ## Themes
@@ -285,11 +285,11 @@ Each color palette consists out of 10 colors with incremental steps of 100, and 
       <td>Recommended text color on 600 and 700.</td>
     </tr>
     <tr>
-      <td>300a</td>
+      <td>200a</td>
       <td>Hover color over tinted backgrounds.</td>
     </tr>
     <tr>
-      <td>600a</td>
+      <td>400a</td>
       <td>Use focus rings and other context-sensitive colors.</td>
     </tr>
   </tbody>
@@ -318,8 +318,8 @@ All colors in the palette are available as CSS variable. The colors are written 
   <div class="rounded p-3" style="background-color: var(--violet-700); color: var(--violet-text);">
     Violet<br />text on 700
   </div>
-  <div class="rounded p-3" style="background-color: var(--rose-600a); color: var(--rose-600);">
-    Rose<br />600 on 600a
+  <div class="rounded p-3" style="background-color: var(--rose-400a); color: var(--rose-600);">
+    Rose<br />600 on 400a
   </div>
   <div class="rounded p-3" style="background-color: var(--cyan-50); color: var(--cyan-500);">
     Cyan<br />500 on 50
