@@ -9,7 +9,6 @@
   --shadow-4: #{ map-get($box-shadows, 4) };
   --shadow-5: #{ map-get($box-shadows, 5) };
   --shadow-inset-btn: #{ light-dark(inset 0 1px 0 rgba(255, 255, 255, .15), initial) };
-  --shadow-inset-input: inset 0 1px 0 rgba(0, 0, 0, .075);
   --font-family-sans: #{ $font-family-sans };
   --font-family-sans-heading: #{ $font-family-sans-heading };
   --font-family-serif: #{ $font-family-serif };

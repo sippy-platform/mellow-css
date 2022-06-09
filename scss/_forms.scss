@@ -6,14 +6,13 @@
   font-size: $font-size-base;
   padding: $spacer * .3125 $spacer * .75;
   line-height: 1.5;
-  box-shadow: $form-box-shadow-inset;
   background-color: var(--form-background);
   color: var(--form-text);
 
   &:focus {
     outline: 0;
     border-color: var(--color-600, var(--accent-600));
-    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--color-400a, var(--accent-400a));
+    box-shadow: 0 0 0 3px var(--color-400a, var(--accent-400a));
   }
 
   &:disabled,
@@ -226,21 +225,51 @@ select.input {
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
+  border: $border-color 1px solid;
+  border-radius: $border-radius;
 
   > .input {
     position: relative;
     flex: 1 1 auto;
     width: 1%;
     min-width: 0;
+    box-shadow: none;
+    border: none;
 
     &:focus {
       z-index: 3;
+      border: none;
+      box-shadow: none;
     }
   }
 
   .btn {
     position: relative;
     z-index: 2;
+    border-top: none;
+    border-bottom: none;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    & + .btn {
+      margin-left: -1px;
+    }
 
     &:focus {
       z-index: 3;
@@ -248,29 +277,43 @@ select.input {
   }
 
   .input-text {
-    margin: 0;
+    margin: $spacer * .125;
     font-size: 1rem;
     display: flex;
     align-items: center;
-    padding: $spacer * .25 $spacer * .75;
+    padding: $spacer * .125 $spacer * .5;
     line-height: 1.5;
     color: var(--grey-900);
     text-align: center;
     white-space: nowrap;
-    background-color: var(--grey-200);
-    border: $border-color 1px solid;
-    border-radius: $border-radius;
+    background-color: var(--grey-100);
+    border-radius: $border-radius - .125rem;
   }
 
-  & > :not(:first-child) {
-    margin-left: -1px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  &:focus-within {
+    outline: 0;
+    border-color: var(--color-600, var(--accent-600));
+    box-shadow: 0 0 0 3px var(--color-400a, var(--accent-400a));
+
+    .input-text {
+      background-color: var(--color-100, var(--accent-100));
+    }
   }
 
-  & > :not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  & > :not(:first-child):not(.btn) {
+    border-left: none;
+
+    &.input {
+      padding-left: $spacer * .5;
+    }
+  }
+
+  & > :not(:last-child):not(.btn) {
+    border-right: none;
+
+    &.input {
+      padding-right: $spacer * .5;
+    }
   }
 }
 
@@ -286,13 +329,12 @@ select.input {
   background-color: #fff;
   color: var(--form-text);
   border: $border-color 1px solid;
-  box-shadow: $form-box-shadow-inset;
   width: 100%;
 
   &:focus {
     outline: 0;
     border-color: var(--color-600, var(--accent-600));
-    box-shadow: $btn-box-shadow-inset, 0 0 0 3px var(--color-400a, var(--accent-400a));
+    box-shadow: 0 0 0 3px var(--color-400a, var(--accent-400a));
   }
 
   > span:first-child {
