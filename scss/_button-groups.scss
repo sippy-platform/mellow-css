@@ -14,11 +14,11 @@
   > .dropdown:not(:last-child) > .btn {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    border-right: 0;
   }
 
   > .btn:not(:first-child),
   > .dropdown:not(:first-child) > .btn {
-    margin-left: -1px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }

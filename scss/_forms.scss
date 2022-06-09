@@ -268,7 +268,7 @@ select.input {
     }
 
     & + .btn {
-      margin-left: -1px;
+      border-left: none;
     }
 
     &:focus {

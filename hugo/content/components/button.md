@@ -26,7 +26,9 @@ The default button has no variants. It's a plain, grey button. Simple.
 ### Colored buttons
 Colored buttons take on the color of the class you assign to it. These are in general great for primary actions.
 
-{{<example>}}
+<div class="alert accent">For demo purposes, all buttons in the following example have been put in a grid and as a result appear as button blocks.</div>
+
+{{<example class="grid grid-4 grid-md-8 gap-1">}}
 <button type="button" class="btn btn-color red">Red</button>
 <button type="button" class="btn btn-color orange">Orange</button>
 <button type="button" class="btn btn-color amber">Amber</button>
@@ -48,7 +50,9 @@ Colored buttons take on the color of the class you assign to it. These are in ge
 ### Colored on hover
 colored on hover buttons are button with colored text on a grey background that turn fully colored on hover. These are great for secondary actions or destructive actions.
 
-{{<example>}}
+<div class="alert accent">For demo purposes, all buttons in the following example have been put in a grid and as a result appear as button blocks.</div>
+
+{{<example class="grid grid-4 grid-md-8 gap-1">}}
 <button type="button" class="btn btn-hover red">Red</button>
 <button type="button" class="btn btn-hover orange">Orange</button>
 <button type="button" class="btn btn-hover amber">Amber</button>
