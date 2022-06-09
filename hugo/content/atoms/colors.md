@@ -261,16 +261,16 @@ Each color palette consists out of 10 colors with incremental steps of 100, and 
   </thead>
   <tbody>
     <tr>
-      <td>50</td>
+      <td>50, 50a</td>
       <td>Use as background.</td>
     </tr>
     <tr>
-      <td>100, 200, 300</td>
+      <td>100, 200, 200a, 300</td>
       <td>Use as component backgrounds  (default, hover, active).</td>
     </tr>
     <tr>
-      <td>400, 500</td>
-      <td>Use as borders and seperators.</td>
+      <td>400, 400a, 500</td>
+      <td>Use as borders, and seperators. Variants as focus rings.</td>
     </tr>
     <tr>
       <td>600, 700</td>
@@ -283,14 +283,6 @@ Each color palette consists out of 10 colors with incremental steps of 100, and 
     <tr>
       <td>text</td>
       <td>Recommended text color on 600 and 700.</td>
-    </tr>
-    <tr>
-      <td>200a</td>
-      <td>Hover color over tinted backgrounds.</td>
-    </tr>
-    <tr>
-      <td>400a</td>
-      <td>Use focus rings and other context-sensitive colors.</td>
     </tr>
   </tbody>
 </table>
