@@ -74,13 +74,13 @@
 
   &:hover {
     color: var(--color-text);
-    background-color: var(--color-700);
+    background-color: var(--color-600);
   }
 
   &:active,
   &.active {
     color: var(--color-text);
-    background-color: var(--color-800);
+    background-color: var(--color-700);
   }
 }
 
@@ -95,13 +95,13 @@
 
   &:hover {
     color: var(--color-text);
-    background-color: var(--color-700);
+    background-color: var(--color-600);
   }
 
   &:active,
   &.active {
     color: var(--color-text);
-    background-color: var(--color-800);
+    background-color: var(--color-700);
   }
 }
 

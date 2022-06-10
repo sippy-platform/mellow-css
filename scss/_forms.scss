@@ -220,6 +220,7 @@ select.input {
 }
 
 .input-group {
+  background-color: var(--form-background);
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -288,6 +289,7 @@ select.input {
     white-space: nowrap;
     background-color: var(--grey-100);
     border-radius: $border-radius - .125rem;
+    border: 1px solid var(--grey-200a);
   }
 
   &:focus-within {
@@ -297,10 +299,11 @@ select.input {
 
     .input-text {
       background-color: var(--color-100, var(--accent-100));
+      border-color: var(--color-200a, var(--accent-200a));
     }
   }
 
-  & > :not(:first-child):not(.btn) {
+  & > :not(:first-child):not(.btn):not(.input-text) {
     border-left: none;
 
     &.input {
@@ -308,7 +311,7 @@ select.input {
     }
   }
 
-  & > :not(:last-child):not(.btn) {
+  & > :not(:last-child):not(.btn):not(.input-text) {
     border-right: none;
 
     &.input {
