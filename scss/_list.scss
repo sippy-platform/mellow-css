@@ -13,6 +13,7 @@
   grid-template-areas: "item-action-s item-icon-s item-label item-icon-e item-action-e";
   padding: var(--list-item-padding-y, $spacer * .5) $spacer;
   border-radius: $border-radius;
+  align-items: center;
 
   &.list-item-action {
     background: inherit;
