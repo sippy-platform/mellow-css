@@ -25,6 +25,7 @@
     width: 100%;
     text-decoration: none;
     color: inherit;
+    transition: $base-transition;
 
     &:hover:not(.disabled) {
       background-color: var(--grey-100);
