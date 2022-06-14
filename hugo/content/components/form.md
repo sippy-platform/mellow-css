@@ -231,11 +231,13 @@ You can also use them on textareas and select boxes. As a result of the flex lay
 {{</example>}}
 
 ### Multiple inputs
+Make sure there is a clear distinction between the two input controls when no text add-on is used.
+
 {{<example>}}
 <div class="input-group">
   <span class="input-text">Multiple fields</span>
-  <input type="text" class="input" aria-label="First">
-  <input type="text" class="input" aria-label="Second">
+  <input type="text" class="input" placeholder="First" aria-label="First">
+  <input type="text" class="input" placeholder="Second" aria-label="Second">
 </div>
 {{</example>}}
 

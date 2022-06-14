@@ -60,8 +60,8 @@ While the grid classes are limited to 12, you can create grids with as much colu
 If you prefer classes, this will help you make additional classes without the need of deeper knowledge for how the grid is being defined.
 
 {{<example class="docs-preview-grid" show_preview="false" lang="scss">}}
-.grid-13 {
-  --columns: 13;
+.grid-14 {
+  --columns: 14;
 }
 {{</example>}}
 

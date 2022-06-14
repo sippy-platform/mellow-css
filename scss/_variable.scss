@@ -382,9 +382,6 @@ $btn-semantic-color: (
   success: "green"
 ) !default;
 
-// Forms
-$form-box-shadow-inset: var(--shadow-inset-input) !default;
-
 // Transitions
 $fast-transition: all .1s ease-in-out;
 $base-transition: all .2s ease-in-out;
