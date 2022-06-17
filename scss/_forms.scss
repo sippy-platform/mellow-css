@@ -10,6 +10,10 @@
   color: var(--form-text);
   transition: $base-transition;
 
+  &::placeholder {
+    color: $muted;
+  }
+
   &:focus {
     outline: 0;
     border-color: var(--color-600, var(--accent-600));
@@ -327,14 +331,18 @@ select.input {
   align-items: center;
   justify-content: space-between;
   border-radius: $border-radius;
-  padding: 0 15px;
+  padding: 0 $spacer * .75;
   font-size: 1rem;
   line-height: 1;
   height: 36px;
-  background-color: #fff;
+  background-color: var(--form-background);
   color: var(--form-text);
   border: $border-color 1px solid;
   width: 100%;
+
+  .placeholder {
+    color: $muted;
+  }
 
   &:focus {
     outline: 0;
@@ -357,4 +365,21 @@ select.input {
       height: 16px;
     }
   }
+}
+
+.listbox {
+  position: absolute;
+  top: 100%;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  overflow: auto;
+  width: 100%;
+  border-radius: $border-radius;
+  background-color: var(--form-background);
+  padding: $spacer * .25;
+  margin-top: $spacer * .25;
+  box-shadow: var(--shadow-2);
+  list-style: none;
+  z-index: 100;
 }
