@@ -1,0 +1,27 @@
+@each $suffix, $direction in $gradient-directions {
+  .gradient-to-#{$suffix} {
+    --gradient-stops: var(--gradient-from, transparent), var(--gradient-to, transparent);
+
+    background-image: linear-gradient(to #{ $direction }, var(--gradient-stops));
+  }
+}
+
+.gradient-radial {
+  --gradient-stops: var(--gradient-from, transparent), var(--gradient-to, transparent);
+
+  background-image: radial-gradient(var(--gradient-stops));
+}
+
+@each $color-name, $color in $colors {
+  @each $color-weight in $color-weights {
+    .from-#{$color-name}-#{ $color-weight} {
+      /* stylelint-disable-next-line custom-property-pattern */
+      --gradient-from: var(--#{ $color-name }-#{ $color-weight });
+    }
+
+    .to-#{$color-name}-#{ $color-weight} {
+      /* stylelint-disable-next-line custom-property-pattern */
+      --gradient-to: var(--#{ $color-name }-#{ $color-weight });
+    }
+  }
+}

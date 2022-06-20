@@ -420,6 +420,27 @@
       }
     }
 
+    &.docs-preview-gradient {
+      div {
+        border-radius: $border-radius;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &.docs-preview-gradient-radial {
+      div {
+        border-radius: $border-radius;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
     &.docs-preview-offcanvas {
       padding: 0;
 
