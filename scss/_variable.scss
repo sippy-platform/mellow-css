@@ -52,6 +52,21 @@ $colors: (
   "grey": $grey
 ) !default;
 
+$color-weights: (
+  50, 100, 200, 300, 400, 500, 600, 700, 800, 900
+) !default;
+
+$gradient-directions: (
+  t: top,
+  te: top right,
+  e: right,
+  be: bottom right,
+  b: bottom,
+  bs: bottom left,
+  s: left,
+  ts: top left
+) !default;
+
 // Anchors
 $anchor-color:          shade($accent, 7%) !default;
 $anchor-hover-color:    shade($accent, 22%) !default;
