@@ -9,7 +9,7 @@ Labels appear as slightly smaller fonts inside a colored or bordered surface.
 
 {{<example>}}
 <span class="label">default label</span>
-<span class="label label-plated">plated label</span>
+<span class="label label-outlined">outlined label</span>
 <span class="label label-solid">solid label</span>
 {{</example>}}
 
@@ -18,7 +18,7 @@ By using the `rounded-pill` class you can make a rounded variant. The rounded va
 
 {{<example>}}
 <span class="label rounded-pill">default label</span>
-<span class="label label-plated rounded-pill">plated label</span>
+<span class="label label-outlined rounded-pill">outlined label</span>
 <span class="label label-solid rounded-pill">solid label</span>
 {{</example>}}
 
@@ -44,24 +44,24 @@ Like other components, the color of a label can be changed with ease:
 <span class="label grey">Grey</span>
 {{</example>}}
 
-### Plated variant
+### Outlined variant
 {{<example>}}
-<span class="label label-plated red">Red</span>
-<span class="label label-plated orange">Orange</span>
-<span class="label label-plated amber">Amber</span>
-<span class="label label-plated yellow">Yellow</span>
-<span class="label label-plated lime">Lime</span>
-<span class="label label-plated green">Green</span>
-<span class="label label-plated teal">Teal</span>
-<span class="label label-plated cyan">Cyan</span>
-<span class="label label-plated blue">Blue</span>
-<span class="label label-plated indigo">Indigo</span>
-<span class="label label-plated violet">Violet</span>
-<span class="label label-plated purple">Purple</span>
-<span class="label label-plated pink">Pink</span>
-<span class="label label-plated rose">Rose</span>
-<span class="label label-plated brown">Brown</span>
-<span class="label label-plated grey">Grey</span>
+<span class="label label-outlined red">Red</span>
+<span class="label label-outlined orange">Orange</span>
+<span class="label label-outlined amber">Amber</span>
+<span class="label label-outlined yellow">Yellow</span>
+<span class="label label-outlined lime">Lime</span>
+<span class="label label-outlined green">Green</span>
+<span class="label label-outlined teal">Teal</span>
+<span class="label label-outlined cyan">Cyan</span>
+<span class="label label-outlined blue">Blue</span>
+<span class="label label-outlined indigo">Indigo</span>
+<span class="label label-outlined violet">Violet</span>
+<span class="label label-outlined purple">Purple</span>
+<span class="label label-outlined pink">Pink</span>
+<span class="label label-outlined rose">Rose</span>
+<span class="label label-outlined brown">Brown</span>
+<span class="label label-outlined grey">Grey</span>
 {{</example>}}
 
 ### Solid variant
@@ -137,7 +137,7 @@ When using a label in a list, you can set it in any of the available locations, 
   <a href="#" class="list-item list-item-action">
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-icon-e">
-      <span class="label label-plated blue">4</span>
+      <span class="label label-outlined blue">4</span>
     </span>
   </a>
   <a href="#" class="list-item list-item-action">
