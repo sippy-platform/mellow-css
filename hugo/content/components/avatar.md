@@ -66,3 +66,43 @@ You can pick different colors for your avatar with the color modifiers.
 <div class="avatar avatar-plated brown">BN</div>
 <div class="avatar avatar-plated grey">GY</div>
 {{</example>}}
+
+## Borders
+When you need a bit more distinction between your avatar and its background, you can use the `avatar-border` class to add a subtle border.
+
+{{<example class="docs-preview-avatar">}}
+<div class="avatar avatar-border red">RD</div>
+<div class="avatar avatar-border orange">OE</div>
+<div class="avatar avatar-border amber">AR</div>
+<div class="avatar avatar-border yellow">YW</div>
+<div class="avatar avatar-border lime">LE</div>
+<div class="avatar avatar-border green">GN</div>
+<div class="avatar avatar-border teal">TL</div>
+<div class="avatar avatar-border cyan">CN</div>
+<div class="avatar avatar-border blue">BE</div>
+<div class="avatar avatar-border indigo">IO</div>
+<div class="avatar avatar-border violet">VT</div>
+<div class="avatar avatar-border purple">PE</div>
+<div class="avatar avatar-border pink">PK</div>
+<div class="avatar avatar-border rose">RE</div>
+<div class="avatar avatar-border brown">BN</div>
+<div class="avatar avatar-border grey">GY</div>
+{{</example>}}
+{{<example class="docs-preview-avatar">}}
+<div class="avatar avatar-plated avatar-border red">RD</div>
+<div class="avatar avatar-plated avatar-border orange">OE</div>
+<div class="avatar avatar-plated avatar-border amber">AR</div>
+<div class="avatar avatar-plated avatar-border yellow">YW</div>
+<div class="avatar avatar-plated avatar-border lime">LE</div>
+<div class="avatar avatar-plated avatar-border green">GN</div>
+<div class="avatar avatar-plated avatar-border teal">TL</div>
+<div class="avatar avatar-plated avatar-border cyan">CN</div>
+<div class="avatar avatar-plated avatar-border blue">BE</div>
+<div class="avatar avatar-plated avatar-border indigo">IO</div>
+<div class="avatar avatar-plated avatar-border violet">VT</div>
+<div class="avatar avatar-plated avatar-border purple">PE</div>
+<div class="avatar avatar-plated avatar-border pink">PK</div>
+<div class="avatar avatar-plated avatar-border rose">RE</div>
+<div class="avatar avatar-plated avatar-border brown">BN</div>
+<div class="avatar avatar-plated avatar-border grey">GY</div>
+{{</example>}}
