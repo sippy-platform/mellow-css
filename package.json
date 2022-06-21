@@ -1,11 +1,12 @@
 {
   "name": "@sippy-platform/mellow-css",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "The Mellow Design System.",
   "main": "dist/js/mellow.js",
   "style": "dist/css/mellow.css",
   "sass": "scss/mellow.scss",
   "scripts": {
+    "build": "npm run prod",
     "bundlewatch": "bundlewatch",
     "clean": "rimraf dist",
     "docs": "npm-run-all --parallel docs:hugo docs:sass",
