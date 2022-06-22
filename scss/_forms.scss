@@ -8,7 +8,7 @@
   line-height: 1.5;
   background-color: var(--form-background);
   color: var(--form-text);
-  transition: $base-transition;
+  transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
 
   &::placeholder {
     color: $muted;
