@@ -237,6 +237,7 @@ select.input {
     border: 1px solid transparent;
     transform-origin: 0 0;
     transition: color .1s ease-in-out, transform .1s ease-in-out;
+    pointer-events: none;
   }
 
   > .input {
