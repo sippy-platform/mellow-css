@@ -1,0 +1,65 @@
+select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%232b2d31' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m4 6 4 4 4-4'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right $spacer * .75 center;
+  background-size: 16px;
+}
+
+.input-select {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: $border-radius;
+  padding: 0 $spacer * .75;
+  font-size: 1rem;
+  line-height: 1;
+  height: 36px;
+  background-color: var(--form-background);
+  color: var(--form-text);
+  border: $border-color 1px solid;
+  width: 100%;
+
+  .placeholder {
+    color: $muted;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: var(--color-600, var(--accent-600));
+    box-shadow: 0 0 0 3px var(--color-400a, var(--accent-400a));
+  }
+
+  > span:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .icon {
+    margin-left: 4px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.listbox {
+  position: absolute;
+  top: 100%;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  overflow: auto;
+  width: 100%;
+  border-radius: $border-radius;
+  background-color: var(--form-background);
+  padding: $spacer * .25;
+  margin-top: $spacer * .25;
+  box-shadow: var(--shadow-2);
+  list-style: none;
+  z-index: 100;
+}
