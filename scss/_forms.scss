@@ -254,7 +254,8 @@ select.input {
     }
 
     &:focus,
-    &:not(:placeholder-shown) {
+    &:not(:placeholder-shown),
+    &:autofill {
       padding-top: 1.625rem;
       padding-bottom: .625rem;
 
