@@ -256,7 +256,7 @@ select.input {
 
       ~ label {
         color: $muted;
-        transform: scale(.85) translateY(-.5rem);
+        transform: scale(.85) translateX(.15rem) translateY(-.5rem);
       }
     }
   }
