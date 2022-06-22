@@ -15,6 +15,14 @@
     - title: Grid
     - title: Table
 
+- title: Forms
+  pages:
+    - title: Input
+    - title: Checkbox & radio
+    - title: File
+    - title: Range
+    - title: Input group
+
 - title: Components
   pages:
     - title: Alert
@@ -26,7 +34,6 @@
     - title: Card
     - title: Dialog
     - title: Dropdown
-    - title: Form
     - title: Label
     - title: List
     - title: Nav
