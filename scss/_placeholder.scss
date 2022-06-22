@@ -1,0 +1,36 @@
+.placeholder {
+  display: inline-block;
+  min-height: 1em;
+  vertical-align: middle;
+  cursor: wait;
+  background-color: var(--color-600, currentcolor);
+  opacity: .4;
+  animation: fade 4s ease-in-out infinite;
+
+  &:not(.btn) {
+    border-radius: $border-radius-sm;
+  }
+
+  &.btn::before {
+    display: inline-block;
+    content: "";
+  }
+}
+
+.placeholder-xs {
+  min-height: .5em;
+}
+
+.placeholder-sm {
+  min-height: .75em;
+}
+
+.placeholder-lg {
+  min-height: 1.25em;
+}
+
+@keyframes fade {
+  50% {
+    opacity: .2;
+  }
+}
