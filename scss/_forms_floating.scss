@@ -60,7 +60,6 @@
     &::file-selector-button {
       margin: (-$spacer * .25) ($spacer * .75) (-$spacer * .25) (-$spacer * .75);
       height: 46px;
-      border-radius: calc($border-radius - 1px) 0 0 calc($border-radius - 1px);
     }
   }
 }
