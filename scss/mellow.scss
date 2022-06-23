@@ -21,6 +21,14 @@
 @import "container";
 @import "grid";
 
+@import "forms";
+@import "forms_input";
+@import "forms_select";
+@import "forms_check";
+@import "forms_range";
+@import "forms_floating";
+@import "forms_groups";
+
 @import "alert";
 @import "avatar";
 @import "backdrop";
@@ -32,7 +40,6 @@
 @import "cards";
 @import "dialog";
 @import "dropdown";
-@import "forms";
 @import "labels";
 @import "list";
 @import "nav";

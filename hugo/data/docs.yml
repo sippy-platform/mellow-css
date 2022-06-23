@@ -18,6 +18,7 @@
 - title: Forms
   pages:
     - title: Input
+    - title: Floating labels
     - title: Checkbox & radio
     - title: File
     - title: Range

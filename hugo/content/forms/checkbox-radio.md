@@ -132,3 +132,4 @@ Like many other components, forms respond to color classes.
     </div>
   </div>
 </form>
+{{</example>}}

@@ -8,13 +8,11 @@ section: forms
 ### Text
 Make your input fields look nice with the `input` class.
 
-{{<example>}}
-<form class="grid gap-3">
-  <input type="text" class="input" placeholder="Name" />
-  <input type="email" class="input" placeholder="Email" />
-  <input type="password" class="input" placeholder="Password" />
-  <textarea class="input" placeholder="Message"></textarea>
-</form>
+{{<example class="grid gap-3">}}
+<input type="text" class="input" placeholder="Name" />
+<input type="email" class="input" placeholder="Email" />
+<input type="password" class="input" placeholder="Password" />
+<textarea class="input" placeholder="Message"></textarea>
 {{</example>}}
 
 ### Select
@@ -80,3 +78,4 @@ Like many other components, forms respond to color classes.
     <option>Optimise</option>
   </select>
 </form>
+{{</example>}}

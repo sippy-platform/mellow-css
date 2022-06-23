@@ -22,6 +22,7 @@ If you want to disable a form input, add the `disabled` attribute to it.
 Like many other components, forms respond to color classes.
 
 {{<example>}}
-<form class="grid gap-3 pink">
+<form class="pink">
   <input class="input" type="file">
 </form>
+{{</example>}}
