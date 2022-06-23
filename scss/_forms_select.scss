@@ -22,6 +22,7 @@ select.input {
 
   .select-placeholder {
     color: $muted;
+    pointer-events: none;
   }
 
   &:focus {
