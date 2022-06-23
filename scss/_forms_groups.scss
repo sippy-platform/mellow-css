@@ -116,4 +116,21 @@
       padding-right: $spacer * .5;
     }
   }
+
+  &.input-group-floating {
+    .btn {
+      padding-top: $spacer * .75;
+      padding-bottom: $spacer * .75;
+    }
+
+    .btn-sm {
+      padding-top: $spacer * .8125;
+      padding-bottom: $spacer * .8125;
+    }
+
+    .btn-lg {
+      padding-top: $spacer * .6875;
+      padding-bottom: $spacer * .6875;
+    }
+  }
 }

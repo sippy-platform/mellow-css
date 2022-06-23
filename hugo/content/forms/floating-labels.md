@@ -48,18 +48,18 @@ section: forms
 {{</example>}}
 
 ## Input groups
-When using input groups, `input-text` will adapt automatically but for buttons, you'll need to use the `btn-float` class.
+When using input groups, use the `input-group-floating` class to make sure buttons adjust properly.
 
 {{<example class="grid gap-3">}}
-<div class="input-group">
+<div class="input-group input-group-floating">
   <span class="input-text" id="prefix-addon">Prefix</span>
   <div class="form-floating">
     <input type="text" class="input" name="prefix" placeholder="Prefixed" aria-label="Prefixed" aria-describedby="prefix-addon">
     <label for="prefix">Prefixed</label>
   </div>
 </div>
-<div class="input-group">
-  <a href="#" class="btn btn-default btn-float">Button</a>
+<div class="input-group input-group-floating">
+  <a href="#" class="btn btn-default">Button</a>
   <div class="form-floating">
     <input type="text" class="input" name="button" placeholder="Buttoned" aria-label="Buttoned" aria-describedby="button-addon">
     <label for="button">Buttoned</label>
