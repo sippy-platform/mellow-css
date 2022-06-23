@@ -39,14 +39,6 @@ section: forms
 </div>
 {{</example>}}
 
-### File
-{{<example>}}
-<div class="form-floating">
-  <input class="input" type="file" name="file">
-  <label for="file">Pick a file</label>
-</div>
-{{</example>}}
-
 ## Input groups
 When using input groups, use the `input-group-floating` class to make sure buttons adjust properly.
 
