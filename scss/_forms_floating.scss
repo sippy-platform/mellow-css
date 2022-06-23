@@ -17,6 +17,17 @@
     white-space: nowrap;
   }
 
+  > .input-select {
+    height: 3rem;
+    padding: $spacer * .75;
+    line-height: 1.25;
+    transition: none;
+
+    .select-placeholder {
+      color: transparent;
+    }
+  }
+
   > .input {
     height: 3rem;
     padding: $spacer * .75;
