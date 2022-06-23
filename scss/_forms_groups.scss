@@ -24,6 +24,24 @@
     }
   }
 
+  > .form-floating {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+
+    > .input {
+      box-shadow: none;
+      border: none;
+
+      &:focus {
+        z-index: 3;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+
   .btn {
     position: relative;
     z-index: 2;
