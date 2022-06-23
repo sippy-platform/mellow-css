@@ -48,4 +48,19 @@
       padding-bottom: .25rem;
     }
   }
+
+  > [type="file"].input {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+
+    ~ label {
+      color: transparent;
+    }
+
+    &::file-selector-button {
+      margin: (-$spacer * .25) ($spacer * .75) (-$spacer * .25) (-$spacer * .75);
+      height: 46px;
+      border-radius: calc($border-radius - 1px) 0 0 calc($border-radius - 1px);
+    }
+  }
 }

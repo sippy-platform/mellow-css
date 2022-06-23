@@ -38,3 +38,11 @@ section: forms
   <label for="select">Pick a name</label>
 </div>
 {{</example>}}
+
+### File
+{{<example>}}
+<div class="form-floating">
+  <input class="input" type="file" name="file">
+  <label for="file">Pick a file</label>
+</div>
+{{</example>}}
