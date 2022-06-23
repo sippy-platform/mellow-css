@@ -23,8 +23,19 @@ Change the capitalization of your text with the transform utilities.
 {{</example>}}
 
 ## Font weight
+### Absolute weights
 Change the font weight with the font weight utilities.
 
+{{<example>}}
+<p class="h4 fw-thin">Thin text.</p>
+<p class="h4 fw-light">Light text.</p>
+<p class="h4 fw-normal">Normal text.</p>
+<p class="h4 fw-semibold">Semibold text.</p>
+<p class="h4 fw-bold">Bold text.</p>
+<p class="h4 fw-black">Black text.</p>
+{{</example>}}
+
+### Relative weights
 The `fw-bolder` and `fw-lighter` classes are relative to their parent and as a result can be stacked. While Mellow only provides utility classes to get bold, normal, and light fonts directly, you can stack these utilities to create strong and thin fonts as well.
 
 {{<example>}}

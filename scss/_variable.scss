@@ -369,11 +369,14 @@ $line-heights: (
 ) !default;
 
 $font-weights: (
+  thin: 100,
   light: 300,
   lighter: lighter,
   normal: 400,
+  semibold: 600,
   bold: 700,
-  bolder: bolder
+  bolder: bolder,
+  black: 900
 ) !default;
 
 // Overflow
