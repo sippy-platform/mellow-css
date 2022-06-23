@@ -24,7 +24,8 @@ If you want to disable a form input, add the `disabled` attribute to it.
 Like many other components, forms respond to color classes.
 
 {{<example>}}
-<form class="grid gap-3 pink">
+<form class="pink">
   <label for="rangeInput" class="input-label">Range example</label>
   <input type="range" class="input-range" id="rangeInput">
 </form>
+{{</example>}}

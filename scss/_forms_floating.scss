@@ -30,13 +30,22 @@
     &:focus,
     &:not(:placeholder-shown),
     &:autofill {
-      padding-top: 1.625rem;
-      padding-bottom: .625rem;
+      padding-top: 1.5rem;
+      padding-bottom: .5rem;
 
       ~ label {
         color: $muted;
         transform: scale(.85) translateX(.15rem) translateY(-.5rem);
       }
+    }
+  }
+
+  > select.input {
+    &:focus,
+    &:not(:placeholder-shown),
+    &:autofill {
+      padding-top: 1.25rem;
+      padding-bottom: .25rem;
     }
   }
 }
