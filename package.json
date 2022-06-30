@@ -1,6 +1,6 @@
 {
   "name": "@sippy-platform/mellow-css",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "The Mellow Design System.",
   "main": "dist/js/mellow.js",
   "style": "dist/css/mellow.css",
