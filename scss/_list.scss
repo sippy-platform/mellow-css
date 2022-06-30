@@ -15,31 +15,8 @@
   border-radius: $border-radius;
   align-items: center;
 
-  &.list-item-action {
-    background: inherit;
-    display: grid;
-    text-align: inherit;
-    cursor: pointer;
-    font-size: 1rem;
-    border: none;
-    width: 100%;
-    text-decoration: none;
-    color: inherit;
-    transition: $base-transition;
-
-    &:hover:not(.disabled) {
-      background-color: var(--grey-100);
-    }
-  }
-
   &.list-item-colored {
     color: var(--color-800, var(--accent-800));
-
-    &.list-item-action {
-      &:hover:not(.disabled) {
-        background-color: var(--color-100, var(--accent-100));
-      }
-    }
 
     &.active {
       background-color: var(--color-100, var(--accent-100));
@@ -79,10 +56,6 @@
   &.active {
     background-color: var(--grey-100);
 
-    &.list-item-action:hover:not(.disabled) {
-      background-color: var(--grey-200);
-    }
-
     &::after {
       position: absolute;
       top: 8px;
@@ -92,6 +65,36 @@
       border-radius: $border-radius;
       content: "";
       background-color: var(--color-600, var(--accent-600));
+    }
+  }
+}
+
+a.list-item,
+button.list-item {
+  background: inherit;
+  display: grid;
+  text-align: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: $base-transition;
+
+  &:hover:not(.disabled) {
+    background-color: var(--grey-100);
+  }
+
+  &.active {
+    &:hover:not(.disabled) {
+      background-color: var(--grey-200);
+    }
+  }
+
+  &.list-item-colored {
+    &:hover:not(.disabled) {
+      background-color: var(--color-100, var(--accent-100));
     }
   }
 }
