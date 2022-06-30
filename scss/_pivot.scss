@@ -23,8 +23,11 @@
   &:hover,
   &:focus {
     color: $body-text;
-    background-color: var(--color-200a, var(--accent-200a));
     text-decoration: none;
+  }
+
+  &:hover {
+    background-color: var(--color-200a, var(--accent-200a));
   }
 
   &:focus {
