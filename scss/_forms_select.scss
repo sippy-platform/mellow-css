@@ -57,10 +57,15 @@ select.input {
   overflow: auto;
   width: 100%;
   border-radius: $border-radius;
-  background-color: var(--form-background);
+  background-color: var(--acrylic-fallback-background);
   padding: $spacer * .25;
   margin-top: $spacer * .25;
   box-shadow: var(--shadow-2);
   list-style: none;
   z-index: 100;
+
+  @supports (backdrop-filter: blur(15px) saturate(350%)) {
+    background-color: var(--acrylic-background);
+    backdrop-filter: blur(15px) saturate(250%);
+  }
 }
