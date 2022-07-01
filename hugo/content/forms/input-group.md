@@ -11,33 +11,33 @@ Text add-ons can be added in every position and/or make combinations.
 
 {{<example class="grid gap-3">}}
 <div class="input-group">
-  <span class="input-text" id="prefix-addon">Prefix</span>
+  <span class="input-addon" id="prefix-addon">Prefix</span>
   <input type="text" class="input" placeholder="Prefixed" aria-label="Prefixed" aria-describedby="prefix-addon">
 </div>
 
 <div class="input-group">
   <input type="text" class="input" placeholder="Affixed" aria-label="Affixed">
-  <span class="input-text">Affix</span>
+  <span class="input-addon">Affix</span>
   <input type="text" class="input" placeholder="Affixed (cont.)" aria-label="Affixed (cont.)">
 </div>
 
 <div class="input-group">
   <input type="text" class="input" placeholder="Suffixed" aria-label="Suffixed" aria-describedby="suffix-addon">
-  <span class="input-text" id="suffix-addon">Suffix</span>
+  <span class="input-addon" id="suffix-addon">Suffix</span>
 </div>
 
 <div class="input-group">
-  <span class="input-text" id="prefix-addon-combo">Prefix</span>
+  <span class="input-addon" id="prefix-addon-combo">Prefix</span>
   <input type="text" class="input" placeholder="Both" aria-label="Both" aria-describedby="suffix-addon-combo">
-  <span class="input-text" id="suffix-addon-combo">Suffix</span>
+  <span class="input-addon" id="suffix-addon-combo">Suffix</span>
 </div>
 
 <div class="input-group">
-  <span class="input-text" id="text-addon-prefix-three">Prefix</span>
+  <span class="input-addon" id="text-addon-prefix-three">Prefix</span>
   <input type="text" class="input" placeholder="All" aria-label="All">
-  <span class="input-text" id="text-addon-affix-three">Affix</span>
+  <span class="input-addon" id="text-addon-affix-three">Affix</span>
   <input type="text" class="input" placeholder="Three" aria-label="Three">
-  <span class="input-text" id="text-addon-suffix-three">Suffix</span>
+  <span class="input-addon" id="text-addon-suffix-three">Suffix</span>
 </div>
 {{</example>}}
 
@@ -45,7 +45,7 @@ You can also use them on textareas and select boxes. As a result of the flex lay
 
 {{<example class="grid gap-3">}}
 <div class="input-group">
-  <span class="input-text" id="textarea-addon">Textarea</span>
+  <span class="input-addon" id="textarea-addon">Textarea</span>
   <textarea class="input" placeholder="Message"></textarea>
 </div>
 
@@ -56,7 +56,7 @@ You can also use them on textareas and select boxes. As a result of the flex lay
     <option>Sippy</option>
     <option>Optimise</option>
   </select>
-  <span class="input-text" id="select-addon">Select</span>
+  <span class="input-addon" id="select-addon">Select</span>
 </div>
 {{</example>}}
 
@@ -65,7 +65,7 @@ Make sure there is a clear distinction between the two input controls when no te
 
 {{<example>}}
 <div class="input-group">
-  <span class="input-text">Multiple fields</span>
+  <span class="input-addon">Multiple fields</span>
   <input type="text" class="input" placeholder="First" aria-label="First">
   <input type="text" class="input" placeholder="Second" aria-label="Second">
 </div>
@@ -74,8 +74,8 @@ Make sure there is a clear distinction between the two input controls when no te
 ## Multiple text add-ons
 {{<example>}}
 <div class="input-group">
-  <span class="input-text">Multiple</span>
-  <span class="input-text">Add-ons</span>
+  <span class="input-addon">Multiple</span>
+  <span class="input-addon">Add-ons</span>
   <input type="text" class="input" aria-label="Field">
 </div>
 {{</example>}}

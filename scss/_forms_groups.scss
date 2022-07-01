@@ -75,8 +75,7 @@
     }
   }
 
-  .input-text {
-    margin: $spacer * .125;
+  .input-addon {
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -86,8 +85,11 @@
     text-align: center;
     white-space: nowrap;
     background-color: var(--grey-100);
-    border-radius: .3rem;
+    border-radius: calc($border-radius - 2.5px);
     border: 1px solid var(--grey-200a);
+    height: calc(100% - .25rem);
+    margin-left: .125rem;
+    align-self: center;
   }
 
   &:focus-within {
@@ -95,13 +97,13 @@
     border-color: var(--color-600, var(--accent-600));
     box-shadow: 0 0 0 3px var(--color-400a, var(--accent-400a));
 
-    .input-text {
+    .input-addon {
       background-color: var(--color-100, var(--accent-100));
       border-color: var(--color-200a, var(--accent-200a));
     }
   }
 
-  & > :not(:first-child):not(.btn):not(.input-text) {
+  & > :not(:first-child):not(.btn):not(.input-addon) {
     border-left: none;
 
     &.input {
@@ -109,7 +111,7 @@
     }
   }
 
-  & > :not(:last-child):not(.btn):not(.input-text) {
+  & > :not(:last-child):not(.btn):not(.input-addon) {
     border-right: none;
 
     &.input {

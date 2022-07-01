@@ -94,27 +94,25 @@ If a section needs a text label, you can do that with `list-item-divider`. When 
 {{</example>}}
 
 ## Links
-Need an interactive list, add the `list-item-action` class to your items.
-
 {{<example>}}
 <div class="list mb-3">
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">Yet another item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">Yet another item</span></a>
 </div>
 <div class="list list-dividers">
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">Yet another item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">Yet another item</span></a>
 </div>
 {{</example>}}
 
 Adding the `border` class to the list will disable the border radius for all elements except the first and last.
 {{<example>}}
 <div class="list border">
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">Yet another item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">Yet another item</span></a>
 </div>
 {{</example>}}
 
@@ -123,9 +121,9 @@ When adding the `active` class, Mellow will show an active indicator and backgro
 
 {{<example>}}
 <div class="list">
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action active"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">Yet another item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
+  <a href="#" class="list-item active"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">Yet another item</span></a>
 </div>
 {{</example>}}
 
@@ -134,9 +132,9 @@ Like many other controls, lists support the color classes. By default, a color c
 
 {{<example>}}
 <div class="list green">
-  <a href="#" class="list-item list-item-action active"><span class="list-item-label">Inherit the green list color</span></a>
-  <a href="#" class="list-item list-item-action active"><span class="list-item-label">Also inherits the green list color</span></a>
-  <a href="#" class="list-item list-item-action active orange"><span class="list-item-label">Overwrites with orange</span></a>
+  <a href="#" class="list-item active"><span class="list-item-label">Inherit the green list color</span></a>
+  <a href="#" class="list-item active"><span class="list-item-label">Also inherits the green list color</span></a>
+  <a href="#" class="list-item active orange"><span class="list-item-label">Overwrites with orange</span></a>
 </div>
 {{</example>}}
 
@@ -145,9 +143,9 @@ If an action requires more attention from the user then the `list-item-colored` 
 
 {{<example>}}
 <div class="list">
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action list-item-colored green active"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action list-item-colored red"><span class="list-item-label">Delete everything</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
+  <a href="#" class="list-item list-item-colored green active"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item list-item-colored red"><span class="list-item-label">Delete everything</span></a>
 </div>
 {{</example>}}
 
@@ -172,9 +170,9 @@ You can disable a `list-item` by adding `disabled` to it.
 
 {{<example>}}
 <div class="list">
-  <a href="#" class="list-item list-item-action disabled"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">This is also a list item</span></a>
-  <a href="#" class="list-item list-item-action"><span class="list-item-label">Yet another item</span></a>
+  <a href="#" class="list-item disabled"><span class="list-item-label">This is a list item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item"><span class="list-item-label">Yet another item</span></a>
 </div>
 {{</example>}}
 
@@ -183,19 +181,19 @@ List items can have icons. These can be positioned either at the start or end of
 
 {{<example>}}
 <div class="list">
-  <a href="#" class="list-item list-item-action">
+  <a href="#" class="list-item">
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
     </span>
     <span class="list-item-label">This is a list item</span>
   </a>
-  <a href="#" class="list-item list-item-action">
+  <a href="#" class="list-item">
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-icon-e">
       <i class="vi vi-magnifying-glass"></i>
     </span>
   </a>
-  <a href="#" class="list-item list-item-action">
+  <a href="#" class="list-item">
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
     </span>
@@ -235,13 +233,13 @@ You can increase the size of the click target by making the entire `list-item` t
 
 {{<example>}}
 <div class="list">
-  <label class="list-item list-item-action">
+  <label class="list-item">
     <span class="list-item-action-s">
       <input type="checkbox" class="input-check" value="1">
     </span>
     <span class="list-item-label">This is a list item</span>
   </label>
-  <label class="list-item list-item-action">
+  <label class="list-item">
     <span class="list-item-label">This is a list item</span>
     <span class="list-item-action-e">
       <input type="checkbox" class="input-check" value="1">
@@ -257,7 +255,7 @@ Of course, all of these various options can be combined into more complex layout
 
 {{<example>}}
 <div class="list list-lg border list-dividers cyan">
-  <label class="list-item list-item-action">
+  <label class="list-item">
     <span class="list-item-action-s">
       <input type="radio" class="input-check" name="listItemRadio" value="1">
     </span>
@@ -270,7 +268,7 @@ Of course, all of these various options can be combined into more complex layout
     </span>
     <span class="list-item-icon-e"></span>
   </label>
-  <label class="list-item list-item-action active">
+  <label class="list-item active">
     <span class="list-item-action-s">
       <input type="radio" class="input-check" name="listItemRadio" value="1" checked>
     </span>
@@ -285,7 +283,7 @@ Of course, all of these various options can be combined into more complex layout
       <i class="vi vi-house"></i>
     </span>
   </label>
-  <label class="list-item list-item-action disabled">
+  <label class="list-item disabled">
     <span class="list-item-action-s">
       <input type="radio" class="input-check" name="listItemRadio" value="1" disabled>
     </span>
@@ -301,7 +299,7 @@ Of course, all of these various options can be combined into more complex layout
     </span>
   </label>
   <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
-  <a class="list-item list-item-action list-item-colored red" href="#">
+  <a class="list-item list-item-colored red" href="#">
     <span class="list-item-icon-s">
       <i class="vi vi-trash-can"></i>
     </span>

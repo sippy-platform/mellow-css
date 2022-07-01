@@ -13,7 +13,7 @@
         {{- $is_active := and $is_active_section (eq $slug $page_slug) -}}
         {{- $href := printf "/%s/%s/" $section_slug $page_slug }}
 
-        <a class="list-item list-item-action{{ if $is_active }} active{{ end }}" href="{{ $href }}"><span class="list-item-label">{{ $page.title }}</span></a>
+        <a class="list-item{{ if $is_active }} active{{ end }}" href="{{ $href }}"><span class="list-item-label">{{ $page.title }}</span></a>
       {{- end }}
     </nav>
   {{- end }}
