@@ -75,7 +75,7 @@ As a result of the use of CSS variable to style the colors, any element that res
   <div class="alert-message">
     <p>Look at this alert message! <a href="#">Link</a> is color-matched.</p>
     <progress class="progress mb-3" value="50" max="100">50%</progress>
-    <div class="btn-toolbar">
+    <div class="toolbar">
       <div class="btn-group">
         <button type="button" class="btn btn-color">Colored</button>
         <button type="button" class="btn btn-hover">On hover</button>
@@ -88,7 +88,7 @@ As a result of the use of CSS variable to style the colors, any element that res
   <div class="alert-message">
     <p>Look at this alert message! <a href="#">Link</a> is color-matched.</p>
     <progress class="progress mb-3" value="50" max="100">50%</progress>
-    <div class="btn-toolbar">
+    <div class="toolbar">
       <div class="btn-group">
         <button type="button" class="btn btn-color">Colored</button>
         <button type="button" class="btn btn-hover">On hover</button>
