@@ -29,7 +29,7 @@
   &[type="file"] {
     overflow: hidden;
 
-    &:not(:disabled):not([readonly]) {
+    &:not(:disabled, [readonly]) {
       cursor: pointer;
     }
   }
@@ -49,7 +49,7 @@
     margin: (-$spacer * .5) ($spacer * .75) (-$spacer * .5) (-$spacer * .875);
   }
 
-  &:hover:not(:disabled):not([readonly])::file-selector-button {
+  &:hover:not(:disabled, [readonly])::file-selector-button {
     background-color: var(--grey-200);
   }
 }

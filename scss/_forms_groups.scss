@@ -24,6 +24,22 @@
     }
   }
 
+  & > :not(:first-child, .btn, .input-addon) {
+    border-left: none;
+
+    &.input {
+      padding-left: $spacer * .5;
+    }
+  }
+
+  & > :not(:last-child, .btn, .input-addon) {
+    border-right: none;
+
+    &.input {
+      padding-right: $spacer * .5;
+    }
+  }
+
   > .form-floating {
     position: relative;
     flex: 1 1 auto;
@@ -100,22 +116,6 @@
     .input-addon {
       background-color: var(--color-100, var(--accent-100));
       border-color: var(--color-200a, var(--accent-200a));
-    }
-  }
-
-  & > :not(:first-child):not(.btn):not(.input-addon) {
-    border-left: none;
-
-    &.input {
-      padding-left: $spacer * .5;
-    }
-  }
-
-  & > :not(:last-child):not(.btn):not(.input-addon) {
-    border-right: none;
-
-    &.input {
-      padding-right: $spacer * .5;
     }
   }
 
