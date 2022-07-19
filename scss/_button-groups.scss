@@ -33,14 +33,3 @@
     @extend .btn-lg;
   }
 }
-
-.btn-toolbar {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-
-  > .btn:not(:last-child),
-  > .btn-group:not(:last-child) {
-    margin-right: .5rem;
-  }
-}
