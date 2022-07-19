@@ -3,8 +3,17 @@
   justify-content: flex-start;
   flex-wrap: wrap;
 
-  > .btn:not(:last-child),
-  > .btn-group:not(:last-child) {
+  > :not(:last-child) {
     margin-right: .5rem;
+  }
+
+  > .input,
+  > .input-group > .input {
+    display: inline-block;
+    width: initial;
+  }
+
+  > .input-group {
+    width: initial;
   }
 }
