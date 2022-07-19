@@ -24,6 +24,20 @@ You can combine multiple `btn-groups` into a `toolbar`. You can a also include a
 </div>
 {{</example>}}
 
+## Text
+You can also insert text into a toolbar. Text won't have any margin applied by default.
+
+{{<example>}}
+<div class="toolbar" role="toolbar">
+  <p class="fs-h5">Toolbar</p>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Bold</button>
+    <button type="button" class="btn btn-default">Italic</button>
+  </div>
+  <button type="button" class="btn btn-danger">Delete</button>
+</div>
+{{</example>}}
+
 ## Inputs
 You can insert other elements into a toolbar too, like inputs and input groups.
 
@@ -101,6 +115,9 @@ Since a toolbar is an advanced flex component, you can use flex classes to align
   <button type="button" class="btn btn-danger">Delete</button>
 </div>
 <div class="toolbar" role="toolbar">
+  <p class="fs-h5">Toolbar</p>
+  <button type="button" class="btn btn-default">Edit</button>
+  <div class="flex-grow-1"></div>
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-default">Bold</button>
     <button type="button" class="btn btn-default">Italic</button>
@@ -109,7 +126,6 @@ Since a toolbar is an advanced flex component, you can use flex classes to align
     <button type="button" class="btn btn-default">Align</button>
     <button type="button" class="btn btn-default">None</button>
   </div>
-  <div class="flex-grow-1"></div>
   <button type="button" class="btn btn-danger">Delete</button>
 </div>
 {{</example>}}
