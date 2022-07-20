@@ -46,6 +46,9 @@ body {
   --light: initial;
   --dark: ;
 
+  // System colors
+  --system-10: #{ light-dark(rgba($dark, .1), rgba($light, .1)) };
+
   // Colors
   @each $name, $color in $colors {
     --#{$name}-50: #{ light-dark(tint($color, 96%), shade($color, 80%)) };
