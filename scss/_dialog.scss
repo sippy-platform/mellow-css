@@ -40,7 +40,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $spacer * .75 $spacer * .75 0;
+  padding: $spacer * .75 $spacer * 1 0;
 
   .dialog-title {
     margin: 0;
@@ -48,7 +48,7 @@
 }
 
 .dialog-body {
-  padding: $spacer * .75;
+  padding: $spacer * 1;
 
   :last-child {
     margin-bottom: 0;
@@ -59,6 +59,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $spacer * .75;
+  padding: $spacer * 1;
   border-top: $border-width solid $border-color;
 }
