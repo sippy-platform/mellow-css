@@ -43,7 +43,7 @@
   }
 }
 
-@mixin rfs($min-font-size, $max-font-size) {
+@mixin rfs($min-font-size, $max-font-size, $heading) {
   $rfs-min-vw-rem: calc((#{ $rfs-min-vw } / 16) * 1rem);
   $rfs-rise: #{ $max-font-size - $min-font-size };
   $rfs-run: calc((#{ $rfs-max-vw } / 16) - (#{ $rfs-min-vw } / 16));
@@ -53,5 +53,5 @@
   $max-font-size-rem: calc(#{ $max-font-size } * 1rem);
   $fluid-font-size-rem: calc(#{ $rfs-slope } * (100vw - #{ $rfs-min-vw-rem }) + #{ $min-font-size-rem });
 
-  font-size: clamp($min-font-size-rem, $fluid-font-size-rem, $max-font-size-rem);
+  --fs-#{$heading}: #{ clamp($min-font-size-rem, $fluid-font-size-rem, $max-font-size-rem) };
 }
