@@ -18,7 +18,7 @@
 // Heading, and heading classes
 @each $heading, $font-size in $font-sizes-heading {
   #{$heading} {
-    @include rfs(map-get($font-size, "min"), map-get($font-size, "max"));
+    font-size: var(--fs-#{$heading});
   }
 }
 
@@ -54,8 +54,7 @@
 
 // Text
 .lead {
-  @include rfs(map-get($font-size-lead, "min"), map-get($font-size-lead, "max"));
-
+  font-size: var(--fs-lead);
   font-weight: 600;
 }
 
@@ -67,8 +66,7 @@ small,
 // Marketing classes
 @each $marketing, $font-size in $font-sizes-marketing {
   .marketing-#{$marketing} {
-    @include rfs(map-get($font-size, "min"), map-get($font-size, "max"));
-
+    font-size: var(--fs-m#{$marketing});
     font-weight: 500;
   }
 }

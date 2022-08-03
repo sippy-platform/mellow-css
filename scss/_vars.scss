@@ -19,6 +19,16 @@
   --titlebar-top-safe-space: env(titlebar-area-y, 0);
   --titlebar-height: env(titlebar-area-height, 33px);
   --titlebar-width: env(titlebar-area-width, 100%);
+
+  @each $heading, $font-size in $font-sizes-heading {
+    @include rfs(map-get($font-size, "min"), map-get($font-size, "max"), $heading);
+  }
+
+  @each $marketing, $font-size in $font-sizes-marketing {
+    @include rfs(map-get($font-size, "min"), map-get($font-size, "max"), "m#{$marketing}");
+  }
+
+  @include rfs(map-get($font-size-lead, "min"), map-get($font-size-lead, "max"), "lead");
 }
 
 // Dark mode
