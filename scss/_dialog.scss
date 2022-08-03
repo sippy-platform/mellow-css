@@ -24,15 +24,15 @@
   }
 
   &.dialog-sm {
-    --dialog-max-width: $dialog-sm;
+    --dialog-max-width: #{ $dialog-sm };
   }
 
   &.dialog-lg {
-    --dialog-max-width: $dialog-lg;
+    --dialog-max-width: #{ $dialog-lg };
   }
 
   &.dialog-xl {
-    --dialog-max-width: $dialog-xl;
+    --dialog-max-width: #{ $dialog-xl };
   }
 }
 
