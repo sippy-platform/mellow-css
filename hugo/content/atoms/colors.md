@@ -54,7 +54,7 @@ Many of the components that use color will support the usage of color classes to
   </div>
   <div class="color blue">
     <h5>Blue</h5>
-    <div class="label label-plated">#0068d8</div>
+    <div class="label label-plated">#007bff</div>
     <div class="color-swatch"></div>
   </div>
   <div class="color indigo">
@@ -104,7 +104,7 @@ By default, `accent` will behave the same as `blue`.
 <div class="grid grid-2 grid-sm-4">
   <div class="color accent">
     <h5>Accent</h5>
-    <div class="label label-plated">#0068d8</div>
+    <div class="label label-plated">#007bff</div>
     <div class="color-swatch"></div>
   </div>
 </div>
