@@ -141,16 +141,17 @@ A color map is made out of a color palette from `50` to `900`, with `200a`, `400
 {{<example show_preview="false" lang="scss">}}
 @each $name, $color in $colors {
   .#{$name} {
-    --color-50: #{ light-dark(tint($color, 96%), shade($color, 80%)) };
-    --color-100: #{ light-dark(tint($color, 92%), shade($color, 74%)) };
-    --color-200: #{ light-dark(tint($color, 87%), shade($color, 67%)) };
-    --color-300: #{ light-dark(tint($color, 80%), shade($color, 63%)) };
-    --color-400: #{ light-dark(tint($color, 70%), shade($color, 52%)) };
-    --color-500: #{ light-dark(tint($color, 28%), shade($color, 26%)) };
-    --color-600: #{ $color };
-    --color-700: #{ light-dark(shade($color, 7%), tint($color, 7%)) };
-    --color-800: #{ light-dark(shade($color, 22%), tint($color, 20%)) };
+    --color-50: #{ light-dark(tint($color, 96%), shade($color, 74%)) };
+    --color-100: #{ light-dark(tint($color, 92%), shade($color, 67%)) };
+    --color-200: #{ light-dark(tint($color, 87%), shade($color, 63%)) };
+    --color-300: #{ light-dark(tint($color, 80%), shade($color, 52%)) };
+    --color-400: #{ light-dark(tint($color, 70%), shade($color, 26%)) };
+    --color-500: #{ light-dark(tint($color, 28%), $color) };
+    --color-600: #{ light-dark($color, tint($color, 20%)) };
+    --color-700: #{ light-dark(shade($color, 7%), tint($color, 43%)) };
+    --color-800: #{ light-dark(shade($color, 22%), tint($color, 65%)) };
     --color-900: #{ light-dark(shade($color, 70%), tint($color, 87%)) };
+    --color-50a: #{ rgba($color, .05) };
     --color-200a: #{ rgba($color, .1) };
     --color-400a: #{ rgba($color, .3) };
     --color-text: #{ color-contrast($color) };
