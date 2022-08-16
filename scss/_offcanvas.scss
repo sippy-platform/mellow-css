@@ -4,7 +4,7 @@
   @include breakpoint-max-width($breakpoint, $grid-breakpoints) {
     .offcanvas#{$breakpoint-infix} {
       position: fixed;
-      background-color: var(--acrylic-fallback-background);
+      background-color: var(--dialog-background);
       z-index: 1050;
       display: flex;
       flex-direction: column;
@@ -17,11 +17,6 @@
       border-color: $border-color;
       border-width: var(--offcanvas-border-width, 0 $border-width 0 0);
       border-style: solid;
-
-      @supports (backdrop-filter: blur(15px) saturate(350%)) {
-        background-color: var(--acrylic-background);
-        backdrop-filter: blur(15px) saturate(250%);
-      }
 
       &.offcanvas-animate {
         visibility: hidden;
