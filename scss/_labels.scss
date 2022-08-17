@@ -1,11 +1,11 @@
 .label {
   border-radius: $border-radius;
   font-size: .85em;
-  background-color: var(--color-200, var(--grey-200));
-  border: $border-width solid var(--color-200, var(--grey-200));
+  background-color: var(--color-200, var(--accent-200));
+  border: $border-width solid var(--color-200, var(--accent-200));
   font-weight: 600;
   padding: 0 $spacer * .375;
-  color: var(--color-800, var(--grey-800));
+  color: var(--color-800, var(--accent-800));
 
   &.rounded-pill {
     padding: 0 $spacer * .5;
@@ -13,12 +13,12 @@
 }
 
 .label-outlined {
-  border-color: var(--color-500, var(--grey-500));
+  border-color: var(--color-500, var(--accent-500));
   background-color: transparent;
 }
 
 .label-solid {
-  border-color: var(--color-600, var(--grey-500));
-  background-color: var(--color-600, var(--grey-500));
-  color: var(--color-text, var(--grey-text));
+  border-color: var(--color-600, var(--accent-600));
+  background-color: var(--color-600, var(--accent-600));
+  color: var(--color-text, var(--accent-text));
 }
