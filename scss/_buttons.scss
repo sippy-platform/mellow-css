@@ -73,13 +73,13 @@
 
   &:hover {
     color: var(--color-text);
-    background-color: var(--color-700);
+    background-color: #{ light-dark(var(--color-700), var(--color-500)) };
   }
 
   &:active,
   &.active {
     color: var(--color-text);
-    background-color: var(--color-800);
+    background-color: #{ light-dark(var(--color-700), var(--color-400)) };
   }
 }
 
@@ -93,13 +93,13 @@
 
   &:hover {
     color: var(--color-text);
-    background-color: var(--color-600);
+    background-color: #{ light-dark(var(--color-700), var(--color-500)) };
   }
 
   &:active,
   &.active {
     color: var(--color-text);
-    background-color: var(--color-700);
+    background-color: #{ light-dark(var(--color-700), var(--color-400)) };
   }
 }
 
