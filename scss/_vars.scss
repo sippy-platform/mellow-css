@@ -91,19 +91,19 @@ body {
 
 @each $name, $color in $colors {
   .#{$name} {
-    --color-50: var(--#{$name}-50);
-    --color-100: var(--#{$name}-100);
-    --color-200: var(--#{$name}-200);
-    --color-300: var(--#{$name}-300);
-    --color-400: var(--#{$name}-400);
-    --color-500: var(--#{$name}-500);
-    --color-600: var(--#{$name}-600);
-    --color-700: var(--#{$name}-700);
-    --color-800: var(--#{$name}-800);
-    --color-900: var(--#{$name}-900);
-    --color-50a: var(--#{$name}-50a);
-    --color-200a: var(--#{$name}-200a);
-    --color-400a: var(--#{$name}-400a);
-    --color-text: var(--#{$name}-text);
+    --color-50: #{ light-dark(tint($color, 96%), shade($color, 74%)) };
+    --color-100: #{ light-dark(tint($color, 92%), shade($color, 67%)) };
+    --color-200: #{ light-dark(tint($color, 87%), shade($color, 63%)) };
+    --color-300: #{ light-dark(tint($color, 80%), shade($color, 52%)) };
+    --color-400: #{ light-dark(tint($color, 70%), shade($color, 26%)) };
+    --color-500: #{ light-dark(tint($color, 28%), $color) };
+    --color-600: #{ light-dark($color, tint($color, 20%)) };
+    --color-700: #{ light-dark(shade($color, 7%), tint($color, 41%)) };
+    --color-800: #{ light-dark(shade($color, 22%), tint($color, 62%)) };
+    --color-900: #{ light-dark(shade($color, 70%), tint($color, 83%)) };
+    --color-50a: #{ rgba($color, .05) };
+    --color-200a: #{ rgba($color, .15) };
+    --color-400a: #{ rgba($color, .3) };
+    --color-text: #{ light-dark(color-contrast($color), color-contrast(tint($color, 26%))) };
   }
 }
