@@ -24,7 +24,7 @@
   .bottom-bar-item-icon {
     /* stylelint-disable-next-line color-function-notation */
     color: #{ light-dark((0, 0, 0), (255, 255, 255)) };
-    margin-block: .125rem;
+    margin-block: .25rem;
   }
 
   &.active {
@@ -41,6 +41,6 @@
   overflow: hidden;
   white-space: nowrap;
   max-width: 100%;
-  padding: 0 .75rem;
+  padding: 0 .5rem;
   text-align: center;
 }
