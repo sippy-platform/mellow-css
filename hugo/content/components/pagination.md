@@ -90,7 +90,7 @@ Aligning the pagination can be done through its parent.
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#" aria-label="Next"><i class="vi vi-angle-right"></i></a></li>
   </ul>
-</nav> 
+</nav>
 <nav class="d-flex justify-content-end" aria-label="Pagination navigation" role="navigation">
   <ul class="pagination">
     <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><i class="vi vi-angle-left"></i></a></li>
