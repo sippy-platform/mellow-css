@@ -1,5 +1,8 @@
 /**
- * Based on Boostrap v5.1.3 - tab.js - MIT
+ * --------------------------------------------------------------------------
+ * Bootstrap (v5.2.0): util/focustrap.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
  */
 
 import EventHandler from '../dom/event-handler';
@@ -21,13 +24,13 @@ const TAB_NAV_FORWARD = 'forward';
 const TAB_NAV_BACKWARD = 'backward';
 
 const Default = {
+  autofocus: true,
   trapElement: null, // The element to trap focus inside of
-  autofocus: true
 };
 
 const DefaultType = {
+  autofocus: 'boolean',
   trapElement: 'element',
-  autofocus: 'boolean'
 };
 
 /**
@@ -57,19 +60,21 @@ class FocusTrap extends Config {
 
   // Public
   activate() {
-    const { trapElement, autofocus } = this._config;
-
     if (this._isActive) {
       return;
     }
 
-    if (autofocus) {
-      trapElement.focus();
+    if (this._config.autofocus) {
+      this._config.trapElement.focus();
     }
 
     EventHandler.off(document, EVENT_KEY); // guard against infinite focus loop
-    EventHandler.on(document, EVENT_FOCUSIN, event => this._handleFocusin(event));
-    EventHandler.on(document, EVENT_KEYDOWN_TAB, event => this._handleKeydown(event));
+    EventHandler.on(document, EVENT_FOCUSIN, (event) =>
+      this._handleFocusin(event)
+    );
+    EventHandler.on(document, EVENT_KEYDOWN_TAB, (event) =>
+      this._handleKeydown(event)
+    );
 
     this._isActive = true;
   }
@@ -85,10 +90,13 @@ class FocusTrap extends Config {
 
   // Private
   _handleFocusin(event) {
-    const { target } = event;
     const { trapElement } = this._config;
 
-    if (target === document || target === trapElement || trapElement.contains(target)) {
+    if (
+      event.target === document ||
+      event.target === trapElement ||
+      trapElement.contains(event.target)
+    ) {
       return;
     }
 
@@ -108,7 +116,9 @@ class FocusTrap extends Config {
       return;
     }
 
-    this._lastTabNavDirection = event.shiftKey ? TAB_NAV_BACKWARD : TAB_NAV_FORWARD;
+    this._lastTabNavDirection = event.shiftKey
+      ? TAB_NAV_BACKWARD
+      : TAB_NAV_FORWARD;
   }
 }
 

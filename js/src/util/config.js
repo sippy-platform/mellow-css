@@ -1,5 +1,8 @@
 /**
- * Based on Boostrap v5.1.3 - tab.js - MIT
+ * --------------------------------------------------------------------------
+ * Bootstrap (v5.2.0): util/config.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
  */
 
 import { isElement, toType } from './index';
@@ -20,7 +23,9 @@ class Config {
   }
 
   static get NAME() {
-    throw new Error('You have to implement the static method "NAME", for each component!');
+    throw new Error(
+      'You have to implement the static method "NAME", for each component!'
+    );
   }
 
   _getConfig(config) {
@@ -35,10 +40,15 @@ class Config {
   }
 
   _mergeConfigObj(config, element) {
+    const jsonConfig = isElement(element)
+      ? Manipulator.getDataAttribute(element, 'config')
+      : {}; // try to parse
+
     return {
       ...this.constructor.Default,
+      ...(typeof jsonConfig === 'object' ? jsonConfig : {}),
       ...(isElement(element) ? Manipulator.getDataAttributes(element) : {}),
-      ...(typeof config === 'object' ? config : {})
+      ...(typeof config === 'object' ? config : {}),
     };
   }
 

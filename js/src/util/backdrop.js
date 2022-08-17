@@ -1,5 +1,8 @@
 /**
- * Based on Boostrap v5.1.3 - tab.js - MIT
+ * --------------------------------------------------------------------------
+ * Bootstrap (v5.2.0): util/backdrop.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
  */
 
 import EventHandler from '../dom/event-handler';
@@ -17,18 +20,18 @@ const EVENT_MOUSEDOWN = `mousedown.mellow.${NAME}`;
 
 const Default = {
   className: 'modal-backdrop',
-  isVisible: true, // if false, we use the backdrop helper without adding any element to the dom
+  clickCallback: null,
   isAnimated: false,
+  isVisible: true, // if false, we use the backdrop helper without adding any element to the dom
   rootElement: 'body', // give the choice to place backdrop under different elements
-  clickCallback: null
 };
 
 const DefaultType = {
   className: 'string',
-  isVisible: 'boolean',
+  clickCallback: '(function|null)',
   isAnimated: 'boolean',
+  isVisible: 'boolean',
   rootElement: '(element|string)',
-  clickCallback: '(function|null)'
 };
 
 /**
@@ -65,11 +68,12 @@ class Backdrop extends Config {
 
     this._append();
 
+    const element = this._getElement();
     if (this._config.isAnimated) {
-      reflow(this._getElement());
+      reflow(element);
     }
 
-    this._getElement().classList.add(CLASS_NAME_SHOW);
+    element.classList.add(CLASS_NAME_SHOW);
 
     this._emulateAnimation(() => {
       execute(callback);
@@ -127,9 +131,10 @@ class Backdrop extends Config {
       return;
     }
 
-    this._config.rootElement.append(this._getElement());
+    const element = this._getElement();
+    this._config.rootElement.append(element);
 
-    EventHandler.on(this._getElement(), EVENT_MOUSEDOWN, () => {
+    EventHandler.on(element, EVENT_MOUSEDOWN, () => {
       execute(this._config.clickCallback);
     });
 
@@ -137,7 +142,11 @@ class Backdrop extends Config {
   }
 
   _emulateAnimation(callback) {
-    executeAfterTransition(callback, this._getElement(), this._config.isAnimated);
+    executeAfterTransition(
+      callback,
+      this._getElement(),
+      this._config.isAnimated
+    );
   }
 }
 
