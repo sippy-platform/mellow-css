@@ -36,8 +36,8 @@ $utilities: (
         "transparent": transparent,
         "light": $light,
         "dark": $dark,
-        "system": light-dark($light, $dark),
-        "system-inverse": light-dark($dark, $light),
+        "system": $system,
+        "system-inverse": $system-inverse,
         "accent": $accent,
         "white": #fff
       )

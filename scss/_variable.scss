@@ -29,6 +29,8 @@ $accent:              $blue;
 $light:               tint($grey, 92%);
 $muted:               $grey;
 $dark:                shade($grey, 84%);
+$system:              light-dark($light, $dark);
+$system-inverse:      light-dark($dark, $light);
 
 $body-text:           var(--body-text);
 $body-bg:             var(--body-background);
