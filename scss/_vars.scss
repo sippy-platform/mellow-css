@@ -67,10 +67,10 @@ body {
     --#{$name}-300: #{ light-dark(tint($color, 80%), shade($color, 52%)) };
     --#{$name}-400: #{ light-dark(tint($color, 70%), shade($color, 26%)) };
     --#{$name}-500: #{ light-dark(tint($color, 28%), $color) };
-    --#{$name}-600: #{ light-dark($color, tint($color, 26%)) };
-    --#{$name}-700: #{ light-dark(shade($color, 7%), tint($color, 48%)) };
-    --#{$name}-800: #{ light-dark(shade($color, 22%), tint($color, 68%)) };
-    --#{$name}-900: #{ light-dark(shade($color, 70%), tint($color, 88%)) };
+    --#{$name}-600: #{ light-dark($color, tint($color, 20%)) };
+    --#{$name}-700: #{ light-dark(shade($color, 7%), tint($color, 41%)) };
+    --#{$name}-800: #{ light-dark(shade($color, 22%), tint($color, 62%)) };
+    --#{$name}-900: #{ light-dark(shade($color, 70%), tint($color, 83%)) };
     --#{$name}-50a: #{ rgba($color, .05) };
     --#{$name}-200a: #{ rgba($color, .15) };
     --#{$name}-400a: #{ rgba($color, .3) };
