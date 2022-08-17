@@ -24,7 +24,8 @@
   .bottom-bar-item-icon {
     /* stylelint-disable-next-line color-function-notation */
     color: #{ light-dark((0, 0, 0), (255, 255, 255)) };
-    margin-block: .25rem;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
   }
 
   &.active {

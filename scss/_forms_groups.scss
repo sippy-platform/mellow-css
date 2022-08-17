@@ -68,7 +68,8 @@
   .btn {
     position: relative;
     z-index: 2;
-    padding-block: $spacer * .3125;
+    padding-top: $spacer * .3125;
+    padding-bottom: $spacer * .3125;
 
     &:first-child {
       border-left: none;
@@ -101,7 +102,8 @@
     font-size: 1rem;
     display: flex;
     align-items: center;
-    padding-inline: $spacer * .5;
+    padding-left: $spacer * .5;
+    padding-right: $spacer * .5;
     line-height: 1.5;
     color: var(--grey-900);
     text-align: center;
