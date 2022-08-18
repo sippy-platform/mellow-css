@@ -21,7 +21,7 @@ Mellow's dialog uses the `dialog` element, this native HTML element is supported
     <button value="cancel" class="btn btn-danger"><i class="vi vi-xmark"></i> Close</button>
   </form>
 </dialog>
-<button class="btn btn-default" onclick="window.exampleDialog.showModal();">Open dialog</button>
+<button class="btn btn-default" type="button" onclick="window.exampleDialog.showModal();">Open dialog</button>
 {{</example>}}
 
 ### `show()` and `showModal()`
@@ -40,15 +40,15 @@ The `showModal()` method does everything the `show()` method does, but also resp
     <p>This dialog can be closed with the <kb>esc</kb> button.</p>
   </div>
 </dialog>
-<button class="btn btn-default" onclick="window.showDialog.showModal();">Use show()</button>
-<button class="btn btn-default" onclick="window.showDialog.showModal();">Use showModal()</button>
+<button class="btn btn-default" type="button" onclick="window.showDialog.show();">Use show()</button>
+<button class="btn btn-default" type="button" onclick="window.showDialog.showModal();">Use showModal()</button>
 {{</example>}}
 
 ## Sizes
 {{<example>}}
-<button class="btn btn-default" onclick="window.smallDialog.showModal();">Open Small</button>
-<button class="btn btn-default" onclick="window.largeDialog.showModal();">Open Large</button>
-<button class="btn btn-default" onclick="window.extraLargeDialog.showModal();">Open Extra Large</button>
+<button class="btn btn-default" type="button" onclick="window.smallDialog.showModal();">Open Small</button>
+<button class="btn btn-default" type="button" onclick="window.largeDialog.showModal();">Open Large</button>
+<button class="btn btn-default" type="button" onclick="window.extraLargeDialog.showModal();">Open Extra Large</button>
 
 <dialog class="dialog dialog-sm" id="smallDialog">
   <form method="dialog" class="dialog-header">
