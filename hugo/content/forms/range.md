@@ -25,7 +25,7 @@ Like many other components, forms respond to color classes.
 
 {{<example>}}
 <form class="pink">
-  <label for="rangeInput" class="input-label">Range example</label>
-  <input type="range" class="input-range" id="rangeInput">
+  <label for="pinkRangeInput" class="input-label">Range example</label>
+  <input type="range" class="input-range" id="pinkRangeInput">
 </form>
 {{</example>}}
