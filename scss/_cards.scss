@@ -29,7 +29,7 @@
     padding: $spacer * .75 $spacer;
     border-bottom: $border-color solid $border-width;
     margin-bottom: 0;
-    background-color: var(--grey-100);
+    background-color: var(--grey-50);
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
@@ -37,7 +37,7 @@
   .card-footer {
     padding: $spacer * .75 $spacer;
     border-top: $border-color solid $border-width;
-    background-color: var(--grey-100);
+    background-color: var(--grey-50);
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
   }
