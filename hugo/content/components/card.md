@@ -109,8 +109,8 @@ Mellow includes modifier classes for images at the top and bottom of the card.
 <div class="card mb-3">
   <svg class="card-img-top" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
     <rect width="100%" height="100%" fill="#e6f0fb" />
-    <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
-    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>
+    <text x="32px" y="48px" fill="#007bff" font-size="18" font-weight="bold">Image</text>
+    <text x="32px" y="80px" fill="#007bff" font-size="14">Hello image</text>
   </svg>
 
   <div class="card-body">
@@ -120,8 +120,8 @@ Mellow includes modifier classes for images at the top and bottom of the card.
 <div class="card mb-3">
   <svg class="card-img" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
     <rect width="100%" height="100%" fill="#e6f0fb" />
-    <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
-    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>
+    <text x="32px" y="48px" fill="#007bff" font-size="18" font-weight="bold">Image</text>
+    <text x="32px" y="80px" fill="#007bff" font-size="14">Hello image</text>
   </svg>
 </div>
 <div class="card">
@@ -130,8 +130,8 @@ Mellow includes modifier classes for images at the top and bottom of the card.
   </div>
   <svg class="card-img-bottom" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
     <rect width="100%" height="100%" fill="#e6f0fb" />
-    <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
-    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>
+    <text x="32px" y="48px" fill="#007bff" font-size="18" font-weight="bold">Image</text>
+    <text x="32px" y="80px" fill="#007bff" font-size="14">Hello image</text>
   </svg>
 </div>
 {{</example>}}
@@ -221,8 +221,8 @@ By applying a `flex-row` class to a card, you can turn the cards content horizon
 <div class="card flex-row mb-3">
   <svg class="border-radius-start w-25" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
     <rect width="100%" height="100%" fill="#e6f0fb" />
-    <text x="32px" y="48px" fill="#0068d8" font-size="18" font-weight="bold">Image</text>
-    <text x="32px" y="80px" fill="#0068d8" font-size="14">Hello image</text>
+    <text x="32px" y="48px" fill="#007bff" font-size="18" font-weight="bold">Image</text>
+    <text x="32px" y="80px" fill="#007bff" font-size="14">Hello image</text>
   </svg>
 
   <div class="card-body">

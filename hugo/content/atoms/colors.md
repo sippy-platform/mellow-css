@@ -54,7 +54,7 @@ Many of the components that use color will support the usage of color classes to
   </div>
   <div class="color blue">
     <h5>Blue</h5>
-    <div class="label label-plated">#0068d8</div>
+    <div class="label label-plated">#007bff</div>
     <div class="color-swatch"></div>
   </div>
   <div class="color indigo">
@@ -89,7 +89,7 @@ Many of the components that use color will support the usage of color classes to
   </div>
   <div class="color grey">
     <h5>Grey</h5>
-    <div class="label label-plated">#6b707a</div>
+    <div class="label label-plated">#616a7a</div>
     <div class="color-swatch"></div>
   </div>
 </div>
@@ -104,7 +104,7 @@ By default, `accent` will behave the same as `blue`.
 <div class="grid grid-2 grid-sm-4">
   <div class="color accent">
     <h5>Accent</h5>
-    <div class="label label-plated">#0068d8</div>
+    <div class="label label-plated">#007bff</div>
     <div class="color-swatch"></div>
   </div>
 </div>
@@ -132,7 +132,8 @@ $colors: (
   "pink": $pink,
   "rose": $rose,
   "brown": $brown,
-  "grey": $grey
+  "grey": $grey,
+  "accent": $accent
 ) !default;
 {{</example>}}
 
@@ -140,37 +141,20 @@ A color map is made out of a color palette from `50` to `900`, with `200a`, `400
 
 {{<example show_preview="false" lang="scss">}}
 @each $name, $color in $colors {
-  .#{$name} {
-    --color-50: #{ light-dark(tint($color, 96%), shade($color, 80%)) };
-    --color-100: #{ light-dark(tint($color, 92%), shade($color, 74%)) };
-    --color-200: #{ light-dark(tint($color, 87%), shade($color, 67%)) };
-    --color-300: #{ light-dark(tint($color, 80%), shade($color, 63%)) };
-    --color-400: #{ light-dark(tint($color, 70%), shade($color, 52%)) };
-    --color-500: #{ light-dark(tint($color, 28%), shade($color, 26%)) };
-    --color-600: #{ $color };
-    --color-700: #{ light-dark(shade($color, 7%), tint($color, 7%)) };
-    --color-800: #{ light-dark(shade($color, 22%), tint($color, 20%)) };
-    --color-900: #{ light-dark(shade($color, 70%), tint($color, 87%)) };
-    --color-200a: #{ rgba($color, .1) };
-    --color-400a: #{ rgba($color, .3) };
-    --color-text: #{ color-contrast($color) };
-  }
-}
-
-.accent {
-  --color-50: #{ light-dark(tint($accent, 96%), shade($accent, 80%)) };
-  --color-100: #{ light-dark(tint($accent, 92%), shade($accent, 74%)) };
-  --color-200: #{ light-dark(tint($accent, 87%), shade($accent, 67%)) };
-  --color-300: #{ light-dark(tint($accent, 80%), shade($accent, 63%)) };
-  --color-400: #{ light-dark(tint($accent, 70%), shade($accent, 52%)) };
-  --color-500: #{ light-dark(tint($accent, 28%), shade($accent, 26%)) };
-  --color-600: #{ $accent };
-  --color-700: #{ light-dark(shade($accent, 7%), tint($accent, 7%)) };
-  --color-800: #{ light-dark(shade($accent, 22%), tint($accent, 20%)) };
-  --color-900: #{ light-dark(shade($accent, 70%), tint($accent, 87%)) };
-  --color-200a: #{ rgba($accent, .1) };
-  --color-400a: #{ rgba($accent, .3) };
-  --color-text: #{ color-contrast($accent) };
+  --#{$name}-50: #{ light-dark(tint($color, 96%), shade($color, 74%)) };
+  --#{$name}-100: #{ light-dark(tint($color, 92%), shade($color, 67%)) };
+  --#{$name}-200: #{ light-dark(tint($color, 87%), shade($color, 63%)) };
+  --#{$name}-300: #{ light-dark(tint($color, 80%), shade($color, 52%)) };
+  --#{$name}-400: #{ light-dark(tint($color, 70%), shade($color, 26%)) };
+  --#{$name}-500: #{ light-dark(tint($color, 28%), $color) };
+  --#{$name}-600: #{ light-dark($color, tint($color, 26%)) };
+  --#{$name}-700: #{ light-dark(shade($color, 7%), tint($color, 48%)) };
+  --#{$name}-800: #{ light-dark(shade($color, 22%), tint($color, 68%)) };
+  --#{$name}-900: #{ light-dark(shade($color, 70%), tint($color, 88%)) };
+  --#{$name}-50a: #{ rgba($color, .05) };
+  --#{$name}-200a: #{ rgba($color, .15) };
+  --#{$name}-400a: #{ rgba($color, .3) };
+  --#{$name}-text: #{ light-dark(color-contrast($color), color-contrast(tint($color, 26%))) };
 }
 {{</example>}}
 

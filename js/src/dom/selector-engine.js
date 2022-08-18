@@ -1,5 +1,8 @@
 /**
- * Based on Boostrap v5.1.3 - tab.js - MIT
+ * --------------------------------------------------------------------------
+ * Bootstrap (v5.2.0): dom/selector-engine.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
  */
 
 import { isDisabled, isVisible } from '../util/index';
@@ -8,11 +11,11 @@ import { isDisabled, isVisible } from '../util/index';
  * Constants
  */
 
-const NODE_TEXT = 3;
-
 const SelectorEngine = {
   find(selector, element = document.documentElement) {
-    return [].concat(...Element.prototype.querySelectorAll.call(element, selector));
+    return [].concat(
+      ...Element.prototype.querySelectorAll.call(element, selector)
+    );
   },
 
   findOne(selector, element = document.documentElement) {
@@ -20,19 +23,18 @@ const SelectorEngine = {
   },
 
   children(element, selector) {
-    return [].concat(...element.children).filter(child => child.matches(selector));
+    return []
+      .concat(...element.children)
+      .filter((child) => child.matches(selector));
   },
 
   parents(element, selector) {
     const parents = [];
-    let ancestor = element.parentNode;
+    let ancestor = element.parentNode.closest(selector);
 
-    while (ancestor && ancestor.nodeType === Node.ELEMENT_NODE && ancestor.nodeType !== NODE_TEXT) {
-      if (ancestor.matches(selector)) {
-        parents.push(ancestor);
-      }
-
-      ancestor = ancestor.parentNode;
+    while (ancestor) {
+      parents.push(ancestor);
+      ancestor = ancestor.parentNode.closest(selector);
     }
 
     return parents;
@@ -51,7 +53,7 @@ const SelectorEngine = {
 
     return [];
   },
-
+  // TODO: this is now unused; remove later along with prev()
   next(element, selector) {
     let next = element.nextElementSibling;
 
@@ -75,11 +77,15 @@ const SelectorEngine = {
       'select',
       'details',
       '[tabindex]',
-      '[contenteditable="true"]'
-    ].map(selector => `${selector}:not([tabindex^="-"])`).join(', ');
+      '[contenteditable="true"]',
+    ]
+      .map((selector) => `${selector}:not([tabindex^="-"])`)
+      .join(',');
 
-    return this.find(focusables, element).filter(el => !isDisabled(el) && isVisible(el));
-  }
+    return this.find(focusables, element).filter(
+      (el) => !isDisabled(el) && isVisible(el)
+    );
+  },
 };
 
 export default SelectorEngine;

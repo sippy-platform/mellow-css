@@ -29,11 +29,37 @@ A basic navigation bar can contain a brand, and 2 lists of links.
 </nav>
 {{</example>}}
 
-### Dark
+### Dark theme
 Swap out the `nav-light` and `bg-light` classes for `nav-dark` and `bg-dark` to get a dark navigation bar.
 
 {{<example>}}
 <nav class="nav nav-dark bg-dark">
+  <div class="container">
+    <ul class="nav-bar me-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+    </ul>
+    <ul class="nav-bar">
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{{</example>}}
+
+### System theme
+Swap out the `nav-light` and `bg-light` classes for `nav-system` and `bg-system` to get a navigation bar that follows the system theme.
+
+{{<example>}}
+<nav class="nav nav-system bg-system">
   <div class="container">
     <ul class="nav-bar me-auto">
       <li class="nav-item">
@@ -141,7 +167,7 @@ You can put a button in the `nav-item`.
 Instead of just a button, an entire form can be used as well:
 
 {{<example>}}
-<nav class="nav nav-light bg-light">
+<nav class="nav nav-system bg-system">
   <div class="container">
     <a class="nav-brand" href="#">Mellow</a>
     <ul class="nav-bar me-auto">

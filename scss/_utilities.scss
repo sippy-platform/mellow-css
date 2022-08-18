@@ -36,9 +36,8 @@ $utilities: (
         "transparent": transparent,
         "light": $light,
         "dark": $dark,
-        "system": light-dark($light, $dark),
-        "system-inverse": light-dark($dark, $light),
-        "accent": $accent,
+        "system": $system,
+        "system-inverse": $system-inverse,
         "white": #fff
       )
     ),
@@ -70,7 +69,6 @@ $utilities: (
         "dark": $dark,
         "system": light-dark($light, $dark),
         "system-inverse": light-dark($dark, $light),
-        "accent": $accent,
         "white": #fff,
         "reset": inherit,
       )
@@ -104,7 +102,6 @@ $utilities: (
         "dark": $dark,
         "system": light-dark($light, $dark),
         "system-inverse": light-dark($dark, $light),
-        "accent": $accent,
         "white": #fff,
         "reset": inherit
       )

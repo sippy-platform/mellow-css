@@ -8,6 +8,7 @@
   border: $border-color 1px solid;
   border-radius: $border-radius;
   transition: $base-transition;
+  overflow: hidden;
 
   > .input {
     position: relative;
@@ -22,6 +23,12 @@
       border: none;
       box-shadow: none;
     }
+  }
+
+  &:focus-within {
+    outline: 0;
+    border-color: var(--color-600, var(--accent-600));
+    box-shadow: 0 0 0 3px var(--color-400a, var(--accent-400a));
   }
 
   & > :not(:first-child, .btn, .input-addon) {
@@ -61,8 +68,8 @@
   .btn {
     position: relative;
     z-index: 2;
-    border-top: none;
-    border-bottom: none;
+    padding-top: $spacer * .3125;
+    padding-bottom: $spacer * .3125;
 
     &:first-child {
       border-left: none;
@@ -95,27 +102,21 @@
     font-size: 1rem;
     display: flex;
     align-items: center;
-    padding: $spacer * .125 $spacer * .5;
+    padding-left: $spacer * .5;
+    padding-right: $spacer * .5;
     line-height: 1.5;
     color: var(--grey-900);
     text-align: center;
     white-space: nowrap;
     background-color: var(--grey-100);
-    border-radius: calc($border-radius - 2.5px);
-    border: 1px solid var(--grey-200a);
-    height: calc(100% - .25rem);
-    margin-left: .125rem;
-    align-self: center;
-  }
+    align-self: stretch;
 
-  &:focus-within {
-    outline: 0;
-    border-color: var(--color-600, var(--accent-600));
-    box-shadow: 0 0 0 3px var(--color-400a, var(--accent-400a));
+    &:not(:first-child) {
+      border-left: 1px solid var(--grey-200a);
+    }
 
-    .input-addon {
-      background-color: var(--color-100, var(--accent-100));
-      border-color: var(--color-200a, var(--accent-200a));
+    &:not(:last-child) {
+      border-right: 1px solid var(--grey-200a);
     }
   }
 

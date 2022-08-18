@@ -85,17 +85,3 @@ You can also alter the color of only 1 pivot item.
   <a class="pivot-link disabled">Disabled</a>
 </nav>
 {{</example>}}
-
-## Tabs
-{{<example>}}
-<nav class="pivot pivot" id="myTab" role="tablist">
-  <button class="pivot-link active" id="home-tab" data-mellow-toggle="tab" data-mellow-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-  <button class="pivot-link" id="profile-tab" data-mellow-toggle="tab" data-mellow-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-  <button class="pivot-link" id="contact-tab" data-mellow-toggle="tab" data-mellow-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-</nav>
-<div class="tab-box mt-3" id="tabbox">
-  <div class="tab-content show active" id="home" role="tabpanel" aria-labelledby="home-tab">Home</div>
-  <div class="tab-content" id="profile" role="tabpanel" aria-labelledby="profile-tab">Profile</div>
-  <div class="tab-content" id="contact" role="tabpanel" aria-labelledby="contact-tab">Contact</div>
-</div>
-{{</example>}}

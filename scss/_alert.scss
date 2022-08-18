@@ -6,15 +6,15 @@
   border: 1px solid $border-color;
   border-left-width: 3px;
   border-radius: $border-radius;
-  border-left-color: var(--color-600, $border-color);
+  border-left-color: var(--color-600, var(--accent-600));
   align-items: center;
   justify-content: flex-start;
 
   a {
-    color: var(--color-700);
+    color: var(--color-700, var(--accent-700));
 
     &:hover {
-      color: var(--color-800);
+      color: var(--color-800, var(--accent-800));
     }
   }
 }

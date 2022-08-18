@@ -76,7 +76,7 @@
 .docs-footer {
   grid-area: footer;
   border-top: 1px solid var(--grey-300);
-  background-color: var(--grey-50);
+  background-color: $system;
 }
 
 .docs-page {

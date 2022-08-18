@@ -41,6 +41,20 @@
     border-radius: 1rem;
   }
 
+  &::-moz-range-progress {
+    width: 100%;
+    height: .5rem;
+    background-color: var(--color-500, var(--accent-500));
+    border-radius: 1rem;
+  }
+
+  &::-ms-fill-lower {
+    width: 100%;
+    height: .5rem;
+    background-color: var(--color-500, var(--accent-500));
+    border-radius: 1rem;
+  }
+
   &:focus {
     outline: 0;
 

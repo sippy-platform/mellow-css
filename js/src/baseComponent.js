@@ -1,5 +1,8 @@
 /**
- * Based on Boostrap v5.1.3 - tab.js - MIT
+ * --------------------------------------------------------------------------
+ * Bootstrap (v5.2.0): base-component.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
  */
 
 import Data from './dom/data';
@@ -11,7 +14,7 @@ import Config from './util/config';
  * Constants
  */
 
-const VERSION = '0.1.0';
+const VERSION = '5.2.0';
 
 /**
  * Class definition
@@ -59,7 +62,10 @@ class BaseComponent extends Config {
   }
 
   static getOrCreateInstance(element, config = {}) {
-    return this.getInstance(element) || new this(element, typeof config === 'object' ? config : null);
+    return (
+      this.getInstance(element) ||
+      new this(element, typeof config === 'object' ? config : null)
+    );
   }
 
   static get VERSION() {
@@ -72,6 +78,10 @@ class BaseComponent extends Config {
 
   static get EVENT_KEY() {
     return `.${this.DATA_KEY}`;
+  }
+
+  static eventName(name) {
+    return `${name}${this.EVENT_KEY}`;
   }
 }
 

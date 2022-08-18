@@ -15,20 +15,22 @@ $lime:                #7acc00 !default;
 $green:               #1ea835 !default;
 $teal:                #00d3b0 !default;
 $cyan:                #00b3d3 !default;
-$blue:                #0068d8 !default;
+$blue:                #007bff !default;
 $indigo:              #5560f7 !default;
 $violet:              #8055f7 !default;
 $purple:              #c455f7 !default;
 $pink:                #ec4899 !default;
 $rose:                #fd194b !default;
 $brown:               #a57041 !default;
-$grey:                #6b707a !default;
+$grey:                #616a7a !default;
 
 $accent:              $blue;
 
 $light:               tint($grey, 92%);
 $muted:               $grey;
-$dark:                shade($grey, 70%);
+$dark:                shade($grey, 84%);
+$system:              light-dark($light, $dark);
+$system-inverse:      light-dark($dark, $light);
 
 $body-text:           var(--body-text);
 $body-bg:             var(--body-background);
@@ -49,7 +51,8 @@ $colors: (
   "pink": $pink,
   "rose": $rose,
   "brown": $brown,
-  "grey": $grey
+  "grey": $grey,
+  "accent": $accent
 ) !default;
 
 $color-weights: (
@@ -186,7 +189,7 @@ $box-shadows: (
 ) !default;
 
 // Borders
-$border-color:        var(--grey-400) !default;
+$border-color:        var(--grey-300) !default;
 $border-width:        1px !default;
 $border-widths: (
   1: 1px,
@@ -202,8 +205,8 @@ $borders: (
 ) !default;
 
 $border-radius-sm:    .25rem !default;
-$border-radius:       .5rem !default;
-$border-radius-lg:    1rem !default;
+$border-radius:       .4rem !default;
+$border-radius-lg:    .8rem !default;
 $border-radius-pill:  50rem !default;
 $border-radia: (
   0: 0,

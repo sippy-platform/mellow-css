@@ -23,7 +23,7 @@ The bottom navigation is a great component for app-like navigation.
   </a>
   <a class="bottom-bar-item" aria-current="page">
     <i class="vi vi-ellipsis bottom-bar-item-icon"></i>
-    <span class="bottom-bar-item-label">This is a very long label, does it wrap or...?</span>
+    <span class="bottom-bar-item-label">This long label will be truncated with ellipsis</span>
   </a>
 </nav>
 {{</example>}}
@@ -47,7 +47,7 @@ You can change the color of the active item with the color classes.
   </a>
   <a class="bottom-bar-item" aria-current="page">
     <i class="vi vi-ellipsis bottom-bar-item-icon"></i>
-    <span class="bottom-bar-item-label">This is a very long label, does it wrap or...?</span>
+    <span class="bottom-bar-item-label">This long label will be truncated with ellipsis</span>
   </a>
 </nav>
 {{</example>}}

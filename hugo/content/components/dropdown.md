@@ -25,7 +25,7 @@ Using the `btn` class is entirely optional. You can also just leave the styling 
 
 {{<example>}}
 <details class="dropdown">
-  <summary class="btn btn-default">
+  <summary>
     Profile
   </summary>
 
@@ -249,8 +249,8 @@ Note that any parent color class will affect the menu. If you use the `btn-color
 To revert to the default look, add the `accent` color class to the `dropdown-menu` or pick any color you want.
 
 {{<example>}}
-<details class="dropdown">
-  <summary class="btn btn-color red">
+<details class="dropdown red">
+  <summary class="btn btn-color">
     Profile <i class="vi vi-angle-down"></i>
   </summary>
 
@@ -259,8 +259,8 @@ To revert to the default look, add the `accent` color class to the `dropdown-men
     <a class="dropdown-item" href="#">Settings</a>
   </div>
 </details>
-<details class="dropdown">
-  <summary class="btn btn-color red">
+<details class="dropdown red">
+  <summary class="btn btn-color">
     Accented <i class="vi vi-angle-down"></i>
   </summary>
 

@@ -126,6 +126,23 @@
   }
 }
 
+.nav-system {
+  .nav-link {
+    color: light-dark(rgba($dark, .65), rgba($light, .65));
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: $system-inverse;
+    }
+  }
+
+  .nav-brand,
+  .nav-btn-expand {
+    color: $system-inverse;
+  }
+}
+
 .nav-collapse-header {
   display: none;
 }
