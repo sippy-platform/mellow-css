@@ -89,7 +89,7 @@ Many of the components that use color will support the usage of color classes to
   </div>
   <div class="color grey">
     <h5>Grey</h5>
-    <div class="label label-plated">#6b707a</div>
+    <div class="label label-plated">#616a7a</div>
     <div class="color-swatch"></div>
   </div>
 </div>
