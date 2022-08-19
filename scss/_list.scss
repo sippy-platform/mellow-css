@@ -7,10 +7,12 @@
 .list-item {
   position: relative;
   display: grid;
-  grid-template-rows: min-content;
+  grid-template-rows: min-content min-content;
   grid-template-columns: min-content min-content minmax(0, auto) min-content min-content;
   /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
-  grid-template-areas: "item-action-s item-icon-s item-label item-icon-e item-action-e";
+  grid-template-areas:
+    "item-action-s item-icon-s item-label item-icon-e item-action-e"
+    "item-action-s item-icon-s item-description item-icon-e item-action-e";
   padding: var(--list-item-padding-y, $spacer * .5) $spacer;
   border-radius: $border-radius;
   align-items: center;
@@ -31,6 +33,13 @@
   .list-item-label {
     grid-area: item-label;
     position: relative;
+  }
+
+  .list-item-description {
+    grid-area: item-description;
+    position: relative;
+    font-size: .8em;
+    color: $muted;
   }
 
   .list-item-icon-s {
