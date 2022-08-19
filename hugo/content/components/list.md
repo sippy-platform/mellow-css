@@ -13,12 +13,18 @@ A basic list contains only a label.
 {{<example>}}
 <ul class="list mb-3">
   <li class="list-item"><span class="list-item-label">This is a list item</span></li>
-  <li class="list-item"><span class="list-item-label">This is also a list item</span></li>
+  <li class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </li>
 </ul>
 
 <ul class="list border">
   <li class="list-item"><span class="list-item-label">This is a list item</span></li>
-  <li class="list-item"><span class="list-item-label">This is also a list item</span></li>
+  <li class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </li>
 </ul>
 {{</example>}}
 
@@ -39,12 +45,18 @@ Lists provide a few divider styles including the default `list-dividers` and `li
 {{<example>}}
 <ul class="list list-dividers border mb-3">
   <li class="list-item"><span class="list-item-label">This is a list item</span></li>
-  <li class="list-item"><span class="list-item-label">This is also a list item</span></li>
+  <li class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </li>
   <li class="list-item"><span class="list-item-label">Yet another item</span></li>
 </ul>
 <ul class="list list-dividers-full border">
   <li class="list-item"><span class="list-item-label">This is a list item</span></li>
-  <li class="list-item"><span class="list-item-label">This is also a list item</span></li>
+  <li class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </li>
   <li class="list-item"><span class="list-item-label">Yet another item</span></li>
 </ul>
 {{</example>}}
@@ -56,14 +68,20 @@ If you rather have more fine-grainded control over where dividers appear, you ca
 <ul class="list border mb-3">
   <li class="list-item"><span class="list-item-label">This is a list item</span></li>
   <li class="list-divider" role="separator"></li>
-  <li class="list-item"><span class="list-item-label">This is also a list item</span></li>
+  <li class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </li>
   <li class="list-divider" role="separator"></li>
   <li class="list-item"><span class="list-item-label">Yet another item</span></li>
 </ul>
 <nav class="list border">
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
   <div class="list-divider-full" role="separator"></div>
-  <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
+  <li class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </li>
   <div class="list-divider-full" role="separator"></div>
   <div class="list-item"><span class="list-item-label">Yet another item</span></div>
 </nav>
@@ -78,7 +96,10 @@ If a section needs a text label, you can do that with `list-item-divider`. When 
 <div class="list list-dividers border mb-3">
   <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider</div>
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
-  <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
+  <li class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </li>
   <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
   <div class="list-item"><span class="list-item-label">Yet another item</span></div>
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
@@ -86,7 +107,10 @@ If a section needs a text label, you can do that with `list-item-divider`. When 
 <div class="list border">
   <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider</div>
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
-  <div class="list-item"><span class="list-item-label">This is also a list item</span></div>
+  <li class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </li>
   <div class="list-item-divider" role="presentation" id="some-unique-id" aria-hidden="true">Section divider<span class="list-item-divider-description">Section description</span></div>
   <div class="list-item"><span class="list-item-label">Yet another item</span></div>
   <div class="list-item"><span class="list-item-label">This is a list item</span></div>
@@ -97,12 +121,18 @@ If a section needs a text label, you can do that with `list-item-divider`. When 
 {{<example>}}
 <div class="list mb-3">
   <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </a>
   <a href="#" class="list-item"><span class="list-item-label">Yet another item</span></a>
 </div>
 <div class="list list-dividers">
   <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </a>
   <a href="#" class="list-item"><span class="list-item-label">Yet another item</span></a>
 </div>
 {{</example>}}
@@ -111,7 +141,10 @@ Adding the `border` class to the list will disable the border radius for all ele
 {{<example>}}
 <div class="list border">
   <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </a>
   <a href="#" class="list-item"><span class="list-item-label">Yet another item</span></a>
 </div>
 {{</example>}}
@@ -122,7 +155,10 @@ When adding the `active` class, Mellow will show an active indicator and backgro
 {{<example>}}
 <div class="list">
   <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item active"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item active">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </a>
   <a href="#" class="list-item"><span class="list-item-label">Yet another item</span></a>
 </div>
 {{</example>}}
@@ -144,7 +180,10 @@ If an action requires more attention from the user then the `list-item-colored` 
 {{<example>}}
 <div class="list">
   <a href="#" class="list-item"><span class="list-item-label">This is a list item</span></a>
-  <a href="#" class="list-item list-item-colored green active"><span class="list-item-label">This is also a list item</span></a>
+  <a href="#" class="list-item list-item-colored active green">
+    <span class="list-item-label">This is also a list item</span>
+    <span class="list-item-description">This is the description</span>
+  </a>
   <a href="#" class="list-item list-item-colored red"><span class="list-item-label">Delete everything</span></a>
 </div>
 {{</example>}}
@@ -262,10 +301,8 @@ Of course, all of these various options can be combined into more complex layout
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
     </span>
-    <span class="list-item-label">
-      <span class="fw-bold">This is a list item</span><br />
-      <span class="text-muted text-small">Hey, look at this</span>
-    </span>
+    <span class="list-item-label fw-bold">This is a list item</span>
+    <span class="list-item-description">Hey, look at this</span>
     <span class="list-item-icon-e"></span>
   </label>
   <label class="list-item active">
@@ -275,10 +312,8 @@ Of course, all of these various options can be combined into more complex layout
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
     </span>
-    <span class="list-item-label">
-      <span class="fw-bold">This is a list item</span><br />
-      <span class="text-muted text-small">Hey, look at this</span>
-    </span>
+    <span class="list-item-label fw-bold">This is a list item</span>
+    <span class="list-item-description">Hey, look at this</span>
     <span class="list-item-icon-e">
       <i class="vi vi-house"></i>
     </span>
@@ -290,10 +325,8 @@ Of course, all of these various options can be combined into more complex layout
     <span class="list-item-icon-s">
       <i class="vi vi-lock"></i>
     </span>
-    <span class="list-item-label">
-      <span class="fw-bold">This is a disabled list item</span><br />
-      <span class="text-muted text-small">Hey, look at this</span>
-    </span>
+    <span class="list-item-label fw-bold">This is a list item</span>
+    <span class="list-item-description">Hey, look at this</span>
     <span class="list-item-icon-e">
       <i class="vi vi-house"></i>
     </span>
