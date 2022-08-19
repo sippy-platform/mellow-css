@@ -301,10 +301,8 @@ Of course, all of these various options can be combined into more complex layout
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
     </span>
-    <span class="list-item-label">
-      <span class="fw-bold">This is a list item</span><br />
-      <span class="text-muted text-small">Hey, look at this</span>
-    </span>
+    <span class="list-item-label fw-bold">This is a list item</span>
+    <span class="list-item-description">Hey, look at this</span>
     <span class="list-item-icon-e"></span>
   </label>
   <label class="list-item active">
@@ -314,10 +312,8 @@ Of course, all of these various options can be combined into more complex layout
     <span class="list-item-icon-s">
       <i class="vi vi-magnifying-glass"></i>
     </span>
-    <span class="list-item-label">
-      <span class="fw-bold">This is a list item</span><br />
-      <span class="text-muted text-small">Hey, look at this</span>
-    </span>
+    <span class="list-item-label fw-bold">This is a list item</span>
+    <span class="list-item-description">Hey, look at this</span>
     <span class="list-item-icon-e">
       <i class="vi vi-house"></i>
     </span>
@@ -329,10 +325,8 @@ Of course, all of these various options can be combined into more complex layout
     <span class="list-item-icon-s">
       <i class="vi vi-lock"></i>
     </span>
-    <span class="list-item-label">
-      <span class="fw-bold">This is a disabled list item</span><br />
-      <span class="text-muted text-small">Hey, look at this</span>
-    </span>
+    <span class="list-item-label fw-bold">This is a list item</span>
+    <span class="list-item-description">Hey, look at this</span>
     <span class="list-item-icon-e">
       <i class="vi vi-house"></i>
     </span>
