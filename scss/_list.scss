@@ -109,11 +109,11 @@ button.list-item {
 }
 
 .list-sm {
-  --list-item-padding-y: $spacer * .25;
+  --list-item-padding-y: #{ $spacer * .25 };
 }
 
 .list-lg {
-  --list-item-padding-y: $spacer * .75;
+  --list-item-padding-y: #{ $spacer * .75 };
 }
 
 .border {
