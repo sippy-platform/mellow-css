@@ -77,6 +77,7 @@
   color: $body-text;
   width: 100%;
   box-sizing: border-box;
+  cursor: pointer;
 
   &:not(:first-child) {
     margin-top: .125rem;
